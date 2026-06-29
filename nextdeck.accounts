@@ -1,0 +1,14 @@
+{
+    "services": [
+        {
+            "name": "NextDeck",
+            "description": "Use this Nextcloud account for NextDeck.",
+            "provider": "nextcloud"
+        },
+        {
+            "name": "NextDeck",
+            "description": "Use this ownCloud account for NextDeck.",
+            "provider": "owncloud"
+        }
+    ]
+}

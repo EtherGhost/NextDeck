@@ -1,0 +1,324 @@
+# Dutch translations for nextdeck.cloudsite package.
+# This file is distributed under the same license as the nextdeck.cloudsite package.
+# AI-assisted starter translation; please review before relying on wording.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: nextdeck.cloudsite\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-26 00:00+0000\n"
+"PO-Revision-Date: 2026-06-26 00:00+0200\n"
+"Last-Translator: AI-assisted starter translation\n"
+"Language-Team: Dutch\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "OK"
+msgstr "OK"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Today"
+msgstr "Vandaag"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Clear"
+msgstr "Wissen"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Now"
+msgstr "Nu"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Hour"
+msgstr "Uur"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Min"
+msgstr "Min"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "January"
+msgstr "Januari"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "February"
+msgstr "Februari"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "March"
+msgstr "Maart"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "April"
+msgstr "April"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "May"
+msgstr "Mei"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "June"
+msgstr "Juni"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "July"
+msgstr "Juli"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "August"
+msgstr "August"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "September"
+msgstr "September"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "October"
+msgstr "Oktober"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "November"
+msgstr "November"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "December"
+msgstr "December"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Mon"
+msgstr "Mo"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Tue"
+msgstr "Di"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Wed"
+msgstr "Mi"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Thu"
+msgstr "Do"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Fri"
+msgstr "Fr"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Sat"
+msgstr "Sa"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Sun"
+msgstr "So"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Mark as done"
+msgstr "Markeren als klaar"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Mark as not done"
+msgstr "Markeren als niet klaar"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Use server version"
+msgstr "Serverversion verwenden"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Keep local version"
+msgstr "Lokale Version behalten"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Share board"
+msgstr "Board delen"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Shared with"
+msgstr "Gedeeld met"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Select an account and authorize it for %1."
+msgstr "Wähle ein Konto aus und autorisiere es für %1."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Accounts"
+msgstr "Accounts"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Authorization succeeded, but the Ubuntu Touch account did not expose a server address for %1."
+msgstr "Die Autorisierung war erfolgreich, aber das Ubuntu-Touch-Konto hat keine Serveradresse für %1 bereitgestellt."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Authorization succeeded for %1. Credentials are available to the app, but were not displayed or stored."
+msgstr "Die Autorisierung für %1 war erfolgreich. Zugangsdaten sind für die App verfügbar, wurden aber weder angezeigt noch gespeichert."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "%1 is not allowed to use this account yet. Open Ubuntu Touch System Settings > Accounts, allow %1 for this account, then return here."
+msgstr "%1 darf dieses Konto noch nicht verwenden. Öffne Ubuntu Touch Systemeinstellungen > Konten, erlaube %1 für dieses Konto und kehre dann hierher zurück."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Authorization failed: %1. If the system did not show an Online Accounts prompt, open System Settings > Accounts and allow %2 for this account, then try again."
+msgstr "Autorisierung fehlgeschlagen: %1. Wenn das System keinen Online-Accounts-Dialog angezeigt hat, öffne Systemeinstellungen > Konten und erlaube %2 für dieses Konto. Versuche es danach erneut."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Allow account access"
+msgstr "Accounttoegang toestaan"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Open System Settings"
+msgstr "Systeeminstellingen openen"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Account"
+msgstr "Account"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Server address"
+msgstr "Serveradres"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "This app uses Ubuntu Touch Online Accounts. Edit this only if the system account did not expose the correct server address."
+msgstr "Diese App verwendet Ubuntu Touch Online Accounts. Bearbeite dies nur, wenn das Systemkonto nicht die richtige Serveradresse bereitgestellt hat."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Available accounts"
+msgstr "Verfügbare Konten"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "No Nextcloud account found"
+msgstr "Kein Nextcloud-Konto gefunden"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Add a Nextcloud or ownCloud account in Ubuntu Touch System Settings > Accounts. Then return here and select it."
+msgstr "Füge ein Nextcloud- oder ownCloud-Konto unter Ubuntu Touch Systemeinstellungen > Konten hinzu. Kehre danach hierher zurück und wähle es aus."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "How to add an account"
+msgstr "So fügst du ein Konto hinzu"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Allow %1 in Ubuntu Touch account settings first"
+msgstr "Erlaube zuerst %1 in den Ubuntu-Touch-Kontoeinstellungen"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Allowed for %1"
+msgstr "Erlaubt für %1"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Nextcloud account discovered"
+msgstr "Nextcloud-Konto gefunden"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Verifying account..."
+msgstr "Konto wird geprüft..."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Verify selected account"
+msgstr "Ausgewähltes Konto prüfen"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "How to allow this account"
+msgstr "So erlaubst du dieses Konto"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Selected %1. Verifying authorization..."
+msgstr "%1 ausgewählt. Autorisierung wird geprüft..."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Saved account selected. Verify again if needed."
+msgstr "Gespeichertes Konto ausgewählt. Bei Bedarf erneut prüfen."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Select an account first."
+msgstr "Wähle zuerst ein Konto aus."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Verifying Online Accounts authorization..."
+msgstr "Online-Accounts-Autorisierung wird geprüft..."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "This account is not allowed for %1 yet. Open Ubuntu Touch System Settings > Accounts, allow %1 for this account, then return here."
+msgstr "Dieses Konto ist für %1 noch nicht erlaubt. Öffne Ubuntu Touch Systemeinstellungen > Konten, erlaube %1 für dieses Konto und kehre hierher zurück."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Checking account permission for %1..."
+msgstr "Kontoberechtigung für %1 wird geprüft..."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Open Ubuntu Touch System Settings manually, go to Accounts, add a Nextcloud or ownCloud account, then return to %1 and select it."
+msgstr "Öffne Ubuntu Touch Systemeinstellungen manuell, gehe zu Konten, füge ein Nextcloud- oder ownCloud-Konto hinzu und kehre zu %1 zurück, um es auszuwählen."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Open Ubuntu Touch System Settings manually, go to Accounts, select %1, allow %2 for that account, then return here. %2 will verify it automatically."
+msgstr "Öffne Ubuntu Touch Systemeinstellungen manuell, gehe zu Konten, wähle %1, erlaube %2 für dieses Konto und kehre hierher zurück. %2 prüft es automatisch."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Open Ubuntu Touch System Settings manually, go to Accounts, select the Nextcloud account, allow %1 for that account, then return here. %1 will verify it automatically."
+msgstr "Öffne Ubuntu Touch Systemeinstellungen manuell, gehe zu Konten, wähle das Nextcloud-Konto, erlaube %1 für dieses Konto und kehre hierher zurück. %1 prüft es automatisch."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Account permission detected. Verifying access..."
+msgstr "Kontoberechtigung erkannt. Zugriff wird geprüft..."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Waiting for account permission. If you already allowed %1, return here and wait a moment."
+msgstr "Warte auf Kontoberechtigung. Wenn du %1 bereits erlaubt hast, kehre hierher zurück und warte einen Moment."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "No account is saved yet. Select a Nextcloud account below, authorize it, and verify access."
+msgstr "Es ist noch kein Konto gespeichert. Wähle unten ein Nextcloud-Konto, autorisiere es und prüfe den Zugriff."
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "%1 on %2\nproviderId=%3 serviceId=%4"
+msgstr "%1 auf %2\nproviderId=%3 serviceId=%4"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "Saved account"
+msgstr "Opgeslagen account"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "server URL missing"
+msgstr "Serveradresse fehlt"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "No account selected"
+msgstr "Geen account geselecteerd"
+
+#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+msgid "The selected Ubuntu Touch account did not expose a server address."
+msgstr "Das ausgewählte Ubuntu-Touch-Konto hat keine Serveradresse bereitgestellt."
+
+#: qml/pages/HomePage.qml
+msgid "Board options"
+msgstr "Bordopties"
+
+#: qml/pages/HomePage.qml
+msgid "Restore board"
+msgstr "Bord herstellen"
+
+#: qml/pages/HomePage.qml
+msgid "Archive board"
+msgstr "Bord archiveren"
+
+#: qml/pages/HomePage.qml
+msgid "Delete board"
+msgstr "Bord verwijderen"
+
+#: qml/pages/HomePage.qml
+msgid "Delete this board and its cards?"
+msgstr "Dit bord en de kaarten verwijderen?"
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml
+msgid "Waiting for Ubuntu Touch Online Accounts to confirm permission for %1. If this does not finish, check that %1 is allowed for this account in System Settings > Accounts."
+msgstr "Wachten tot Ubuntu Touch Online Accounts toestemming voor %1 bevestigt. Als dit niet wordt voltooid, controleer dan in Systeeminstellingen > Accounts of %1 voor dit account is toegestaan."

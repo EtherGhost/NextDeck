@@ -1,0 +1,17 @@
+{
+    "name": "nextdeck.cloudsite",
+    "description": "Native but simple Ubuntu Touch client for Nextcloud Deck.",
+    "architecture": "$ENV{ARCH}",
+    "title": "NextDeck",
+    "hooks": {
+        "nextdeck": {
+            "accounts": "nextdeck.accounts",
+            "apparmor": "nextdeck.apparmor",
+            "content-hub": "nextdeck-contenthub.json",
+            "desktop": "nextdeck.desktop"
+        }
+    },
+    "version": "@NEXTDECK_VERSION@",
+    "maintainer": "Etherghost <noreply@cloudsite.se>",
+    "framework": "$ENV{CLICK_FRAMEWORK}"
+}
