@@ -12,6 +12,7 @@ Item {
     property string accountServerUrl: accountSettings.serverUrl || ""
     property var entries: []
     property var cachedBoards: []
+    property var boardCardCounts: ({})
     property string viewMode: "boards"
     property string titleText: i18n.tr("Boards")
     property int selectedBoardId: 0
@@ -268,6 +269,7 @@ Item {
             }
             controller.entries = entries
             cache.saveBoardEntries(controller.selectedBoardId, entries)
+            controller.boardCardCounts = cache.loadBoardCardCounts()
             controller.viewMode = "cards"
             controller.titleText = boardTitle
             controller.loading = false
@@ -601,6 +603,7 @@ Item {
             skipNextCachedLoad = false
             entries = []
             cachedBoards = []
+            boardCardCounts = ({})
             statusText = i18n.tr("Account changed. Refreshing...")
         } else {
             if (viewMode === "cards" && selectedBoardId > 0) {
@@ -613,6 +616,7 @@ Item {
                 var cachedBoards = cache.loadBoards()
                 if (cachedBoards.length > 0) {
                     controller.cachedBoards = cachedBoards
+                    controller.boardCardCounts = cache.loadBoardCardCounts()
                     entries = cachedBoards
                     statusText = i18n.tr("Showing cached boards. Refreshing...")
                 }
@@ -648,11 +652,13 @@ Item {
             skipNextCachedLoad = false
             entries = []
             cachedBoards = []
+            boardCardCounts = ({})
             statusText = i18n.tr("Account changed. Refreshing...")
         } else {
             var cachedBoardsForMenu = cache.loadBoards()
             if (cachedBoardsForMenu.length > 0) {
                 cachedBoards = cachedBoardsForMenu
+                boardCardCounts = cache.loadBoardCardCounts()
                 if (viewMode !== "cards") {
                     entries = cachedBoardsForMenu
                 }
@@ -1312,6 +1318,7 @@ Item {
         entries = updatedEntries
         if (selectedBoardId > 0) {
             cache.saveBoardEntries(selectedBoardId, entries)
+            boardCardCounts = cache.loadBoardCardCounts()
         }
         updateLocalCounts()
         statusText = i18n.tr("Card order changed.")
@@ -1532,6 +1539,7 @@ Item {
         cache.setScope(accountKey())
         dirtyCount = cache.countDirty()
         conflictCount = cache.countConflicts()
+        boardCardCounts = cache.loadBoardCardCounts()
         if (conflictCount > 0) {
             syncStateText = i18n.tr("Conflict")
             syncStateColor = "#c23b3b"
@@ -1622,6 +1630,7 @@ Item {
     function clearAccountData() {
         entries = []
         cachedBoards = []
+        boardCardCounts = ({})
         viewMode = "boards"
         titleText = i18n.tr("Boards")
         selectedBoardId = 0

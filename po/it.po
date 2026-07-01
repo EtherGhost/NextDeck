@@ -326,3 +326,23 @@ msgstr "In attesa che Ubuntu Touch Online Accounts confermi l’autorizzazione p
 #: qml/pages/HomePage.qml:2958
 msgid "Archived cards"
 msgstr "Schede archiviate"
+
+#: qml/pages/HomePage.qml
+msgid "Archived boards and cached archived cards are shown here."
+msgstr "Qui vengono mostrate le bacheche archiviate e le schede archiviate nella cache."
+
+#: qml/pages/HomePage.qml
+msgid "Archive is empty."
+msgstr "L’archivio è vuoto."
+
+#: qml/pages/HomePage.qml
+msgid "Archived cards appear here after their board has been loaded."
+msgstr "Le schede archiviate compaiono qui dopo il caricamento della loro bacheca."
+
+#: qml/pages/HomePage.qml
+msgid "Delete archived item"
+msgstr "Elimina elemento archiviato"
+
+#: qml/pages/HomePage.qml
+msgid "Delete this archived item?"
+msgstr "Eliminare questo elemento archiviato?"

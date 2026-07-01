@@ -1985,3 +1985,23 @@ msgstr ""
 #: qml/pages/HomePage.qml:2958
 msgid "Archived cards"
 msgstr "Arkiverade kort"
+
+#: qml/pages/HomePage.qml
+msgid "Archived boards and cached archived cards are shown here."
+msgstr "Arkiverade tavlor och cachade arkiverade kort visas här."
+
+#: qml/pages/HomePage.qml
+msgid "Archive is empty."
+msgstr "Arkivet är tomt."
+
+#: qml/pages/HomePage.qml
+msgid "Archived cards appear here after their board has been loaded."
+msgstr "Arkiverade kort visas här efter att deras tavla har laddats."
+
+#: qml/pages/HomePage.qml
+msgid "Delete archived item"
+msgstr "Ta bort arkiverat objekt"
+
+#: qml/pages/HomePage.qml
+msgid "Delete this archived item?"
+msgstr "Ta bort det här arkiverade objektet?"

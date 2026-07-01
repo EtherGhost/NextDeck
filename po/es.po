@@ -326,3 +326,23 @@ msgstr "Esperando a que Ubuntu Touch Online Accounts confirme el permiso para %1
 #: qml/pages/HomePage.qml:2958
 msgid "Archived cards"
 msgstr "Tarjetas archivadas"
+
+#: qml/pages/HomePage.qml
+msgid "Archived boards and cached archived cards are shown here."
+msgstr "Aquí se muestran los tableros archivados y las tarjetas archivadas en caché."
+
+#: qml/pages/HomePage.qml
+msgid "Archive is empty."
+msgstr "El archivo está vacío."
+
+#: qml/pages/HomePage.qml
+msgid "Archived cards appear here after their board has been loaded."
+msgstr "Las tarjetas archivadas aparecen aquí después de cargar su tablero."
+
+#: qml/pages/HomePage.qml
+msgid "Delete archived item"
+msgstr "Eliminar elemento archivado"
+
+#: qml/pages/HomePage.qml
+msgid "Delete this archived item?"
+msgstr "¿Eliminar este elemento archivado?"

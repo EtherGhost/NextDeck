@@ -21,7 +21,6 @@
         <file>NextCommon/qmldir</file>
         <file>NextCommon/VERSION</file>
         <file>NextCommon/AvatarButton.qml</file>
-        <file>NextCommon/AppButton.qml</file>
         <file>NextCommon/AboutPage.qml</file>
         <file>NextCommon/LanguagePage.qml</file>
         <file>NextCommon/AccountPage.qml</file>

@@ -326,3 +326,23 @@ msgstr "Odotetaan, että Ubuntu Touch Online Accounts vahvistaa käyttöoikeuden
 #: qml/pages/HomePage.qml:2958
 msgid "Archived cards"
 msgstr "Arkistoidut kortit"
+
+#: qml/pages/HomePage.qml
+msgid "Archived boards and cached archived cards are shown here."
+msgstr "Arkistoidut taulut ja välimuistissa olevat arkistoidut kortit näytetään tässä."
+
+#: qml/pages/HomePage.qml
+msgid "Archive is empty."
+msgstr "Arkisto on tyhjä."
+
+#: qml/pages/HomePage.qml
+msgid "Archived cards appear here after their board has been loaded."
+msgstr "Arkistoidut kortit näkyvät tässä, kun niiden taulu on ladattu."
+
+#: qml/pages/HomePage.qml
+msgid "Delete archived item"
+msgstr "Poista arkistoitu kohde"
+
+#: qml/pages/HomePage.qml
+msgid "Delete this archived item?"
+msgstr "Poistetaanko tämä arkistoitu kohde?"

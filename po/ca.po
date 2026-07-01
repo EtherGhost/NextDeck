@@ -2387,3 +2387,23 @@ msgstr "Obre els enllaços de les targetes directament al navegador"
 #: qml/pages/HomePage.qml:2958
 msgid "Archived cards"
 msgstr "Targetes arxivades"
+
+#: qml/pages/HomePage.qml
+msgid "Archived boards and cached archived cards are shown here."
+msgstr "Aquí es mostren els taulers arxivats i les targetes arxivades en memòria cau."
+
+#: qml/pages/HomePage.qml
+msgid "Archive is empty."
+msgstr "L’arxiu és buit."
+
+#: qml/pages/HomePage.qml
+msgid "Archived cards appear here after their board has been loaded."
+msgstr "Les targetes arxivades apareixen aquí després que s’hagi carregat el seu tauler."
+
+#: qml/pages/HomePage.qml
+msgid "Delete archived item"
+msgstr "Suprimeix l'element arxivat"
+
+#: qml/pages/HomePage.qml
+msgid "Delete this archived item?"
+msgstr "Vols suprimir aquest element arxivat?"

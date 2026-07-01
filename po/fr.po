@@ -326,3 +326,23 @@ msgstr "En attente de la confirmation de l’autorisation pour %1 par Ubuntu Tou
 #: qml/pages/HomePage.qml:2958
 msgid "Archived cards"
 msgstr "Cartes archivées"
+
+#: qml/pages/HomePage.qml
+msgid "Archived boards and cached archived cards are shown here."
+msgstr "Les tableaux archivés et les cartes archivées en cache sont affichés ici."
+
+#: qml/pages/HomePage.qml
+msgid "Archive is empty."
+msgstr "L’archive est vide."
+
+#: qml/pages/HomePage.qml
+msgid "Archived cards appear here after their board has been loaded."
+msgstr "Les cartes archivées apparaissent ici après le chargement de leur tableau."
+
+#: qml/pages/HomePage.qml
+msgid "Delete archived item"
+msgstr "Supprimer l'élément archivé"
+
+#: qml/pages/HomePage.qml
+msgid "Delete this archived item?"
+msgstr "Supprimer cet élément archivé ?"

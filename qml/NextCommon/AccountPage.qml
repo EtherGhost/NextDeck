@@ -202,7 +202,7 @@ Page {
             title: i18n.tr("Allow account access")
             text: page.systemAccountsDialogText()
 
-            AppButton {
+            Button {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Open System Settings")
@@ -212,7 +212,7 @@ Page {
                 }
             }
 
-            AppButton {
+            Button {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("OK")

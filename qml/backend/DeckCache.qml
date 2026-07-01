@@ -93,6 +93,21 @@ Item {
         return entries
     }
 
+    function loadBoardCardCounts() {
+        var counts = {}
+        db().readTransaction(function(tx) {
+            var rows = tx.executeSql(
+                "SELECT board_id, COUNT(*) AS c FROM cards WHERE local_status != ? AND archived = 0 GROUP BY board_id",
+                [statusDeleted]
+            )
+            for (var i = 0; i < rows.rows.length; ++i) {
+                var row = rows.rows.item(i)
+                counts[String(Number(row.board_id || 0))] = Number(row.c || 0)
+            }
+        })
+        return counts
+    }
+
     function clearCleanServerDataForCurrentScope() {
         db().transaction(function(tx) {
             tx.executeSql("DELETE FROM boards")

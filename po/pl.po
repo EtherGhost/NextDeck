@@ -326,3 +326,23 @@ msgstr "Oczekiwanie, aż Ubuntu Touch Online Accounts potwierdzi uprawnienie dla
 #: qml/pages/HomePage.qml:2958
 msgid "Archived cards"
 msgstr "Zarchiwizowane karty"
+
+#: qml/pages/HomePage.qml
+msgid "Archived boards and cached archived cards are shown here."
+msgstr "Tutaj są wyświetlane zarchiwizowane tablice i zbuforowane zarchiwizowane karty."
+
+#: qml/pages/HomePage.qml
+msgid "Archive is empty."
+msgstr "Archiwum jest puste."
+
+#: qml/pages/HomePage.qml
+msgid "Archived cards appear here after their board has been loaded."
+msgstr "Zarchiwizowane karty pojawią się tutaj po wczytaniu ich tablicy."
+
+#: qml/pages/HomePage.qml
+msgid "Delete archived item"
+msgstr "Usuń zarchiwizowany element"
+
+#: qml/pages/HomePage.qml
+msgid "Delete this archived item?"
+msgstr "Usunąć ten zarchiwizowany element?"

@@ -31,7 +31,10 @@ Item {
     property bool selectionEnabled: false
     property bool selectionMode: false
     property int selectedCount: 0
+    property real secondaryActionRightWidth: 0
 
+    signal itemClicked(int index, var itemData)
+    signal secondaryActionRequested(int index, var itemData)
     signal moveRequested(int fromIndex, int toIndex)
     signal dragStarted(int index)
     signal dragEnded(int fromIndex, int toIndex)
@@ -661,8 +664,12 @@ Item {
                     }
                     if (row.selectionHandledByLongPress) {
                         row.selectionHandledByLongPress = false
+                    } else if (!wasSwipeActive && root.secondaryActionRightWidth > 0 && mouse.x >= row.width - root.secondaryActionRightWidth) {
+                        root.secondaryActionRequested(index, row.rowItem)
                     } else if (!wasSwipeActive && root.selectionMode && root.selectionEnabled) {
                         root.toggleRowSelection(index, row.rowItem)
+                    } else if (!wasSwipeActive && !root.selectionMode) {
+                        root.itemClicked(index, row.rowItem)
                     }
                 }
                 onCanceled: {

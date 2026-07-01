@@ -326,3 +326,23 @@ msgstr "Очікування підтвердження дозволу для %1
 #: qml/pages/HomePage.qml:2958
 msgid "Archived cards"
 msgstr "Заархівовані картки"
+
+#: qml/pages/HomePage.qml
+msgid "Archived boards and cached archived cards are shown here."
+msgstr "Тут показано заархівовані дошки та кешовані заархівовані картки."
+
+#: qml/pages/HomePage.qml
+msgid "Archive is empty."
+msgstr "Архів порожній."
+
+#: qml/pages/HomePage.qml
+msgid "Archived cards appear here after their board has been loaded."
+msgstr "Заархівовані картки з’являться тут після завантаження їхньої дошки."
+
+#: qml/pages/HomePage.qml
+msgid "Delete archived item"
+msgstr "Видалити архівний елемент"
+
+#: qml/pages/HomePage.qml
+msgid "Delete this archived item?"
+msgstr "Видалити цей архівний елемент?"

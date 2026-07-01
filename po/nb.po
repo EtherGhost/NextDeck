@@ -326,3 +326,23 @@ msgstr "Venter på at Ubuntu Touch Online Accounts bekrefter tillatelse for %1. 
 #: qml/pages/HomePage.qml:2958
 msgid "Archived cards"
 msgstr "Arkiverte kort"
+
+#: qml/pages/HomePage.qml
+msgid "Archived boards and cached archived cards are shown here."
+msgstr "Arkiverte tavler og hurtiglagrede arkiverte kort vises her."
+
+#: qml/pages/HomePage.qml
+msgid "Archive is empty."
+msgstr "Arkivet er tomt."
+
+#: qml/pages/HomePage.qml
+msgid "Archived cards appear here after their board has been loaded."
+msgstr "Arkiverte kort vises her etter at tavlen deres er lastet."
+
+#: qml/pages/HomePage.qml
+msgid "Delete archived item"
+msgstr "Slett arkivert element"
+
+#: qml/pages/HomePage.qml
+msgid "Delete this archived item?"
+msgstr "Slette dette arkiverte elementet?"

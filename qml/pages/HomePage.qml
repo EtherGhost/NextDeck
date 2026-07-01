@@ -20,6 +20,7 @@ Page {
     property var selectedList: ({})
     property var selectedCard: ({})
     property var selectedBoard: ({})
+    property var selectedArchiveItem: ({})
     property var selectedCards: []
     property var bulkCardsQueue: []
     property string bulkCardsOperation: ""
@@ -44,6 +45,7 @@ Page {
     property var draftFilterLabelIds: []
     property var draftFilterUserIds: []
     property bool showArchivedCardsMode: false
+    property bool archiveOverviewMode: false
     property bool showArchivedBoardsMode: uiSettings.showArchivedBoardsMode
     property bool cardPullToRefreshEnabled: appController ? appController.pullToRefreshEnabled : true
     onShowArchivedCardsModeChanged: updateVisibleCardEntries()
@@ -76,6 +78,7 @@ Page {
     }
 
     function openCard(card) {
+        archiveOverviewMode = false
         if (appController && appController.openCardLinksDirectly) {
             var link = cardShareLink(card)
             if (link.length > 0) {
@@ -88,14 +91,35 @@ Page {
 
     function stackOptions() {
         var options = []
+        var seen = {}
         var source = dataController.entries || []
         for (var i = 0; i < source.length; ++i) {
             var entry = source[i]
             if (entry.type === "stack") {
+                var id = Number(entry.stackId || 0)
+                if (seen[id]) {
+                    continue
+                }
+                seen[id] = true
                 options.push({
                     "boardId": entry.boardId,
-                    "stackId": entry.stackId,
+                    "stackId": id,
                     "stackTitle": entry.stackTitle || entry.title || i18n.tr("List")
+                })
+            }
+        }
+        for (var c = 0; c < source.length; ++c) {
+            var card = source[c]
+            if (card.type !== "card") {
+                continue
+            }
+            var stackId = Number(card.stackId || 0)
+            if (stackId > 0 && !seen[stackId]) {
+                seen[stackId] = true
+                options.push({
+                    "boardId": card.boardId,
+                    "stackId": stackId,
+                    "stackTitle": card.stackTitle || i18n.tr("List")
                 })
             }
         }
@@ -105,6 +129,10 @@ Page {
     function showCreateCardDialog() {
         newCardTitle = ""
         ensureActiveStack()
+        if (stackEntries().length === 0) {
+            showCreateListDialog()
+            return
+        }
         if (activeStackId > 0) {
             PopupUtils.open(createCardDialog)
         }
@@ -198,6 +226,8 @@ Page {
     }
 
     function selectStack(stackId) {
+        archiveOverviewMode = false
+        showArchivedCardsMode = false
         activeStackId = Number(stackId || 0)
         saveLastStackForCurrentBoard(activeStackId)
         updateFilteredEntries()
@@ -265,6 +295,52 @@ Page {
         visibleCardEntries = visibleCards()
     }
 
+    function reorderableCardModel() {
+        var result = []
+        for (var i = 0; i < visibleCardEntries.length; ++i) {
+            var card = visibleCardEntries[i] || {}
+            result.push({
+                "__sourceIndex": i,
+                "type": "card",
+                "id": card.id || 0,
+                "localKey": card.localKey || "",
+                "boardId": card.boardId || 0,
+                "stackId": card.stackId || 0,
+                "stackTitle": card.stackTitle || "",
+                "title": card.title || "",
+                "archived": card.archived === true,
+                "done": card.done || "",
+                "order": card.order || 0
+            })
+        }
+        return result
+    }
+
+    function cardForVisualItem(item) {
+        if (!item) {
+            return ({})
+        }
+        if (item.item) {
+            item = item.item
+        }
+        var index = Number(item.__sourceIndex)
+        if (!isNaN(index) && index >= 0 && index < visibleCardEntries.length) {
+            return visibleCardEntries[index]
+        }
+        var id = Number(item.id || 0)
+        var key = String(item.localKey || "")
+        for (var i = 0; i < visibleCardEntries.length; ++i) {
+            var card = visibleCardEntries[i]
+            if (id > 0 && Number(card.id || 0) === id) {
+                return card
+            }
+            if (key.length > 0 && String(card.localKey || "") === key) {
+                return card
+            }
+        }
+        return item
+    }
+
     function showCardOptions(card) {
         selectedCard = card || ({})
         PopupUtils.open(cardOptionsDialog)
@@ -278,6 +354,7 @@ Page {
             if (item && item.item) {
                 item = item.item
             }
+            item = cardForVisualItem(item)
             if (item && item.type === "card") {
                 output.push(item)
             }
@@ -351,6 +428,31 @@ Page {
         if (cards.length > 0) {
             startBulkCardOperation("move", cards, stack)
         }
+    }
+
+    function availableMoveStacksForCards(cards) {
+        var selected = cards || []
+        var stacks = stackOptions()
+        var result = []
+        for (var i = 0; i < stacks.length; ++i) {
+            var stack = stacks[i]
+            var stackId = Number(stack.stackId || 0)
+            var canMoveAny = false
+            for (var j = 0; j < selected.length; ++j) {
+                if (Number(selected[j].stackId || 0) !== stackId) {
+                    canMoveAny = true
+                    break
+                }
+            }
+            if (canMoveAny) {
+                result.push(stack)
+            }
+        }
+        return result
+    }
+
+    function selectedCardsMoveTargets() {
+        return availableMoveStacksForCards(selectedCardItems())
     }
 
     function cardShareLink(card) {
@@ -513,6 +615,15 @@ Page {
         return result
     }
 
+    function boardCardCount(board) {
+        var boardId = Number(board && board.id ? board.id : 0)
+        if (boardId <= 0) {
+            return 0
+        }
+        var counts = dataController.boardCardCounts || {}
+        return Number(counts[String(boardId)] || 0)
+    }
+
     function archivedCardCount() {
         var count = 0
         for (var i = 0; i < filteredEntries.length; ++i) {
@@ -524,6 +635,7 @@ Page {
     }
 
     function showActiveCards() {
+        archiveOverviewMode = false
         showArchivedCardsMode = false
         drawerOpen = false
         updateVisibleCardEntries()
@@ -533,6 +645,66 @@ Page {
         showArchivedCardsMode = true
         drawerOpen = false
         updateVisibleCardEntries()
+    }
+
+    function showArchiveOverview() {
+        archiveOverviewMode = true
+        showArchivedCardsMode = false
+        drawerOpen = false
+        updateVisibleCardEntries()
+    }
+
+    function archiveOverviewItems() {
+        var result = []
+        var boards = dataController.cachedBoards || []
+        for (var i = 0; i < boards.length; ++i) {
+            if (boards[i].type === "board" && boards[i].archived === true) {
+                var board = {}
+                for (var boardKey in boards[i]) board[boardKey] = boards[i][boardKey]
+                board.archiveType = "board"
+                result.push(board)
+            }
+        }
+        var cards = archivedCards()
+        for (var j = 0; j < cards.length; ++j) {
+            var card = {}
+            for (var cardKey in cards[j]) card[cardKey] = cards[j][cardKey]
+            card.archiveType = "card"
+            result.push(card)
+        }
+        return result
+    }
+
+    function archiveOverviewCount() {
+        return archiveOverviewItems().length
+    }
+
+    function restoreArchiveItem(item) {
+        if (!item) {
+            return
+        }
+        if (item.archiveType === "board") {
+            selectedBoard = item
+            archiveSelectedBoard(false)
+        } else if (item.archiveType === "card") {
+            dataController.archiveCard(item, false)
+        }
+    }
+
+    function deleteArchiveItem(item) {
+        if (!item) {
+            return
+        }
+        if (item.archiveType === "board") {
+            dataController.deleteBoard(item)
+        } else if (item.archiveType === "card") {
+            dataController.deleteCard(item)
+        }
+    }
+
+    function requestDeleteArchiveItem(item) {
+        selectedArchiveItem = item || ({})
+        PopupUtils.open(deleteArchiveItemConfirmDialog)
     }
 
     function updateVisibleBoardEntries() {
@@ -602,6 +774,8 @@ Page {
 
     function resetAccountLocalState() {
         activeStackId = 0
+        archiveOverviewMode = false
+        showArchivedCardsMode = false
         filteredEntries = []
         visibleCardEntries = []
         visibleBoardEntries = []
@@ -1899,7 +2073,7 @@ Page {
             text: i18n.tr("Choose destination list.")
 
             Repeater {
-                model: page.stackOptions()
+                model: page.selectedCardsMoveTargets()
 
                 UTControls.AppButton {
                     width: parent ? parent.width : units.gu(34)
@@ -1953,6 +2127,39 @@ Page {
         }
     }
 
+    Component {
+        id: deleteArchiveItemConfirmDialog
+
+        Dialog {
+            id: dialog
+            title: i18n.tr("Delete archived item")
+            text: i18n.tr("Delete this archived item?")
+
+            UTControls.AppButton {
+                width: parent ? parent.width : units.gu(34)
+                height: units.gu(4.8)
+                text: i18n.tr("Delete")
+                variant: "destructive"
+                enabled: page.selectedArchiveItem && (page.selectedArchiveItem.id || page.selectedArchiveItem.localKey) && !dataController.loading
+                onClicked: {
+                    PopupUtils.close(dialog)
+                    page.deleteArchiveItem(page.selectedArchiveItem)
+                    page.selectedArchiveItem = ({})
+                }
+            }
+
+            UTControls.AppButton {
+                width: parent ? parent.width : units.gu(34)
+                height: units.gu(4.8)
+                text: i18n.tr("Cancel")
+                onClicked: {
+                    PopupUtils.close(dialog)
+                    page.selectedArchiveItem = ({})
+                }
+            }
+        }
+    }
+
     DeckController {
         id: dataController
         onLoadingChanged: {
@@ -1996,9 +2203,10 @@ Page {
             property bool dragging: false
             property bool selected: false
             property bool selectionMode: false
-            readonly property var labelsData: page.cardLabels(itemData)
-            readonly property var infoBadgesData: page.cardInfoBadges(itemData)
-            readonly property var assignedUsersData: page.cardAssignedUsers(itemData)
+            readonly property var cardData: page.cardForVisualItem(itemData)
+            readonly property var labelsData: page.cardLabels(cardData)
+            readonly property var infoBadgesData: page.cardInfoBadges(cardData)
+            readonly property var assignedUsersData: page.cardAssignedUsers(cardData)
             readonly property real metaContentGap: units.gu(1)
             readonly property real labelBlockHeight: labelsData.length > 0 ? Math.max(compactLabelFlow.childrenRect.height, units.gu(1.5)) : 0
             readonly property real infoBlockHeight: infoBadgesData.length > 0 ? Math.max(compactInfoFlow.childrenRect.height, units.gu(1.5)) : 0
@@ -2043,7 +2251,7 @@ Page {
 
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: page.showCardOptions(reorderCard.itemData)
+                    enabled: false
                 }
             }
 
@@ -2078,8 +2286,8 @@ Page {
                             top: parent.top
                             rightMargin: doneBadgeNew.visible ? units.gu(0.8) : 0
                         }
-                        text: reorderCard.itemData.title || i18n.tr("Untitled")
-                        font.bold: !page.cardDone(reorderCard.itemData)
+                        text: reorderCard.cardData.title || i18n.tr("Untitled")
+                        font.bold: !page.cardDone(reorderCard.cardData)
                         fontSize: "small"
                         wrapMode: Text.WordWrap
                         maximumLineCount: 6
@@ -2095,7 +2303,7 @@ Page {
                         }
                         width: doneBadgeLabelNew.implicitWidth + units.gu(1.1)
                         height: doneBadgeLabelNew.implicitHeight + units.gu(0.35)
-                        visible: page.cardDone(reorderCard.itemData)
+                        visible: page.cardDone(reorderCard.cardData)
                         radius: units.gu(0.45)
                         color: Qt.rgba(0.35, 0.56, 0.24, 0.18)
                         border.width: 1
@@ -2104,7 +2312,7 @@ Page {
                         Label {
                             id: doneBadgeLabelNew
                             anchors.centerIn: parent
-                            text: "\u2713 " + page.formatDoneDate(reorderCard.itemData.done)
+                            text: "\u2713 " + page.formatDoneDate(reorderCard.cardData.done)
                             color: "#5a8f3c"
                             font.bold: true
                             fontSize: "x-small"
@@ -2256,10 +2464,10 @@ Page {
         contentWidth: width
         contentHeight: contentColumn.height + units.gu(3)
         clip: true
-        boundsBehavior: dataController.viewMode === "cards"
+        boundsBehavior: dataController.viewMode === "cards" && !page.archiveOverviewMode
             ? Flickable.StopAtBounds
             : Flickable.DragOverBounds
-        interactive: dataController.viewMode !== "cards"
+        interactive: dataController.viewMode !== "cards" || page.archiveOverviewMode
         property bool pullRefreshArmed: false
 
         MouseArea {
@@ -2274,14 +2482,14 @@ Page {
         }
 
         onContentYChanged: {
-            if (dataController.viewMode !== "cards"
+            if ((dataController.viewMode !== "cards" || page.archiveOverviewMode)
                     && contentY < -page.pullRefreshThreshold && !dataController.loading) {
                 pullRefreshArmed = true
             }
         }
 
         onMovementEnded: {
-            if (dataController.viewMode !== "cards"
+            if ((dataController.viewMode !== "cards" || page.archiveOverviewMode)
                     && pullRefreshArmed && !dataController.loading) {
                 dataController.refreshAll()
             }
@@ -2298,7 +2506,7 @@ Page {
             height: units.gu(3.2)
             radius: units.gu(1.6)
             color: page.actionBlue
-            opacity: dataController.viewMode !== "cards"
+            opacity: (dataController.viewMode !== "cards" || page.archiveOverviewMode)
                 && (contentFlickable.contentY < -units.gu(2) || dataController.loading) ? 0.92 : 0
             visible: opacity > 0
             z: 4
@@ -2324,7 +2532,7 @@ Page {
             RowLayout {
                 Layout.fillWidth: true
                 Layout.preferredHeight: units.gu(5.8)
-                visible: dataController.viewMode === "cards"
+                visible: dataController.viewMode === "cards" && !page.archiveOverviewMode
                 spacing: units.gu(0.6)
 
                 Flickable {
@@ -2408,60 +2616,219 @@ Page {
                 }
             }
 
+            ColumnLayout {
+                Layout.fillWidth: true
+                visible: page.archiveOverviewMode
+                spacing: units.gu(1)
+
+                Label {
+                    Layout.fillWidth: true
+                    text: i18n.tr("Archive")
+                    font.bold: true
+                    font.pixelSize: units.gu(2.4)
+                    color: theme.palette.normal.backgroundText
+                }
+
+                Label {
+                    Layout.fillWidth: true
+                    text: i18n.tr("Archived boards and cached archived cards are shown here.")
+                    wrapMode: Text.WordWrap
+                    opacity: 0.68
+                    color: theme.palette.normal.backgroundText
+                }
+
+                Repeater {
+                    model: page.archiveOverviewItems()
+
+                    delegate: Rectangle {
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: units.gu(9.6)
+                        radius: units.gu(0.7)
+                        color: theme.palette.normal.background
+                        border.width: 1
+                        border.color: theme.palette.normal.base
+
+                        RowLayout {
+                            anchors {
+                                fill: parent
+                                margins: units.gu(1.2)
+                            }
+                            spacing: units.gu(1)
+
+                            Rectangle {
+                                Layout.preferredWidth: units.gu(4.4)
+                                Layout.preferredHeight: units.gu(4.4)
+                                Layout.alignment: Qt.AlignVCenter
+                                radius: width / 2
+                                color: modelData.archiveType === "board"
+                                    ? page.boardColor(modelData)
+                                    : Qt.rgba(theme.palette.normal.backgroundText.r,
+                                              theme.palette.normal.backgroundText.g,
+                                              theme.palette.normal.backgroundText.b,
+                                              0.12)
+
+                                Label {
+                                    anchors.centerIn: parent
+                                    text: modelData.archiveType === "board" ? "\u2630" : "\u25a1"
+                                    color: modelData.archiveType === "board"
+                                        ? "white"
+                                        : theme.palette.normal.backgroundText
+                                    font.bold: true
+                                    font.pixelSize: units.gu(2.1)
+                                }
+                            }
+
+                            ColumnLayout {
+                                Layout.fillWidth: true
+                                Layout.alignment: Qt.AlignVCenter
+                                spacing: units.gu(0.45)
+
+                                Label {
+                                    Layout.fillWidth: true
+                                    text: modelData.title || (modelData.archiveType === "board" ? i18n.tr("Untitled board") : i18n.tr("Untitled card"))
+                                    font.bold: true
+                                    color: theme.palette.normal.backgroundText
+                                    elide: Text.ElideRight
+                                    maximumLineCount: 1
+                                }
+
+                                RowLayout {
+                                    Layout.fillWidth: true
+                                    spacing: units.gu(0.6)
+
+                                    Rectangle {
+                                        Layout.preferredHeight: units.gu(2.4)
+                                        Layout.preferredWidth: archiveTypeLabel.implicitWidth + units.gu(1.4)
+                                        radius: units.gu(1.2)
+                                        color: Qt.rgba(theme.palette.normal.backgroundText.r,
+                                                       theme.palette.normal.backgroundText.g,
+                                                       theme.palette.normal.backgroundText.b,
+                                                       0.10)
+
+                                        Label {
+                                            id: archiveTypeLabel
+                                            anchors.centerIn: parent
+                                            text: modelData.archiveType === "board" ? i18n.tr("Board") : i18n.tr("Card")
+                                            textSize: Label.Small
+                                            font.bold: true
+                                            color: theme.palette.normal.backgroundText
+                                            opacity: 0.78
+                                        }
+                                    }
+
+                                    Label {
+                                        Layout.fillWidth: true
+                                        text: modelData.archiveType === "card" ? (modelData.stackTitle || "") : (modelData.subtitle || i18n.tr("Archived board"))
+                                        textSize: Label.Small
+                                        opacity: 0.68
+                                        color: theme.palette.normal.backgroundText
+                                        elide: Text.ElideRight
+                                        maximumLineCount: 1
+                                    }
+                                }
+                            }
+
+                            UTControls.AppButton {
+                                Layout.preferredWidth: units.gu(9.2)
+                                Layout.preferredHeight: units.gu(4.4)
+                                text: i18n.tr("Restore")
+                                enabled: !dataController.loading
+                                onClicked: page.restoreArchiveItem(modelData)
+                            }
+
+                            UTControls.AppButton {
+                                Layout.preferredWidth: units.gu(8.6)
+                                Layout.preferredHeight: units.gu(4.4)
+                                text: i18n.tr("Delete")
+                                variant: "destructive"
+                                enabled: !dataController.loading
+                                onClicked: page.requestDeleteArchiveItem(modelData)
+                            }
+                        }
+                    }
+                }
+
+                UTControls.EmptyState {
+                    Layout.fillWidth: true
+                    visible: page.archiveOverviewItems().length === 0 && !dataController.loading
+                    title: i18n.tr("Archive is empty.")
+                    message: i18n.tr("Archived cards appear here after their board has been loaded.")
+                }
+            }
+
             Rectangle {
                 Layout.fillWidth: true
-                Layout.preferredHeight: page.selectionMode ? units.gu(5.6) : 0
-                visible: page.selectionMode
+                Layout.preferredHeight: page.selectionMode ? units.gu(9.8) : 0
+                visible: page.selectionMode && !page.archiveOverviewMode
                 radius: units.gu(0.7)
                 color: Qt.rgba(0.17, 0.5, 0.72, 0.12)
                 border.width: 1
                 border.color: Qt.rgba(0.17, 0.5, 0.72, 0.36)
 
-                RowLayout {
+                ColumnLayout {
                     anchors {
                         fill: parent
                         leftMargin: units.gu(1)
                         rightMargin: units.gu(1)
+                        topMargin: units.gu(0.6)
+                        bottomMargin: units.gu(0.6)
                     }
-                    spacing: units.gu(0.6)
+                    spacing: units.gu(0.4)
 
                     Label {
                         Layout.fillWidth: true
+                        Layout.preferredHeight: units.gu(2.6)
                         text: i18n.tr("%1 selected").arg(page.selectedCardCount())
                         font.bold: true
                         elide: Text.ElideRight
                     }
 
-                    UTControls.AppButton {
-                        Layout.preferredWidth: units.gu(9)
-                        height: units.gu(4.4)
-                        text: page.showArchivedCardsMode ? i18n.tr("Restore") : i18n.tr("Archive")
-                        enabled: page.selectedCardCount() > 0 && !dataController.loading
-                        onClicked: page.archiveSelectedCards(!page.showArchivedCardsMode)
-                    }
+                    Flickable {
+                        id: bulkActionsFlick
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: units.gu(5)
+                        contentWidth: bulkActionsRow.width
+                        contentHeight: height
+                        clip: true
 
-                    UTControls.AppButton {
-                        Layout.preferredWidth: units.gu(8)
-                        height: units.gu(4.4)
-                        text: i18n.tr("Move")
-                        enabled: page.selectedCardCount() > 0 && page.stackOptions().length > 1 && !dataController.loading
-                        onClicked: PopupUtils.open(moveSelectedCardsDialog)
-                    }
+                        Row {
+                            id: bulkActionsRow
+                            x: Math.max(0, bulkActionsFlick.width - width)
+                            height: parent.height
+                            spacing: units.gu(0.7)
 
-                    UTControls.AppButton {
-                        Layout.preferredWidth: units.gu(8)
-                        height: units.gu(4.4)
-                        text: i18n.tr("Delete")
-                        variant: "destructive"
-                        enabled: page.selectedCardCount() > 0 && !dataController.loading
-                        onClicked: PopupUtils.open(deleteSelectedCardsDialog)
-                    }
+                            UTControls.AppButton {
+                                width: units.gu(11)
+                                height: units.gu(4.6)
+                                text: page.showArchivedCardsMode ? i18n.tr("Restore") : i18n.tr("Archive")
+                                enabled: page.selectedCardCount() > 0 && !dataController.loading
+                                onClicked: page.archiveSelectedCards(!page.showArchivedCardsMode)
+                            }
 
-                    UTControls.AppButton {
-                        Layout.preferredWidth: units.gu(8)
-                        height: units.gu(4.4)
-                        text: i18n.tr("Cancel")
-                        onClicked: page.clearCardSelection()
+                            UTControls.AppButton {
+                                width: units.gu(10)
+                                height: units.gu(4.6)
+                                text: i18n.tr("Move")
+                                enabled: page.selectedCardCount() > 0 && page.selectedCardsMoveTargets().length > 0 && !dataController.loading
+                                onClicked: PopupUtils.open(moveSelectedCardsDialog)
+                            }
+
+                            UTControls.AppButton {
+                                width: units.gu(10)
+                                height: units.gu(4.6)
+                                text: i18n.tr("Delete")
+                                variant: "destructive"
+                                enabled: page.selectedCardCount() > 0 && !dataController.loading
+                                onClicked: PopupUtils.open(deleteSelectedCardsDialog)
+                            }
+
+                            UTControls.AppButton {
+                                width: units.gu(10)
+                                height: units.gu(4.6)
+                                text: i18n.tr("Cancel")
+                                onClicked: page.clearCardSelection()
+                            }
+                        }
                     }
                 }
             }
@@ -2469,12 +2836,14 @@ Page {
             UTControls.ReorderableListView {
                 id: reorderableCards
                 Layout.fillWidth: true
-                Layout.preferredHeight: Math.max(units.gu(28), page.height - page.header.height - stackTabs.height - units.gu(7) - (page.selectionMode ? units.gu(5.8) : 0))
+                Layout.preferredHeight: Math.max(units.gu(28), page.height - page.header.height - stackTabs.height - units.gu(7) - (page.selectionMode ? units.gu(10) : 0))
                 visible: dataController.viewMode === "cards"
+                    && !page.archiveOverviewMode
                     && page.visibleCardEntries.length > 0
-                model: page.visibleCardEntries
+                model: page.reorderableCardModel()
                 delegate: reorderCardDelegate
                 reorderEnabled: !dataController.loading && !page.showArchivedCardsMode && (!appController || appController.dragForMoveEnabled)
+                secondaryActionRightWidth: units.gu(6.4)
                 refreshing: dataController.loading
                 dragAreaRightMargin: units.gu(5.4)
                 pullRefreshThreshold: page.pullRefreshThreshold
@@ -2497,13 +2866,19 @@ Page {
                     page.reorderVisibleCards(fromIndex, toIndex)
                 }
 
+                onItemClicked: function(index, itemData) {
+                    page.openCard(page.cardForVisualItem(itemData))
+                }
+                onSecondaryActionRequested: function(index, itemData) {
+                    page.showCardOptions(page.cardForVisualItem(itemData))
+                }
                 onRefreshRequested: dataController.refreshAll()
                 onSwipeRightRequested: function(index, itemData) {
-                    page.selectedCard = itemData || ({})
+                    page.selectedCard = page.cardForVisualItem(itemData)
                     PopupUtils.open(deleteCardConfirmDialog)
                 }
                 onSwipeLeftRequested: function(index, itemData) {
-                    dataController.archiveCard(itemData, !page.showArchivedCardsMode)
+                    dataController.archiveCard(page.cardForVisualItem(itemData), !page.showArchivedCardsMode)
                 }
                 onSelectionChanged: function(selectedItems) {
                     page.selectedCards = selectedItems || []
@@ -2786,20 +3161,23 @@ Page {
 
             UTControls.EmptyState {
                 Layout.fillWidth: true
-                visible: page.filteredEntries.length === 0 && dataController.viewMode === "cards" && !dataController.loading && page.searchQuery.length === 0
+                visible: page.filteredEntries.length === 0 && dataController.viewMode === "cards" && !page.archiveOverviewMode && !dataController.loading && page.searchQuery.length === 0
                 message: i18n.tr("No cards found.")
             }
 
             UTControls.EmptyState {
                 Layout.fillWidth: true
-                visible: page.filteredEntries.length === 0 && !dataController.loading && (page.searchQuery.length > 0 || dataController.viewMode === "boards")
+                visible: page.filteredEntries.length === 0 && !page.archiveOverviewMode && !dataController.loading && (page.searchQuery.length > 0 || dataController.viewMode === "boards")
                 message: page.searchQuery.length > 0 ? i18n.tr("No matching items") : i18n.tr("Open the menu and choose a board.")
             }
         }
     }
 
     Rectangle {
-        visible: dataController.viewMode === "cards" && page.stackOptions().length > 0
+        visible: dataController.viewMode === "cards"
+            && !page.archiveOverviewMode
+            && !page.showArchivedCardsMode
+            && dataController.selectedBoardId > 0
         anchors {
             right: parent.right
             bottom: parent.bottom
@@ -2888,24 +3266,16 @@ Page {
             }
         }
 
-        Label {
-            Layout.fillWidth: true
-            visible: dataController.selectedBoardId > 0
-            text: dataController.selectedBoardTitle || i18n.tr("Cards")
-            font.bold: true
-            opacity: 0.72
-        }
-
         Rectangle {
             Layout.fillWidth: true
             Layout.preferredHeight: units.gu(5.2)
-            visible: dataController.selectedBoardId > 0
+            visible: dataController.selectedBoardId > 0 || page.archiveOverviewCount() > 0
             radius: units.gu(0.55)
-            color: dataController.viewMode === "cards" && !page.showArchivedCardsMode
+            color: page.archiveOverviewMode
                 ? Qt.rgba(0.17, 0.5, 0.72, 0.16)
                 : "transparent"
             border.width: 1
-            border.color: dataController.viewMode === "cards" && !page.showArchivedCardsMode
+            border.color: page.archiveOverviewMode
                 ? page.actionBlue
                 : "#7a7a7a"
 
@@ -2916,14 +3286,14 @@ Page {
 
                 Label {
                     Layout.fillWidth: true
-                    text: i18n.tr("Cards")
+                    text: i18n.tr("Archive")
                     color: theme.palette.normal.backgroundText
                     font.bold: true
                     elide: Text.ElideRight
                 }
 
                 Label {
-                    text: String(page.activeCards().length)
+                    text: String(page.archiveOverviewCount())
                     color: theme.palette.normal.backgroundText
                     opacity: 0.72
                 }
@@ -2931,46 +3301,7 @@ Page {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: page.showActiveCards()
-            }
-        }
-
-        Rectangle {
-            Layout.fillWidth: true
-            Layout.preferredHeight: units.gu(5.2)
-            visible: dataController.selectedBoardId > 0
-            radius: units.gu(0.55)
-            color: dataController.viewMode === "cards" && page.showArchivedCardsMode
-                ? Qt.rgba(0.17, 0.5, 0.72, 0.16)
-                : "transparent"
-            border.width: 1
-            border.color: dataController.viewMode === "cards" && page.showArchivedCardsMode
-                ? page.actionBlue
-                : "#7a7a7a"
-
-            RowLayout {
-                anchors.fill: parent
-                anchors.margins: units.gu(1)
-                spacing: units.gu(1)
-
-                Label {
-                    Layout.fillWidth: true
-                    text: i18n.tr("Archived cards")
-                    color: theme.palette.normal.backgroundText
-                    font.bold: true
-                    elide: Text.ElideRight
-                }
-
-                Label {
-                    text: String(page.archivedCardCount())
-                    color: theme.palette.normal.backgroundText
-                    opacity: 0.72
-                }
-            }
-
-            MouseArea {
-                anchors.fill: parent
-                onClicked: page.showArchivedCards()
+                onClicked: page.showArchiveOverview()
             }
         }
 
@@ -3009,6 +3340,13 @@ Page {
                         elide: Text.ElideRight
                     }
 
+                    Label {
+                        text: String(page.boardCardCount(modelData))
+                        color: theme.palette.normal.backgroundText
+                        opacity: 0.72
+                        font.bold: true
+                    }
+
                     Rectangle {
                         Layout.preferredWidth: units.gu(3.8)
                         Layout.preferredHeight: units.gu(3.8)
@@ -3038,6 +3376,8 @@ Page {
                     anchors.rightMargin: units.gu(4.8)
                     onClicked: {
                         page.drawerOpen = false
+                        page.archiveOverviewMode = false
+                        page.showArchivedCardsMode = false
                         dataController.openBoard(modelData.id, modelData.title, modelData.labels || [])
                     }
                     }
