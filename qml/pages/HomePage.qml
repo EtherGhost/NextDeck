@@ -6,6 +6,7 @@ import QtGraphicalEffects 1.0
 import Qt.labs.settings 1.0
 import "../backend"
 import "qrc:/NextCommon" as NextCommon
+import "qrc:/UTControls" as UTControls
 
 Page {
     id: page
@@ -19,6 +20,12 @@ Page {
     property var selectedList: ({})
     property var selectedCard: ({})
     property var selectedBoard: ({})
+    property var selectedCards: []
+    property var bulkCardsQueue: []
+    property string bulkCardsOperation: ""
+    property var bulkCardsStack: ({})
+    property bool bulkCardsRunning: false
+    property bool selectionMode: false
     property var filteredEntries: []
     property var visibleCardEntries: []
     property var visibleBoardEntries: []
@@ -38,7 +45,7 @@ Page {
     property var draftFilterUserIds: []
     property bool showArchivedCardsMode: false
     property bool showArchivedBoardsMode: uiSettings.showArchivedBoardsMode
-    property bool cardPullToRefreshEnabled: true
+    property bool cardPullToRefreshEnabled: appController ? appController.pullToRefreshEnabled : true
     onShowArchivedCardsModeChanged: updateVisibleCardEntries()
     onShowArchivedBoardsModeChanged: {
         uiSettings.showArchivedBoardsMode = showArchivedBoardsMode
@@ -261,6 +268,86 @@ Page {
     function showCardOptions(card) {
         selectedCard = card || ({})
         PopupUtils.open(cardOptionsDialog)
+    }
+
+    function selectedCardItems() {
+        var output = []
+        var source = selectedCards || []
+        for (var i = 0; i < source.length; ++i) {
+            var item = source[i] && source[i].itemData ? source[i].itemData : source[i]
+            if (item && item.type === "card") {
+                output.push(item)
+            }
+        }
+        return output
+    }
+
+    function selectedCardCount() {
+        return selectedCardItems().length
+    }
+
+    function clearCardSelection() {
+        selectedCards = []
+        selectionMode = false
+        if (reorderableCards) {
+            reorderableCards.clearSelection()
+        }
+    }
+
+    function startBulkCardOperation(operation, cards, stack) {
+        bulkCardsQueue = (cards || []).slice(0)
+        bulkCardsOperation = operation || ""
+        bulkCardsStack = stack || ({})
+        bulkCardsRunning = bulkCardsQueue.length > 0
+        page.clearCardSelection()
+        processNextBulkCard()
+    }
+
+    function processNextBulkCard() {
+        if (!bulkCardsRunning || dataController.loading) {
+            return
+        }
+        if (bulkCardsQueue.length === 0) {
+            bulkCardsRunning = false
+            bulkCardsOperation = ""
+            bulkCardsStack = ({})
+            dataController.statusText = i18n.tr("Bulk action finished.")
+            return
+        }
+        var cards = bulkCardsQueue.slice(0)
+        var card = cards.shift()
+        bulkCardsQueue = cards
+        if (bulkCardsOperation === "archive") {
+            dataController.archiveCard(card, true)
+        } else if (bulkCardsOperation === "restore") {
+            dataController.archiveCard(card, false)
+        } else if (bulkCardsOperation === "delete") {
+            dataController.deleteCard(card)
+        } else if (bulkCardsOperation === "move") {
+            dataController.moveCardToStack(card, bulkCardsStack)
+        }
+        Qt.callLater(processNextBulkCard)
+    }
+
+    function archiveSelectedCards(archived) {
+        var cards = selectedCardItems()
+        if (cards.length > 0) {
+            startBulkCardOperation(archived === true ? "archive" : "restore", cards, ({}))
+        }
+    }
+
+    function deleteSelectedCards() {
+        var cards = selectedCardItems()
+        if (cards.length > 0) {
+            startBulkCardOperation("delete", cards, ({}))
+        }
+    }
+
+    function moveSelectedCardsToStack(stack) {
+        var cards = selectedCardItems()
+        if (cards.length > 0) {
+            startBulkCardOperation("move", cards, stack)
+        }
     }
 
     function cardShareLink(card) {
@@ -928,7 +1015,7 @@ Page {
                 height: units.gu(5)
                 spacing: units.gu(0.8)
 
-                NextCommon.AppButton {
+                UTControls.AppButton {
                     width: (parent.width - parent.spacing) / 2
                     height: parent.height
                     enabled: !dataController.loading
@@ -941,7 +1028,7 @@ Page {
                     }
                 }
 
-                NextCommon.AppButton {
+                UTControls.AppButton {
                     width: (parent.width - parent.spacing) / 2
                     height: parent.height
                     text: i18n.tr("Close")
@@ -979,7 +1066,7 @@ Page {
                             {"value": "due", "label": i18n.tr("Due date")}
                         ]
 
-                        NextCommon.AppButton {
+                        UTControls.AppButton {
                             width: Math.max(units.gu(10), String(modelData.label || "").length * units.gu(0.75) + units.gu(2.4))
                             height: units.gu(4.6)
                             text: modelData.label
@@ -1002,7 +1089,7 @@ Page {
                     width: parent.width
                     spacing: units.gu(0.35)
 
-                    NextCommon.AppButton {
+                    UTControls.AppButton {
                         width: parent.width
                         height: units.gu(4.4)
                         text: page.draftFilterNoLabel ? "\u2713 " + i18n.tr("No assigned tag") : i18n.tr("No assigned tag")
@@ -1016,7 +1103,7 @@ Page {
                     Repeater {
                         model: page.labelOptions()
 
-                        NextCommon.AppButton {
+                        UTControls.AppButton {
                             width: tagFilterRow.width
                             height: units.gu(4.4)
                             selected: page.optionSelected(page.draftFilterLabelIds, Number(modelData.id || 0))
@@ -1046,7 +1133,7 @@ Page {
                     width: parent.width
                     spacing: units.gu(0.35)
 
-                    NextCommon.AppButton {
+                    UTControls.AppButton {
                         width: parent.width
                         height: units.gu(4.4)
                         text: page.draftFilterNoUser ? "\u2713 " + i18n.tr("Unassigned") : i18n.tr("Unassigned")
@@ -1060,7 +1147,7 @@ Page {
                     Repeater {
                         model: page.userOptions()
 
-                        NextCommon.AppButton {
+                        UTControls.AppButton {
                             width: userFilterRow.width
                             height: units.gu(4.4)
                             selected: page.optionSelected(page.draftFilterUserIds, page.userId(modelData))
@@ -1097,7 +1184,7 @@ Page {
                             {"value": "undone", "label": i18n.tr("Not done")}
                         ]
 
-                        NextCommon.AppButton {
+                        UTControls.AppButton {
                             width: doneFilterRow.width
                             height: units.gu(4.4)
                             selected: page.draftFilterDoneMode === modelData.value
@@ -1133,7 +1220,7 @@ Page {
                             {"value": "later", "label": i18n.tr("Later")}
                         ]
 
-                        NextCommon.AppButton {
+                        UTControls.AppButton {
                             width: dueFilterRow.width
                             height: units.gu(4.4)
                             selected: page.draftFilterDueMode === modelData.value
@@ -1152,21 +1239,21 @@ Page {
                 height: units.gu(5)
                 spacing: units.gu(0.6)
 
-                NextCommon.AppButton {
+                UTControls.AppButton {
                     width: (parent.width - units.gu(1.2)) / 3
                     height: parent.height
                     text: i18n.tr("Cancel")
                     onClicked: PopupUtils.close(dialog)
                 }
 
-                NextCommon.AppButton {
+                UTControls.AppButton {
                     width: (parent.width - units.gu(1.2)) / 3
                     height: parent.height
                     text: i18n.tr("Reset")
                     onClicked: page.resetFilterDraft()
                 }
 
-                NextCommon.AppButton {
+                UTControls.AppButton {
                     width: (parent.width - units.gu(1.2)) / 3
                     height: parent.height
                     text: i18n.tr("Filter")
@@ -1196,7 +1283,7 @@ Page {
                 onTextChanged: page.newCardTitle = text
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Create")
@@ -1214,7 +1301,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Cancel")
@@ -1237,7 +1324,7 @@ Page {
                 onTextChanged: page.newBoardTitle = text
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Create")
@@ -1252,7 +1339,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Cancel")
@@ -1275,7 +1362,7 @@ Page {
                 onTextChanged: page.newListTitle = text
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Create")
@@ -1289,7 +1376,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Cancel")
@@ -1324,7 +1411,7 @@ Page {
             Repeater {
                 model: dataController.sharees || []
 
-                NextCommon.AppButton {
+                UTControls.AppButton {
                     width: parent ? parent.width : units.gu(34)
                     height: units.gu(4.8)
                     text: i18n.tr("Add %1").arg(modelData.label || modelData.id)
@@ -1369,7 +1456,7 @@ Page {
                             height: parent.height
                             spacing: units.gu(0.5)
 
-                            NextCommon.AppButton {
+                            UTControls.AppButton {
                                 width: units.gu(12)
                                 height: parent.height
                                 text: modelData.permissionEdit ? "\u2713 " + i18n.tr("Edit") : i18n.tr("Edit")
@@ -1379,7 +1466,7 @@ Page {
                                 onClicked: page.toggleAclPermission(modelData, "permissionEdit")
                             }
 
-                            NextCommon.AppButton {
+                            UTControls.AppButton {
                                 width: units.gu(12)
                                 height: parent.height
                                 text: modelData.permissionShare ? "\u2713 " + i18n.tr("Share") : i18n.tr("Share")
@@ -1389,7 +1476,7 @@ Page {
                                 onClicked: page.toggleAclPermission(modelData, "permissionShare")
                             }
 
-                            NextCommon.AppButton {
+                            UTControls.AppButton {
                                 width: units.gu(13)
                                 height: parent.height
                                 text: modelData.permissionManage ? "\u2713 " + i18n.tr("Manage") : i18n.tr("Manage")
@@ -1399,7 +1486,7 @@ Page {
                                 onClicked: page.toggleAclPermission(modelData, "permissionManage")
                             }
 
-                            NextCommon.AppButton {
+                            UTControls.AppButton {
                                 width: units.gu(13)
                                 height: parent.height
                                 text: i18n.tr("Remove")
@@ -1418,7 +1505,7 @@ Page {
                 wrapMode: Text.WordWrap
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Close")
@@ -1434,7 +1521,7 @@ Page {
             id: dialog
             title: page.selectedBoard.title || i18n.tr("Board")
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Share board")
@@ -1446,7 +1533,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: page.selectedBoard.archived === true ? i18n.tr("Restore board") : i18n.tr("Archive board")
@@ -1457,7 +1544,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Delete board")
@@ -1469,7 +1556,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Cancel")
@@ -1486,7 +1573,7 @@ Page {
             title: i18n.tr("Delete board")
             text: i18n.tr("Delete this board and its cards?")
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Delete")
@@ -1498,7 +1585,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Cancel")
@@ -1531,7 +1618,7 @@ Page {
                 height: units.gu(4.8)
                 spacing: units.gu(0.8)
 
-                NextCommon.AppButton {
+                UTControls.AppButton {
                     width: (parent.width - parent.spacing) / 2
                     height: parent.height
                     text: i18n.tr("Active")
@@ -1541,7 +1628,7 @@ Page {
                     onClicked: page.showArchivedCardsMode = false
                 }
 
-                NextCommon.AppButton {
+                UTControls.AppButton {
                     width: (parent.width - parent.spacing) / 2
                     height: parent.height
                     text: i18n.tr("Archived")
@@ -1552,7 +1639,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 visible: dialog.hasList
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
@@ -1571,7 +1658,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 visible: dialog.hasList
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
@@ -1585,7 +1672,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Add list")
@@ -1598,7 +1685,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 visible: dialog.hasList
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
@@ -1610,7 +1697,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 visible: dialog.hasList
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
@@ -1623,7 +1710,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Cancel")
@@ -1639,7 +1726,7 @@ Page {
             id: dialog
             title: page.selectedCard.title || i18n.tr("Card")
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Share link")
@@ -1650,7 +1737,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Share content")
@@ -1661,7 +1748,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Assign card to me")
@@ -1672,7 +1759,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Move card")
@@ -1683,7 +1770,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: page.selectedCard.archived === true ? i18n.tr("Restore card") : i18n.tr("Archive card")
@@ -1694,18 +1781,18 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Delete card")
                 variant: "destructive"
                 onClicked: {
                     PopupUtils.close(dialog)
-                    dataController.deleteCard(page.selectedCard)
+                    PopupUtils.open(deleteCardConfirmDialog)
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Cancel")
@@ -1725,7 +1812,7 @@ Page {
             Repeater {
                 model: page.stackOptions()
 
-                NextCommon.AppButton {
+                UTControls.AppButton {
                     visible: Number(modelData.stackId || 0) !== Number(page.selectedCard.stackId || 0)
                     width: visible ? (parent ? parent.width : units.gu(34)) : 0
                     height: visible ? units.gu(4.8) : 0
@@ -1740,7 +1827,99 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
+                width: parent ? parent.width : units.gu(34)
+                height: units.gu(4.8)
+                text: i18n.tr("Cancel")
+                onClicked: PopupUtils.close(dialog)
+            }
+        }
+    }
+
+    Component {
+        id: deleteCardConfirmDialog
+
+        Dialog {
+            id: dialog
+            title: i18n.tr("Delete card")
+            text: i18n.tr("Delete this card?")
+
+            UTControls.AppButton {
+                width: parent ? parent.width : units.gu(34)
+                height: units.gu(4.8)
+                text: i18n.tr("Delete")
+                variant: "destructive"
+                enabled: page.selectedCard && page.selectedCard.id && !dataController.loading
+                onClicked: {
+                    PopupUtils.close(dialog)
+                    dataController.deleteCard(page.selectedCard)
+                }
+            }
+
+            UTControls.AppButton {
+                width: parent ? parent.width : units.gu(34)
+                height: units.gu(4.8)
+                text: i18n.tr("Cancel")
+                onClicked: PopupUtils.close(dialog)
+            }
+        }
+    }
+
+    Component {
+        id: moveSelectedCardsDialog
+
+        Dialog {
+            id: dialog
+            title: i18n.tr("Move selected cards")
+            text: i18n.tr("Choose destination list.")
+
+            Repeater {
+                model: page.stackOptions()
+
+                UTControls.AppButton {
+                    width: parent ? parent.width : units.gu(34)
+                    height: units.gu(4.8)
+                    text: modelData.stackTitle
+                    enabled: page.selectedCardCount() > 0 && !dataController.loading
+                    variant: "primary"
+                    accentColor: page.actionBlue
+                    onClicked: {
+                        PopupUtils.close(dialog)
+                        page.moveSelectedCardsToStack(modelData)
+                    }
+                }
+            }
+
+            UTControls.AppButton {
+                width: parent ? parent.width : units.gu(34)
+                height: units.gu(4.8)
+                text: i18n.tr("Cancel")
+                onClicked: PopupUtils.close(dialog)
+            }
+        }
+    }
+
+    Component {
+        id: deleteSelectedCardsDialog
+
+        Dialog {
+            id: dialog
+            title: i18n.tr("Delete selected cards")
+            text: i18n.tr("Delete %1 selected card(s)?").arg(page.selectedCardCount())
+
+            UTControls.AppButton {
+                width: parent ? parent.width : units.gu(34)
+                height: units.gu(4.8)
+                text: i18n.tr("Delete")
+                variant: "destructive"
+                enabled: page.selectedCardCount() > 0 && !dataController.loading
+                onClicked: {
+                    PopupUtils.close(dialog)
+                    page.deleteSelectedCards()
+                }
+            }
+
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Cancel")
@@ -1751,6 +1930,11 @@ Page {
 
     DeckController {
         id: dataController
+        onLoadingChanged: {
+            if (!loading) {
+                page.processNextBulkCard()
+            }
+        }
         onEntriesChanged: {
             page.updateFilteredEntries()
             page.updateVisibleBoardEntries()
@@ -1785,6 +1969,8 @@ Page {
             property int itemIndex: -1
             property bool placeholder: false
             property bool dragging: false
+            property bool selected: false
+            property bool selectionMode: false
             readonly property var labelsData: page.cardLabels(itemData)
             readonly property var infoBadgesData: page.cardInfoBadges(itemData)
             readonly property var assignedUsersData: page.cardAssignedUsers(itemData)
@@ -1808,8 +1994,8 @@ Page {
             height: implicitHeight
             radius: units.gu(0.7)
             color: theme.palette.normal.background
-            border.width: placeholder ? 2 : 1
-            border.color: placeholder ? page.actionBlue : theme.palette.normal.base
+            border.width: placeholder || selected ? 2 : 1
+            border.color: placeholder || selected ? page.actionBlue : theme.palette.normal.base
 
             Item {
                 id: cardMenuButtonNew
@@ -2197,15 +2383,73 @@ Page {
                 }
             }
 
-            NextCommon.ReorderableListView {
+            Rectangle {
+                Layout.fillWidth: true
+                Layout.preferredHeight: page.selectionMode ? units.gu(5.6) : 0
+                visible: page.selectionMode
+                radius: units.gu(0.7)
+                color: Qt.rgba(0.17, 0.5, 0.72, 0.12)
+                border.width: 1
+                border.color: Qt.rgba(0.17, 0.5, 0.72, 0.36)
+
+                RowLayout {
+                    anchors {
+                        fill: parent
+                        leftMargin: units.gu(1)
+                        rightMargin: units.gu(1)
+                    }
+                    spacing: units.gu(0.6)
+
+                    Label {
+                        Layout.fillWidth: true
+                        text: i18n.tr("%1 selected").arg(page.selectedCardCount())
+                        font.bold: true
+                        elide: Text.ElideRight
+                    }
+
+                    UTControls.AppButton {
+                        Layout.preferredWidth: units.gu(9)
+                        height: units.gu(4.4)
+                        text: page.showArchivedCardsMode ? i18n.tr("Restore") : i18n.tr("Archive")
+                        enabled: page.selectedCardCount() > 0 && !dataController.loading
+                        onClicked: page.archiveSelectedCards(!page.showArchivedCardsMode)
+                    }
+
+                    UTControls.AppButton {
+                        Layout.preferredWidth: units.gu(8)
+                        height: units.gu(4.4)
+                        text: i18n.tr("Move")
+                        enabled: page.selectedCardCount() > 0 && page.stackOptions().length > 1 && !dataController.loading
+                        onClicked: PopupUtils.open(moveSelectedCardsDialog)
+                    }
+
+                    UTControls.AppButton {
+                        Layout.preferredWidth: units.gu(8)
+                        height: units.gu(4.4)
+                        text: i18n.tr("Delete")
+                        variant: "destructive"
+                        enabled: page.selectedCardCount() > 0 && !dataController.loading
+                        onClicked: PopupUtils.open(deleteSelectedCardsDialog)
+                    }
+
+                    UTControls.AppButton {
+                        Layout.preferredWidth: units.gu(8)
+                        height: units.gu(4.4)
+                        text: i18n.tr("Cancel")
+                        onClicked: page.clearCardSelection()
+                    }
+                }
+            }
+
+            UTControls.ReorderableListView {
                 id: reorderableCards
                 Layout.fillWidth: true
-                Layout.preferredHeight: Math.max(units.gu(28), page.height - page.header.height - stackTabs.height - units.gu(7))
+                Layout.preferredHeight: Math.max(units.gu(28), page.height - page.header.height - stackTabs.height - units.gu(7) - (page.selectionMode ? units.gu(5.8) : 0))
                 visible: dataController.viewMode === "cards"
                     && page.visibleCardEntries.length > 0
                 model: page.visibleCardEntries
                 delegate: reorderCardDelegate
-                reorderEnabled: !dataController.loading && !page.showArchivedCardsMode
+                reorderEnabled: !dataController.loading && !page.showArchivedCardsMode && (!appController || appController.dragForMoveEnabled)
                 refreshing: dataController.loading
                 dragAreaRightMargin: units.gu(5.4)
                 pullRefreshThreshold: page.pullRefreshThreshold
@@ -2214,18 +2458,36 @@ Page {
                 pullToRefreshText: i18n.tr("Pull to refresh")
                 releaseToRefreshText: i18n.tr("Release to refresh")
                 refreshingText: i18n.tr("Refreshing...")
-
-                onItemClicked: function(index, item) {
-                    if (item && item.type === "card") {
-                        page.openCard(item)
-                    }
-                }
+                swipeActionsEnabled: appController ? appController.swipeActionsEnabled : true
+                swipeRightEnabled: appController ? appController.swipeActionsEnabled : true
+                swipeLeftEnabled: appController ? appController.swipeActionsEnabled : true
+                swipeActionsReversed: appController ? appController.swipeActionsReversed : false
+                swipeRightText: i18n.tr("Delete")
+                swipeLeftText: page.showArchivedCardsMode ? i18n.tr("Restore") : i18n.tr("Archive")
+                swipeRightColor: "#c23b3b"
+                swipeLeftColor: page.actionBlue
+                selectionEnabled: appController ? appController.multiSelectEnabled : true
 
                 onMoveRequested: function(fromIndex, toIndex) {
                     page.reorderVisibleCards(fromIndex, toIndex)
                 }
 
                 onRefreshRequested: dataController.refreshAll()
+                onSwipeRightRequested: function(index, itemData) {
+                    page.selectedCard = itemData || ({})
+                    PopupUtils.open(deleteCardConfirmDialog)
+                }
+                onSwipeLeftRequested: function(index, itemData) {
+                    dataController.archiveCard(itemData, !page.showArchivedCardsMode)
+                }
+                onSelectionChanged: function(selectedItems) {
+                    page.selectedCards = selectedItems || []
+                    page.selectionMode = page.selectedCardCount() > 0
+                }
+                onSelectionCleared: {
+                    page.selectedCards = []
+                    page.selectionMode = false
+                }
             }
 
             Repeater {
@@ -2497,13 +2759,13 @@ Page {
                 }
             }
 
-            NextCommon.EmptyState {
+            UTControls.EmptyState {
                 Layout.fillWidth: true
                 visible: page.filteredEntries.length === 0 && dataController.viewMode === "cards" && !dataController.loading && page.searchQuery.length === 0
                 message: i18n.tr("No cards found.")
             }
 
-            NextCommon.EmptyState {
+            UTControls.EmptyState {
                 Layout.fillWidth: true
                 visible: page.filteredEntries.length === 0 && !dataController.loading && (page.searchQuery.length > 0 || dataController.viewMode === "boards")
                 message: page.searchQuery.length > 0 ? i18n.tr("No matching items") : i18n.tr("Open the menu and choose a board.")
@@ -2580,7 +2842,7 @@ Page {
             Layout.preferredHeight: units.gu(4.6)
             spacing: units.gu(0.8)
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: (parent.width - parent.spacing) / 2
                 height: parent.height
                 text: i18n.tr("Active")
@@ -2590,7 +2852,7 @@ Page {
                 onClicked: page.showArchivedBoardsMode = false
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: (parent.width - parent.spacing) / 2
                 height: parent.height
                 text: i18n.tr("Archived")

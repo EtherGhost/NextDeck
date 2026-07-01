@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nextdeck.cloudsite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-29 12:57+0000\n"
+"POT-Creation-Date: 2026-07-01 09:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,293 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: qml/NextCommon/AboutPage.qml:17 qml/pages/HomePage.qml:2828
+msgid "About"
+msgstr ""
+
+#: qml/NextCommon/AboutPage.qml:58
+msgid "Version %1"
+msgstr ""
+
+#: qml/NextCommon/AboutPage.qml:79
+msgid "License"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:41
+msgid "Select an account and authorize it for %1."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:48
+msgid "Accounts"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:87
+msgid ""
+"Authorization succeeded, but the Ubuntu Touch account did not expose a "
+"server address for %1."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:89
+msgid ""
+"Authorization succeeded for %1. Credentials are available to the app, but "
+"were not displayed or stored."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:118 qml/NextCommon/AccountPage.qml:857
+msgid ""
+"Ubuntu Touch Online Accounts did not allow %1 to use this account yet. Check "
+"that %1 is enabled for this account in System Settings > Accounts, then "
+"return here."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:121
+msgid ""
+"Authorization failed: %1. If the system did not show an Online Accounts "
+"prompt, open System Settings > Accounts and allow %2 for this account, then "
+"try again."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:202
+msgid "Allow account access"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:208
+msgid "Open System Settings"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:218 qml/pages/CardDetailPage.qml:448
+#: qml/pages/CardDetailPage.qml:475
+msgid "OK"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:247 qml/pages/HomePage.qml:2826
+msgid "Account"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:314
+msgid "Server address"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:322
+msgid "https://cloud.example.com"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:331
+msgid ""
+"This app uses Ubuntu Touch Online Accounts. Edit this only if the system "
+"account did not expose the correct server address."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:339
+msgid "Available accounts"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:365
+msgid "No Nextcloud account found"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:372
+msgid ""
+"Add a Nextcloud or ownCloud account in Ubuntu Touch System Settings > "
+"Accounts. Then return here and select it."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:384
+msgid "How to add an account"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:506
+msgid "Allow %1 in Ubuntu Touch account settings first"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:506
+msgid "Allowed for %1"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:507
+msgid "Nextcloud account discovered"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:529
+msgid "Verify selected account"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:529
+msgid "Verifying account..."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:551
+msgid "How to allow this account"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:604
+msgid "Selected %1. Verifying authorization..."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:670
+msgid "Saved account selected. Verify again if needed."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:788 qml/NextCommon/AccountPage.qml:801
+msgid "Select an account first."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:806 qml/NextCommon/AccountPage.qml:853
+msgid "Verifying Online Accounts authorization..."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:814
+msgid ""
+"Waiting for Ubuntu Touch Online Accounts to confirm permission for %1. If "
+"this does not finish, check that %1 is allowed for this account in System "
+"Settings > Accounts."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:832
+msgid "Refreshing Ubuntu Touch account permission for %1..."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:870
+msgid "Checking account permission for %1..."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:894
+msgid ""
+"Open Ubuntu Touch System Settings manually, go to Accounts, add a Nextcloud "
+"or ownCloud account, then return to %1 and select it."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:901
+msgid ""
+"Open Ubuntu Touch System Settings manually, go to Accounts, select %1, allow "
+"%2 for that account, then return here. %2 will verify it automatically."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:905
+msgid ""
+"Open Ubuntu Touch System Settings manually, go to Accounts, select the "
+"Nextcloud account, allow %1 for that account, then return here. %1 will "
+"verify it automatically."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:927
+msgid "Account permission detected. Verifying access..."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:931
+msgid ""
+"Waiting for account permission. If you already allowed %1, return here and "
+"wait a moment."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:968
+msgid ""
+"No account is saved yet. Select a Nextcloud account below, authorize it, and "
+"verify access."
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:971
+msgid ""
+"%1 on %2\n"
+"providerId=%3 serviceId=%4"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:972
+msgid "Saved account"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:973
+msgid "server URL missing"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:985 qml/NextCommon/AccountPage.qml:1013
+msgid "No account selected"
+msgstr ""
+
+#: qml/NextCommon/AccountPage.qml:996
+msgid "The selected Ubuntu Touch account did not expose a server address."
+msgstr ""
+
+#: qml/NextCommon/AccountSessionAdapter.qml:66
+msgid ""
+"Authentication succeeded, but the required Online Accounts credentials were "
+"not available."
+msgstr ""
+
+#: qml/NextCommon/AccountSessionAdapter.qml:98
+msgid "Authentication failed: %1"
+msgstr ""
+
+#: qml/NextCommon/AccountSessionAdapter.qml:127
+msgid "Desktop test credentials are incomplete."
+msgstr ""
+
+#: qml/NextCommon/AccountSessionAdapter.qml:146
+msgid ""
+"No account selected. Open Account first and authorize a Nextcloud account."
+msgstr ""
+
+#: qml/NextCommon/AccountSessionAdapter.qml:152
+msgid "No server URL configured. Open Account and authorize the OS account."
+msgstr ""
+
+#: qml/NextCommon/AccountSessionAdapter.qml:170
+msgid "Waiting for Online Accounts..."
+msgstr ""
+
+#: qml/NextCommon/AccountSessionAdapter.qml:172
+msgid ""
+"Selected Online Accounts service was not found. Open Account and verify the "
+"account again."
+msgstr ""
+
+#: qml/NextCommon/LanguagePage.qml:11
+msgid ""
+"Some translations are AI-assisted and not fully reviewed. You can help "
+"improve translations in the project repository."
+msgstr ""
+
+#: qml/NextCommon/LanguagePage.qml:14 qml/pages/HomePage.qml:2825
+msgid "Language"
+msgstr ""
+
+#: qml/NextCommon/LanguagePage.qml:34
+msgid ""
+"Choose the language %1 should use. Restart the app after changing language."
+msgstr ""
+
+#: qml/NextCommon/LanguagePage.qml:131
+msgid "%1 will follow the system language after restart."
+msgstr ""
+
+#: qml/NextCommon/LanguagePage.qml:132
+msgid "%1 will use %2 after restart."
+msgstr ""
+
+#: qml/NextCommon/SettingsShell.qml:8 qml/pages/HomePage.qml:2827
+#: qml/pages/SettingsPage.qml:12
+msgid "Settings"
+msgstr ""
+
+#: qml/UTControls/ConfirmDialog.qml:10
+msgid "Confirm"
+msgstr ""
+
+#: qml/UTControls/ConfirmDialog.qml:11 qml/pages/CardDetailPage.qml:256
+#: qml/pages/CardDetailPage.qml:286 qml/pages/CardDetailPage.qml:319
+#: qml/pages/CardDetailPage.qml:352 qml/pages/CardDetailPage.qml:431
+#: qml/pages/CardDetailPage.qml:451 qml/pages/CardDetailPage.qml:478
+#: qml/pages/CardDetailPage.qml:1001 qml/pages/CardDetailPage.qml:1172
+#: qml/pages/HomePage.qml:1245 qml/pages/HomePage.qml:1307
+#: qml/pages/HomePage.qml:1345 qml/pages/HomePage.qml:1382
+#: qml/pages/HomePage.qml:1562 qml/pages/HomePage.qml:1591
+#: qml/pages/HomePage.qml:1716 qml/pages/HomePage.qml:1798
+#: qml/pages/HomePage.qml:1833 qml/pages/HomePage.qml:1862
+#: qml/pages/HomePage.qml:1896 qml/pages/HomePage.qml:1925
+#: qml/pages/HomePage.qml:2438
+msgid "Cancel"
+msgstr ""
+
 #: qml/backend/DeckApiClient.qml:48
 msgid "boards"
 msgstr ""
@@ -24,7 +311,7 @@ msgstr ""
 #: qml/backend/DeckApiClient.qml:66 qml/backend/DeckApiClient.qml:85
 #: qml/backend/DeckApiClient.qml:638 qml/backend/DeckCache.qml:86
 #: qml/backend/DeckCache.qml:175 qml/backend/DeckController.qml:901
-#: qml/pages/HomePage.qml:2633
+#: qml/pages/HomePage.qml:2895
 msgid "Untitled board"
 msgstr ""
 
@@ -88,7 +375,7 @@ msgstr ""
 #: qml/backend/DeckApiClient.qml:191 qml/backend/DeckApiClient.qml:195
 #: qml/backend/DeckApiClient.qml:639 qml/backend/DeckCache.qml:87
 #: qml/backend/DeckController.qml:286 qml/backend/DeckController.qml:671
-#: qml/backend/DeckController.qml:710 qml/pages/HomePage.qml:1435
+#: qml/backend/DeckController.qml:710 qml/pages/HomePage.qml:1522
 msgid "Board"
 msgstr ""
 
@@ -122,9 +409,9 @@ msgstr ""
 
 #: qml/backend/DeckApiClient.qml:272 qml/backend/DeckApiClient.qml:919
 #: qml/backend/DeckCache.qml:303 qml/backend/DeckCache.qml:334
-#: qml/backend/DeckController.qml:834 qml/pages/CardDetailPage.qml:90
-#: qml/pages/CardDetailPage.qml:1564 qml/pages/CardDetailPage.qml:1947
-#: qml/pages/CardDetailPage.qml:2523 qml/pages/HomePage.qml:1211
+#: qml/backend/DeckController.qml:834 qml/pages/CardDetailPage.qml:91
+#: qml/pages/CardDetailPage.qml:1565 qml/pages/CardDetailPage.qml:1948
+#: qml/pages/CardDetailPage.qml:2524 qml/pages/HomePage.qml:1298
 msgid "Untitled card"
 msgstr ""
 
@@ -143,8 +430,8 @@ msgstr ""
 #: qml/backend/DeckCache.qml:115 qml/backend/DeckCache.qml:303
 #: qml/backend/DeckCache.qml:333 qml/backend/DeckCache.qml:335
 #: qml/backend/DeckController.qml:832 qml/backend/DeckController.qml:833
-#: qml/backend/DeckController.qml:1272 qml/pages/HomePage.qml:91
-#: qml/pages/HomePage.qml:1190 qml/pages/HomePage.qml:1518
+#: qml/backend/DeckController.qml:1272 qml/pages/HomePage.qml:98
+#: qml/pages/HomePage.qml:1277 qml/pages/HomePage.qml:1605
 msgid "List"
 msgstr ""
 
@@ -197,8 +484,8 @@ msgid "user assignment"
 msgstr ""
 
 #: qml/backend/DeckApiClient.qml:426 qml/backend/DeckController.qml:1222
-#: qml/pages/CardDetailPage.qml:722 qml/pages/HomePage.qml:1954
-#: qml/pages/HomePage.qml:2379
+#: qml/pages/CardDetailPage.qml:723 qml/pages/HomePage.qml:2140
+#: qml/pages/HomePage.qml:2641
 msgid "Label"
 msgstr ""
 
@@ -284,7 +571,7 @@ msgstr ""
 
 #: qml/backend/DeckApiClient.qml:907 qml/backend/DeckAttachmentOpenPage.qml:49
 #: qml/backend/DeckAttachmentOpenPageUbuntu.qml:49
-#: qml/pages/CardDetailPage.qml:1700
+#: qml/pages/CardDetailPage.qml:1701
 msgid "Attachment"
 msgstr ""
 
@@ -367,7 +654,7 @@ msgstr ""
 
 #: qml/backend/DeckController.qml:16 qml/backend/DeckController.qml:692
 #: qml/backend/DeckController.qml:749 qml/backend/DeckController.qml:1626
-#: qml/pages/HomePage.qml:2573
+#: qml/pages/HomePage.qml:2835
 msgid "Boards"
 msgstr ""
 
@@ -392,12 +679,12 @@ msgstr ""
 #: qml/backend/DeckController.qml:476 qml/backend/DeckController.qml:498
 #: qml/backend/DeckController.qml:509 qml/backend/DeckController.qml:531
 #: qml/backend/DeckController.qml:545 qml/backend/DeckController.qml:799
-#: qml/backend/DeckController.qml:1356 qml/pages/CardDetailPage.qml:1921
-#: qml/pages/HomePage.qml:867
+#: qml/backend/DeckController.qml:1356 qml/pages/CardDetailPage.qml:1922
+#: qml/pages/HomePage.qml:954
 msgid "Up to date"
 msgstr ""
 
-#: qml/backend/DeckController.qml:274 qml/pages/HomePage.qml:2503
+#: qml/backend/DeckController.qml:274 qml/pages/HomePage.qml:2765
 msgid "No cards found."
 msgstr ""
 
@@ -486,7 +773,7 @@ msgid "Activity loaded."
 msgstr ""
 
 #: qml/backend/DeckController.qml:557 qml/backend/DeckController.qml:1356
-#: qml/backend/DeckController.qml:1536 qml/pages/CardDetailPage.qml:1882
+#: qml/backend/DeckController.qml:1536 qml/pages/CardDetailPage.qml:1883
 msgid "Conflict"
 msgstr ""
 
@@ -496,7 +783,7 @@ msgstr ""
 #: qml/backend/DeckController.qml:885 qml/backend/DeckController.qml:1074
 #: qml/backend/DeckController.qml:1126 qml/backend/DeckController.qml:1234
 #: qml/backend/DeckController.qml:1265 qml/backend/DeckController.qml:1323
-#: qml/pages/CardDetailPage.qml:1879 qml/pages/HomePage.qml:864
+#: qml/pages/CardDetailPage.qml:1880 qml/pages/HomePage.qml:951
 msgid "Sync failed"
 msgstr ""
 
@@ -615,7 +902,7 @@ msgstr ""
 msgid "Loading card..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1073 qml/pages/CardDetailPage.qml:1740
+#: qml/backend/DeckController.qml:1073 qml/pages/CardDetailPage.qml:1741
 msgid "Save the card before attaching files."
 msgstr ""
 
@@ -704,7 +991,7 @@ msgid "Refreshing"
 msgstr ""
 
 #: qml/backend/DeckShareExportPage.qml:7
-#: qml/backend/DeckShareExportPageUbuntu.qml:7 qml/pages/HomePage.qml:1385
+#: qml/backend/DeckShareExportPageUbuntu.qml:7 qml/pages/HomePage.qml:1472
 msgid "Share"
 msgstr ""
 
@@ -718,680 +1005,684 @@ msgstr ""
 msgid "Shared"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:237
+#: qml/pages/CardDetailPage.qml:238
 msgid "Delete card?"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:238
+#: qml/pages/CardDetailPage.qml:239
 msgid "This card will be deleted from Nextcloud Deck."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:243 qml/pages/CardDetailPage.qml:272
-#: qml/pages/CardDetailPage.qml:339 qml/pages/CardDetailPage.qml:991
-#: qml/pages/HomePage.qml:1492
+#: qml/pages/CardDetailPage.qml:244 qml/pages/CardDetailPage.qml:273
+#: qml/pages/CardDetailPage.qml:340 qml/pages/CardDetailPage.qml:992
+#: qml/pages/HomePage.qml:1579 qml/pages/HomePage.qml:1850
+#: qml/pages/HomePage.qml:1913 qml/pages/HomePage.qml:2429
+#: qml/pages/HomePage.qml:2465
 msgid "Delete"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:255 qml/pages/CardDetailPage.qml:285
-#: qml/pages/CardDetailPage.qml:318 qml/pages/CardDetailPage.qml:351
-#: qml/pages/CardDetailPage.qml:430 qml/pages/CardDetailPage.qml:450
-#: qml/pages/CardDetailPage.qml:477 qml/pages/CardDetailPage.qml:1000
-#: qml/pages/CardDetailPage.qml:1171 qml/pages/HomePage.qml:1158
-#: qml/pages/HomePage.qml:1220 qml/pages/HomePage.qml:1258
-#: qml/pages/HomePage.qml:1295 qml/pages/HomePage.qml:1475
-#: qml/pages/HomePage.qml:1504 qml/pages/HomePage.qml:1629
-#: qml/pages/HomePage.qml:1711 qml/pages/HomePage.qml:1746
-msgid "Cancel"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:266
+#: qml/pages/CardDetailPage.qml:267
 msgid "Delete label?"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:267
+#: qml/pages/CardDetailPage.qml:268
 msgid "The label will be removed from this board."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:297
+#: qml/pages/CardDetailPage.qml:298
 msgid "Remove attachment?"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:298
+#: qml/pages/CardDetailPage.qml:299
 msgid "Remove attachments?"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:300
+#: qml/pages/CardDetailPage.qml:301
 msgid "The selected attachment will be removed from this card."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:301
+#: qml/pages/CardDetailPage.qml:302
 msgid "The selected attachments will be removed from this card."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:306 qml/pages/CardDetailPage.qml:1162
-#: qml/pages/HomePage.qml:1405
+#: qml/pages/CardDetailPage.qml:307 qml/pages/CardDetailPage.qml:1163
+#: qml/pages/HomePage.qml:1492
 msgid "Remove"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:330
+#: qml/pages/CardDetailPage.qml:331
 msgid "Delete comment?"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:331
+#: qml/pages/CardDetailPage.qml:332
 msgid "Delete comments?"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:333
+#: qml/pages/CardDetailPage.qml:334
 msgid "The selected comment will be deleted from this card."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:334
+#: qml/pages/CardDetailPage.qml:335
 msgid "The selected comments will be deleted from this card."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:362 qml/pages/HomePage.qml:923
+#: qml/pages/CardDetailPage.qml:363 qml/pages/HomePage.qml:1010
 msgid "Sync status"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:368 qml/pages/HomePage.qml:947
-#: qml/pages/HomePage.qml:1424
+#: qml/pages/CardDetailPage.qml:369 qml/pages/HomePage.qml:1034
+#: qml/pages/HomePage.qml:1511
 msgid "Close"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:379
+#: qml/pages/CardDetailPage.qml:380
 msgid "Resolve conflict"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:380
+#: qml/pages/CardDetailPage.qml:381
 msgid ""
 "The server version changed while this card had local changes. Choose which "
 "version to keep."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:390
+#: qml/pages/CardDetailPage.qml:391
 msgid "Server version"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:400
+#: qml/pages/CardDetailPage.qml:401
 msgid "Local version"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:418
+#: qml/pages/CardDetailPage.qml:419
 msgid "Keep local version"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:418
+#: qml/pages/CardDetailPage.qml:419
 msgid "Use server version"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:442 qml/pages/CardDetailPage.qml:646
-#: qml/pages/HomePage.qml:979
+#: qml/pages/CardDetailPage.qml:443 qml/pages/CardDetailPage.qml:647
+#: qml/pages/HomePage.qml:1066
 msgid "Due date"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:447 qml/pages/CardDetailPage.qml:474
-msgid "OK"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:448 qml/pages/CardDetailPage.qml:2271
-#: qml/pages/CardDetailPage.qml:2348 qml/pages/HomePage.qml:1128
+#: qml/pages/CardDetailPage.qml:449 qml/pages/CardDetailPage.qml:2272
+#: qml/pages/CardDetailPage.qml:2349 qml/pages/HomePage.qml:1215
 msgid "Today"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:449
+#: qml/pages/CardDetailPage.qml:450
 msgid "Clear due date"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:469 qml/pages/CardDetailPage.qml:676
+#: qml/pages/CardDetailPage.qml:470 qml/pages/CardDetailPage.qml:677
 msgid "Time"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:475
+#: qml/pages/CardDetailPage.qml:476
 msgid "Now"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:476
+#: qml/pages/CardDetailPage.qml:477
 msgid "Clear time"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:535 qml/pages/HomePage.qml:2102
-#: qml/pages/HomePage.qml:2214
+#: qml/pages/CardDetailPage.qml:536 qml/pages/HomePage.qml:2288
+#: qml/pages/HomePage.qml:2458 qml/pages/SettingsPage.qml:58
 msgid "Pull to refresh"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:535 qml/pages/HomePage.qml:2101
-#: qml/pages/HomePage.qml:2215
+#: qml/pages/CardDetailPage.qml:536 qml/pages/HomePage.qml:2287
+#: qml/pages/HomePage.qml:2459
 msgid "Release to refresh"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:546
+#: qml/pages/CardDetailPage.qml:547
 msgid "Details"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:547 qml/pages/CardDetailPage.qml:1196
+#: qml/pages/CardDetailPage.qml:548 qml/pages/CardDetailPage.qml:1197
 msgid "Attachments"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:548
+#: qml/pages/CardDetailPage.qml:549
 msgid "Comments"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:549 qml/pages/CardDetailPage.qml:1324
+#: qml/pages/CardDetailPage.qml:550 qml/pages/CardDetailPage.qml:1325
 msgid "Activity"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:613
+#: qml/pages/CardDetailPage.qml:614
 msgid "Conflict. Server version changed while local changes are waiting."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:620
+#: qml/pages/CardDetailPage.qml:621
 msgid "Due"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:691
+#: qml/pages/CardDetailPage.qml:692
 msgid "Labels"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:771
+#: qml/pages/CardDetailPage.qml:772
 msgid "New label"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:783
+#: qml/pages/CardDetailPage.qml:784
 msgid "Assignments"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:857
+#: qml/pages/CardDetailPage.qml:858
 msgid "Assign users"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:924 qml/pages/HomePage.qml:1079
+#: qml/pages/CardDetailPage.qml:925 qml/pages/HomePage.qml:1166
 msgid "No users available."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:933
+#: qml/pages/CardDetailPage.qml:934
 msgid "Mark as done"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:933
+#: qml/pages/CardDetailPage.qml:934
 msgid "Mark as not done"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:942
+#: qml/pages/CardDetailPage.qml:943
 msgid "Description"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:965 qml/pages/HomePage.qml:1700
+#: qml/pages/CardDetailPage.qml:966 qml/pages/HomePage.qml:1787
+#: qml/pages/HomePage.qml:1844
 msgid "Delete card"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:984 qml/pages/CardDetailPage.qml:1155
+#: qml/pages/CardDetailPage.qml:985 qml/pages/CardDetailPage.qml:1156
+#: qml/pages/HomePage.qml:2405
 msgid "%1 selected"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1008
+#: qml/pages/CardDetailPage.qml:1009
 msgid "No comments yet."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1204
+#: qml/pages/CardDetailPage.qml:1205
 msgid "There are no files attached to this card."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1332
+#: qml/pages/CardDetailPage.qml:1333
 msgid "No activity yet."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1451
+#: qml/pages/CardDetailPage.qml:1452
 msgid "Add comment"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1681
+#: qml/pages/CardDetailPage.qml:1682
 msgid "No app picker is available."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1730
+#: qml/pages/CardDetailPage.qml:1731
 msgid "%1 B"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1733
+#: qml/pages/CardDetailPage.qml:1734
 msgid "%1 KB"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1735
+#: qml/pages/CardDetailPage.qml:1736
 msgid "%1 MB"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1755
+#: qml/pages/CardDetailPage.qml:1756
 msgid "No file picker is available."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1764
+#: qml/pages/CardDetailPage.qml:1765
 msgid "The selected file could not be prepared for upload."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1911
+#: qml/pages/CardDetailPage.qml:1912
 msgid "This card has a conflict."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1913
+#: qml/pages/CardDetailPage.qml:1914
 msgid "This card has local changes waiting to sync."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1919 qml/pages/HomePage.qml:886
+#: qml/pages/CardDetailPage.qml:1920 qml/pages/HomePage.qml:973
 msgid "Sync: %1"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1945
+#: qml/pages/CardDetailPage.qml:1946
 msgid ""
 "Server version is not available in the local cache yet. Pull to refresh and "
 "open this conflict again."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1950
+#: qml/pages/CardDetailPage.qml:1951
 msgid "Title: %1"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1952
+#: qml/pages/CardDetailPage.qml:1953
 msgid "Due: %1"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2068
+#: qml/pages/CardDetailPage.qml:2069
 msgid "April"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2068
+#: qml/pages/CardDetailPage.qml:2069
 msgid "August"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2068
+#: qml/pages/CardDetailPage.qml:2069
 msgid "December"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2068
+#: qml/pages/CardDetailPage.qml:2069
 msgid "February"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2068
+#: qml/pages/CardDetailPage.qml:2069
 msgid "January"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2068
+#: qml/pages/CardDetailPage.qml:2069
 msgid "July"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2068
+#: qml/pages/CardDetailPage.qml:2069
 msgid "June"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2068
+#: qml/pages/CardDetailPage.qml:2069
 msgid "March"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2068 qml/pages/CardDetailPage.qml:2276
-#: qml/pages/CardDetailPage.qml:2353
+#: qml/pages/CardDetailPage.qml:2069 qml/pages/CardDetailPage.qml:2277
+#: qml/pages/CardDetailPage.qml:2354
 msgid "May"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2068
+#: qml/pages/CardDetailPage.qml:2069
 msgid "November"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2068
+#: qml/pages/CardDetailPage.qml:2069
 msgid "October"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2068
+#: qml/pages/CardDetailPage.qml:2069
 msgid "September"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2106 qml/pages/CardDetailPage.qml:2221
-#: qml/pages/HomePage.qml:694
+#: qml/pages/CardDetailPage.qml:2107 qml/pages/CardDetailPage.qml:2222
+#: qml/pages/HomePage.qml:781
 msgid "User"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2274 qml/pages/CardDetailPage.qml:2351
+#: qml/pages/CardDetailPage.qml:2275 qml/pages/CardDetailPage.qml:2352
 msgid "Yesterday"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2276 qml/pages/CardDetailPage.qml:2353
+#: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Apr"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2276 qml/pages/CardDetailPage.qml:2353
+#: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Aug"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2276 qml/pages/CardDetailPage.qml:2353
+#: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Dec"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2276 qml/pages/CardDetailPage.qml:2353
+#: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Feb"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2276 qml/pages/CardDetailPage.qml:2353
+#: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Jan"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2276 qml/pages/CardDetailPage.qml:2353
+#: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Jul"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2276 qml/pages/CardDetailPage.qml:2353
+#: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Jun"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2276 qml/pages/CardDetailPage.qml:2353
+#: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Mar"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2276 qml/pages/CardDetailPage.qml:2353
+#: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Nov"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2276 qml/pages/CardDetailPage.qml:2353
+#: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Oct"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2276 qml/pages/CardDetailPage.qml:2353
+#: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Sep"
 msgstr ""
 
-#: qml/pages/HomePage.qml:289
+#: qml/pages/HomePage.qml:314
+msgid "Bulk action finished."
+msgstr ""
+
+#: qml/pages/HomePage.qml:376
 msgid "There is no card text to share."
 msgstr ""
 
-#: qml/pages/HomePage.qml:293 qml/pages/HomePage.qml:298
-#: qml/pages/HomePage.qml:317 qml/pages/HomePage.qml:321
+#: qml/pages/HomePage.qml:380 qml/pages/HomePage.qml:385
+#: qml/pages/HomePage.qml:404 qml/pages/HomePage.qml:408
 msgid "Shared card"
 msgstr ""
 
-#: qml/pages/HomePage.qml:303
+#: qml/pages/HomePage.qml:390
 msgid "Sharing is not available."
 msgstr ""
 
-#: qml/pages/HomePage.qml:441
+#: qml/pages/HomePage.qml:528
 msgid "Owner"
 msgstr ""
 
-#: qml/pages/HomePage.qml:448
+#: qml/pages/HomePage.qml:535
 msgid "(Group)"
 msgstr ""
 
-#: qml/pages/HomePage.qml:449
+#: qml/pages/HomePage.qml:536
 msgid "(Team)"
 msgstr ""
 
-#: qml/pages/HomePage.qml:450
+#: qml/pages/HomePage.qml:537
 msgid "(Remote)"
 msgstr ""
 
-#: qml/pages/HomePage.qml:451
+#: qml/pages/HomePage.qml:538
 msgid "Shared user"
 msgstr ""
 
-#: qml/pages/HomePage.qml:677 qml/pages/HomePage.qml:1870
-#: qml/pages/HomePage.qml:2298
+#: qml/pages/HomePage.qml:764 qml/pages/HomePage.qml:2056
+#: qml/pages/HomePage.qml:2560
 msgid "Untitled"
 msgstr ""
 
-#: qml/pages/HomePage.qml:888
+#: qml/pages/HomePage.qml:975
 msgid "No status message."
 msgstr ""
 
-#: qml/pages/HomePage.qml:898
+#: qml/pages/HomePage.qml:985
 msgid "Search in %1"
 msgstr ""
 
-#: qml/pages/HomePage.qml:899
+#: qml/pages/HomePage.qml:986
 msgid "Search"
 msgstr ""
 
-#: qml/pages/HomePage.qml:935
+#: qml/pages/HomePage.qml:1022
 msgid "Refresh"
 msgstr ""
 
-#: qml/pages/HomePage.qml:959 qml/pages/HomePage.qml:1172
+#: qml/pages/HomePage.qml:1046 qml/pages/HomePage.qml:1259
 msgid "Filter"
 msgstr ""
 
-#: qml/pages/HomePage.qml:976
+#: qml/pages/HomePage.qml:1063
 msgid "Tags"
 msgstr ""
 
-#: qml/pages/HomePage.qml:977
+#: qml/pages/HomePage.qml:1064
 msgid "Users"
 msgstr ""
 
-#: qml/pages/HomePage.qml:978 qml/pages/HomePage.qml:1096
+#: qml/pages/HomePage.qml:1065 qml/pages/HomePage.qml:1183
 msgid "Done"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1008
+#: qml/pages/HomePage.qml:1095
 msgid "No assigned tag"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1023
+#: qml/pages/HomePage.qml:1110
 msgid "Tag"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1035
+#: qml/pages/HomePage.qml:1122
 msgid "No tags available."
 msgstr ""
 
-#: qml/pages/HomePage.qml:1052
+#: qml/pages/HomePage.qml:1139
 msgid "Unassigned"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1095 qml/pages/HomePage.qml:1126
+#: qml/pages/HomePage.qml:1182 qml/pages/HomePage.qml:1213
 msgid "All"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1097
+#: qml/pages/HomePage.qml:1184
 msgid "Not done"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1127
+#: qml/pages/HomePage.qml:1214
 msgid "Overdue"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1129
+#: qml/pages/HomePage.qml:1216
 msgid "Tomorrow"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1130
+#: qml/pages/HomePage.qml:1217
 msgid "Next 7 days"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1131
+#: qml/pages/HomePage.qml:1218
 msgid "Next 30 days"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1132
+#: qml/pages/HomePage.qml:1219
 msgid "No due date"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1133
+#: qml/pages/HomePage.qml:1220
 msgid "Later"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1165
+#: qml/pages/HomePage.qml:1252
 msgid "Reset"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1189
+#: qml/pages/HomePage.qml:1276
 msgid "New card"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1190
+#: qml/pages/HomePage.qml:1277
 msgid "Create a card in %1."
 msgstr ""
 
-#: qml/pages/HomePage.qml:1193
+#: qml/pages/HomePage.qml:1280
 msgid "Card title"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1202 qml/pages/HomePage.qml:1243
-#: qml/pages/HomePage.qml:1281
+#: qml/pages/HomePage.qml:1289 qml/pages/HomePage.qml:1330
+#: qml/pages/HomePage.qml:1368
 msgid "Create"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1231
+#: qml/pages/HomePage.qml:1318
 msgid "New board"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1234
+#: qml/pages/HomePage.qml:1321
 msgid "Board title"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1269
+#: qml/pages/HomePage.qml:1356
 msgid "New list"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1272 qml/pages/HomePage.qml:1523
+#: qml/pages/HomePage.qml:1359 qml/pages/HomePage.qml:1610
 msgid "List title"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1306 qml/pages/HomePage.qml:1440
+#: qml/pages/HomePage.qml:1393 qml/pages/HomePage.qml:1527
 msgid "Share board"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1309
+#: qml/pages/HomePage.qml:1396
 msgid "Search users, groups or teams"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1319
+#: qml/pages/HomePage.qml:1406
 msgid "Owner: %1"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1330
+#: qml/pages/HomePage.qml:1417
 msgid "Add %1"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1342
+#: qml/pages/HomePage.qml:1429
 msgid "Shared with"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1375
+#: qml/pages/HomePage.qml:1462
 msgid "Edit"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1395
+#: qml/pages/HomePage.qml:1482
 msgid "Manage"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1416
+#: qml/pages/HomePage.qml:1503
 msgid "This board is not shared with anyone else."
 msgstr ""
 
-#: qml/pages/HomePage.qml:1452
+#: qml/pages/HomePage.qml:1539
 msgid "Archive board"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1452
+#: qml/pages/HomePage.qml:1539
 msgid "Restore board"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1463 qml/pages/HomePage.qml:1486
+#: qml/pages/HomePage.qml:1550 qml/pages/HomePage.qml:1573
 msgid "Delete board"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1487
+#: qml/pages/HomePage.qml:1574
 msgid "Delete this board and its cards?"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1519
+#: qml/pages/HomePage.qml:1606
 msgid "Board options"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1537 qml/pages/HomePage.qml:2586
+#: qml/pages/HomePage.qml:1624 qml/pages/HomePage.qml:2848
 msgid "Active"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1547 qml/pages/HomePage.qml:2596
+#: qml/pages/HomePage.qml:1634 qml/pages/HomePage.qml:2858
 msgid "Archived"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1559
+#: qml/pages/HomePage.qml:1646
 msgid "Save"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1578
+#: qml/pages/HomePage.qml:1665
 msgid "Add card"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1591
+#: qml/pages/HomePage.qml:1678
 msgid "Add list"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1605
+#: qml/pages/HomePage.qml:1692
 msgid "Move list right"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1617
+#: qml/pages/HomePage.qml:1704
 msgid "Delete list"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1640
+#: qml/pages/HomePage.qml:1727
 msgid "Card"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1645
+#: qml/pages/HomePage.qml:1732
 msgid "Share link"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1656
+#: qml/pages/HomePage.qml:1743
 msgid "Share content"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1667
+#: qml/pages/HomePage.qml:1754
 msgid "Assign card to me"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1678 qml/pages/HomePage.qml:1722
+#: qml/pages/HomePage.qml:1765 qml/pages/HomePage.qml:1809
 msgid "Move card"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1689
+#: qml/pages/HomePage.qml:1776
 msgid "Archive card"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1689
+#: qml/pages/HomePage.qml:1776
 msgid "Restore card"
 msgstr ""
 
-#: qml/pages/HomePage.qml:1723
+#: qml/pages/HomePage.qml:1810 qml/pages/HomePage.qml:1874
 msgid "Choose destination list."
 msgstr ""
 
-#: qml/pages/HomePage.qml:2099 qml/pages/HomePage.qml:2216
+#: qml/pages/HomePage.qml:1845
+msgid "Delete this card?"
+msgstr ""
+
+#: qml/pages/HomePage.qml:1873
+msgid "Move selected cards"
+msgstr ""
+
+#: qml/pages/HomePage.qml:1907
+msgid "Delete selected cards"
+msgstr ""
+
+#: qml/pages/HomePage.qml:1908
+msgid "Delete %1 selected card(s)?"
+msgstr ""
+
+#: qml/pages/HomePage.qml:2285 qml/pages/HomePage.qml:2460
 msgid "Refreshing..."
 msgstr ""
 
-#: qml/pages/HomePage.qml:2509
+#: qml/pages/HomePage.qml:2413 qml/pages/HomePage.qml:2466
+msgid "Archive"
+msgstr ""
+
+#: qml/pages/HomePage.qml:2413 qml/pages/HomePage.qml:2466
+msgid "Restore"
+msgstr ""
+
+#: qml/pages/HomePage.qml:2421
+msgid "Move"
+msgstr ""
+
+#: qml/pages/HomePage.qml:2771
 msgid "No matching items"
 msgstr ""
 
-#: qml/pages/HomePage.qml:2509
+#: qml/pages/HomePage.qml:2771
 msgid "Open the menu and choose a board."
 msgstr ""
 
-#: qml/pages/HomePage.qml:2563
-msgid "Language"
-msgstr ""
-
-#: qml/pages/HomePage.qml:2564
-msgid "Account"
-msgstr ""
-
-#: qml/pages/HomePage.qml:2565 qml/pages/SettingsPage.qml:12
-msgid "Settings"
-msgstr ""
-
-#: qml/pages/HomePage.qml:2566
-msgid "About"
-msgstr ""
-
-#: qml/pages/HomePage.qml:2676
+#: qml/pages/HomePage.qml:2938
 msgid "Create board"
 msgstr ""
 
@@ -1422,35 +1713,46 @@ msgstr ""
 #: qml/pages/LanguageSelectionPage.qml:22
 #: qml/pages/LanguageSelectionPage.qml:23
 #: qml/pages/LanguageSelectionPage.qml:24
+#: qml/pages/LanguageSelectionPage.qml:25
 msgid "AI-assisted starter translation"
 msgstr ""
 
-#: qml/pages/SettingsPage.qml:29
+#: qml/pages/SettingsPage.qml:56
+msgid "Swipe actions"
+msgstr ""
+
+#: qml/pages/SettingsPage.qml:57
+msgid "Reverse left/right actions"
+msgstr ""
+
+#: qml/pages/SettingsPage.qml:59
+msgid "Drag to move"
+msgstr ""
+
+#: qml/pages/SettingsPage.qml:60
+msgid "Bulk selection"
+msgstr ""
+
+#: qml/pages/SettingsPage.qml:67
 msgid "Sync"
 msgstr ""
 
-#: qml/pages/SettingsPage.qml:40
-msgid "Sync while app is active"
-msgstr ""
-
-#: qml/pages/SettingsPage.qml:56
+#: qml/pages/SettingsPage.qml:77
 msgid "Sync on startup"
 msgstr ""
 
-#: qml/pages/SettingsPage.qml:68
-msgid "Active sync interval"
+#: qml/pages/SettingsPage.qml:109
+msgid "List interaction"
 msgstr ""
 
-#: qml/pages/SettingsPage.qml:92
-msgid ""
-"Ubuntu Touch does not provide Android-style background services for this "
-"app. Sync runs while NextDeck is open or activated."
+#: qml/pages/SettingsPage.qml:115
+msgid "Configure card list gestures."
 msgstr ""
 
-#: qml/pages/SettingsPage.qml:106
+#: qml/pages/SettingsPage.qml:162
 msgid "Cards"
 msgstr ""
 
-#: qml/pages/SettingsPage.qml:117
+#: qml/pages/SettingsPage.qml:172
 msgid "Open card links in browser directly"
 msgstr ""

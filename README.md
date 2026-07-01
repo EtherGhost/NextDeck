@@ -16,7 +16,7 @@ Card reordering uses `NextCommon.ReorderableListView` with live placeholder move
 
 Known limitations: the offline-first queue currently covers cards, not board/list management or attachment operations. Conflict handling marks cards as conflicted but does not provide a full merge UI yet. Attachment opening depends on installed Ubuntu Touch apps that can receive the downloaded document through Content Hub.
 
-Translations are available for Swedish plus AI-assisted starter catalogs for Danish, German, Spanish, Finnish, French, Italian, Norwegian Bokmal, Dutch, Polish, Russian, and Ukrainian. Starter translations are intended to be improved by native speakers.
+Translations are available for Swedish plus AI-assisted starter catalogs for Catalan, Danish, German, Spanish, Finnish, French, Italian, Norwegian Bokmal, Dutch, Polish, Russian, and Ukrainian. Starter translations are intended to be improved by native speakers.
 
 ## Authentication
 

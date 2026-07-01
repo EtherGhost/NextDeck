@@ -1,90 +1,98 @@
-# Swedish translations for NextDeck.
+# Catalan translations for nextdeck.cloudsite package.
+# Copyright (C) 2026 THE nextdeck.cloudsite'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the nextdeck.cloudsite package.
+# Automatically generated, 2026.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: nextdeck.cloudsite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-01 09:45+0000\n"
-"Language: sv\n"
+"POT-Creation-Date: 2026-07-01 09:46+0000\n"
+"PO-Revision-Date: 2026-06-30 22:30+0200\n"
+"Last-Translator: AI-assisted starter translation\n"
+"Language-Team: Catalan\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: qml/NextCommon/AboutPage.qml:17 qml/pages/HomePage.qml:2828
 msgid "About"
-msgstr "Om"
+msgstr "Quant a"
 
 #: qml/NextCommon/AboutPage.qml:58
 msgid "Version %1"
-msgstr "Version %1"
+msgstr "Versió %1"
 
 #: qml/NextCommon/AboutPage.qml:79
 msgid "License"
-msgstr "Licens"
+msgstr "Llicència"
 
 #: qml/NextCommon/AccountPage.qml:41
 msgid "Select an account and authorize it for %1."
-msgstr "Välj ett konto och auktorisera det för %1."
+msgstr "Seleccioneu un compte i autoritzeu-lo per a %1."
 
 #: qml/NextCommon/AccountPage.qml:48
 msgid "Accounts"
-msgstr "Konton"
+msgstr "Comptes"
 
 #: qml/NextCommon/AccountPage.qml:87
 msgid ""
 "Authorization succeeded, but the Ubuntu Touch account did not expose a "
 "server address for %1."
 msgstr ""
-"Auktoriseringen lyckades, men Ubuntu Touch-kontot exponerade ingen "
-"serveradress för %1."
+"L'autorització ha estat correcta, però el compte Ubuntu Touch no ha exposat "
+"cap adreça de servidor per a %1."
 
 #: qml/NextCommon/AccountPage.qml:89
 msgid ""
 "Authorization succeeded for %1. Credentials are available to the app, but "
 "were not displayed or stored."
 msgstr ""
-"Auktoriseringen lyckades för %1. Inloggningsuppgifter är tillgängliga för "
-"appen, men visades inte och sparades inte."
+"L'autorització ha estat correcta per a %1. Les credencials estan disponibles "
+"per a l'aplicació, però no s'han mostrat ni desat."
 
 #: qml/NextCommon/AccountPage.qml:118 qml/NextCommon/AccountPage.qml:857
-#, fuzzy
 msgid ""
 "Ubuntu Touch Online Accounts did not allow %1 to use this account yet. Check "
 "that %1 is enabled for this account in System Settings > Accounts, then "
 "return here."
 msgstr ""
-"Väntar på att Ubuntu Touch Online Accounts ska bekräfta behörighet för %1. "
-"Om detta inte slutförs, kontrollera att %1 är tillåten för det här kontot i "
-"Systeminställningar > Konton."
+"Els comptes en línia de l'Ubuntu Touch encara no han permès que %1 utilitzi "
+"aquest compte. Comproveu que %1 estigui habilitat per a aquest compte a "
+"Configuració del sistema > Comptes i torneu aquí."
 
 #: qml/NextCommon/AccountPage.qml:121
-#, fuzzy
 msgid ""
 "Authorization failed: %1. If the system did not show an Online Accounts "
 "prompt, open System Settings > Accounts and allow %2 for this account, then "
 "try again."
 msgstr ""
-"Auktorisering misslyckades: %1. Om systemet inte visade en Online Accounts-"
-"fråga, öppna Systeminställningar > Konton och tillåt NextDeck för detta "
-"konto. Försök sedan igen."
+"Ha fallat l'autorització: %1. Si el sistema no ha mostrat cap avís de "
+"Comptes en línia, obriu Configuració del sistema > Comptes i permeteu %2 per "
+"a aquest compte; després torneu-ho a provar."
 
 #: qml/NextCommon/AccountPage.qml:202
 msgid "Allow account access"
-msgstr "Tillåt kontoåtkomst"
+msgstr "Permet l'accés al compte"
 
 #: qml/NextCommon/AccountPage.qml:208
 msgid "Open System Settings"
-msgstr "Öppna systeminställningar"
+msgstr "Obre la configuració del sistema"
 
 #: qml/NextCommon/AccountPage.qml:218 qml/pages/CardDetailPage.qml:448
 #: qml/pages/CardDetailPage.qml:475
 msgid "OK"
-msgstr "OK"
+msgstr "D'acord"
 
 #: qml/NextCommon/AccountPage.qml:247 qml/pages/HomePage.qml:2826
 msgid "Account"
-msgstr "Konto"
+msgstr "Compte"
 
 #: qml/NextCommon/AccountPage.qml:314
 msgid "Server address"
-msgstr "Serveradress"
+msgstr "Adreça del servidor"
 
 #: qml/NextCommon/AccountPage.qml:322
 msgid "https://cloud.example.com"
@@ -95,69 +103,68 @@ msgid ""
 "This app uses Ubuntu Touch Online Accounts. Edit this only if the system "
 "account did not expose the correct server address."
 msgstr ""
-"Appen använder Ubuntu Touch Online Accounts. Ändra detta endast om "
-"systemkontot inte visar rätt serveradress."
+"Aquesta aplicació utilitza els comptes en línia de l'Ubuntu Touch. Editeu-ho "
+"només si el compte del sistema no ha exposat l'adreça correcta del servidor."
 
 #: qml/NextCommon/AccountPage.qml:339
 msgid "Available accounts"
-msgstr "Tillgängliga konton"
+msgstr "Comptes disponibles"
 
 #: qml/NextCommon/AccountPage.qml:365
 msgid "No Nextcloud account found"
-msgstr "Inget Nextcloud-konto hittades"
+msgstr "No s'ha trobat cap compte de Nextcloud"
 
 #: qml/NextCommon/AccountPage.qml:372
 msgid ""
 "Add a Nextcloud or ownCloud account in Ubuntu Touch System Settings > "
 "Accounts. Then return here and select it."
 msgstr ""
-"Lägg till ett Nextcloud- eller ownCloud-konto i Ubuntu Touch "
-"systeminställningar > Konton. Gå sedan tillbaka hit och välj det."
+"Afegiu un compte de Nextcloud o ownCloud a Configuració del sistema Ubuntu "
+"Touch > Comptes. Després torneu aquí i seleccioneu-lo."
 
 #: qml/NextCommon/AccountPage.qml:384
 msgid "How to add an account"
-msgstr "Så lägger du till ett konto"
+msgstr "Com afegir un compte"
 
 #: qml/NextCommon/AccountPage.qml:506
 msgid "Allow %1 in Ubuntu Touch account settings first"
-msgstr "Tillåt först %1 i Ubuntu Touch-kontoinställningarna"
+msgstr "Permeteu primer %1 a la configuració de comptes de l'Ubuntu Touch"
 
 #: qml/NextCommon/AccountPage.qml:506
 msgid "Allowed for %1"
-msgstr "Tillåtet för %1"
+msgstr "Permès per a %1"
 
 #: qml/NextCommon/AccountPage.qml:507
 msgid "Nextcloud account discovered"
-msgstr "Nextcloud-konto hittat"
+msgstr "Compte de Nextcloud descobert"
 
 #: qml/NextCommon/AccountPage.qml:529
 msgid "Verify selected account"
-msgstr "Verifiera valt konto"
+msgstr "Verifica el compte seleccionat"
 
 #: qml/NextCommon/AccountPage.qml:529
 msgid "Verifying account..."
-msgstr "Verifierar konto..."
+msgstr "S'està verificant el compte..."
 
 #: qml/NextCommon/AccountPage.qml:551
-#, fuzzy
 msgid "How to allow this account"
-msgstr "Så lägger du till ett konto"
+msgstr "Com permetre aquest compte"
 
 #: qml/NextCommon/AccountPage.qml:604
 msgid "Selected %1. Verifying authorization..."
-msgstr "Valde %1. Verifierar auktorisering..."
+msgstr "S'ha seleccionat %1. S'està verificant l'autorització..."
 
 #: qml/NextCommon/AccountPage.qml:670
 msgid "Saved account selected. Verify again if needed."
-msgstr "Sparat konto valt. Verifiera igen vid behov."
+msgstr "Compte desat seleccionat. Verifiqueu-lo de nou si cal."
 
 #: qml/NextCommon/AccountPage.qml:788 qml/NextCommon/AccountPage.qml:801
 msgid "Select an account first."
-msgstr "Välj ett konto först."
+msgstr "Seleccioneu primer un compte."
 
 #: qml/NextCommon/AccountPage.qml:806 qml/NextCommon/AccountPage.qml:853
 msgid "Verifying Online Accounts authorization..."
-msgstr "Verifierar Online Accounts-auktorisering..."
+msgstr "S'està verificant l'autorització dels Comptes en línia..."
 
 #: qml/NextCommon/AccountPage.qml:814
 msgid ""
@@ -165,34 +172,34 @@ msgid ""
 "this does not finish, check that %1 is allowed for this account in System "
 "Settings > Accounts."
 msgstr ""
-"Väntar på att Ubuntu Touch Online Accounts ska bekräfta behörighet för %1. "
-"Om detta inte slutförs, kontrollera att %1 är tillåten för det här kontot i "
-"Systeminställningar > Konton."
+"S'està esperant que els Comptes en línia de l'Ubuntu Touch confirmin el "
+"permís per a %1. Si això no acaba, comproveu que %1 estigui permès per a "
+"aquest compte a Configuració del sistema > Comptes."
 
 #: qml/NextCommon/AccountPage.qml:832
-#, fuzzy
 msgid "Refreshing Ubuntu Touch account permission for %1..."
-msgstr "Kontrollerar kontobehörighet för %1..."
+msgstr "S'està actualitzant el permís del compte Ubuntu Touch per a %1..."
 
 #: qml/NextCommon/AccountPage.qml:870
 msgid "Checking account permission for %1..."
-msgstr "Kontrollerar kontobehörighet för %1..."
+msgstr "S'està comprovant el permís del compte per a %1..."
 
 #: qml/NextCommon/AccountPage.qml:894
 msgid ""
 "Open Ubuntu Touch System Settings manually, go to Accounts, add a Nextcloud "
 "or ownCloud account, then return to %1 and select it."
 msgstr ""
-"Öppna Ubuntu Touch Systeminställningar manuellt, gå till Konton, lägg till "
-"ett Nextcloud- eller ownCloud-konto och återvänd sedan till %1 och välj det."
+"Obriu manualment la configuració del sistema Ubuntu Touch, aneu a Comptes, "
+"afegiu un compte de Nextcloud o ownCloud, torneu a %1 i seleccioneu-lo."
 
 #: qml/NextCommon/AccountPage.qml:901
 msgid ""
 "Open Ubuntu Touch System Settings manually, go to Accounts, select %1, allow "
 "%2 for that account, then return here. %2 will verify it automatically."
 msgstr ""
-"Öppna Ubuntu Touch Systeminställningar manuellt, gå till Konton, välj %1, "
-"tillåt %2 för det kontot och återvänd hit. %2 verifierar det automatiskt."
+"Obriu manualment la configuració del sistema Ubuntu Touch, aneu a Comptes, "
+"seleccioneu %1, permeteu %2 per a aquest compte i torneu aquí. %2 el "
+"verificarà automàticament."
 
 #: qml/NextCommon/AccountPage.qml:905
 msgid ""
@@ -200,124 +207,131 @@ msgid ""
 "Nextcloud account, allow %1 for that account, then return here. %1 will "
 "verify it automatically."
 msgstr ""
-"Öppna Ubuntu Touch Systeminställningar manuellt, gå till Konton, välj "
-"Nextcloud-kontot, tillåt %1 för det kontot och återvänd hit. %1 verifierar "
-"det automatiskt."
+"Obriu manualment la configuració del sistema Ubuntu Touch, aneu a Comptes, "
+"seleccioneu el compte de Nextcloud, permeteu %1 per a aquest compte i torneu "
+"aquí. %1 el verificarà automàticament."
 
 #: qml/NextCommon/AccountPage.qml:927
 msgid "Account permission detected. Verifying access..."
-msgstr "Kontobehörighet hittades. Verifierar åtkomst..."
+msgstr "S'ha detectat el permís del compte. S'està verificant l'accés..."
 
 #: qml/NextCommon/AccountPage.qml:931
 msgid ""
 "Waiting for account permission. If you already allowed %1, return here and "
 "wait a moment."
 msgstr ""
-"Väntar på kontobehörighet. Om du redan har tillåtit %1, återvänd hit och "
-"vänta en stund."
+"S'està esperant el permís del compte. Si ja heu permès %1, torneu aquí i "
+"espereu un moment."
 
 #: qml/NextCommon/AccountPage.qml:968
 msgid ""
 "No account is saved yet. Select a Nextcloud account below, authorize it, and "
 "verify access."
 msgstr ""
-"Inget konto är sparat ännu. Välj ett Nextcloud-konto nedan, auktorisera det "
-"och verifiera åtkomst."
+"Encara no hi ha cap compte desat. Seleccioneu un compte de Nextcloud a sota, "
+"autoritzeu-lo i verifiqueu l'accés."
 
 #: qml/NextCommon/AccountPage.qml:971
 msgid ""
 "%1 on %2\n"
 "providerId=%3 serviceId=%4"
 msgstr ""
-"%1 på %2\n"
+"%1 a %2\n"
 "providerId=%3 serviceId=%4"
 
 #: qml/NextCommon/AccountPage.qml:972
 msgid "Saved account"
-msgstr "Sparat konto"
+msgstr "Compte desat"
 
 #: qml/NextCommon/AccountPage.qml:973
 msgid "server URL missing"
-msgstr "serveradress saknas"
+msgstr "manca l'URL del servidor"
 
 #: qml/NextCommon/AccountPage.qml:985 qml/NextCommon/AccountPage.qml:1013
 msgid "No account selected"
-msgstr "Inget konto valt"
+msgstr "No s'ha seleccionat cap compte"
 
 #: qml/NextCommon/AccountPage.qml:996
 msgid "The selected Ubuntu Touch account did not expose a server address."
-msgstr "Det valda Ubuntu Touch-kontot exponerade ingen serveradress."
+msgstr ""
+"El compte Ubuntu Touch seleccionat no ha exposat cap adreça de servidor."
 
 #: qml/NextCommon/AccountSessionAdapter.qml:66
 msgid ""
 "Authentication succeeded, but the required Online Accounts credentials were "
 "not available."
 msgstr ""
-"Autentiseringen lyckades, men de nödvändiga Online Accounts-uppgifterna var "
-"inte tillgängliga."
+"L'autenticació ha estat correcta, però les credencials necessàries dels "
+"Comptes en línia no estaven disponibles."
 
 #: qml/NextCommon/AccountSessionAdapter.qml:98
 msgid "Authentication failed: %1"
-msgstr "Autentisering misslyckades: %1"
+msgstr "Ha fallat l'autenticació: %1"
 
 #: qml/NextCommon/AccountSessionAdapter.qml:127
 msgid "Desktop test credentials are incomplete."
-msgstr "Testuppgifterna för desktop är ofullständiga."
+msgstr "Les credencials de prova d'escriptori són incompletes."
 
 #: qml/NextCommon/AccountSessionAdapter.qml:146
 msgid ""
 "No account selected. Open Account first and authorize a Nextcloud account."
 msgstr ""
-"Inget konto är valt. Öppna Konto först och auktorisera ett Nextcloud-konto."
+"No s'ha seleccionat cap compte. Obriu primer Compte i autoritzeu un compte "
+"de Nextcloud."
 
 #: qml/NextCommon/AccountSessionAdapter.qml:152
 msgid "No server URL configured. Open Account and authorize the OS account."
 msgstr ""
-"Ingen serveradress är konfigurerad. Öppna Konto och auktorisera OS-kontot."
+"No hi ha cap URL de servidor configurat. Obriu Compte i autoritzeu el compte "
+"del sistema."
 
 #: qml/NextCommon/AccountSessionAdapter.qml:170
 msgid "Waiting for Online Accounts..."
-msgstr "Väntar på Online Accounts..."
+msgstr "S'està esperant Comptes en línia..."
 
 #: qml/NextCommon/AccountSessionAdapter.qml:172
 msgid ""
 "Selected Online Accounts service was not found. Open Account and verify the "
 "account again."
 msgstr ""
-"Den valda Online Accounts-tjänsten hittades inte. Öppna Konto och verifiera "
-"kontot igen."
+"No s'ha trobat el servei de Comptes en línia seleccionat. Obriu Compte i "
+"torneu a verificar el compte."
 
 #: qml/NextCommon/LanguagePage.qml:11
 msgid ""
 "Some translations are AI-assisted and not fully reviewed. You can help "
 "improve translations in the project repository."
 msgstr ""
+"Algunes traduccions són assistides per IA i no estan completament revisades. "
+"Podeu ajudar a millorar les traduccions al repositori del projecte."
 
 #: qml/NextCommon/LanguagePage.qml:14 qml/pages/HomePage.qml:2825
 msgid "Language"
-msgstr "Språk"
+msgstr "Idioma"
 
 #: qml/NextCommon/LanguagePage.qml:34
 msgid ""
 "Choose the language %1 should use. Restart the app after changing language."
 msgstr ""
+"Trieu l'idioma que ha d'utilitzar %1. Reinicieu l'aplicació després de "
+"canviar l'idioma."
 
 #: qml/NextCommon/LanguagePage.qml:131
 msgid "%1 will follow the system language after restart."
-msgstr ""
+msgstr "%1 seguirà l'idioma del sistema després de reiniciar."
 
 #: qml/NextCommon/LanguagePage.qml:132
 msgid "%1 will use %2 after restart."
-msgstr ""
+msgstr "%1 utilitzarà %2 després de reiniciar."
 
 #: qml/NextCommon/SettingsShell.qml:8 qml/pages/HomePage.qml:2827
 #: qml/pages/SettingsPage.qml:12
 msgid "Settings"
-msgstr "Inställningar"
+msgstr "Configuració"
 
 #: qml/UTControls/ConfirmDialog.qml:10
 msgid "Confirm"
-msgstr ""
+msgstr "Confirma"
 
 #: qml/UTControls/ConfirmDialog.qml:11 qml/pages/CardDetailPage.qml:256
 #: qml/pages/CardDetailPage.qml:286 qml/pages/CardDetailPage.qml:319
@@ -332,87 +346,82 @@ msgstr ""
 #: qml/pages/HomePage.qml:1896 qml/pages/HomePage.qml:1925
 #: qml/pages/HomePage.qml:2438
 msgid "Cancel"
-msgstr "Avbryt"
+msgstr "Cancel·la"
 
 #: qml/backend/DeckApiClient.qml:48
 msgid "boards"
-msgstr "boards"
+msgstr "taulers"
 
 #: qml/backend/DeckApiClient.qml:66 qml/backend/DeckApiClient.qml:85
 #: qml/backend/DeckApiClient.qml:638 qml/backend/DeckCache.qml:86
 #: qml/backend/DeckCache.qml:175 qml/backend/DeckController.qml:901
 #: qml/pages/HomePage.qml:2895
 msgid "Untitled board"
-msgstr "Namnlös board"
+msgstr "Tauler sense títol"
 
 #: qml/backend/DeckApiClient.qml:69
 msgid "board create"
-msgstr ""
+msgstr "creació del tauler"
 
 #: qml/backend/DeckApiClient.qml:79
 msgid "Board update data is incomplete."
-msgstr ""
+msgstr "Les dades d’actualització del tauler són incompletes."
 
 #: qml/backend/DeckApiClient.qml:88
-#, fuzzy
 msgid "board update"
-msgstr "Inget förfallodatum"
+msgstr "actualització del tauler"
 
 #: qml/backend/DeckApiClient.qml:97
 msgid "board delete"
-msgstr ""
+msgstr "supressió del tauler"
 
 #: qml/backend/DeckApiClient.qml:113
-#, fuzzy
 msgid "share search"
-msgstr "Dela tavla"
+msgstr "cerca per compartir"
 
 #: qml/backend/DeckApiClient.qml:123 qml/backend/DeckApiClient.qml:148
 #: qml/backend/DeckApiClient.qml:172
-#, fuzzy
 msgid "Board share data is incomplete."
-msgstr "Kontouppgifterna är ofullständiga."
+msgstr "Les dades de compartició del tauler són incompletes."
 
 #: qml/backend/DeckApiClient.qml:134
-#, fuzzy
 msgid "board share"
-msgstr "boards"
+msgstr "compartició del tauler"
 
 #: qml/backend/DeckApiClient.qml:138
 msgid "Board share added."
-msgstr ""
+msgstr "S’ha afegit la compartició del tauler."
 
 #: qml/backend/DeckApiClient.qml:160
 msgid "board share update"
-msgstr ""
+msgstr "actualització de la compartició del tauler"
 
 #: qml/backend/DeckApiClient.qml:162
 msgid "Board share saved."
-msgstr ""
+msgstr "S’ha desat la compartició del tauler."
 
 #: qml/backend/DeckApiClient.qml:176
 msgid "board share delete"
-msgstr ""
+msgstr "supressió de la compartició del tauler"
 
 #: qml/backend/DeckApiClient.qml:177
 msgid "Board share removed."
-msgstr ""
+msgstr "S’ha eliminat la compartició del tauler."
 
 #: qml/backend/DeckApiClient.qml:185
 msgid "board stacks"
-msgstr "board-listor"
+msgstr "llistes del tauler"
 
 #: qml/backend/DeckApiClient.qml:189
-#, fuzzy
 msgid "archived cards"
-msgstr "Arkivera kort"
+msgstr "targetes arxivades"
 
 #: qml/backend/DeckApiClient.qml:191 qml/backend/DeckApiClient.qml:195
 #: qml/backend/DeckApiClient.qml:639 qml/backend/DeckCache.qml:87
 #: qml/backend/DeckController.qml:286 qml/backend/DeckController.qml:671
 #: qml/backend/DeckController.qml:710 qml/pages/HomePage.qml:1522
 msgid "Board"
-msgstr "Board"
+msgstr "Tauler"
 
 #: qml/backend/DeckApiClient.qml:225 qml/backend/DeckApiClient.qml:244
 #: qml/backend/DeckApiClient.qml:745 qml/backend/DeckApiClient.qml:746
@@ -420,29 +429,27 @@ msgstr "Board"
 #: qml/backend/DeckCache.qml:113 qml/backend/DeckCache.qml:114
 #: qml/backend/DeckCache.qml:201 qml/backend/DeckController.qml:934
 msgid "Untitled list"
-msgstr "Namnlös lista"
+msgstr "Llista sense títol"
 
 #: qml/backend/DeckApiClient.qml:227
 msgid "list create"
-msgstr ""
+msgstr "creació de la llista"
 
 #: qml/backend/DeckApiClient.qml:238
-#, fuzzy
 msgid "List update data is incomplete."
-msgstr "Testuppgifterna för desktop är ofullständiga."
+msgstr "Les dades d’actualització de la llista són incompletes."
 
 #: qml/backend/DeckApiClient.qml:246
 msgid "list update"
-msgstr ""
+msgstr "actualització de la llista"
 
 #: qml/backend/DeckApiClient.qml:255
 msgid "list delete"
-msgstr ""
+msgstr "supressió de la llista"
 
 #: qml/backend/DeckApiClient.qml:268
-#, fuzzy
 msgid "Card create data is incomplete."
-msgstr "Kontouppgifterna är ofullständiga."
+msgstr "Les dades de creació de la targeta són incompletes."
 
 #: qml/backend/DeckApiClient.qml:272 qml/backend/DeckApiClient.qml:919
 #: qml/backend/DeckCache.qml:303 qml/backend/DeckCache.qml:334
@@ -450,11 +457,11 @@ msgstr "Kontouppgifterna är ofullständiga."
 #: qml/pages/CardDetailPage.qml:1565 qml/pages/CardDetailPage.qml:1948
 #: qml/pages/CardDetailPage.qml:2524 qml/pages/HomePage.qml:1298
 msgid "Untitled card"
-msgstr "Namnlöst kort"
+msgstr "Targeta sense títol"
 
 #: qml/backend/DeckApiClient.qml:279
 msgid "card create"
-msgstr ""
+msgstr "creació de la targeta"
 
 #: qml/backend/DeckApiClient.qml:280 qml/backend/DeckApiClient.qml:292
 #: qml/backend/DeckApiClient.qml:324 qml/backend/DeckApiClient.qml:347
@@ -470,253 +477,242 @@ msgstr ""
 #: qml/backend/DeckController.qml:1272 qml/pages/HomePage.qml:98
 #: qml/pages/HomePage.qml:1277 qml/pages/HomePage.qml:1605
 msgid "List"
-msgstr "Lista"
+msgstr "Llista"
 
 #: qml/backend/DeckApiClient.qml:291
 msgid "card details"
-msgstr ""
+msgstr "detalls de la targeta"
 
 #: qml/backend/DeckApiClient.qml:307 qml/backend/DeckController.qml:755
 msgid "Card update data is incomplete."
-msgstr ""
+msgstr "Les dades d’actualització de la targeta són incompletes."
 
 #: qml/backend/DeckApiClient.qml:323
 msgid "card update"
-msgstr ""
+msgstr "actualització de la targeta"
 
 #: qml/backend/DeckApiClient.qml:340 qml/backend/DeckController.qml:1322
 msgid "Card reorder data is incomplete."
-msgstr ""
+msgstr "Les dades de reordenació de la targeta són incompletes."
 
 #: qml/backend/DeckApiClient.qml:346
 msgid "card reorder"
-msgstr ""
+msgstr "reordenació de la targeta"
 
 #: qml/backend/DeckApiClient.qml:362 qml/backend/DeckController.qml:855
 msgid "Card delete data is incomplete."
-msgstr ""
+msgstr "Les dades de supressió de la targeta són incompletes."
 
 #: qml/backend/DeckApiClient.qml:365
 msgid "card delete"
-msgstr ""
+msgstr "supressió de la targeta"
 
 #: qml/backend/DeckApiClient.qml:377 qml/backend/DeckController.qml:884
 msgid "Card archive data is incomplete."
-msgstr ""
+msgstr "Les dades d’arxivament de la targeta són incompletes."
 
 #: qml/backend/DeckApiClient.qml:386
 msgid "card archive"
-msgstr ""
+msgstr "arxivament de la targeta"
 
 #: qml/backend/DeckApiClient.qml:386
 msgid "card unarchive"
-msgstr ""
+msgstr "restauració de la targeta"
 
 #: qml/backend/DeckApiClient.qml:402
 msgid "label assignment"
-msgstr ""
+msgstr "assignació d’etiqueta"
 
 #: qml/backend/DeckApiClient.qml:416
-#, fuzzy
 msgid "user assignment"
-msgstr "Ingen tilldelad tagg"
+msgstr "assignació d’usuari"
 
 #: qml/backend/DeckApiClient.qml:426 qml/backend/DeckController.qml:1222
 #: qml/pages/CardDetailPage.qml:723 qml/pages/HomePage.qml:2140
 #: qml/pages/HomePage.qml:2641
 msgid "Label"
-msgstr ""
+msgstr "Etiqueta"
 
 #: qml/backend/DeckApiClient.qml:428
 msgid "label create"
-msgstr ""
+msgstr "creació de l’etiqueta"
 
 #: qml/backend/DeckApiClient.qml:439
 msgid "label delete"
-msgstr ""
+msgstr "supressió de l’etiqueta"
 
 #: qml/backend/DeckApiClient.qml:452
 msgid "attachments"
-msgstr ""
+msgstr "fitxers adjunts"
 
 #: qml/backend/DeckApiClient.qml:467
 msgid "Attachment upload data is incomplete."
-msgstr ""
+msgstr "Les dades de pujada de l’adjunt són incompletes."
 
 #: qml/backend/DeckApiClient.qml:471
 msgid "Attachment upload requires the native network backend."
-msgstr ""
+msgstr "La pujada d’adjunts requereix el backend de xarxa nadiu."
 
 #: qml/backend/DeckApiClient.qml:475
-#, fuzzy
 msgid "The selected file could not be read."
-msgstr "Korttexten kunde inte förberedas för delning."
+msgstr "No s’ha pogut llegir el fitxer seleccionat."
 
 #: qml/backend/DeckApiClient.qml:491
 msgid "attachment upload"
-msgstr ""
+msgstr "pujada de l’adjunt"
 
 #: qml/backend/DeckApiClient.qml:501
 msgid "The selected file is empty."
-msgstr ""
+msgstr "El fitxer seleccionat és buit."
 
 #: qml/backend/DeckApiClient.qml:516
-#, fuzzy
 msgid "Attachment delete data is incomplete."
-msgstr "Kontouppgifterna är ofullständiga."
+msgstr "Les dades de supressió de l’adjunt són incompletes."
 
 #: qml/backend/DeckApiClient.qml:529
 msgid "attachment delete"
-msgstr ""
+msgstr "supressió de l’adjunt"
 
 #: qml/backend/DeckApiClient.qml:542
 msgid "Attachment download data is incomplete."
-msgstr ""
+msgstr "Les dades de baixada de l’adjunt són incompletes."
 
 #: qml/backend/DeckApiClient.qml:546
 msgid "Attachment download requires the native network backend."
-msgstr ""
+msgstr "La baixada d’adjunts requereix el backend de xarxa nadiu."
 
 #: qml/backend/DeckApiClient.qml:563
 msgid "attachment download"
-msgstr ""
+msgstr "baixada de l’adjunt"
 
 #: qml/backend/DeckApiClient.qml:578
 msgid "comments"
-msgstr ""
+msgstr "comentaris"
 
 #: qml/backend/DeckApiClient.qml:590
 msgid "comment create"
-msgstr ""
+msgstr "creació del comentari"
 
 #: qml/backend/DeckApiClient.qml:601
-#, fuzzy
 msgid "Comment delete data is incomplete."
-msgstr "Kontouppgifterna är ofullständiga."
+msgstr "Les dades de supressió del comentari són incompletes."
 
 #: qml/backend/DeckApiClient.qml:606
 msgid "comment delete"
-msgstr ""
+msgstr "supressió del comentari"
 
 #: qml/backend/DeckApiClient.qml:617
-#, fuzzy
 msgid "Activity data is incomplete."
-msgstr "Kontouppgifterna är ofullständiga."
+msgstr "Les dades d’activitat són incompletes."
 
 #: qml/backend/DeckApiClient.qml:628
 msgid "activity"
-msgstr ""
+msgstr "activitat"
 
 #: qml/backend/DeckApiClient.qml:639 qml/backend/DeckCache.qml:87
 msgid "Archived board"
-msgstr "Arkiverad board"
+msgstr "Tauler arxivat"
 
 #: qml/backend/DeckApiClient.qml:907 qml/backend/DeckAttachmentOpenPage.qml:49
 #: qml/backend/DeckAttachmentOpenPageUbuntu.qml:49
 #: qml/pages/CardDetailPage.qml:1701
 msgid "Attachment"
-msgstr ""
+msgstr "Adjunt"
 
 #: qml/backend/DeckApiClient.qml:975 qml/backend/DeckApiClient.qml:1010
 #: qml/backend/DeckApiClient.qml:1051
 msgid "Account credentials are incomplete."
-msgstr "Kontouppgifterna är ofullständiga."
+msgstr "Les credencials del compte són incompletes."
 
 #: qml/backend/DeckApiClient.qml:989 qml/backend/DeckApiClient.qml:1030
 #: qml/backend/DeckApiClient.qml:1071 qml/backend/DeckApiClient.qml:1126
 msgid "Deck %1 request failed with HTTP %2."
-msgstr "Deck %1-begäran misslyckades med HTTP %2."
+msgstr "La sol·licitud de Deck %1 ha fallat amb HTTP %2."
 
 #: qml/backend/DeckApiClient.qml:996 qml/backend/DeckApiClient.qml:1037
 #: qml/backend/DeckApiClient.qml:1137
 msgid "Deck response could not be parsed."
-msgstr "Deck-svaret kunde inte tolkas."
+msgstr "No s’ha pogut interpretar la resposta del Deck."
 
 #: qml/backend/DeckApiClient.qml:1000 qml/backend/DeckApiClient.qml:1041
 #: qml/backend/DeckApiClient.qml:1077 qml/backend/DeckApiClient.qml:1150
 msgid "Deck request failed because the network request could not be completed."
-msgstr ""
-"Deck-begäran misslyckades eftersom nätverksanropet inte kunde slutföras."
+msgstr "La sol·licitud de Deck ha fallat perquè no s’ha pogut completar la petició de xarxa."
 
 #: qml/backend/DeckApiClient.qml:1003 qml/backend/DeckApiClient.qml:1044
 #: qml/backend/DeckApiClient.qml:1080
 msgid "Deck request timed out."
-msgstr "Deck-begäran tog för lång tid."
+msgstr "La sol·licitud de Deck ha esgotat el temps d’espera."
 
 #: qml/backend/DeckApiClient.qml:1027 qml/backend/DeckApiClient.qml:1123
 msgid "Server version changed. Local card was not uploaded."
-msgstr ""
+msgstr "La versió del servidor ha canviat. La targeta local no s’ha pujat."
 
 #: qml/backend/DeckApiClient.qml:1092
-#, fuzzy
 msgid "Native network backend is not available."
-msgstr "Delning är inte tillgänglig."
+msgstr "El backend de xarxa nadiu no està disponible."
 
 #: qml/backend/DeckAttachmentImportPage.qml:7
 #: qml/backend/DeckAttachmentImportPageUbuntu.qml:7
 msgid "Attach file"
-msgstr ""
+msgstr "Adjunta un fitxer"
 
 #: qml/backend/DeckAttachmentImportPage.qml:46
 #: qml/backend/DeckAttachmentImportPageUbuntu.qml:46
 msgid "No file provider was selected."
-msgstr ""
+msgstr "No s’ha seleccionat cap proveïdor de fitxers."
 
 #: qml/backend/DeckAttachmentImportPage.qml:51
 #: qml/backend/DeckAttachmentImportPageUbuntu.qml:51
 msgid "The file provider did not start a transfer."
-msgstr ""
+msgstr "El proveïdor de fitxers no ha iniciat cap transferència."
 
 #: qml/backend/DeckAttachmentImportPage.qml:58
 #: qml/backend/DeckAttachmentImportPageUbuntu.qml:58
-#, fuzzy
 msgid "No file was selected."
-msgstr "Inget konto valt"
+msgstr "No s’ha seleccionat cap fitxer."
 
 #: qml/backend/DeckAttachmentOpenPage.qml:7
 #: qml/backend/DeckAttachmentOpenPageUbuntu.qml:7
-#, fuzzy
 msgid "Open attachment"
-msgstr "Öppna konton"
+msgstr "Obre l’adjunt"
 
 #: qml/backend/DeckAttachmentOpenPage.qml:40
 #: qml/backend/DeckAttachmentOpenPageUbuntu.qml:40
-#, fuzzy
 msgid "No app was selected."
-msgstr "Inget konto valt"
+msgstr "No s’ha seleccionat cap aplicació."
 
 #: qml/backend/DeckAttachmentOpenPage.qml:44
 #: qml/backend/DeckAttachmentOpenPageUbuntu.qml:44
-#, fuzzy
 msgid "The attachment file is not available."
-msgstr "Delning är inte tillgänglig."
+msgstr "El fitxer adjunt no està disponible."
 
 #: qml/backend/DeckController.qml:8 qml/backend/DeckController.qml:623
 #: qml/backend/DeckController.qml:1637
 msgid "Select an account to load Deck boards."
-msgstr "Välj ett konto för att ladda Deck boards."
+msgstr "Seleccioneu un compte per carregar els taulers de Deck."
 
 #: qml/backend/DeckController.qml:9 qml/backend/DeckController.qml:1640
 msgid "No account"
-msgstr "Inget konto"
+msgstr "Cap compte"
 
 #: qml/backend/DeckController.qml:16 qml/backend/DeckController.qml:692
 #: qml/backend/DeckController.qml:749 qml/backend/DeckController.qml:1626
 #: qml/pages/HomePage.qml:2835
 msgid "Boards"
-msgstr "Boards"
+msgstr "Taulers"
 
 #: qml/backend/DeckController.qml:243
 msgid "Authentication failed"
-msgstr "Autentisering misslyckades"
+msgstr "Ha fallat l'autenticació"
 
 #: qml/backend/DeckController.qml:258 qml/backend/DeckController.qml:274
 msgid "Loaded %1 item(s)."
-msgstr "Laddade %1 objekt."
+msgstr "S’han carregat %1 elements."
 
 #: qml/backend/DeckController.qml:258
 msgid "No items found."
-msgstr "Inga objekt hittades."
+msgstr "No s’ha trobat cap element."
 
 #: qml/backend/DeckController.qml:259 qml/backend/DeckController.qml:275
 #: qml/backend/DeckController.qml:301 qml/backend/DeckController.qml:314
@@ -730,102 +726,100 @@ msgstr "Inga objekt hittades."
 #: qml/backend/DeckController.qml:1356 qml/pages/CardDetailPage.qml:1922
 #: qml/pages/HomePage.qml:954
 msgid "Up to date"
-msgstr "Uppdaterad"
+msgstr "Actualitzat"
 
 #: qml/backend/DeckController.qml:274 qml/pages/HomePage.qml:2765
 msgid "No cards found."
-msgstr "Inga kort hittades."
+msgstr "No s’ha trobat cap targeta."
 
 #: qml/backend/DeckController.qml:283
 msgid "Board created."
-msgstr ""
+msgstr "S’ha creat el tauler."
 
 #: qml/backend/DeckController.qml:292
-#, fuzzy
 msgid "Board saved."
-msgstr "Boards"
+msgstr "S’ha desat el tauler."
 
 #: qml/backend/DeckController.qml:308
 msgid "Board deleted."
-msgstr ""
+msgstr "S’ha suprimit el tauler."
 
 #: qml/backend/DeckController.qml:323
 msgid "Board sharing updated."
-msgstr ""
+msgstr "S’ha actualitzat la compartició del tauler."
 
 #: qml/backend/DeckController.qml:332
 msgid "Found %1 share recipient(s)."
-msgstr ""
+msgstr "S’han trobat %1 destinataris per compartir."
 
 #: qml/backend/DeckController.qml:333
-#, fuzzy
 msgid "No share recipients found."
-msgstr "Inga objekt hittades."
+msgstr "No s’ha trobat cap destinatari per compartir."
 
 #: qml/backend/DeckController.qml:340
 msgid "List created."
-msgstr ""
+msgstr "S’ha creat la llista."
 
 #: qml/backend/DeckController.qml:346
 msgid "List saved."
-msgstr ""
+msgstr "S’ha desat la llista."
 
 #: qml/backend/DeckController.qml:352
 msgid "List deleted."
-msgstr ""
+msgstr "S’ha suprimit la llista."
 
 #: qml/backend/DeckController.qml:393
 msgid "Card created."
-msgstr ""
+msgstr "S’ha creat la targeta."
 
 #: qml/backend/DeckController.qml:406
 msgid "Card saved."
-msgstr ""
+msgstr "S’ha desat la targeta."
 
 #: qml/backend/DeckController.qml:417
 msgid "Card order saved."
-msgstr ""
+msgstr "S’ha desat l’ordre de les targetes."
 
 #: qml/backend/DeckController.qml:429
 msgid "Card deleted."
-msgstr ""
+msgstr "S’ha suprimit la targeta."
 
 #: qml/backend/DeckController.qml:444
 msgid "Card archived."
-msgstr ""
+msgstr "S’ha arxivat la targeta."
 
 #: qml/backend/DeckController.qml:444
 msgid "Card restored."
-msgstr ""
+msgstr "S’ha restaurat la targeta."
 
 #: qml/backend/DeckController.qml:457
 msgid "Card loaded."
-msgstr ""
+msgstr "S’ha carregat la targeta."
 
 #: qml/backend/DeckController.qml:475
 msgid "Attachment uploaded."
-msgstr ""
+msgstr "S’ha pujat l’adjunt."
 
 #: qml/backend/DeckController.qml:497
 msgid "Attachment removed."
-msgstr ""
+msgstr "S’ha eliminat l’adjunt."
 
 #: qml/backend/DeckController.qml:508
 msgid "Attachment ready."
-msgstr ""
+msgstr "L’adjunt està preparat."
 
 #: qml/backend/DeckController.qml:530
 msgid "Comment deleted."
-msgstr ""
+msgstr "S’ha suprimit el comentari."
 
 #: qml/backend/DeckController.qml:544
 msgid "Activity loaded."
-msgstr ""
+msgstr "S’ha carregat l’activitat."
 
 #: qml/backend/DeckController.qml:557 qml/backend/DeckController.qml:1356
 #: qml/backend/DeckController.qml:1536 qml/pages/CardDetailPage.qml:1883
 msgid "Conflict"
-msgstr ""
+msgstr "Conflicte"
 
 #: qml/backend/DeckController.qml:574 qml/backend/DeckController.qml:756
 #: qml/backend/DeckController.qml:779 qml/backend/DeckController.qml:807
@@ -835,26 +829,24 @@ msgstr ""
 #: qml/backend/DeckController.qml:1265 qml/backend/DeckController.qml:1323
 #: qml/pages/CardDetailPage.qml:1880 qml/pages/HomePage.qml:951
 msgid "Sync failed"
-msgstr "Synkronisering misslyckades"
+msgstr "Ha fallat la sincronització"
 
 #: qml/backend/DeckController.qml:604 qml/backend/DeckController.qml:651
 #: qml/backend/DeckController.qml:1636
 msgid "Account changed. Refreshing..."
-msgstr "Kontot ändrades. Uppdaterar..."
+msgstr "Compte canviat. S'està actualitzant..."
 
 #: qml/backend/DeckController.qml:610 qml/backend/DeckController.qml:681
-#, fuzzy
 msgid "Showing cached cards. Refreshing..."
-msgstr "Kontot ändrades. Uppdaterar..."
+msgstr "Es mostren les targetes en memòria cau. S’està actualitzant..."
 
 #: qml/backend/DeckController.qml:617 qml/backend/DeckController.qml:659
-#, fuzzy
 msgid "Showing cached boards. Refreshing..."
-msgstr "Kontot ändrades. Uppdaterar..."
+msgstr "Es mostren els taulers en memòria cau. S’està actualitzant..."
 
 #: qml/backend/DeckController.qml:624 qml/backend/DeckController.qml:681
 msgid "Loading..."
-msgstr "Laddar..."
+msgstr "S'està carregant..."
 
 #: qml/backend/DeckController.qml:626 qml/backend/DeckController.qml:664
 #: qml/backend/DeckController.qml:682 qml/backend/DeckController.qml:770
@@ -872,936 +864,891 @@ msgstr "Laddar..."
 #: qml/backend/DeckController.qml:1256 qml/backend/DeckController.qml:1330
 #: qml/backend/DeckController.qml:1343
 msgid "Syncing"
-msgstr "Synkroniserar"
+msgstr "S'està sincronitzant"
 
 #: qml/backend/DeckController.qml:769
 msgid "Saving card..."
-msgstr ""
+msgstr "S’està desant la targeta..."
 
 #: qml/backend/DeckController.qml:778 qml/backend/DeckController.qml:806
-#, fuzzy
 msgid "Conflict data is incomplete."
-msgstr "Kontouppgifterna är ofullständiga."
+msgstr "Les dades del conflicte són incompletes."
 
 #: qml/backend/DeckController.qml:798
-#, fuzzy
 msgid "Server version kept."
-msgstr "Använd serverversion"
+msgstr "S’ha conservat la versió del servidor."
 
 #: qml/backend/DeckController.qml:823
 msgid "Choose a list before creating a card."
-msgstr ""
+msgstr "Trieu una llista abans de crear una targeta."
 
 #: qml/backend/DeckController.qml:846
-#, fuzzy
 msgid "Creating card..."
-msgstr "Skapa ett kort i %1."
+msgstr "S’està creant la targeta..."
 
 #: qml/backend/DeckController.qml:863
 msgid "Local card deleted."
-msgstr ""
+msgstr "S’ha suprimit la targeta local."
 
 #: qml/backend/DeckController.qml:875
-#, fuzzy
 msgid "Deleting card..."
-msgstr "Ta bort kort"
+msgstr "S’està suprimint la targeta..."
 
 #: qml/backend/DeckController.qml:892
-#, fuzzy
 msgid "Archiving card..."
-msgstr "Arkivera kort"
+msgstr "S’està arxivant la targeta..."
 
 #: qml/backend/DeckController.qml:892
-#, fuzzy
 msgid "Restoring card..."
-msgstr "Återställ tavla"
+msgstr "S’està restaurant la targeta..."
 
 #: qml/backend/DeckController.qml:903
 msgid "Creating board..."
-msgstr ""
+msgstr "S’està creant el tauler..."
 
 #: qml/backend/DeckController.qml:914
-#, fuzzy
 msgid "Saving board..."
-msgstr "Dela tavla"
+msgstr "S’està desant el tauler..."
 
 #: qml/backend/DeckController.qml:925
-#, fuzzy
 msgid "Deleting board..."
-msgstr "Ta bort tavla"
+msgstr "S’està suprimint el tauler..."
 
 #: qml/backend/DeckController.qml:936
-#, fuzzy
 msgid "Creating list..."
-msgstr "Välj mållista."
+msgstr "S’està creant la llista..."
 
 #: qml/backend/DeckController.qml:947
 msgid "Saving list..."
-msgstr ""
+msgstr "S’està desant la llista..."
 
 #: qml/backend/DeckController.qml:958
-#, fuzzy
 msgid "Deleting list..."
-msgstr "Ta bort lista"
+msgstr "S’està suprimint la llista..."
 
 #: qml/backend/DeckController.qml:969
 msgid "Searching share recipients..."
-msgstr ""
+msgstr "S’estan cercant destinataris per compartir..."
 
 #: qml/backend/DeckController.qml:980
 msgid "Adding board share..."
-msgstr ""
+msgstr "S’està afegint la compartició del tauler..."
 
 #: qml/backend/DeckController.qml:991
 msgid "Saving board share..."
-msgstr ""
+msgstr "S’està desant la compartició del tauler..."
 
 #: qml/backend/DeckController.qml:1002
 msgid "Removing board share..."
-msgstr ""
+msgstr "S’està eliminant la compartició del tauler..."
 
 #: qml/backend/DeckController.qml:1014
-#, fuzzy
 msgid "Loading card..."
-msgstr "Laddar..."
+msgstr "S’està carregant la targeta..."
 
 #: qml/backend/DeckController.qml:1073 qml/pages/CardDetailPage.qml:1741
 msgid "Save the card before attaching files."
-msgstr ""
+msgstr "Deseu la targeta abans d’adjuntar fitxers."
 
 #: qml/backend/DeckController.qml:1081
 msgid "Uploading attachment..."
-msgstr ""
+msgstr "S’està pujant l’adjunt..."
 
 #: qml/backend/DeckController.qml:1096
-#, fuzzy
 msgid "No removable attachments selected."
-msgstr "Inget konto valt"
+msgstr "No s’ha seleccionat cap adjunt que es pugui eliminar."
 
 #: qml/backend/DeckController.qml:1115 qml/backend/DeckController.qml:1116
 msgid "Removing attachment..."
-msgstr ""
+msgstr "S’està eliminant l’adjunt..."
 
 #: qml/backend/DeckController.qml:1125
-#, fuzzy
 msgid "Attachment data is incomplete."
-msgstr "Kontouppgifterna är ofullständiga."
+msgstr "Les dades de l’adjunt són incompletes."
 
 #: qml/backend/DeckController.qml:1133
 msgid "Opening attachment..."
-msgstr ""
+msgstr "S’està obrint l’adjunt..."
 
 #: qml/backend/DeckController.qml:1161
 msgid "Adding comment..."
-msgstr ""
+msgstr "S’està afegint el comentari..."
 
 #: qml/backend/DeckController.qml:1176
-#, fuzzy
 msgid "No removable comments selected."
-msgstr "Inget konto valt"
+msgstr "No s’ha seleccionat cap comentari que es pugui eliminar."
 
 #: qml/backend/DeckController.qml:1194
-#, fuzzy
 msgid "Deleting comment..."
-msgstr "Verifierar konto..."
+msgstr "S’està suprimint el comentari..."
 
 #: qml/backend/DeckController.qml:1213
 msgid "Updating labels..."
-msgstr ""
+msgstr "S’estan actualitzant les etiquetes..."
 
 #: qml/backend/DeckController.qml:1224
 msgid "Creating label..."
-msgstr ""
+msgstr "S’està creant l’etiqueta..."
 
 #: qml/backend/DeckController.qml:1233
 msgid "Label delete data is incomplete."
-msgstr ""
+msgstr "Les dades de supressió de l’etiqueta són incompletes."
 
 #: qml/backend/DeckController.qml:1241
 msgid "Deleting label..."
-msgstr ""
+msgstr "S’està suprimint l’etiqueta..."
 
 #: qml/backend/DeckController.qml:1255
 msgid "Updating assignment..."
-msgstr ""
+msgstr "S’està actualitzant l’assignació..."
 
 #: qml/backend/DeckController.qml:1264
 msgid "Card move data is incomplete."
-msgstr ""
+msgstr "Les dades per moure la targeta són incompletes."
 
 #: qml/backend/DeckController.qml:1317
 msgid "Card order changed."
-msgstr ""
+msgstr "S’ha canviat l’ordre de les targetes."
 
 #: qml/backend/DeckController.qml:1329
 msgid "Saving card order..."
-msgstr ""
+msgstr "S’està desant l’ordre de les targetes..."
 
 #: qml/backend/DeckController.qml:1342
 msgid "Uploading local changes..."
-msgstr ""
+msgstr "S’estan pujant els canvis locals..."
 
 #: qml/backend/DeckController.qml:1355
 msgid "All local changes uploaded."
-msgstr ""
+msgstr "S’han pujat tots els canvis locals."
 
 #: qml/backend/DeckController.qml:1355
-#, fuzzy
 msgid "Some local changes could not be uploaded."
-msgstr "Deck-svaret kunde inte tolkas."
+msgstr "No s’han pogut pujar alguns canvis locals."
 
 #: qml/backend/DeckController.qml:1356 qml/backend/DeckController.qml:1539
 msgid "Unsynced"
-msgstr ""
+msgstr "No sincronitzada"
 
 #: qml/backend/DeckController.qml:1639
 msgid "Refreshing"
-msgstr "Uppdaterar"
+msgstr "S'està actualitzant"
 
 #: qml/backend/DeckShareExportPage.qml:7
 #: qml/backend/DeckShareExportPageUbuntu.qml:7 qml/pages/HomePage.qml:1472
-#, fuzzy
 msgid "Share"
-msgstr "Dela länk"
+msgstr "Comparteix"
 
 #: qml/backend/DeckShareExportPage.qml:40
 #: qml/backend/DeckShareExportPageUbuntu.qml:40
 msgid "The card text could not be prepared for sharing."
-msgstr "Korttexten kunde inte förberedas för delning."
+msgstr "No s’ha pogut preparar el text de la targeta per compartir-lo."
 
 #: qml/backend/DeckShareExportPage.qml:46
 #: qml/backend/DeckShareExportPageUbuntu.qml:46
-#, fuzzy
 msgid "Shared"
-msgstr "Delad med"
+msgstr "Compartit"
 
 #: qml/pages/CardDetailPage.qml:238
-#, fuzzy
 msgid "Delete card?"
-msgstr "Ta bort kort"
+msgstr "Voleu suprimir la targeta?"
 
 #: qml/pages/CardDetailPage.qml:239
 msgid "This card will be deleted from Nextcloud Deck."
-msgstr ""
+msgstr "Aquesta targeta se suprimirà de Nextcloud Deck."
 
 #: qml/pages/CardDetailPage.qml:244 qml/pages/CardDetailPage.qml:273
 #: qml/pages/CardDetailPage.qml:340 qml/pages/CardDetailPage.qml:992
 #: qml/pages/HomePage.qml:1579 qml/pages/HomePage.qml:1850
 #: qml/pages/HomePage.qml:1913 qml/pages/HomePage.qml:2429
 #: qml/pages/HomePage.qml:2465
-#, fuzzy
 msgid "Delete"
-msgstr "Ta bort lista"
+msgstr "Suprimeix"
 
 #: qml/pages/CardDetailPage.qml:267
-#, fuzzy
 msgid "Delete label?"
-msgstr "Ta bort lista"
+msgstr "Voleu suprimir l’etiqueta?"
 
 #: qml/pages/CardDetailPage.qml:268
 msgid "The label will be removed from this board."
-msgstr ""
+msgstr "L’etiqueta s’eliminarà d’aquest tauler."
 
 #: qml/pages/CardDetailPage.qml:298
 msgid "Remove attachment?"
-msgstr ""
+msgstr "Voleu eliminar l’adjunt?"
 
 #: qml/pages/CardDetailPage.qml:299
 msgid "Remove attachments?"
-msgstr ""
+msgstr "Voleu eliminar els adjunts?"
 
 #: qml/pages/CardDetailPage.qml:301
 msgid "The selected attachment will be removed from this card."
-msgstr ""
+msgstr "L’adjunt seleccionat s’eliminarà d’aquesta targeta."
 
 #: qml/pages/CardDetailPage.qml:302
 msgid "The selected attachments will be removed from this card."
-msgstr ""
+msgstr "Els adjunts seleccionats s’eliminaran d’aquesta targeta."
 
 #: qml/pages/CardDetailPage.qml:307 qml/pages/CardDetailPage.qml:1163
 #: qml/pages/HomePage.qml:1492
 msgid "Remove"
-msgstr "Ta bort"
+msgstr "Elimina"
 
 #: qml/pages/CardDetailPage.qml:331
-#, fuzzy
 msgid "Delete comment?"
-msgstr "Ta bort kort"
+msgstr "Voleu suprimir el comentari?"
 
 #: qml/pages/CardDetailPage.qml:332
 msgid "Delete comments?"
-msgstr ""
+msgstr "Voleu suprimir els comentaris?"
 
 #: qml/pages/CardDetailPage.qml:334
 msgid "The selected comment will be deleted from this card."
-msgstr ""
+msgstr "El comentari seleccionat se suprimirà d’aquesta targeta."
 
 #: qml/pages/CardDetailPage.qml:335
 msgid "The selected comments will be deleted from this card."
-msgstr ""
+msgstr "Els comentaris seleccionats se suprimiran d’aquesta targeta."
 
 #: qml/pages/CardDetailPage.qml:363 qml/pages/HomePage.qml:1010
 msgid "Sync status"
-msgstr "Synkstatus"
+msgstr "Estat de sincronització"
 
 #: qml/pages/CardDetailPage.qml:369 qml/pages/HomePage.qml:1034
 #: qml/pages/HomePage.qml:1511
 msgid "Close"
-msgstr "Stäng"
+msgstr "Tanca"
 
 #: qml/pages/CardDetailPage.qml:380
 msgid "Resolve conflict"
-msgstr ""
+msgstr "Resol el conflicte"
 
 #: qml/pages/CardDetailPage.qml:381
 msgid ""
 "The server version changed while this card had local changes. Choose which "
 "version to keep."
 msgstr ""
+"La versió del servidor ha canviat mentre aquesta targeta tenia canvis "
+"locals. Trieu quina versió voleu conservar."
 
 #: qml/pages/CardDetailPage.qml:391
-#, fuzzy
 msgid "Server version"
-msgstr "Använd serverversion"
+msgstr "Versió del servidor"
 
 #: qml/pages/CardDetailPage.qml:401
-#, fuzzy
 msgid "Local version"
-msgstr "Behåll lokal version"
+msgstr "Versió local"
 
 #: qml/pages/CardDetailPage.qml:419
 msgid "Keep local version"
-msgstr "Behåll lokal version"
+msgstr "Mantén la versió local"
 
 #: qml/pages/CardDetailPage.qml:419
 msgid "Use server version"
-msgstr "Använd serverversion"
+msgstr "Utilitza la versió del servidor"
 
 #: qml/pages/CardDetailPage.qml:443 qml/pages/CardDetailPage.qml:647
 #: qml/pages/HomePage.qml:1066
 msgid "Due date"
-msgstr "Förfallodatum"
+msgstr "Data de venciment"
 
 #: qml/pages/CardDetailPage.qml:449 qml/pages/CardDetailPage.qml:2272
 #: qml/pages/CardDetailPage.qml:2349 qml/pages/HomePage.qml:1215
 msgid "Today"
-msgstr "Idag"
+msgstr "Avui"
 
 #: qml/pages/CardDetailPage.qml:450
-#, fuzzy
 msgid "Clear due date"
-msgstr "Inget förfallodatum"
+msgstr "Esborra la data de venciment"
 
 #: qml/pages/CardDetailPage.qml:470 qml/pages/CardDetailPage.qml:677
 msgid "Time"
-msgstr ""
+msgstr "Hora"
 
 #: qml/pages/CardDetailPage.qml:476
 msgid "Now"
-msgstr "Nu"
+msgstr "Ara"
 
 #: qml/pages/CardDetailPage.qml:477
-#, fuzzy
 msgid "Clear time"
-msgstr "Rensa"
+msgstr "Esborra l’hora"
 
 #: qml/pages/CardDetailPage.qml:536 qml/pages/HomePage.qml:2288
 #: qml/pages/HomePage.qml:2458 qml/pages/SettingsPage.qml:58
 msgid "Pull to refresh"
-msgstr "Dra för att uppdatera"
+msgstr "Estireu per actualitzar"
 
 #: qml/pages/CardDetailPage.qml:536 qml/pages/HomePage.qml:2287
 #: qml/pages/HomePage.qml:2459
 msgid "Release to refresh"
-msgstr "Släpp för att uppdatera"
+msgstr "Deixeu anar per actualitzar"
 
 #: qml/pages/CardDetailPage.qml:547
 msgid "Details"
-msgstr ""
+msgstr "Detalls"
 
 #: qml/pages/CardDetailPage.qml:548 qml/pages/CardDetailPage.qml:1197
 msgid "Attachments"
-msgstr ""
+msgstr "Adjunts"
 
 #: qml/pages/CardDetailPage.qml:549
 msgid "Comments"
-msgstr ""
+msgstr "Comentaris"
 
 #: qml/pages/CardDetailPage.qml:550 qml/pages/CardDetailPage.qml:1325
 msgid "Activity"
-msgstr ""
+msgstr "Activitat"
 
 #: qml/pages/CardDetailPage.qml:614
 msgid "Conflict. Server version changed while local changes are waiting."
-msgstr ""
+msgstr "Conflicte. La versió del servidor ha canviat mentre hi ha canvis locals pendents."
 
 #: qml/pages/CardDetailPage.qml:621
-#, fuzzy
 msgid "Due"
-msgstr "Tis"
+msgstr "Venciment"
 
 #: qml/pages/CardDetailPage.qml:692
 msgid "Labels"
-msgstr ""
+msgstr "Etiquetes"
 
 #: qml/pages/CardDetailPage.qml:772
 msgid "New label"
-msgstr ""
+msgstr "Etiqueta nova"
 
 #: qml/pages/CardDetailPage.qml:784
 msgid "Assignments"
-msgstr ""
+msgstr "Assignacions"
 
 #: qml/pages/CardDetailPage.qml:858
 msgid "Assign users"
-msgstr ""
+msgstr "Assigna usuaris"
 
 #: qml/pages/CardDetailPage.qml:925 qml/pages/HomePage.qml:1166
 msgid "No users available."
-msgstr "Inga användare tillgängliga."
+msgstr "No hi ha cap usuari disponible."
 
 #: qml/pages/CardDetailPage.qml:934
 msgid "Mark as done"
-msgstr "Markera som klar"
+msgstr "Marca com a feta"
 
 #: qml/pages/CardDetailPage.qml:934
 msgid "Mark as not done"
-msgstr "Markera som ej klar"
+msgstr "Marca com a no feta"
 
 #: qml/pages/CardDetailPage.qml:943
 msgid "Description"
-msgstr ""
+msgstr "Descripció"
 
 #: qml/pages/CardDetailPage.qml:966 qml/pages/HomePage.qml:1787
 #: qml/pages/HomePage.qml:1844
 msgid "Delete card"
-msgstr "Ta bort kort"
+msgstr "Suprimeix la targeta"
 
 #: qml/pages/CardDetailPage.qml:985 qml/pages/CardDetailPage.qml:1156
 #: qml/pages/HomePage.qml:2405
 msgid "%1 selected"
-msgstr "%1 markerade"
+msgstr "%1 seleccionades"
 
 #: qml/pages/CardDetailPage.qml:1009
 msgid "No comments yet."
-msgstr ""
+msgstr "Encara no hi ha comentaris."
 
 #: qml/pages/CardDetailPage.qml:1205
 msgid "There are no files attached to this card."
-msgstr ""
+msgstr "No hi ha cap fitxer adjunt a aquesta targeta."
 
 #: qml/pages/CardDetailPage.qml:1333
 msgid "No activity yet."
-msgstr ""
+msgstr "Encara no hi ha activitat."
 
 #: qml/pages/CardDetailPage.qml:1452
 msgid "Add comment"
-msgstr ""
+msgstr "Afegeix un comentari"
 
 #: qml/pages/CardDetailPage.qml:1682
-#, fuzzy
 msgid "No app picker is available."
-msgstr "Inga användare tillgängliga."
+msgstr "No hi ha cap selector d’aplicacions disponible."
 
 #: qml/pages/CardDetailPage.qml:1731
 msgid "%1 B"
-msgstr ""
+msgstr "%1 B"
 
 #: qml/pages/CardDetailPage.qml:1734
 msgid "%1 KB"
-msgstr ""
+msgstr "%1 KB"
 
 #: qml/pages/CardDetailPage.qml:1736
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #: qml/pages/CardDetailPage.qml:1756
-#, fuzzy
 msgid "No file picker is available."
-msgstr "Inga användare tillgängliga."
+msgstr "No hi ha cap selector de fitxers disponible."
 
 #: qml/pages/CardDetailPage.qml:1765
-#, fuzzy
 msgid "The selected file could not be prepared for upload."
-msgstr "Korttexten kunde inte förberedas för delning."
+msgstr "No s’ha pogut preparar el fitxer seleccionat per pujar-lo."
 
 #: qml/pages/CardDetailPage.qml:1912
 msgid "This card has a conflict."
-msgstr ""
+msgstr "Aquesta targeta té un conflicte."
 
 #: qml/pages/CardDetailPage.qml:1914
 msgid "This card has local changes waiting to sync."
-msgstr ""
+msgstr "Aquesta targeta té canvis locals pendents de sincronitzar."
 
 #: qml/pages/CardDetailPage.qml:1920 qml/pages/HomePage.qml:973
 msgid "Sync: %1"
-msgstr "Synk: %1"
+msgstr "Sincronització: %1"
 
 #: qml/pages/CardDetailPage.qml:1946
 msgid ""
 "Server version is not available in the local cache yet. Pull to refresh and "
 "open this conflict again."
 msgstr ""
+"La versió del servidor encara no està disponible a la memòria cau local. "
+"Estireu per actualitzar i torneu a obrir aquest conflicte."
 
 #: qml/pages/CardDetailPage.qml:1951
 msgid "Title: %1"
-msgstr ""
+msgstr "Títol: %1"
 
 #: qml/pages/CardDetailPage.qml:1953
 msgid "Due: %1"
-msgstr ""
+msgstr "Venciment: %1"
 
 #: qml/pages/CardDetailPage.qml:2069
 msgid "April"
-msgstr "April"
+msgstr "abril"
 
 #: qml/pages/CardDetailPage.qml:2069
 msgid "August"
-msgstr "Augusti"
+msgstr "agost"
 
 #: qml/pages/CardDetailPage.qml:2069
 msgid "December"
-msgstr "December"
+msgstr "desembre"
 
 #: qml/pages/CardDetailPage.qml:2069
 msgid "February"
-msgstr "Februari"
+msgstr "febrer"
 
 #: qml/pages/CardDetailPage.qml:2069
 msgid "January"
-msgstr "Januari"
+msgstr "gener"
 
 #: qml/pages/CardDetailPage.qml:2069
 msgid "July"
-msgstr "Juli"
+msgstr "juliol"
 
 #: qml/pages/CardDetailPage.qml:2069
 msgid "June"
-msgstr "Juni"
+msgstr "juny"
 
 #: qml/pages/CardDetailPage.qml:2069
 msgid "March"
-msgstr "Mars"
+msgstr "març"
 
 #: qml/pages/CardDetailPage.qml:2069 qml/pages/CardDetailPage.qml:2277
 #: qml/pages/CardDetailPage.qml:2354
 msgid "May"
-msgstr "Maj"
+msgstr "maig"
 
 #: qml/pages/CardDetailPage.qml:2069
 msgid "November"
-msgstr "November"
+msgstr "novembre"
 
 #: qml/pages/CardDetailPage.qml:2069
 msgid "October"
-msgstr "Oktober"
+msgstr "octubre"
 
 #: qml/pages/CardDetailPage.qml:2069
 msgid "September"
-msgstr "September"
+msgstr "setembre"
 
 #: qml/pages/CardDetailPage.qml:2107 qml/pages/CardDetailPage.qml:2222
 #: qml/pages/HomePage.qml:781
-#, fuzzy
 msgid "User"
-msgstr "Användare"
+msgstr "Usuari"
 
 #: qml/pages/CardDetailPage.qml:2275 qml/pages/CardDetailPage.qml:2352
 msgid "Yesterday"
-msgstr ""
+msgstr "Ahir"
 
 #: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
-#, fuzzy
 msgid "Apr"
-msgstr "April"
+msgstr "abr."
 
 #: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
-#, fuzzy
 msgid "Aug"
-msgstr "Augusti"
+msgstr "ag."
 
 #: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Dec"
-msgstr ""
+msgstr "des."
 
 #: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Feb"
-msgstr ""
+msgstr "febr."
 
 #: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
-#, fuzzy
 msgid "Jan"
-msgstr "Januari"
+msgstr "gen."
 
 #: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
-#, fuzzy
 msgid "Jul"
-msgstr "Juli"
+msgstr "jul."
 
 #: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
-#, fuzzy
 msgid "Jun"
-msgstr "Juni"
+msgstr "juny"
 
 #: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
-#, fuzzy
 msgid "Mar"
-msgstr "Mars"
+msgstr "març"
 
 #: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
-#, fuzzy
 msgid "Nov"
-msgstr "Nu"
+msgstr "nov."
 
 #: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
-#, fuzzy
 msgid "Oct"
-msgstr "Oktober"
+msgstr "oct."
 
 #: qml/pages/CardDetailPage.qml:2277 qml/pages/CardDetailPage.qml:2354
 msgid "Sep"
-msgstr ""
+msgstr "set."
 
 #: qml/pages/HomePage.qml:314
 msgid "Bulk action finished."
-msgstr ""
+msgstr "L’acció massiva ha acabat."
 
 #: qml/pages/HomePage.qml:376
 msgid "There is no card text to share."
-msgstr "Det finns ingen korttext att dela."
+msgstr "No hi ha cap text de targeta per compartir."
 
 #: qml/pages/HomePage.qml:380 qml/pages/HomePage.qml:385
 #: qml/pages/HomePage.qml:404 qml/pages/HomePage.qml:408
-#, fuzzy
 msgid "Shared card"
-msgstr "Dela tavla"
+msgstr "Targeta compartida"
 
 #: qml/pages/HomePage.qml:390
 msgid "Sharing is not available."
-msgstr "Delning är inte tillgänglig."
+msgstr "Compartir no està disponible."
 
 #: qml/pages/HomePage.qml:528
 msgid "Owner"
-msgstr ""
+msgstr "Propietari"
 
 #: qml/pages/HomePage.qml:535
 msgid "(Group)"
-msgstr ""
+msgstr "(Grup)"
 
 #: qml/pages/HomePage.qml:536
 msgid "(Team)"
-msgstr ""
+msgstr "(Equip)"
 
 #: qml/pages/HomePage.qml:537
-#, fuzzy
 msgid "(Remote)"
-msgstr "Ta bort"
+msgstr "(Remot)"
 
 #: qml/pages/HomePage.qml:538
-#, fuzzy
 msgid "Shared user"
-msgstr "Delad med"
+msgstr "Usuari compartit"
 
 #: qml/pages/HomePage.qml:764 qml/pages/HomePage.qml:2056
 #: qml/pages/HomePage.qml:2560
 msgid "Untitled"
-msgstr "Namnlös"
+msgstr "Sense títol"
 
 #: qml/pages/HomePage.qml:975
 msgid "No status message."
-msgstr "Inget statusmeddelande."
+msgstr "No hi ha cap missatge d'estat."
 
 #: qml/pages/HomePage.qml:985
 msgid "Search in %1"
-msgstr "Sök i %1"
+msgstr "Cerca a %1"
 
 #: qml/pages/HomePage.qml:986
 msgid "Search"
-msgstr "Sök"
+msgstr "Cerca"
 
 #: qml/pages/HomePage.qml:1022
 msgid "Refresh"
-msgstr "Uppdatera"
+msgstr "Actualitza"
 
 #: qml/pages/HomePage.qml:1046 qml/pages/HomePage.qml:1259
 msgid "Filter"
-msgstr "Filter"
+msgstr "Filtra"
 
 #: qml/pages/HomePage.qml:1063
 msgid "Tags"
-msgstr "Taggar"
+msgstr "Etiquetes"
 
 #: qml/pages/HomePage.qml:1064
 msgid "Users"
-msgstr "Användare"
+msgstr "Usuaris"
 
 #: qml/pages/HomePage.qml:1065 qml/pages/HomePage.qml:1183
 msgid "Done"
-msgstr "Klar"
+msgstr "Fet"
 
 #: qml/pages/HomePage.qml:1095
 msgid "No assigned tag"
-msgstr "Ingen tilldelad tagg"
+msgstr "Cap etiqueta assignada"
 
 #: qml/pages/HomePage.qml:1110
 msgid "Tag"
-msgstr "Tagg"
+msgstr "Etiqueta"
 
 #: qml/pages/HomePage.qml:1122
 msgid "No tags available."
-msgstr "Inga taggar tillgängliga."
+msgstr "No hi ha cap etiqueta disponible."
 
 #: qml/pages/HomePage.qml:1139
 msgid "Unassigned"
-msgstr "Ej tilldelad"
+msgstr "Sense assignar"
 
 #: qml/pages/HomePage.qml:1182 qml/pages/HomePage.qml:1213
 msgid "All"
-msgstr "Alla"
+msgstr "Totes"
 
 #: qml/pages/HomePage.qml:1184
 msgid "Not done"
-msgstr "Inte klar"
+msgstr "No fetes"
 
 #: qml/pages/HomePage.qml:1214
 msgid "Overdue"
-msgstr "Försenad"
+msgstr "Vençudes"
 
 #: qml/pages/HomePage.qml:1216
 msgid "Tomorrow"
-msgstr "Imorgon"
+msgstr "Demà"
 
 #: qml/pages/HomePage.qml:1217
 msgid "Next 7 days"
-msgstr "Nästa 7 dagar"
+msgstr "Propers 7 dies"
 
 #: qml/pages/HomePage.qml:1218
 msgid "Next 30 days"
-msgstr "Nästa 30 dagar"
+msgstr "Propers 30 dies"
 
 #: qml/pages/HomePage.qml:1219
 msgid "No due date"
-msgstr "Inget förfallodatum"
+msgstr "Sense data de venciment"
 
 #: qml/pages/HomePage.qml:1220
 msgid "Later"
-msgstr "Senare"
+msgstr "Més tard"
 
 #: qml/pages/HomePage.qml:1252
 msgid "Reset"
-msgstr "Återställ"
+msgstr "Restableix"
 
 #: qml/pages/HomePage.qml:1276
-#, fuzzy
 msgid "New card"
-msgstr "Flytta kort"
+msgstr "Targeta nova"
 
 #: qml/pages/HomePage.qml:1277
 msgid "Create a card in %1."
-msgstr "Skapa ett kort i %1."
+msgstr "Crea una targeta a %1."
 
 #: qml/pages/HomePage.qml:1280
 msgid "Card title"
-msgstr ""
+msgstr "Títol de la targeta"
 
 #: qml/pages/HomePage.qml:1289 qml/pages/HomePage.qml:1330
 #: qml/pages/HomePage.qml:1368
 msgid "Create"
-msgstr ""
+msgstr "Crea"
 
 #: qml/pages/HomePage.qml:1318
-#, fuzzy
 msgid "New board"
-msgstr "Dela tavla"
+msgstr "Tauler nou"
 
 #: qml/pages/HomePage.qml:1321
-#, fuzzy
 msgid "Board title"
-msgstr "Tavelalternativ"
+msgstr "Títol del tauler"
 
 #: qml/pages/HomePage.qml:1356
-#, fuzzy
 msgid "New list"
-msgstr "Ta bort lista"
+msgstr "Llista nova"
 
 #: qml/pages/HomePage.qml:1359 qml/pages/HomePage.qml:1610
 msgid "List title"
-msgstr ""
+msgstr "Títol de la llista"
 
 #: qml/pages/HomePage.qml:1393 qml/pages/HomePage.qml:1527
 msgid "Share board"
-msgstr "Dela tavla"
+msgstr "Comparteix el tauler"
 
 #: qml/pages/HomePage.qml:1396
 msgid "Search users, groups or teams"
-msgstr ""
+msgstr "Cerca usuaris, grups o equips"
 
 #: qml/pages/HomePage.qml:1406
 msgid "Owner: %1"
-msgstr ""
+msgstr "Propietari: %1"
 
 #: qml/pages/HomePage.qml:1417
 msgid "Add %1"
-msgstr ""
+msgstr "Afegeix %1"
 
 #: qml/pages/HomePage.qml:1429
 msgid "Shared with"
-msgstr "Delad med"
+msgstr "Compartit amb"
 
 #: qml/pages/HomePage.qml:1462
 msgid "Edit"
-msgstr ""
+msgstr "Edita"
 
 #: qml/pages/HomePage.qml:1482
 msgid "Manage"
-msgstr ""
+msgstr "Gestiona"
 
 #: qml/pages/HomePage.qml:1503
 msgid "This board is not shared with anyone else."
-msgstr ""
+msgstr "Aquest tauler no està compartit amb ningú més."
 
 #: qml/pages/HomePage.qml:1539
 msgid "Archive board"
-msgstr "Arkivera tavla"
+msgstr "Arxiva el tauler"
 
 #: qml/pages/HomePage.qml:1539
 msgid "Restore board"
-msgstr "Återställ tavla"
+msgstr "Restaura el tauler"
 
 #: qml/pages/HomePage.qml:1550 qml/pages/HomePage.qml:1573
 msgid "Delete board"
-msgstr "Ta bort tavla"
+msgstr "Suprimeix el tauler"
 
 #: qml/pages/HomePage.qml:1574
 msgid "Delete this board and its cards?"
-msgstr "Ta bort den här tavlan och dess kort?"
+msgstr "Voleu suprimir aquest tauler i les seves targetes?"
 
 #: qml/pages/HomePage.qml:1606
 msgid "Board options"
-msgstr "Tavelalternativ"
+msgstr "Opcions del tauler"
 
 #: qml/pages/HomePage.qml:1624 qml/pages/HomePage.qml:2848
 msgid "Active"
-msgstr ""
+msgstr "Actius"
 
 #: qml/pages/HomePage.qml:1634 qml/pages/HomePage.qml:2858
-#, fuzzy
 msgid "Archived"
-msgstr "Arkivera kort"
+msgstr "Arxivats"
 
 #: qml/pages/HomePage.qml:1646
 msgid "Save"
-msgstr ""
+msgstr "Desa"
 
 #: qml/pages/HomePage.qml:1665
 msgid "Add card"
-msgstr "Lägg till kort"
+msgstr "Afegeix una targeta"
 
 #: qml/pages/HomePage.qml:1678
 msgid "Add list"
-msgstr "Lägg till lista"
+msgstr "Afegeix una llista"
 
 #: qml/pages/HomePage.qml:1692
 msgid "Move list right"
-msgstr "Flytta listan åt höger"
+msgstr "Mou la llista a la dreta"
 
 #: qml/pages/HomePage.qml:1704
 msgid "Delete list"
-msgstr "Ta bort lista"
+msgstr "Suprimeix la llista"
 
 #: qml/pages/HomePage.qml:1727
 msgid "Card"
-msgstr ""
+msgstr "Targeta"
 
 #: qml/pages/HomePage.qml:1732
 msgid "Share link"
-msgstr "Dela länk"
+msgstr "Comparteix l’enllaç"
 
 #: qml/pages/HomePage.qml:1743
 msgid "Share content"
-msgstr "Dela innehåll"
+msgstr "Comparteix el contingut"
 
 #: qml/pages/HomePage.qml:1754
 msgid "Assign card to me"
-msgstr "Tilldela kort till mig"
+msgstr "Assigna’m la targeta"
 
 #: qml/pages/HomePage.qml:1765 qml/pages/HomePage.qml:1809
 msgid "Move card"
-msgstr "Flytta kort"
+msgstr "Mou la targeta"
 
 #: qml/pages/HomePage.qml:1776
 msgid "Archive card"
-msgstr "Arkivera kort"
+msgstr "Arxiva la targeta"
 
 #: qml/pages/HomePage.qml:1776
-#, fuzzy
 msgid "Restore card"
-msgstr "Återställ tavla"
+msgstr "Restaura la targeta"
 
 #: qml/pages/HomePage.qml:1810 qml/pages/HomePage.qml:1874
 msgid "Choose destination list."
-msgstr "Välj mållista."
+msgstr "Trieu la llista de destinació."
 
 #: qml/pages/HomePage.qml:1845
 msgid "Delete this card?"
-msgstr "Ta bort det här kortet?"
+msgstr "Voleu suprimir aquesta targeta?"
 
 #: qml/pages/HomePage.qml:1873
 msgid "Move selected cards"
-msgstr "Flytta markerade kort"
+msgstr "Mou les targetes seleccionades"
 
 #: qml/pages/HomePage.qml:1907
 msgid "Delete selected cards"
-msgstr "Ta bort markerade kort"
+msgstr "Suprimeix les targetes seleccionades"
 
 #: qml/pages/HomePage.qml:1908
 msgid "Delete %1 selected card(s)?"
-msgstr "Ta bort %1 markerade kort?"
+msgstr "Voleu suprimir %1 targetes seleccionades?"
 
 #: qml/pages/HomePage.qml:2285 qml/pages/HomePage.qml:2460
 msgid "Refreshing..."
-msgstr "Uppdaterar..."
+msgstr "S'està actualitzant..."
 
 #: qml/pages/HomePage.qml:2413 qml/pages/HomePage.qml:2466
 msgid "Archive"
-msgstr "Arkivera"
+msgstr "Arxiva"
 
 #: qml/pages/HomePage.qml:2413 qml/pages/HomePage.qml:2466
 msgid "Restore"
-msgstr "Återställ"
+msgstr "Restaura"
 
 #: qml/pages/HomePage.qml:2421
 msgid "Move"
-msgstr "Flytta"
+msgstr "Mou"
 
 #: qml/pages/HomePage.qml:2771
 msgid "No matching items"
-msgstr "Inga matchande objekt"
+msgstr "Cap element coincident"
 
 #: qml/pages/HomePage.qml:2771
 msgid "Open the menu and choose a board."
-msgstr "Öppna menyn och välj en tavla."
+msgstr "Obriu el menú i trieu un tauler."
 
 #: qml/pages/HomePage.qml:2938
-#, fuzzy
 msgid "Create board"
-msgstr "Ta bort tavla"
+msgstr "Crea un tauler"
 
 #: qml/pages/LanguageSelectionPage.qml:11
 msgid "Default"
-msgstr "Standard"
+msgstr "Per defecte"
 
 #: qml/pages/LanguageSelectionPage.qml:11
 msgid "Follow system language"
-msgstr "Följ systemspråk"
+msgstr "Segueix l'idioma del sistema"
 
 #: qml/pages/LanguageSelectionPage.qml:12
 msgid "Built-in source language"
-msgstr "Inbyggt källspråk"
+msgstr "Idioma font integrat"
 
 #: qml/pages/LanguageSelectionPage.qml:13
 msgid "Initial translation"
-msgstr "Initial översättning"
+msgstr "Traducció inicial"
 
 #: qml/pages/LanguageSelectionPage.qml:14
 #: qml/pages/LanguageSelectionPage.qml:15
@@ -1814,170 +1761,625 @@ msgstr "Initial översättning"
 #: qml/pages/LanguageSelectionPage.qml:22
 #: qml/pages/LanguageSelectionPage.qml:23
 #: qml/pages/LanguageSelectionPage.qml:24
-#, fuzzy
 msgid "AI-assisted starter translation"
-msgstr "Initial översättning"
+msgstr "Traducció inicial assistida per IA"
 
 #: qml/pages/SettingsPage.qml:56
 msgid "Swipe actions"
-msgstr "Svepåtgärder"
+msgstr "Accions de lliscament"
 
 #: qml/pages/SettingsPage.qml:57
 msgid "Reverse left/right actions"
-msgstr "Vänd vänster/höger-åtgärder"
+msgstr "Inverteix les accions esquerra/dreta"
 
 #: qml/pages/SettingsPage.qml:59
 msgid "Drag to move"
-msgstr "Dra för att flytta"
+msgstr "Arrossega per moure"
 
 #: qml/pages/SettingsPage.qml:60
 msgid "Bulk selection"
-msgstr "Markera flera för bulkåtgärder"
+msgstr "Selecció múltiple"
 
 #: qml/pages/SettingsPage.qml:67
 msgid "Sync"
-msgstr "Synk"
+msgstr "Sincronització"
 
 #: qml/pages/SettingsPage.qml:77
 msgid "Sync on startup"
-msgstr "Synka vid start"
+msgstr "Sincronitza en iniciar"
 
 #: qml/pages/SettingsPage.qml:109
 msgid "List interaction"
-msgstr "Listinteraktion"
+msgstr "Interacció de llista"
 
 #: qml/pages/SettingsPage.qml:115
 msgid "Configure card list gestures."
-msgstr "Ställ in gester för kortlistan."
+msgstr "Configureu els gestos de la llista de targetes."
 
 #: qml/pages/SettingsPage.qml:162
-#, fuzzy
 msgid "Cards"
-msgstr "boards"
+msgstr "Targetes"
 
 #: qml/pages/SettingsPage.qml:172
 msgid "Open card links in browser directly"
-msgstr ""
+msgstr "Obre els enllaços de les targetes directament al navegador"
 
-#~ msgid "This project is licensed under the MIT License."
-#~ msgstr "Det här projektet är licensierat under MIT-licensen."
+#~ msgid "No shared content was received."
+#~ msgstr "No s'ha rebut cap contingut compartit."
 
-#~ msgid "Select an account and authorize it for NextDeck."
-#~ msgstr "Välj ett konto och auktorisera det för NextDeck."
+#~ msgid "The shared content did not contain readable text."
+#~ msgstr "El contingut compartit no contenia text llegible."
+
+#~ msgid "Tasks calendar request failed with HTTP %1."
+#~ msgstr "La sol·licitud del calendari de tasques ha fallat amb HTTP %1."
 
 #~ msgid ""
-#~ "Authorization succeeded, but the Ubuntu Touch account did not expose a "
-#~ "server address for NextDeck."
+#~ "Tasks calendar request failed because the network request could not be "
+#~ "completed."
 #~ msgstr ""
-#~ "Auktoriseringen lyckades, men Ubuntu Touch-kontot exponerade ingen "
-#~ "serveradress för NextDeck."
+#~ "La sol·licitud del calendari de tasques ha fallat perquè no s'ha pogut "
+#~ "completar la petició de xarxa."
 
-#~ msgid "System account authorization completed. Verifying access..."
-#~ msgstr "Systemkontots auktorisering är klar. Verifierar åtkomst..."
-
-#~ msgid ""
-#~ "System account authorization was cancelled or did not return an account."
-#~ msgstr "Systemets kontoauktorisering avbröts eller returnerade inget konto."
-
-#~ msgid "Open system accounts?"
-#~ msgstr "Öppna systemets konton?"
-
-#~ msgid "Allow NextDeck in Ubuntu Touch account settings first"
-#~ msgstr "Tillåt först NextDeck i Ubuntu Touch-kontoinställningarna"
-
-#~ msgid "Allowed for NextDeck"
-#~ msgstr "Tillåtet för NextDeck"
-
-#~ msgid ""
-#~ "This account is not allowed for NextDeck yet. Open Ubuntu Touch System "
-#~ "Settings > Accounts, allow NextDeck for this account, then return here."
+#~ msgid "Tasks calendar request timed out."
 #~ msgstr ""
-#~ "Det här kontot är inte tillåtet för NextDeck än. Öppna Ubuntu Touch "
-#~ "systeminställningar > Konton, tillåt NextDeck för detta konto och "
-#~ "återvänd hit."
+#~ "La sol·licitud del calendari de tasques ha esgotat el temps d'espera."
+
+#~ msgid "Tasks"
+#~ msgstr "Tasques"
+
+#~ msgid "Trash bin request is incomplete."
+#~ msgstr "La sol·licitud de la paperera és incompleta."
+
+#~ msgid "Trash restore request is incomplete."
+#~ msgstr "La sol·licitud de restauració és incompleta."
+
+#~ msgid "Task list creation is not available."
+#~ msgstr "La creació de llistes de tasques no està disponible."
+
+#~ msgid "Task list name is required."
+#~ msgstr "Cal un nom per a la llista de tasques."
+
+#~ msgid "Task list deletion is not available."
+#~ msgstr "La supressió de la llista de tasques no està disponible."
+
+#~ msgid "Task list delete request is incomplete."
+#~ msgstr "La sol·licitud per suprimir la llista de tasques és incompleta."
+
+#~ msgid "Task update failed with HTTP %1."
+#~ msgstr "L'actualització de la tasca ha fallat amb HTTP %1."
 
 #~ msgid ""
-#~ "Add a Nextcloud or ownCloud account in Ubuntu Touch System Settings, then "
-#~ "return to NextDeck."
+#~ "Task update failed because the network request could not be completed."
 #~ msgstr ""
-#~ "Lägg till ett Nextcloud- eller ownCloud-konto i Ubuntu Touch "
-#~ "systeminställningar och återvänd sedan till NextDeck."
+#~ "L'actualització de la tasca ha fallat perquè no s'ha pogut completar la "
+#~ "petició de xarxa."
+
+#~ msgid "Task update timed out."
+#~ msgstr "L'actualització de la tasca ha esgotat el temps d'espera."
+
+#~ msgid "Server rejected the new task because that resource already exists."
+#~ msgstr ""
+#~ "El servidor ha rebutjat la tasca nova perquè aquest recurs ja existeix."
+
+#~ msgid "Task create failed with HTTP %1."
+#~ msgstr "La creació de la tasca ha fallat amb HTTP %1."
 
 #~ msgid ""
-#~ "Open Ubuntu Touch System Settings, select %1, allow NextDeck for that "
-#~ "account, then return here. NextDeck will verify it automatically."
+#~ "Task create failed because the network request could not be completed."
 #~ msgstr ""
-#~ "Öppna Ubuntu Touch systeminställningar, välj %1, tillåt NextDeck för det "
-#~ "kontot och återvänd hit. NextDeck verifierar det automatiskt."
+#~ "La creació de la tasca ha fallat perquè no s'ha pogut completar la "
+#~ "petició de xarxa."
+
+#~ msgid "Task create timed out."
+#~ msgstr "La creació de la tasca ha esgotat el temps d'espera."
+
+#~ msgid "Server version changed. Local delete was not uploaded."
+#~ msgstr ""
+#~ "La versió del servidor ha canviat. La supressió local no s'ha pujat."
+
+#~ msgid "Task delete failed with HTTP %1."
+#~ msgstr "La supressió de la tasca ha fallat amb HTTP %1."
 
 #~ msgid ""
-#~ "Open Ubuntu Touch System Settings, select the Nextcloud account, allow "
-#~ "NextDeck for that account, then return here. NextDeck will verify it "
-#~ "automatically."
+#~ "Task delete failed because the network request could not be completed."
 #~ msgstr ""
-#~ "Öppna Ubuntu Touch systeminställningar, välj Nextcloud-kontot, tillåt "
-#~ "NextDeck för det kontot och återvänd hit. NextDeck verifierar det "
-#~ "automatiskt."
+#~ "La supressió de la tasca ha fallat perquè no s'ha pogut completar la "
+#~ "petició de xarxa."
+
+#~ msgid "Task delete timed out."
+#~ msgstr "La supressió de la tasca ha esgotat el temps d'espera."
+
+#~ msgid "Choose a different task list."
+#~ msgstr "Trieu una altra llista de tasques."
+
+#~ msgid "Read-only task calendar"
+#~ msgstr "Calendari de tasques de només lectura"
+
+#~ msgid "Task calendar"
+#~ msgstr "Calendari de tasques"
+
+#~ msgid "Deleted task list"
+#~ msgstr "Llista de tasques suprimida"
+
+#~ msgid "Deleted task"
+#~ msgstr "Tasca suprimida"
+
+#~ msgid "Due %1"
+#~ msgstr "Venciment %1"
+
+#~ msgid "In progress"
+#~ msgstr "En curs"
+
+#~ msgid "Canceled"
+#~ msgstr "Cancel·lada"
+
+#~ msgid "Open task"
+#~ msgstr "Tasca oberta"
+
+#~ msgid "High"
+#~ msgstr "Alta"
+
+#~ msgid "Medium"
+#~ msgstr "Mitjana"
+
+#~ msgid "Low"
+#~ msgstr "Baixa"
+
+#~ msgid "Select an account to load CalDAV task calendars."
+#~ msgstr "Seleccioneu un compte per carregar calendaris de tasques CalDAV."
+
+#~ msgid "My Tasks"
+#~ msgstr "Les meves tasques"
+
+#~ msgid "Loaded %1 task(s)."
+#~ msgstr "S'han carregat %1 tasques."
+
+#~ msgid "Updated %1 tasks."
+#~ msgstr "S'han actualitzat %1 tasques."
+
+#~ msgid "Task marked completed."
+#~ msgstr "Tasca marcada com a completada."
+
+#~ msgid "Task marked open."
+#~ msgstr "Tasca marcada com a oberta."
+
+#~ msgid "Task list created. Refreshing..."
+#~ msgstr "Llista de tasques creada. S'està actualitzant..."
+
+#~ msgid "Task list updated. Refreshing..."
+#~ msgstr "Llista de tasques actualitzada. S'està actualitzant..."
+
+#~ msgid "Task list deleted. Refreshing..."
+#~ msgstr "Llista de tasques suprimida. S'està actualitzant..."
+
+#~ msgid "Trash bin"
+#~ msgstr "Paperera"
+
+#~ msgid "Loaded %1 deleted item(s)."
+#~ msgstr "S'han carregat %1 elements suprimits."
+
+#~ msgid "Item restored. Refreshing..."
+#~ msgstr "Element restaurat. S'està actualitzant..."
+
+#~ msgid "Lists"
+#~ msgstr "Llistes"
+
+#~ msgid "This task is read-only."
+#~ msgstr "Aquesta tasca és de només lectura."
+
+#~ msgid "No task list is available for new tasks."
+#~ msgstr "No hi ha cap llista disponible per a tasques noves."
+
+#~ msgid "This task list is read-only."
+#~ msgstr "Aquesta llista de tasques és de només lectura."
+
+#~ msgid "New task"
+#~ msgstr "Tasca nova"
+
+#~ msgid "Waiting to sync"
+#~ msgstr "Pendent de sincronitzar"
+
+#~ msgid "Shared text imported as a local task. Syncing soon."
+#~ msgstr ""
+#~ "El text compartit s'ha importat com a tasca local. Se sincronitzarà aviat."
+
+#~ msgid "Shared %1"
+#~ msgstr "Compartit %1"
+
+#~ msgid "Deleted local task draft."
+#~ msgstr "S'ha suprimit l'esborrany local de la tasca."
+
+#~ msgid "Task deleted locally. Syncing deletion..."
+#~ msgstr "Tasca suprimida localment. S'està sincronitzant la supressió..."
+
+#~ msgid "%1 tasks deleted locally. Syncing deletions..."
+#~ msgstr ""
+#~ "%1 tasques suprimides localment. S'estan sincronitzant les supressions..."
+
+#~ msgid "Choose a target task list."
+#~ msgstr "Trieu una llista de tasques de destinació."
+
+#~ msgid "Selected tasks must be synced before they can be moved."
+#~ msgstr ""
+#~ "Les tasques seleccionades s'han de sincronitzar abans de poder-les moure."
+
+#~ msgid "No tasks can be moved."
+#~ msgstr "No es pot moure cap tasca."
+
+#~ msgid "Moving %1 tasks..."
+#~ msgstr "S'estan movent %1 tasques..."
+
+#~ msgid "Moving task..."
+#~ msgstr "S'està movent la tasca..."
+
+#~ msgid "Moving task %1 of %2..."
+#~ msgstr "S'està movent la tasca %1 de %2..."
+
+#~ msgid "Moved %1 task(s), %2 failed, %3 skipped."
+#~ msgstr "S'han mogut %1 tasques, %2 han fallat, %3 s'han omès."
+
+#~ msgid "Moved %1 task(s). %2 skipped because they need sync first."
+#~ msgstr ""
+#~ "S'han mogut %1 tasques. %2 s'han omès perquè primer cal sincronitzar-les."
+
+#~ msgid "Moved %1 task(s)."
+#~ msgstr "S'han mogut %1 tasques."
+
+#~ msgid "%1 local task changes saved."
+#~ msgstr "S'han desat %1 canvis locals de tasques."
+
+#~ msgid "Task marked completed locally."
+#~ msgstr "Tasca marcada com a completada localment."
+
+#~ msgid "Task marked open locally."
+#~ msgstr "Tasca marcada com a oberta localment."
+
+#~ msgid "Updating task %1 of %2..."
+#~ msgstr "S'està actualitzant la tasca %1 de %2..."
+
+#~ msgid "Marking task completed..."
+#~ msgstr "S'està marcant la tasca com a completada..."
+
+#~ msgid "Local changes saved on this device"
+#~ msgstr "Canvis locals desats en aquest dispositiu"
+
+#~ msgid "Task cannot be moved because it has no server identity yet."
+#~ msgstr "La tasca no es pot moure perquè encara no té identitat al servidor."
+
+#~ msgid "Task cannot be moved under itself."
+#~ msgstr "La tasca no es pot moure sota ella mateixa."
+
+#~ msgid "Subtask relationship saved locally."
+#~ msgstr "Relació de subtasca desada localment."
+
+#~ msgid "Task moved to top level locally."
+#~ msgstr "Tasca moguda al nivell superior localment."
+
+#~ msgid "Local changes waiting to sync."
+#~ msgstr "Canvis locals pendents de sincronitzar."
+
+#~ msgid "Views"
+#~ msgstr "Vistes"
+
+#~ msgid "Create new list"
+#~ msgstr "Crea una llista nova"
+
+#~ msgid "Priority"
+#~ msgstr "Prioritat"
+
+#~ msgid "Alphabetical"
+#~ msgstr "Alfabètic"
+
+#~ msgid "Modified"
+#~ msgstr "Modificat"
+
+#~ msgid "Manual order"
+#~ msgstr "Ordre manual"
+
+#~ msgid "New task waiting for a title before sync."
+#~ msgstr "La tasca nova espera un títol abans de sincronitzar-se."
+
+#~ msgid "Uploading task %1 of %2..."
+#~ msgstr "S'està pujant la tasca %1 de %2..."
+
+#~ msgid "Local version kept. It will be uploaded on the next sync."
+#~ msgstr ""
+#~ "S'ha mantingut la versió local. Es pujarà en la propera sincronització."
+
+#~ msgid "Using server version."
+#~ msgstr "S'està utilitzant la versió del servidor."
+
+#~ msgid "Server version changed"
+#~ msgstr "La versió del servidor ha canviat"
+
+#~ msgid "Local changes uploaded. Refreshing..."
+#~ msgstr "Canvis locals pujats. S'està actualitzant..."
 
 #~ msgid ""
-#~ "Waiting for account permission. If you already allowed NextDeck, return "
-#~ "here and wait a moment."
+#~ "Sync finished with %1 failed and %2 conflicts. Local changes were kept."
 #~ msgstr ""
-#~ "Väntar på kontobehörighet. Om du redan har tillåtit NextDeck, återvänd "
-#~ "hit och vänta en stund."
+#~ "La sincronització ha acabat amb %1 errors i %2 conflictes. Els canvis "
+#~ "locals s'han conservat."
+
+#~ msgid "Server version is not available."
+#~ msgstr "La versió del servidor no està disponible."
+
+#~ msgid "Status: %1"
+#~ msgstr "Estat: %1"
+
+#~ msgid "Start: %1"
+#~ msgstr "Inici: %1"
+
+#~ msgid "Priority: %1"
+#~ msgstr "Prioritat: %1"
+
+#, javascript-format
+#~ msgid "Progress: %1%"
+#~ msgstr "Progrés: %1%"
+
+#~ msgid "Complete"
+#~ msgstr "Completa"
+
+#~ msgid "Reopen"
+#~ msgstr "Reobre"
+
+#~ msgid "No task list is available for imported text."
+#~ msgstr "No hi ha cap llista de tasques disponible per al text importat."
+
+#~ msgid "This will delete %1 selected tasks."
+#~ msgstr "Això suprimirà %1 tasques seleccionades."
+
+#~ msgid "%1 tasks have unsynced local changes that will be discarded."
+#~ msgstr "%1 tasques tenen canvis locals no sincronitzats que es descartaran."
+
+#~ msgid "%1 tasks have conflicts."
+#~ msgstr "%1 tasques tenen conflictes."
+
+#~ msgid "%1 tasks have unsynced local changes."
+#~ msgstr "%1 tasques tenen canvis locals no sincronitzats."
+
+#~ msgid "Choose a list"
+#~ msgstr "Trieu una llista"
+
+#~ msgid "Completed tasks are shown"
+#~ msgstr "Es mostren les tasques completades"
+
+#~ msgid "Open tasks"
+#~ msgstr "Tasques obertes"
+
+#~ msgid "Sort: %1"
+#~ msgstr "Ordenació: %1"
+
+#~ msgid "Read-only"
+#~ msgstr "Només lectura"
+
+#~ msgid "Delete pending"
+#~ msgstr "Supressió pendent"
+
+#~ msgid "New"
+#~ msgstr "Nova"
+
+#~ msgid "Choose task list"
+#~ msgstr "Trieu una llista de tasques"
+
+#~ msgid "Select where the new task should be created."
+#~ msgstr "Seleccioneu on s'ha de crear la tasca nova."
+
+#~ msgid "Select where the shared text task should be created."
+#~ msgstr "Seleccioneu on s'ha de crear la tasca del text compartit."
+
+#~ msgid "Enter a name for the new task list."
+#~ msgstr "Introduïu un nom per a la nova llista de tasques."
+
+#~ msgid "Task list"
+#~ msgstr "Llista de tasques"
+
+#~ msgid "Rename the list, change its color, or delete it."
+#~ msgstr "Canvieu el nom de la llista, canvieu-ne el color o suprimiu-la."
+
+#~ msgid "Color"
+#~ msgstr "Color"
+
+#~ msgid "Delete task list?"
+#~ msgstr "Voleu suprimir la llista de tasques?"
 
 #~ msgid ""
-#~ "%1 is not allowed to use this account yet. Open Ubuntu Touch System "
-#~ "Settings > Accounts, allow %1 for this account, then return here."
+#~ "The list and its tasks will be removed from the server and this device."
 #~ msgstr ""
-#~ "%1 får inte använda det här kontot än. Öppna Ubuntu Touch "
-#~ "Systeminställningar > Konton, tillåt %1 för detta konto och återvänd hit."
+#~ "La llista i les seves tasques s'eliminaran del servidor i d'aquest "
+#~ "dispositiu."
+
+#~ msgid "No selected tasks could be deleted."
+#~ msgstr "No s'ha pogut suprimir cap tasca seleccionada."
 
 #~ msgid ""
-#~ "This account is not allowed for %1 yet. Open Ubuntu Touch System Settings "
-#~ "> Accounts, allow %1 for this account, then return here."
+#~ "Choose the target list. Tasks with unsynced local changes are skipped."
 #~ msgstr ""
-#~ "Det här kontot är inte tillåtet för %1 än. Öppna Ubuntu Touch "
-#~ "Systeminställningar > Konton, tillåt %1 för detta konto och återvänd hit."
+#~ "Trieu la llista de destinació. Les tasques amb canvis locals no "
+#~ "sincronitzats s'ometen."
 
-#~ msgid "%1 active filter(s)"
-#~ msgstr "%1 aktiva filter"
+#~ msgid "Reopen completed tasks?"
+#~ msgstr "Voleu reobrir les tasques completades?"
 
-#~ msgid "All cards are shown."
-#~ msgstr "Alla kort visas."
+#~ msgid "This will mark all completed tasks in this list as open again."
+#~ msgstr ""
+#~ "Això tornarà a marcar totes les tasques completades d'aquesta llista com "
+#~ "a obertes."
 
-#~ msgid "Nextcloud account"
-#~ msgstr "Nextcloud-konto"
+#~ msgid "Reopen all"
+#~ msgstr "Reobre-ho tot"
 
-#~ msgid "App"
-#~ msgstr "App"
+#~ msgid "Sort %1"
+#~ msgstr "Ordena %1"
 
-#~ msgid "Sync while app is active"
-#~ msgstr "Synka när appen är aktiv"
+#~ msgid "Sort tasks"
+#~ msgstr "Ordena les tasques"
 
-#~ msgid "Foundation status"
-#~ msgstr "Grundstatus"
+#~ msgid ""
+#~ "Manual order is saved to the task list using Nextcloud-compatible task "
+#~ "order values."
+#~ msgstr ""
+#~ "L'ordre manual es desa a la llista de tasques amb valors d'ordre "
+#~ "compatibles amb Nextcloud."
+
+#~ msgid "Uses standard task sort concepts."
+#~ msgstr "Utilitza conceptes estàndard d'ordenació de tasques."
+
+#~ msgid "Ascending"
+#~ msgstr "Ascendent"
+
+#~ msgid "Descending"
+#~ msgstr "Descendent"
+
+#~ msgid "Sort list"
+#~ msgstr "Ordena la llista"
+
+#~ msgid "Choose which task list to sort."
+#~ msgstr "Trieu quina llista de tasques voleu ordenar."
+
+#~ msgid "Task"
+#~ msgstr "Tasca"
+
+#~ msgid "Deleted %1"
+#~ msgstr "Suprimit %1"
+
+#~ msgid "Deleted items are kept for a limited time by the server."
+#~ msgstr ""
+#~ "Els elements suprimits es conserven durant un temps limitat al servidor."
+
+#~ msgid "Hide completed tasks (%1)"
+#~ msgstr "Amaga les tasques completades (%1)"
+
+#~ msgid "Show completed tasks (%1)"
+#~ msgstr "Mostra les tasques completades (%1)"
+
+#~ msgid "Toggle complete"
+#~ msgstr "Canvia completada"
+
+#~ msgid "Level 0 drag/drop"
+#~ msgstr "Arrossega/deixa anar al nivell 0"
+
+#~ msgid "Children drag/drop"
+#~ msgstr "Arrossega/deixa anar subtasques"
+
+#~ msgid "Expanded by default"
+#~ msgstr "Expandit per defecte"
+
+#~ msgid "Show tree lines"
+#~ msgstr "Mostra les línies de l'arbre"
+
+#~ msgid "Read-only lists"
+#~ msgstr "Llistes de només lectura"
+
+#~ msgid ""
+#~ "Some servers expose Deck cards as read-only task lists. You can hide them "
+#~ "from NextTasks."
+#~ msgstr ""
+#~ "Alguns servidors exposen targetes Deck com a llistes de tasques de només "
+#~ "lectura. Podeu amagar-les de NextTasks."
+
+#~ msgid "Show read-only lists"
+#~ msgstr "Mostra les llistes de només lectura"
+
+#~ msgid "Server version - ETag available"
+#~ msgstr "Versió del servidor - ETag disponible"
+
+#~ msgid "Local version - unsynced"
+#~ msgstr "Versió local - no sincronitzada"
+
+#~ msgid "Select a date."
+#~ msgstr "Seleccioneu una data."
+
+#~ msgid "Fri"
+#~ msgstr "Dv"
+
+#~ msgid "Mon"
+#~ msgstr "Dl"
+
+#~ msgid "Sat"
+#~ msgstr "Ds"
+
+#~ msgid "Sun"
+#~ msgstr "Dg"
+
+#~ msgid "Thu"
+#~ msgstr "Dj"
+
+#~ msgid "Wed"
+#~ msgstr "Dc"
+
+#~ msgid "Status"
+#~ msgstr "Estat"
+
+#~ msgid "Choose task status."
+#~ msgstr "Trieu l'estat de la tasca."
+
+#~ msgid "Select tags"
+#~ msgstr "Seleccioneu etiquetes"
+
+#~ msgid "No tags yet. Type above to create one."
+#~ msgstr "Encara no hi ha etiquetes. Escriviu a dalt per crear-ne una."
+
+#~ msgid "Selected: %1"
+#~ msgstr "Seleccionat: %1"
+
+#~ msgid "Clear tags"
+#~ msgstr "Neteja etiquetes"
+
+#~ msgid ""
+#~ "This task has local changes. Deleting it will discard those local changes."
+#~ msgstr ""
+#~ "Aquesta tasca té canvis locals. Si la suprimiu, aquests canvis es "
+#~ "descartaran."
+
+#~ msgid "Sync this task before moving it to another list."
+#~ msgstr "Sincronitzeu aquesta tasca abans de moure-la a una altra llista."
+
+#~ msgid "Notes"
+#~ msgstr "Notes"
+
+#, javascript-format
+#~ msgid "%1% completed"
+#~ msgstr "%1% completat"
+
+#~ msgid "Progress"
+#~ msgstr "Progrés"
+
+#~ msgid "Set location"
+#~ msgstr "Defineix la ubicació"
+
+#~ msgid "Set a URL"
+#~ msgstr "Defineix un URL"
+
+#~ msgid "No tags"
+#~ msgstr "Sense etiquetes"
+
+#~ msgid "Move to another list"
+#~ msgstr "Mou a una altra llista"
+
+#~ msgid "Modified: %1"
+#~ msgstr "Modificat: %1"
+
+#~ msgid "No notes."
+#~ msgstr "Sense notes."
+
+#~ msgid "This task is up to date."
+#~ msgstr "Aquesta tasca està actualitzada."
+
+#~ msgid "High (%1)"
+#~ msgstr "Alta (%1)"
+
+#~ msgid "Medium (5)"
+#~ msgstr "Mitjana (5)"
+
+#~ msgid "Low (%1)"
+#~ msgstr "Baixa (%1)"
+
+#~ msgid "Clear"
+#~ msgstr "Neteja"
 
 #~ msgid "Hour"
-#~ msgstr "Timme"
+#~ msgstr "Hora"
 
 #~ msgid "Min"
 #~ msgstr "Min"
-
-#~ msgid "Mon"
-#~ msgstr "Mån"
-
-#~ msgid "Wed"
-#~ msgstr "Ons"
-
-#~ msgid "Thu"
-#~ msgstr "Tor"
-
-#~ msgid "Fri"
-#~ msgstr "Fre"
-
-#~ msgid "Sat"
-#~ msgstr "Lör"
-
-#~ msgid "Sun"
-#~ msgstr "Sön"

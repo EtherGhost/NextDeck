@@ -3,6 +3,7 @@ import QtQuick.Layouts 1.3
 import Lomiri.Components 1.3
 import Lomiri.Components.Popups 1.3
 import "qrc:/NextCommon" as NextCommon
+import "qrc:/UTControls" as UTControls
 
 Page {
     id: page
@@ -237,7 +238,7 @@ Page {
             title: i18n.tr("Delete card?")
             text: i18n.tr("This card will be deleted from Nextcloud Deck.")
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Delete")
@@ -249,7 +250,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Cancel")
@@ -266,7 +267,7 @@ Page {
             title: i18n.tr("Delete label?")
             text: i18n.tr("The label will be removed from this board.")
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Delete")
@@ -279,7 +280,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Cancel")
@@ -300,7 +301,7 @@ Page {
                 ? i18n.tr("The selected attachment will be removed from this card.")
                 : i18n.tr("The selected attachments will be removed from this card.")
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Remove")
@@ -312,7 +313,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Cancel")
@@ -333,7 +334,7 @@ Page {
                 ? i18n.tr("The selected comment will be deleted from this card.")
                 : i18n.tr("The selected comments will be deleted from this card.")
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Delete")
@@ -345,7 +346,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Cancel")
@@ -362,7 +363,7 @@ Page {
             title: i18n.tr("Sync status")
             text: page.syncStatusDetailsText()
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Close")
@@ -384,7 +385,7 @@ Page {
                 height: units.gu(5)
                 spacing: units.gu(0.6)
 
-                NextCommon.AppButton {
+                UTControls.AppButton {
                     width: (parent.width - units.gu(0.6)) / 2
                     height: parent.height
                     text: page.conflictChoice === "server" ? "\u2713 " + i18n.tr("Server version") : i18n.tr("Server version")
@@ -394,7 +395,7 @@ Page {
                     onClicked: page.conflictChoice = "server"
                 }
 
-                NextCommon.AppButton {
+                UTControls.AppButton {
                     width: (parent.width - units.gu(0.6)) / 2
                     height: parent.height
                     text: page.conflictChoice === "local" ? "\u2713 " + i18n.tr("Local version") : i18n.tr("Local version")
@@ -412,7 +413,7 @@ Page {
                 text: page.conflictPreviewText()
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: page.conflictChoice === "server" ? i18n.tr("Use server version") : i18n.tr("Keep local version")
@@ -424,7 +425,7 @@ Page {
                 }
             }
 
-            NextCommon.AppButton {
+            UTControls.AppButton {
                 width: parent ? parent.width : units.gu(34)
                 height: units.gu(4.8)
                 text: i18n.tr("Cancel")
@@ -441,7 +442,7 @@ Page {
             width: Math.min(page.width - units.gu(4), units.gu(40))
             title: i18n.tr("Due date")
 
-            NextCommon.CalendarDatePicker {
+            UTControls.CalendarDatePicker {
                 width: Math.min(dateDialog.width - units.gu(2), units.gu(34))
                 value: page.dueDateText
                 okText: i18n.tr("OK")
@@ -468,7 +469,7 @@ Page {
             id: timeDialog
             title: i18n.tr("Time")
 
-            NextCommon.TimePicker {
+            UTControls.TimePicker {
                 width: Math.min(timeDialog.width - units.gu(2), units.gu(34))
                 value: page.dueTimeText
                 okText: i18n.tr("OK")
@@ -926,7 +927,7 @@ Page {
                     }
                 }
 
-                NextCommon.AppButton {
+                UTControls.AppButton {
                     Layout.alignment: Qt.AlignHCenter
                     Layout.preferredWidth: units.gu(24)
                     Layout.preferredHeight: units.gu(4.8)
@@ -958,7 +959,7 @@ Page {
                     }
                 }
 
-                NextCommon.AppButton {
+                UTControls.AppButton {
                     Layout.alignment: Qt.AlignHCenter
                     Layout.preferredWidth: units.gu(24)
                     Layout.preferredHeight: units.gu(4.8)
@@ -985,7 +986,7 @@ Page {
                         font.bold: true
                     }
 
-                    NextCommon.AppButton {
+                    UTControls.AppButton {
                         Layout.preferredWidth: units.gu(12)
                         Layout.preferredHeight: units.gu(4.8)
                         text: i18n.tr("Delete")
@@ -994,7 +995,7 @@ Page {
                         onClicked: PopupUtils.open(deleteCommentsDialog)
                     }
 
-                    NextCommon.AppButton {
+                    UTControls.AppButton {
                         Layout.preferredWidth: units.gu(12)
                         Layout.preferredHeight: units.gu(4.8)
                         text: i18n.tr("Cancel")
@@ -1156,7 +1157,7 @@ Page {
                         font.bold: true
                     }
 
-                    NextCommon.AppButton {
+                    UTControls.AppButton {
                         Layout.preferredWidth: units.gu(12)
                         Layout.preferredHeight: units.gu(4.8)
                         text: i18n.tr("Remove")
@@ -1165,7 +1166,7 @@ Page {
                         onClicked: PopupUtils.open(deleteAttachmentsDialog)
                     }
 
-                    NextCommon.AppButton {
+                    UTControls.AppButton {
                         Layout.preferredWidth: units.gu(12)
                         Layout.preferredHeight: units.gu(4.8)
                         text: i18n.tr("Cancel")
