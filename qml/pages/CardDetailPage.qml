@@ -1982,6 +1982,14 @@ Page {
         if (text.length === 0) {
             return result
         }
+        if (/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(text) && /(Z|[+-]\d{2}:?\d{2})$/.test(text)) {
+            var parsed = new Date(text)
+            if (!isNaN(parsed.getTime())) {
+                result.date = formatDate(parsed)
+                result.time = pad(parsed.getHours()) + ":" + pad(parsed.getMinutes())
+                return result
+            }
+        }
         var match = text.match(/^(\d{4}-\d{2}-\d{2})(?:[T\s](\d{2}:\d{2}))?/)
         if (match) {
             result.date = match[1]
@@ -2001,7 +2009,17 @@ Page {
         if (dueTimeText.length === 0) {
             return dueDateText
         }
-        return dueDateText + "T" + dueTimeText + ":00"
+        var localDateTime = new Date(
+            parseInt(dueDateText.substring(0, 4), 10),
+            parseInt(dueDateText.substring(5, 7), 10) - 1,
+            parseInt(dueDateText.substring(8, 10), 10),
+            parseInt(dueTimeText.substring(0, 2), 10),
+            parseInt(dueTimeText.substring(3, 5), 10),
+            0)
+        if (isNaN(localDateTime.getTime())) {
+            return dueDateText + "T" + dueTimeText + ":00"
+        }
+        return localDateTime.toISOString().replace(/\.\d{3}Z$/, "Z")
     }
 
     function openDueDateDialog() {

@@ -646,10 +646,26 @@ Item {
             "permissionEdit": board.permissionEdit === true,
             "permissionShare": board.permissionShare === true,
             "permissionManage": board.permissionManage === true,
+            "cardCount": Number(board.cardCount || board.cardsCount || board.nbCards || board.count || boardStackCardCount(board)),
+            "stackCount": Number(board.stackCount || board.stacksCount || 0),
             "deletedAt": board.deletedAt || board.deleted_at || "",
             "status": board.status || "",
             "type": "board"
         }
+    }
+
+    function boardStackCardCount(board) {
+        var total = 0
+        var stacks = board && board.stacks && board.stacks.length !== undefined ? board.stacks : []
+        for (var i = 0; i < stacks.length; ++i) {
+            var cards = stacks[i].cards && stacks[i].cards.length !== undefined ? stacks[i].cards : []
+            for (var j = 0; j < cards.length; ++j) {
+                if (!isDeletedEntity(cards[j]) && cards[j].archived !== true) {
+                    total += 1
+                }
+            }
+        }
+        return total
     }
 
     function normalizeAcls(list) {

@@ -1,4 +1,5 @@
 import json
+import re
 import unittest
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
@@ -9,7 +10,7 @@ class ProjectContractTests(unittest.TestCase):
         cmake = read_text("CMakeLists.txt")
         self.assertEqual(manifest["name"], "nextdeck.cloudsite")
         self.assertEqual(manifest["title"], "NextDeck")
-        self.assertIn('set(NEXTDECK_VERSION "0.1.0")', cmake)
+        self.assertRegex(cmake, r'set\(NEXTDECK_VERSION "0\.2\.0"\)')
         self.assertEqual(manifest["version"], "@NEXTDECK_VERSION@")
         self.assertEqual(manifest["architecture"], "$ENV{ARCH}")
         self.assertEqual(manifest["framework"], "$ENV{CLICK_FRAMEWORK}")
@@ -381,7 +382,12 @@ class ProjectContractTests(unittest.TestCase):
     def test_home_top_bar_contract(self):
         home = read_text("qml/pages/HomePage.qml")
         self.assertIn('import "qrc:/NextCommon" as NextCommon', home)
-        self.assertIn("contents: NextCommon.MainTopBar", home)
+        self.assertIn("contents: Item", home)
+        self.assertIn("NextCommon.MainTopBar", home)
+        self.assertIn("visible: !page.selectionMode", home)
+        self.assertIn('text: i18n.tr("%1 selected").arg(page.selectedCardCount())', home)
+        self.assertIn("onClicked: page.clearCardSelection()", home)
+        self.assertIn("page.archiveSelectedCards(!page.showArchivedCardsMode)", home)
         self.assertIn("NextCommon.DrawerShell", home)
         self.assertIn("appName: appController.appName", home)
         self.assertIn("onBottomItemClicked: page.openPage(pageUrl)", home)
@@ -416,11 +422,11 @@ class ProjectContractTests(unittest.TestCase):
         self.assertIn('i18n.tr("Archive board")', home)
         self.assertIn('i18n.tr("Restore board")', home)
         self.assertIn('i18n.tr("Delete board")', home)
-        self.assertIn("property bool showArchivedBoardsMode", home)
         self.assertIn("property var visibleBoardEntries", home)
         self.assertIn("function updateVisibleBoardEntries()", home)
         self.assertIn("model: page.visibleBoardEntries", home)
-        self.assertIn("(source[i].archived === true) === showArchivedBoardsMode", home)
+        self.assertIn("source[i].archived !== true", home)
+        self.assertIn("function showArchiveOverview()", home)
         self.assertNotIn("function beginCardDrag(card, sceneY)", home)
         self.assertNotIn("function updateCardDrag(sceneY)", home)
         self.assertNotIn("function finishCardDrag()", home)

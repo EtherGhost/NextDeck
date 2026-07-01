@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.0 - 2026-07-01
+
+Feature and polish release.
+
+- Improved board navigation with card counts, archive overview, and clearer board actions.
+- Improved card list bulk actions, move behavior, archive/restore flow, and list-menu handling.
+- Fixed due date/time handling so saved card times respect the local timezone.
+- Updated the shared Ubuntu Touch controls, including an adaptive calendar action layout for small screens.
+- Improved release readiness after mobile testing. Bugs and rough edges are still expected.
+
 ## 0.1.0 - 2026-06-29
 
 First public release of NextDeck for Ubuntu Touch.

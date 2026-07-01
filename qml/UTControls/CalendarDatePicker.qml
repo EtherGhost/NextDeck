@@ -280,111 +280,231 @@ Item {
             }
         }
 
-        Row {
+        Column {
+            id: actionRows
+
+            readonly property real buttonSpacing: units.gu(0.8)
+            readonly property real clearButtonWidth: Math.max(units.gu(7), clearLabel.implicitWidth + units.gu(2))
+            readonly property real todayButtonWidth: Math.max(units.gu(7), todayLabel.implicitWidth + units.gu(2))
+            readonly property real cancelButtonWidth: Math.max(units.gu(7), cancelLabel.implicitWidth + units.gu(2))
+            readonly property real okButtonWidth: Math.max(units.gu(7), okLabel.implicitWidth + units.gu(2))
+            readonly property int visibleButtonCount: (root.showClearButton ? 1 : 0) + 1 + (root.showCancelButton ? 1 : 0) + 1
+            readonly property real singleRowWidth: (root.showClearButton ? clearButtonWidth : 0)
+                + todayButtonWidth
+                + (root.showCancelButton ? cancelButtonWidth : 0)
+                + okButtonWidth
+                + buttonSpacing * Math.max(0, visibleButtonCount - 1)
+            readonly property bool useSingleRow: singleRowWidth <= width
+
             width: parent.width
-            height: units.gu(4.8)
-            spacing: units.gu(0.8)
+            spacing: units.gu(0.6)
 
-            Rectangle {
-                visible: root.showClearButton
-                width: visible ? Math.max(units.gu(7), clearLabel.implicitWidth + units.gu(2)) : 0
-                height: parent.height
-                radius: units.gu(0.4)
-                color: clearMouse.pressed ? Qt.rgba(1, 1, 1, 0.08) : "transparent"
+            Row {
+                visible: actionRows.useSingleRow
+                width: actionRows.singleRowWidth
+                height: visible ? units.gu(4.8) : 0
+                anchors.horizontalCenter: parent.horizontalCenter
+                spacing: actionRows.buttonSpacing
 
-                Label {
-                    id: clearLabel
-                    anchors.centerIn: parent
-                    text: root.clearText
-                    color: theme.palette.normal.backgroundText
-                    opacity: 0.78
+                Rectangle {
+                    visible: root.showClearButton
+                    width: visible ? actionRows.clearButtonWidth : 0
+                    height: parent.height
+                    radius: units.gu(0.4)
+                    color: clearSingleMouse.pressed ? Qt.rgba(1, 1, 1, 0.08) : "transparent"
+
+                    Label {
+                        anchors.centerIn: parent
+                        text: root.clearText
+                        color: theme.palette.normal.backgroundText
+                        opacity: 0.78
+                    }
+
+                    MouseArea {
+                        id: clearSingleMouse
+                        anchors.fill: parent
+                        onClicked: {
+                            root.selectedDate = ""
+                            root.cleared()
+                        }
+                    }
                 }
 
-                MouseArea {
-                    id: clearMouse
-                    anchors.fill: parent
-                    onClicked: {
-                        root.selectedDate = ""
-                        root.cleared()
+                Rectangle {
+                    width: actionRows.todayButtonWidth
+                    height: parent.height
+                    radius: units.gu(0.4)
+                    color: todaySingleMouse.pressed ? Qt.rgba(1, 1, 1, 0.08) : "transparent"
+
+                    Label {
+                        anchors.centerIn: parent
+                        text: root.todayTextLabel
+                        color: theme.palette.normal.backgroundText
+                        opacity: 0.78
+                    }
+
+                    MouseArea {
+                        id: todaySingleMouse
+                        anchors.fill: parent
+                        onClicked: {
+                            root.visibleMonth = new Date()
+                            root.viewMode = "month"
+                            root.chooseDate(root.todayText())
+                        }
+                    }
+                }
+
+                Rectangle {
+                    visible: root.showCancelButton
+                    width: visible ? actionRows.cancelButtonWidth : 0
+                    height: parent.height
+                    radius: units.gu(0.4)
+                    color: cancelSingleMouse.pressed ? Qt.rgba(1, 1, 1, 0.08) : "transparent"
+
+                    Label {
+                        anchors.centerIn: parent
+                        text: root.cancelText
+                        color: theme.palette.normal.backgroundText
+                        opacity: 0.78
+                    }
+
+                    MouseArea {
+                        id: cancelSingleMouse
+                        anchors.fill: parent
+                        onClicked: root.canceled()
+                    }
+                }
+
+                Rectangle {
+                    width: actionRows.okButtonWidth
+                    height: parent.height
+                    radius: units.gu(0.4)
+                    color: okSingleMouse.pressed ? Qt.rgba(0.17, 0.5, 0.72, 0.18) : "transparent"
+
+                    Label {
+                        anchors.centerIn: parent
+                        text: root.okText
+                        color: "#2c7fb8"
+                        font.bold: true
+                    }
+
+                    MouseArea {
+                        id: okSingleMouse
+                        anchors.fill: parent
+                        onClicked: root.accepted(root.selectedDate)
                     }
                 }
             }
 
-            Rectangle {
-                width: Math.max(units.gu(7), todayLabel.implicitWidth + units.gu(2))
-                height: parent.height
-                radius: units.gu(0.4)
-                color: todayMouse.pressed ? Qt.rgba(1, 1, 1, 0.08) : "transparent"
+            Row {
+                visible: !actionRows.useSingleRow
+                width: (root.showClearButton ? Math.max(units.gu(7), clearLabel.implicitWidth + units.gu(2)) + spacing : 0)
+                    + Math.max(units.gu(7), todayLabel.implicitWidth + units.gu(2))
+                height: visible ? units.gu(4.8) : 0
+                anchors.horizontalCenter: parent.horizontalCenter
+                spacing: actionRows.buttonSpacing
 
-                Label {
-                    id: todayLabel
-                    anchors.centerIn: parent
-                    text: root.todayTextLabel
-                    color: theme.palette.normal.backgroundText
-                    opacity: 0.78
-                }
+                Rectangle {
+                    visible: root.showClearButton
+                    width: visible ? actionRows.clearButtonWidth : 0
+                    height: parent.height
+                    radius: units.gu(0.4)
+                    color: clearMouse.pressed ? Qt.rgba(1, 1, 1, 0.08) : "transparent"
 
-                MouseArea {
-                    id: todayMouse
-                    anchors.fill: parent
-                    onClicked: {
-                        root.visibleMonth = new Date()
-                        root.viewMode = "month"
-                        root.chooseDate(root.todayText())
+                    Label {
+                        id: clearLabel
+                        anchors.centerIn: parent
+                        text: root.clearText
+                        color: theme.palette.normal.backgroundText
+                        opacity: 0.78
+                    }
+
+                    MouseArea {
+                        id: clearMouse
+                        anchors.fill: parent
+                        onClicked: {
+                            root.selectedDate = ""
+                            root.cleared()
+                        }
                     }
                 }
-            }
 
-            Item {
-                width: Math.max(0, parent.width
-                    - (root.showClearButton ? Math.max(units.gu(7), clearLabel.implicitWidth + units.gu(2)) : 0)
-                    - Math.max(units.gu(7), todayLabel.implicitWidth + units.gu(2))
-                    - (root.showCancelButton ? Math.max(units.gu(7), cancelLabel.implicitWidth + units.gu(2)) : 0)
-                    - Math.max(units.gu(7), okLabel.implicitWidth + units.gu(2))
-                    - parent.spacing * (1 + (root.showClearButton ? 1 : 0) + (root.showCancelButton ? 1 : 0)))
-                height: 1
-            }
+                Rectangle {
+                    width: actionRows.todayButtonWidth
+                    height: parent.height
+                    radius: units.gu(0.4)
+                    color: todayMouse.pressed ? Qt.rgba(1, 1, 1, 0.08) : "transparent"
 
-            Rectangle {
-                visible: root.showCancelButton
-                width: visible ? Math.max(units.gu(7), cancelLabel.implicitWidth + units.gu(2)) : 0
-                height: parent.height
-                radius: units.gu(0.4)
-                color: cancelMouse.pressed ? Qt.rgba(1, 1, 1, 0.08) : "transparent"
+                    Label {
+                        id: todayLabel
+                        anchors.centerIn: parent
+                        text: root.todayTextLabel
+                        color: theme.palette.normal.backgroundText
+                        opacity: 0.78
+                    }
 
-                Label {
-                    id: cancelLabel
-                    anchors.centerIn: parent
-                    text: root.cancelText
-                    color: theme.palette.normal.backgroundText
-                    opacity: 0.78
+                    MouseArea {
+                        id: todayMouse
+                        anchors.fill: parent
+                        onClicked: {
+                            root.visibleMonth = new Date()
+                            root.viewMode = "month"
+                            root.chooseDate(root.todayText())
+                        }
+                    }
                 }
 
-                MouseArea {
-                    id: cancelMouse
-                    anchors.fill: parent
-                    onClicked: root.canceled()
-                }
             }
 
-            Rectangle {
-                width: Math.max(units.gu(7), okLabel.implicitWidth + units.gu(2))
-                height: parent.height
-                radius: units.gu(0.4)
-                color: okMouse.pressed ? Qt.rgba(0.17, 0.5, 0.72, 0.18) : "transparent"
+            Row {
+                visible: !actionRows.useSingleRow
+                width: (root.showCancelButton ? Math.max(units.gu(7), cancelLabel.implicitWidth + units.gu(2)) + spacing : 0)
+                    + Math.max(units.gu(7), okLabel.implicitWidth + units.gu(2))
+                height: visible ? units.gu(4.8) : 0
+                anchors.horizontalCenter: parent.horizontalCenter
+                spacing: actionRows.buttonSpacing
 
-                Label {
-                    id: okLabel
-                    anchors.centerIn: parent
-                    text: root.okText
-                    color: "#2c7fb8"
-                    font.bold: true
+                Rectangle {
+                    visible: root.showCancelButton
+                    width: visible ? actionRows.cancelButtonWidth : 0
+                    height: parent.height
+                    radius: units.gu(0.4)
+                    color: cancelMouse.pressed ? Qt.rgba(1, 1, 1, 0.08) : "transparent"
+
+                    Label {
+                        id: cancelLabel
+                        anchors.centerIn: parent
+                        text: root.cancelText
+                        color: theme.palette.normal.backgroundText
+                        opacity: 0.78
+                    }
+
+                    MouseArea {
+                        id: cancelMouse
+                        anchors.fill: parent
+                        onClicked: root.canceled()
+                    }
                 }
 
-                MouseArea {
-                    id: okMouse
-                    anchors.fill: parent
-                    onClicked: root.accepted(root.selectedDate)
+                Rectangle {
+                    width: actionRows.okButtonWidth
+                    height: parent.height
+                    radius: units.gu(0.4)
+                    color: okMouse.pressed ? Qt.rgba(0.17, 0.5, 0.72, 0.18) : "transparent"
+
+                    Label {
+                        id: okLabel
+                        anchors.centerIn: parent
+                        text: root.okText
+                        color: "#2c7fb8"
+                        font.bold: true
+                    }
+
+                    MouseArea {
+                        id: okMouse
+                        anchors.fill: parent
+                        onClicked: root.accepted(root.selectedDate)
+                    }
                 }
             }
         }
