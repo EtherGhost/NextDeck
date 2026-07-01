@@ -22,6 +22,8 @@ Translations are available for Swedish plus AI-assisted starter catalogs for Cat
 
 NextDeck will always use Ubuntu Touch Online Accounts only. Users should add a Nextcloud or ownCloud account in Ubuntu Touch System Settings > Accounts. If the selected account has not allowed NextDeck yet, the app opens a guided prompt to the OS account settings, keeps the account selected, and verifies access automatically when the user returns. Credentials are kept only in memory.
 
+Shared suite account UI and account-session logic are provided by `vendor/NextCommon`, a git submodule. NextDeck packages the shared source into its own click package; there is no runtime dependency on another NextApps package.
+
 ## Build
 
 ```bash

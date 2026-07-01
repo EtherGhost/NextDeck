@@ -25,7 +25,31 @@ target_link_libraries(${PROJECT_NAME} Qt5::Gui Qt5::Network Qt5::Qml Qt5::Quick)
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX})
 configure_file(${DESKTOP_FILE_NAME}.in ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_NAME})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_NAME} DESTINATION ${DATA_DIR})
-file(GLOB_RECURSE I18N_SRC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} qml/*.qml qml/*.js)
+file(GLOB_RECURSE I18N_SRC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
+    qml/*.qml
+    qml/*.js
+    vendor/NextCommon/qml/NextCommon/*.qml
+    vendor/NextCommon/js/*.js
+)
 add_subdirectory(po)
-file(GLOB_RECURSE PROJECT_SRC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} qml/*.qml qml/*.js assets/* *.json *.json.in *.apparmor *.accounts *.desktop.in *.yaml po/*.po po/*.pot main.cpp DeckNetwork.cpp DeckNetwork.h ContentHubBridge.cpp ContentHubBridge.h)
+file(GLOB_RECURSE PROJECT_SRC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
+    qml/*.qml
+    qml/*.js
+    vendor/NextCommon/qml/NextCommon/*.qml
+    vendor/NextCommon/js/*.js
+    assets/*
+    *.json
+    *.json.in
+    *.apparmor
+    *.accounts
+    *.desktop.in
+    *.yaml
+    po/*.po
+    po/*.pot
+    main.cpp
+    DeckNetwork.cpp
+    DeckNetwork.h
+    ContentHubBridge.cpp
+    ContentHubBridge.h
+)
 add_custom_target(${PROJECT_NAME}_FILES ALL SOURCES ${PROJECT_SRC_FILES})
