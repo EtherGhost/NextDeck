@@ -275,6 +275,9 @@ Page {
         var source = selectedCards || []
         for (var i = 0; i < source.length; ++i) {
             var item = source[i] && source[i].itemData ? source[i].itemData : source[i]
+            if (item && item.item) {
+                item = item.item
+            }
             if (item && item.type === "card") {
                 output.push(item)
             }
@@ -508,6 +511,28 @@ Page {
             }
         }
         return result
+    }
+
+    function archivedCardCount() {
+        var count = 0
+        for (var i = 0; i < filteredEntries.length; ++i) {
+            if (filteredEntries[i].type === "card" && filteredEntries[i].archived === true) {
+                count += 1
+            }
+        }
+        return count
+    }
+
+    function showActiveCards() {
+        showArchivedCardsMode = false
+        drawerOpen = false
+        updateVisibleCardEntries()
+    }
+
+    function showArchivedCards() {
+        showArchivedCardsMode = true
+        drawerOpen = false
+        updateVisibleCardEntries()
     }
 
     function updateVisibleBoardEntries() {
@@ -2860,6 +2885,92 @@ Page {
                 variant: selected ? "primary" : "neutral"
                 accentColor: page.actionBlue
                 onClicked: page.showArchivedBoardsMode = true
+            }
+        }
+
+        Label {
+            Layout.fillWidth: true
+            visible: dataController.selectedBoardId > 0
+            text: dataController.selectedBoardTitle || i18n.tr("Cards")
+            font.bold: true
+            opacity: 0.72
+        }
+
+        Rectangle {
+            Layout.fillWidth: true
+            Layout.preferredHeight: units.gu(5.2)
+            visible: dataController.selectedBoardId > 0
+            radius: units.gu(0.55)
+            color: dataController.viewMode === "cards" && !page.showArchivedCardsMode
+                ? Qt.rgba(0.17, 0.5, 0.72, 0.16)
+                : "transparent"
+            border.width: 1
+            border.color: dataController.viewMode === "cards" && !page.showArchivedCardsMode
+                ? page.actionBlue
+                : "#7a7a7a"
+
+            RowLayout {
+                anchors.fill: parent
+                anchors.margins: units.gu(1)
+                spacing: units.gu(1)
+
+                Label {
+                    Layout.fillWidth: true
+                    text: i18n.tr("Cards")
+                    color: theme.palette.normal.backgroundText
+                    font.bold: true
+                    elide: Text.ElideRight
+                }
+
+                Label {
+                    text: String(page.activeCards().length)
+                    color: theme.palette.normal.backgroundText
+                    opacity: 0.72
+                }
+            }
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: page.showActiveCards()
+            }
+        }
+
+        Rectangle {
+            Layout.fillWidth: true
+            Layout.preferredHeight: units.gu(5.2)
+            visible: dataController.selectedBoardId > 0
+            radius: units.gu(0.55)
+            color: dataController.viewMode === "cards" && page.showArchivedCardsMode
+                ? Qt.rgba(0.17, 0.5, 0.72, 0.16)
+                : "transparent"
+            border.width: 1
+            border.color: dataController.viewMode === "cards" && page.showArchivedCardsMode
+                ? page.actionBlue
+                : "#7a7a7a"
+
+            RowLayout {
+                anchors.fill: parent
+                anchors.margins: units.gu(1)
+                spacing: units.gu(1)
+
+                Label {
+                    Layout.fillWidth: true
+                    text: i18n.tr("Archived cards")
+                    color: theme.palette.normal.backgroundText
+                    font.bold: true
+                    elide: Text.ElideRight
+                }
+
+                Label {
+                    text: String(page.archivedCardCount())
+                    color: theme.palette.normal.backgroundText
+                    opacity: 0.72
+                }
+            }
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: page.showArchivedCards()
             }
         }
 

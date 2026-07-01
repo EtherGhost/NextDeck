@@ -2383,3 +2383,7 @@ msgstr "Obre els enllaços de les targetes directament al navegador"
 
 #~ msgid "Min"
 #~ msgstr "Min"
+
+#: qml/pages/HomePage.qml:2958
+msgid "Archived cards"
+msgstr "Targetes arxivades"

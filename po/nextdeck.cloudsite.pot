@@ -1756,3 +1756,7 @@ msgstr ""
 #: qml/pages/SettingsPage.qml:172
 msgid "Open card links in browser directly"
 msgstr ""
+
+#: qml/pages/HomePage.qml:2958
+msgid "Archived cards"
+msgstr ""

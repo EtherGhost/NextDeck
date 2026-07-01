@@ -1981,3 +1981,7 @@ msgstr ""
 
 #~ msgid "Sun"
 #~ msgstr "Sön"
+
+#: qml/pages/HomePage.qml:2958
+msgid "Archived cards"
+msgstr "Arkiverade kort"

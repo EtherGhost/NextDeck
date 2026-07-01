@@ -322,3 +322,7 @@ msgstr "Удалить эту доску и ее карточки?"
 #: vendor/NextCommon/qml/NextCommon/AccountPage.qml
 msgid "Waiting for Ubuntu Touch Online Accounts to confirm permission for %1. If this does not finish, check that %1 is allowed for this account in System Settings > Accounts."
 msgstr "Ожидание подтверждения разрешения для %1 от Ubuntu Touch Online Accounts. Если это не завершится, проверьте в Системные настройки > Учетные записи, что %1 разрешено для этой учетной записи."
+
+#: qml/pages/HomePage.qml:2958
+msgid "Archived cards"
+msgstr "Архивированные карточки"
