@@ -28,6 +28,20 @@ Feature and reliability release.
   NextCommon submodule that still checked internal details of an older,
   already-replaced Online Accounts API.
 - Dropped "but simple" from the tagline.
+- Added a start date and time to cards, alongside the existing due date
+  and time.
+- Added card dependents: view, browse, add, and remove other cards this
+  card depends on.
+- Fixed switching to a language other than Swedish or English not actually
+  changing the app's language, even though translations for that language
+  were complete.
+- Fixed a rare case where quickly switching boards could briefly show the
+  previous board's cards.
+- Fixed local changes sometimes silently no longer syncing after switching
+  accounts while a sync was in progress.
+- Fixed "Move list right" sometimes moving a list back to its original
+  position immediately, caused by list order never being explicitly sorted
+  and an unreliable full-board refresh right after saving the new order.
 
 ## 0.2.0 - 2026-07-01
 

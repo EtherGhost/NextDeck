@@ -99,7 +99,9 @@ Page {
                 options.push({
                     "boardId": entry.boardId,
                     "stackId": id,
-                    "stackTitle": entry.stackTitle || entry.title || i18n.tr("List")
+                    "stackTitle": entry.stackTitle || entry.title || i18n.tr("List"),
+                    "order": Number(entry.order || 0),
+                    "__seq": options.length
                 })
             }
         }
@@ -114,10 +116,16 @@ Page {
                 options.push({
                     "boardId": card.boardId,
                     "stackId": stackId,
-                    "stackTitle": card.stackTitle || i18n.tr("List")
+                    "stackTitle": card.stackTitle || i18n.tr("List"),
+                    "order": 0,
+                    "__seq": options.length
                 })
             }
         }
+        options.sort(function(a, b) {
+            if (a.order !== b.order) return a.order - b.order
+            return a.__seq - b.__seq
+        })
         return options
     }
 
@@ -180,6 +188,12 @@ Page {
                 result.push(source[i])
             }
         }
+        result.sort(function(a, b) {
+            var orderA = Number(a.order || 0)
+            var orderB = Number(b.order || 0)
+            if (orderA !== orderB) return orderA - orderB
+            return Number(a.stackId || 0) - Number(b.stackId || 0)
+        })
         return result
     }
 
@@ -636,10 +650,22 @@ Page {
         }
         var current = stacks[index]
         var next = stacks[index + 1]
+        var nextOrder = Number(next.order || ((index + 2) * 1000))
+        var newOrder
+        if (index + 2 < stacks.length) {
+            var afterNext = Number(stacks[index + 2].order || ((index + 3) * 1000))
+            newOrder = afterNext > nextOrder ? Math.floor((nextOrder + afterNext) / 2) : nextOrder + 1
+            if (newOrder <= nextOrder) {
+                newOrder = nextOrder + 1
+            }
+        } else {
+            newOrder = nextOrder + 1000
+        }
         var updated = {}
         for (var key in current) updated[key] = current[key]
-        var nextOrder = Number(next.order || ((index + 2) * 1000))
-        updated.order = nextOrder + 1
+        updated.order = newOrder
+        updated._isReorder = true
+        dataController.applyStackOrderLocally(current.stackId, newOrder)
         dataController.updateStack(updated)
     }
 

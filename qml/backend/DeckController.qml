@@ -355,6 +355,12 @@ Item {
             if (!controller.isCurrentApiGeneration(generation)) return
             controller.loading = false
             controller.statusText = i18n.tr("List saved.")
+            if (stack && stack._isReorder === true) {
+                controller.replaceStackEntry(stack)
+                controller.syncStateText = i18n.tr("Up to date")
+                controller.syncStateColor = "#5a8f3c"
+                return
+            }
             controller.openBoard(controller.selectedBoardId, controller.selectedBoardTitle)
         }
         onStackDeleted: function(stackId, generation) {
@@ -1497,6 +1503,49 @@ Item {
             }
         }
         return {"id": selectedBoardId, "title": selectedBoardTitle, "labels": selectedBoardLabels, "type": "board"}
+    }
+
+    function applyStackOrderLocally(stackId, newOrder) {
+        var id = Number(stackId || 0)
+        if (id <= 0) {
+            return
+        }
+        var updated = []
+        for (var i = 0; i < entries.length; ++i) {
+            var item = entries[i]
+            if (item.type === "stack" && Number(item.stackId || 0) === id) {
+                var patched = {}
+                for (var key in item) patched[key] = item[key]
+                patched.order = newOrder
+                updated.push(patched)
+            } else {
+                updated.push(item)
+            }
+        }
+        entries = updated
+    }
+
+    function replaceStackEntry(stack) {
+        if (!stack || !stack.stackId) {
+            return
+        }
+        var updated = []
+        var replaced = false
+        for (var i = 0; i < entries.length; ++i) {
+            var item = entries[i]
+            if (item.type === "stack" && Number(item.stackId || 0) === Number(stack.stackId || 0)) {
+                var patched = {}
+                for (var key in item) patched[key] = item[key]
+                for (var newKey in stack) patched[newKey] = stack[newKey]
+                updated.push(patched)
+                replaced = true
+            } else {
+                updated.push(item)
+            }
+        }
+        if (replaced) {
+            entries = updated
+        }
     }
 
     function replaceBoardEntry(board) {

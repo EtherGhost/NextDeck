@@ -244,7 +244,11 @@ Item {
             "title": stack.title || i18n.tr("Untitled list"),
             "order": stack.order || 0
         }, i18n.tr("list update"), function(data) {
-            stackUpdated(stackEntryFromResponse(data || stack, boardId), generation)
+            var updatedEntry = stackEntryFromResponse(data || stack, boardId)
+            if (stack && stack._isReorder === true) {
+                updatedEntry._isReorder = true
+            }
+            stackUpdated(updatedEntry, generation)
         }, generation)
     }
 
