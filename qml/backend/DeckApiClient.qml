@@ -8,7 +8,7 @@ Item {
     property var pendingNativeRequests: ({})
 
     signal boardsLoaded(var entries, int generation)
-    signal cardsLoaded(string boardTitle, var entries, int generation)
+    signal cardsLoaded(int boardId, string boardTitle, var entries, int generation)
     signal cardCreated(var card, int generation)
     signal cardUpdated(var card, int generation)
     signal cardReordered(var card, int generation)
@@ -188,11 +188,11 @@ Item {
                 var archivedUrl = base + "/index.php/apps/deck/api/v1.0/boards/" + encodeURIComponent(boardId) + "/stacks/archived"
                 requestJson(archivedUrl, userName, secret, i18n.tr("archived cards"), function(archivedData) {
                     var archivedEntries = stackEntriesFromResponse(archivedData, boardId, true)
-                    cardsLoaded(boardTitle || i18n.tr("Board"), mergeStackEntries(entries, archivedEntries), generation)
+                    cardsLoaded(boardId, boardTitle || i18n.tr("Board"), mergeStackEntries(entries, archivedEntries), generation)
                 }, generation)
                 return
             }
-            cardsLoaded(boardTitle || i18n.tr("Board"), entries, generation)
+            cardsLoaded(boardId, boardTitle || i18n.tr("Board"), entries, generation)
         }, generation)
     }
 
@@ -312,6 +312,7 @@ Item {
             "title": card.title || "",
             "description": card.description || "",
             "duedate": card.duedate || null,
+            "startdate": card.startdate || null,
             "done": card.done || null,
             "stackId": Number(stackId),
             "type": card.typeRaw || "plain",
@@ -414,6 +415,19 @@ Item {
             + "/cards/" + encodeURIComponent(card.id || 0)
             + "/" + action
         requestForm(url, userName, secret, "PUT", {"type": 0, "userId": userId || ""}, i18n.tr("user assignment"), function() {
+            loadCardDetails(serverUrl, userName, secret, card)
+        }, generation)
+    }
+
+    function assignDependent(serverUrl, userName, secret, card, dependentCardId, assign) {
+        var generation = requestGeneration
+        var base = AuthCore.normalizeServerUrl(serverUrl)
+        var url = base
+            + "/index.php/apps/deck/api/v1.0/boards/" + encodeURIComponent(card.boardId || 0)
+            + "/stacks/" + encodeURIComponent(card.stackId || 0)
+            + "/cards/" + encodeURIComponent(card.id || 0)
+            + "/dependentCards/" + encodeURIComponent(dependentCardId)
+        requestJsonWithBody(url, userName, secret, assign ? "POST" : "DELETE", {}, i18n.tr("dependent assignment"), function() {
             loadCardDetails(serverUrl, userName, secret, card)
         }, generation)
     }
@@ -937,10 +951,12 @@ Item {
             "detail": source.duedate || source.lastModified || source.lastModifiedTimestamp || backup.detail || "",
             "description": source.description || backup.description || "",
             "duedate": source.duedate || backup.duedate || "",
+            "startdate": source.startdate || backup.startdate || "",
             "order": source.order || backup.order || 0,
             "typeRaw": source.type || backup.typeRaw || "plain",
             "archived": source.archived === true,
             "owner": nonEmptyArray(source.owner, backup.owner),
+            "dependentCards": nonEmptyArray(source.dependentCards, backup.dependentCards),
             "labels": nonEmptyArray(source.labels, backup.labels),
             "_labelsAuthoritative": backup._labelsAuthoritative === true,
             "assignedUsers": nonEmptyArray(source.assignedUsers, backup.assignedUsers),

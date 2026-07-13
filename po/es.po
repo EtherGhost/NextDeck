@@ -1896,3 +1896,40 @@ msgstr "%1 usará %2 tras reiniciar."
 
 #~ msgid "Archived cards appear here after their board has been loaded."
 #~ msgstr "Las tarjetas archivadas aparecen aquí después de cargar su tablero."
+
+msgid "Start"
+msgstr "Inicio"
+
+
+msgid "Start date"
+msgstr "Fecha de inicio"
+
+
+msgid "Clear start date"
+msgstr "Borrar fecha de inicio"
+
+msgid "Dependents"
+msgstr "Dependencias"
+
+
+msgid "Search cards on this board"
+msgstr "Buscar tarjetas en este tablero"
+
+
+msgid "No matching cards found."
+msgstr "No se encontraron tarjetas coincidentes."
+
+
+msgid "Card #%1"
+msgstr "Tarjeta n.º %1"
+
+
+msgid "Updating dependents..."
+msgstr "Actualizando dependencias..."
+
+
+msgid "dependent assignment"
+msgstr "asignación de dependencia"
+
+msgid "Add dependent"
+msgstr "Añadir dependencia"

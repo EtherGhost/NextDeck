@@ -2005,3 +2005,40 @@ msgstr "%1 använder %2 efter omstart."
 
 #~ msgid "Archived cards appear here after their board has been loaded."
 #~ msgstr "Arkiverade kort visas här efter att deras tavla har laddats."
+
+msgid "Start"
+msgstr "Start"
+
+
+msgid "Start date"
+msgstr "Startdatum"
+
+
+msgid "Clear start date"
+msgstr "Rensa startdatum"
+
+msgid "Dependents"
+msgstr "Beroenden"
+
+
+msgid "Search cards on this board"
+msgstr "Sök kort på denna board"
+
+
+msgid "No matching cards found."
+msgstr "Inga matchande kort hittades."
+
+
+msgid "Card #%1"
+msgstr "Kort nr %1"
+
+
+msgid "Updating dependents..."
+msgstr "Uppdaterar beroenden..."
+
+
+msgid "dependent assignment"
+msgstr "beroendetilldelning"
+
+msgid "Add dependent"
+msgstr "Lägg till beroende"

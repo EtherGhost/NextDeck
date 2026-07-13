@@ -42,6 +42,7 @@ Item {
     property var pendingCardDetails: ({})
     property var pendingLabelOperation: ({})
     property var pendingUserOperation: ({})
+    property var pendingDependentOperation: ({})
     property var pendingAttachmentOperation: ({})
     property var pendingAttachmentDeleteQueue: []
     property var pendingCommentOperation: ({})
@@ -201,6 +202,11 @@ Item {
                 controller.pendingOperation = ""
                 controller.pendingUserOperation = ({})
                 api.assignUser(serverUrl, userName, secret, userOp.card, userOp.userId, userOp.assign)
+            } else if (controller.pendingOperation === "assignDependent" && controller.pendingDependentOperation && controller.pendingDependentOperation.card) {
+                var dependentOp = controller.pendingDependentOperation
+                controller.pendingOperation = ""
+                controller.pendingDependentOperation = ({})
+                api.assignDependent(serverUrl, userName, secret, dependentOp.card, dependentOp.dependentCardId, dependentOp.assign)
             } else if (controller.pendingOperation === "createCard" && controller.pendingCardCreate && controller.pendingCardCreate.stackId) {
                 var create = controller.pendingCardCreate
                 controller.pendingOperation = ""
@@ -263,8 +269,11 @@ Item {
             controller.syncDirtySoon()
             controller.openPreferredBoard(entries)
         }
-        onCardsLoaded: function(boardTitle, entries, generation) {
+        onCardsLoaded: function(boardId, boardTitle, entries, generation) {
             if (!controller.isCurrentApiGeneration(generation)) {
+                return
+            }
+            if (Number(boardId || 0) !== Number(controller.selectedBoardId || 0)) {
                 return
             }
             controller.entries = entries
@@ -1265,6 +1274,20 @@ Item {
         session.authenticate()
     }
 
+    function assignDependent(card, dependentCardId, assign) {
+        if (card && card.id) {
+            replaceCardEntry(card)
+        }
+        pendingOperation = "assignDependent"
+        pendingDependentOperation = {"card": card, "dependentCardId": dependentCardId, "assign": assign === true}
+        loading = true
+        statusText = i18n.tr("Updating dependents...")
+        syncStateText = i18n.tr("Syncing")
+        syncStateColor = "#2c7fb8"
+        api.requestGeneration = accountRequestGeneration
+        session.authenticate()
+    }
+
     function moveCardToStack(card, stack) {
         if (!card || !stack || !stack.stackId) {
             statusText = i18n.tr("Card move data is incomplete.")
@@ -1617,11 +1640,16 @@ Item {
         pendingCardDetails = ({})
         pendingLabelOperation = ({})
         pendingUserOperation = ({})
+        pendingDependentOperation = ({})
         pendingAttachmentOperation = ({})
         pendingAttachmentDeleteQueue = []
         pendingCommentOperation = ({})
         pendingCommentDeleteQueue = []
         activeDirtyCard = ({})
+        pendingCardReorder = ({})
+        pendingAccessControlOperation = ({})
+        dirtySyncRunning = false
+        dirtySyncQueue = []
         loading = false
         session.setAccount(accountSettings.accountId, accountSettings.providerId, accountSettings.serviceId, accountSettings.serverUrl)
         api.requestGeneration = accountRequestGeneration

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nextdeck.cloudsite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-13 10:57+0000\n"
+"POT-Creation-Date: 2026-07-13 18:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: qml/UTControls/CalendarDatePicker.qml:12 qml/UTControls/TimePicker.qml:13
-#: qml/pages/CardDetailPage.qml:448 qml/pages/CardDetailPage.qml:475
+#: qml/pages/CardDetailPage.qml:452 qml/pages/CardDetailPage.qml:479
+#: qml/pages/CardDetailPage.qml:508 qml/pages/CardDetailPage.qml:535
 #: vendor/NextCommon/qml/NextCommon/AccountPage.qml:131
 msgid "OK"
 msgstr ""
 
-#: qml/UTControls/CalendarDatePicker.qml:13 qml/pages/CardDetailPage.qml:449
-#: qml/pages/CardDetailPage.qml:2290 qml/pages/CardDetailPage.qml:2367
-#: qml/pages/HomePage.qml:1534
+#: qml/UTControls/CalendarDatePicker.qml:13 qml/pages/CardDetailPage.qml:453
+#: qml/pages/CardDetailPage.qml:509 qml/pages/CardDetailPage.qml:2592
+#: qml/pages/CardDetailPage.qml:2669 qml/pages/HomePage.qml:1534
 msgid "Today"
 msgstr ""
 
@@ -34,11 +35,12 @@ msgid "Clear"
 msgstr ""
 
 #: qml/UTControls/CalendarDatePicker.qml:15 qml/UTControls/ConfirmDialog.qml:11
-#: qml/UTControls/TimePicker.qml:16 qml/pages/CardDetailPage.qml:256
-#: qml/pages/CardDetailPage.qml:286 qml/pages/CardDetailPage.qml:319
-#: qml/pages/CardDetailPage.qml:352 qml/pages/CardDetailPage.qml:431
-#: qml/pages/CardDetailPage.qml:451 qml/pages/CardDetailPage.qml:478
-#: qml/pages/CardDetailPage.qml:1001 qml/pages/CardDetailPage.qml:1172
+#: qml/UTControls/TimePicker.qml:16 qml/pages/CardDetailPage.qml:260
+#: qml/pages/CardDetailPage.qml:290 qml/pages/CardDetailPage.qml:323
+#: qml/pages/CardDetailPage.qml:356 qml/pages/CardDetailPage.qml:435
+#: qml/pages/CardDetailPage.qml:455 qml/pages/CardDetailPage.qml:482
+#: qml/pages/CardDetailPage.qml:511 qml/pages/CardDetailPage.qml:538
+#: qml/pages/CardDetailPage.qml:1258 qml/pages/CardDetailPage.qml:1429
 #: qml/pages/HomePage.qml:1564 qml/pages/HomePage.qml:1626
 #: qml/pages/HomePage.qml:1664 qml/pages/HomePage.qml:1701
 #: qml/pages/HomePage.qml:1881 qml/pages/HomePage.qml:1910
@@ -49,52 +51,52 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2389
 msgid "April"
 msgstr ""
 
-#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2389
 msgid "August"
 msgstr ""
 
-#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2389
 msgid "December"
 msgstr ""
 
-#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2389
 msgid "February"
 msgstr ""
 
-#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2389
 msgid "January"
 msgstr ""
 
-#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2389
 msgid "July"
 msgstr ""
 
-#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2389
 msgid "June"
 msgstr ""
 
-#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2389
 msgid "March"
 msgstr ""
 
-#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
-#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2389
+#: qml/pages/CardDetailPage.qml:2597 qml/pages/CardDetailPage.qml:2674
 msgid "May"
 msgstr ""
 
-#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2389
 msgid "November"
 msgstr ""
 
-#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2389
 msgid "October"
 msgstr ""
 
-#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2389
 msgid "September"
 msgstr ""
 
@@ -130,7 +132,8 @@ msgstr ""
 msgid "Confirm"
 msgstr ""
 
-#: qml/UTControls/TimePicker.qml:14 qml/pages/CardDetailPage.qml:476
+#: qml/UTControls/TimePicker.qml:14 qml/pages/CardDetailPage.qml:480
+#: qml/pages/CardDetailPage.qml:536
 msgid "Now"
 msgstr ""
 
@@ -151,8 +154,8 @@ msgid "boards"
 msgstr ""
 
 #: qml/backend/DeckApiClient.qml:66 qml/backend/DeckApiClient.qml:85
-#: qml/backend/DeckApiClient.qml:638 qml/backend/DeckCache.qml:86
-#: qml/backend/DeckCache.qml:190 qml/backend/DeckController.qml:907
+#: qml/backend/DeckApiClient.qml:652 qml/backend/DeckCache.qml:86
+#: qml/backend/DeckCache.qml:190 qml/backend/DeckController.qml:916
 #: qml/pages/HomePage.qml:2795 qml/pages/HomePage.qml:3346
 msgid "Untitled board"
 msgstr ""
@@ -215,18 +218,18 @@ msgid "archived cards"
 msgstr ""
 
 #: qml/backend/DeckApiClient.qml:191 qml/backend/DeckApiClient.qml:195
-#: qml/backend/DeckApiClient.qml:639 qml/backend/DeckCache.qml:87
-#: qml/backend/DeckController.qml:288 qml/backend/DeckController.qml:677
-#: qml/backend/DeckController.qml:716 qml/pages/HomePage.qml:1841
+#: qml/backend/DeckApiClient.qml:653 qml/backend/DeckCache.qml:87
+#: qml/backend/DeckController.qml:297 qml/backend/DeckController.qml:686
+#: qml/backend/DeckController.qml:725 qml/pages/HomePage.qml:1841
 #: qml/pages/HomePage.qml:2819
 msgid "Board"
 msgstr ""
 
 #: qml/backend/DeckApiClient.qml:225 qml/backend/DeckApiClient.qml:244
-#: qml/backend/DeckApiClient.qml:761 qml/backend/DeckApiClient.qml:762
-#: qml/backend/DeckApiClient.qml:783 qml/backend/DeckApiClient.qml:784
+#: qml/backend/DeckApiClient.qml:775 qml/backend/DeckApiClient.qml:776
+#: qml/backend/DeckApiClient.qml:797 qml/backend/DeckApiClient.qml:798
 #: qml/backend/DeckCache.qml:128 qml/backend/DeckCache.qml:129
-#: qml/backend/DeckCache.qml:216 qml/backend/DeckController.qml:940
+#: qml/backend/DeckCache.qml:216 qml/backend/DeckController.qml:949
 msgid "Untitled list"
 msgstr ""
 
@@ -250,11 +253,12 @@ msgstr ""
 msgid "Card create data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:272 qml/backend/DeckApiClient.qml:935
+#: qml/backend/DeckApiClient.qml:272 qml/backend/DeckApiClient.qml:949
 #: qml/backend/DeckCache.qml:318 qml/backend/DeckCache.qml:349
-#: qml/backend/DeckController.qml:840 qml/pages/CardDetailPage.qml:91
-#: qml/pages/CardDetailPage.qml:1565 qml/pages/CardDetailPage.qml:1948
-#: qml/pages/CardDetailPage.qml:2542 qml/pages/HomePage.qml:1617
+#: qml/backend/DeckController.qml:849 qml/pages/CardDetailPage.qml:95
+#: qml/pages/CardDetailPage.qml:1167 qml/pages/CardDetailPage.qml:1822
+#: qml/pages/CardDetailPage.qml:2206 qml/pages/CardDetailPage.qml:2854
+#: qml/pages/CardDetailPage.qml:2923 qml/pages/HomePage.qml:1617
 #: qml/pages/HomePage.qml:2796
 msgid "Untitled card"
 msgstr ""
@@ -264,17 +268,17 @@ msgid "card create"
 msgstr ""
 
 #: qml/backend/DeckApiClient.qml:280 qml/backend/DeckApiClient.qml:292
-#: qml/backend/DeckApiClient.qml:324 qml/backend/DeckApiClient.qml:347
-#: qml/backend/DeckApiClient.qml:387 qml/backend/DeckApiClient.qml:453
-#: qml/backend/DeckApiClient.qml:494 qml/backend/DeckApiClient.qml:530
-#: qml/backend/DeckApiClient.qml:565 qml/backend/DeckApiClient.qml:579
-#: qml/backend/DeckApiClient.qml:607 qml/backend/DeckApiClient.qml:629
-#: qml/backend/DeckApiClient.qml:763 qml/backend/DeckApiClient.qml:785
-#: qml/backend/DeckApiClient.qml:800 qml/backend/DeckApiClient.qml:929
+#: qml/backend/DeckApiClient.qml:325 qml/backend/DeckApiClient.qml:348
+#: qml/backend/DeckApiClient.qml:388 qml/backend/DeckApiClient.qml:467
+#: qml/backend/DeckApiClient.qml:508 qml/backend/DeckApiClient.qml:544
+#: qml/backend/DeckApiClient.qml:579 qml/backend/DeckApiClient.qml:593
+#: qml/backend/DeckApiClient.qml:621 qml/backend/DeckApiClient.qml:643
+#: qml/backend/DeckApiClient.qml:777 qml/backend/DeckApiClient.qml:799
+#: qml/backend/DeckApiClient.qml:814 qml/backend/DeckApiClient.qml:943
 #: qml/backend/DeckCache.qml:130 qml/backend/DeckCache.qml:318
 #: qml/backend/DeckCache.qml:348 qml/backend/DeckCache.qml:350
-#: qml/backend/DeckController.qml:838 qml/backend/DeckController.qml:839
-#: qml/backend/DeckController.qml:1278 qml/pages/HomePage.qml:102
+#: qml/backend/DeckController.qml:847 qml/backend/DeckController.qml:848
+#: qml/backend/DeckController.qml:1301 qml/pages/HomePage.qml:102
 #: qml/pages/HomePage.qml:117 qml/pages/HomePage.qml:468
 #: qml/pages/HomePage.qml:1596 qml/pages/HomePage.qml:1924
 msgid "List"
@@ -284,173 +288,177 @@ msgstr ""
 msgid "card details"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:307 qml/backend/DeckController.qml:761
+#: qml/backend/DeckApiClient.qml:307 qml/backend/DeckController.qml:770
 msgid "Card update data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:323
+#: qml/backend/DeckApiClient.qml:324
 msgid "card update"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:340 qml/backend/DeckController.qml:1329
+#: qml/backend/DeckApiClient.qml:341 qml/backend/DeckController.qml:1352
 msgid "Card reorder data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:346
+#: qml/backend/DeckApiClient.qml:347
 msgid "card reorder"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:362 qml/backend/DeckController.qml:861
+#: qml/backend/DeckApiClient.qml:363 qml/backend/DeckController.qml:870
 msgid "Card delete data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:365
+#: qml/backend/DeckApiClient.qml:366
 msgid "card delete"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:377 qml/backend/DeckController.qml:890
+#: qml/backend/DeckApiClient.qml:378 qml/backend/DeckController.qml:899
 msgid "Card archive data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:386
+#: qml/backend/DeckApiClient.qml:387
 msgid "card archive"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:386
+#: qml/backend/DeckApiClient.qml:387
 msgid "card unarchive"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:402
+#: qml/backend/DeckApiClient.qml:403
 msgid "label assignment"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:416
+#: qml/backend/DeckApiClient.qml:417
 msgid "user assignment"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:426 qml/backend/DeckController.qml:1228
-#: qml/pages/CardDetailPage.qml:723 qml/pages/HomePage.qml:2479
+#: qml/backend/DeckApiClient.qml:430
+msgid "dependent assignment"
+msgstr ""
+
+#: qml/backend/DeckApiClient.qml:440 qml/backend/DeckController.qml:1237
+#: qml/pages/CardDetailPage.qml:854 qml/pages/HomePage.qml:2479
 #: qml/pages/HomePage.qml:3076
 msgid "Label"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:428
+#: qml/backend/DeckApiClient.qml:442
 msgid "label create"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:439
+#: qml/backend/DeckApiClient.qml:453
 msgid "label delete"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:452
+#: qml/backend/DeckApiClient.qml:466
 msgid "attachments"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:467
+#: qml/backend/DeckApiClient.qml:481
 msgid "Attachment upload data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:471
+#: qml/backend/DeckApiClient.qml:485
 msgid "Attachment upload requires the native network backend."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:475
+#: qml/backend/DeckApiClient.qml:489
 msgid "The selected file could not be read."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:491
+#: qml/backend/DeckApiClient.qml:505
 msgid "attachment upload"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:501
+#: qml/backend/DeckApiClient.qml:515
 msgid "The selected file is empty."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:516
+#: qml/backend/DeckApiClient.qml:530
 msgid "Attachment delete data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:529
+#: qml/backend/DeckApiClient.qml:543
 msgid "attachment delete"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:542
+#: qml/backend/DeckApiClient.qml:556
 msgid "Attachment download data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:546
+#: qml/backend/DeckApiClient.qml:560
 msgid "Attachment download requires the native network backend."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:563
+#: qml/backend/DeckApiClient.qml:577
 msgid "attachment download"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:578
+#: qml/backend/DeckApiClient.qml:592
 msgid "comments"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:590
+#: qml/backend/DeckApiClient.qml:604
 msgid "comment create"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:601
+#: qml/backend/DeckApiClient.qml:615
 msgid "Comment delete data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:606
+#: qml/backend/DeckApiClient.qml:620
 msgid "comment delete"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:617
+#: qml/backend/DeckApiClient.qml:631
 msgid "Activity data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:628
+#: qml/backend/DeckApiClient.qml:642
 msgid "activity"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:639 qml/backend/DeckCache.qml:87
+#: qml/backend/DeckApiClient.qml:653 qml/backend/DeckCache.qml:87
 #: qml/pages/HomePage.qml:2831
 msgid "Archived board"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:923 qml/backend/DeckAttachmentOpenPage.qml:49
+#: qml/backend/DeckApiClient.qml:937 qml/backend/DeckAttachmentOpenPage.qml:49
 #: qml/backend/DeckAttachmentOpenPageUbuntu.qml:49
-#: qml/pages/CardDetailPage.qml:1701
+#: qml/pages/CardDetailPage.qml:1959
 msgid "Attachment"
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:991 qml/backend/DeckApiClient.qml:1026
-#: qml/backend/DeckApiClient.qml:1067
+#: qml/backend/DeckApiClient.qml:1007 qml/backend/DeckApiClient.qml:1042
+#: qml/backend/DeckApiClient.qml:1083
 msgid "Account credentials are incomplete."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:1005 qml/backend/DeckApiClient.qml:1046
-#: qml/backend/DeckApiClient.qml:1087 qml/backend/DeckApiClient.qml:1142
+#: qml/backend/DeckApiClient.qml:1021 qml/backend/DeckApiClient.qml:1062
+#: qml/backend/DeckApiClient.qml:1103 qml/backend/DeckApiClient.qml:1158
 msgid "Deck %1 request failed with HTTP %2."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:1012 qml/backend/DeckApiClient.qml:1053
-#: qml/backend/DeckApiClient.qml:1153
+#: qml/backend/DeckApiClient.qml:1028 qml/backend/DeckApiClient.qml:1069
+#: qml/backend/DeckApiClient.qml:1169
 msgid "Deck response could not be parsed."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:1016 qml/backend/DeckApiClient.qml:1057
-#: qml/backend/DeckApiClient.qml:1093 qml/backend/DeckApiClient.qml:1166
+#: qml/backend/DeckApiClient.qml:1032 qml/backend/DeckApiClient.qml:1073
+#: qml/backend/DeckApiClient.qml:1109 qml/backend/DeckApiClient.qml:1182
 msgid "Deck request failed because the network request could not be completed."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:1019 qml/backend/DeckApiClient.qml:1060
-#: qml/backend/DeckApiClient.qml:1096
+#: qml/backend/DeckApiClient.qml:1035 qml/backend/DeckApiClient.qml:1076
+#: qml/backend/DeckApiClient.qml:1112
 msgid "Deck request timed out."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:1043 qml/backend/DeckApiClient.qml:1139
+#: qml/backend/DeckApiClient.qml:1059 qml/backend/DeckApiClient.qml:1155
 msgid "Server version changed. Local card was not uploaded."
 msgstr ""
 
-#: qml/backend/DeckApiClient.qml:1108
+#: qml/backend/DeckApiClient.qml:1124
 msgid "Native network backend is not available."
 msgstr ""
 
@@ -489,350 +497,354 @@ msgstr ""
 msgid "The attachment file is not available."
 msgstr ""
 
-#: qml/backend/DeckController.qml:8 qml/backend/DeckController.qml:627
-#: qml/backend/DeckController.qml:1646
+#: qml/backend/DeckController.qml:8 qml/backend/DeckController.qml:636
+#: qml/backend/DeckController.qml:1674
 msgid "Select an account to load Deck boards."
 msgstr ""
 
-#: qml/backend/DeckController.qml:9 qml/backend/DeckController.qml:1649
+#: qml/backend/DeckController.qml:9 qml/backend/DeckController.qml:1677
 msgid "No account"
 msgstr ""
 
-#: qml/backend/DeckController.qml:17 qml/backend/DeckController.qml:698
-#: qml/backend/DeckController.qml:755 qml/backend/DeckController.qml:1635
+#: qml/backend/DeckController.qml:17 qml/backend/DeckController.qml:707
+#: qml/backend/DeckController.qml:764 qml/backend/DeckController.qml:1663
 #: qml/pages/HomePage.qml:3273
 msgid "Boards"
 msgstr ""
 
-#: qml/backend/DeckController.qml:244
+#: qml/backend/DeckController.qml:250
 msgid "Authentication failed"
 msgstr ""
 
-#: qml/backend/DeckController.qml:259 qml/backend/DeckController.qml:276
+#: qml/backend/DeckController.qml:265 qml/backend/DeckController.qml:285
 msgid "Loaded %1 item(s)."
 msgstr ""
 
-#: qml/backend/DeckController.qml:259
+#: qml/backend/DeckController.qml:265
 msgid "No items found."
 msgstr ""
 
-#: qml/backend/DeckController.qml:260 qml/backend/DeckController.qml:277
-#: qml/backend/DeckController.qml:303 qml/backend/DeckController.qml:316
-#: qml/backend/DeckController.qml:326 qml/backend/DeckController.qml:336
-#: qml/backend/DeckController.qml:396 qml/backend/DeckController.qml:409
-#: qml/backend/DeckController.qml:420 qml/backend/DeckController.qml:432
-#: qml/backend/DeckController.qml:447 qml/backend/DeckController.qml:460
-#: qml/backend/DeckController.qml:478 qml/backend/DeckController.qml:500
-#: qml/backend/DeckController.qml:511 qml/backend/DeckController.qml:533
-#: qml/backend/DeckController.qml:547 qml/backend/DeckController.qml:805
-#: qml/backend/DeckController.qml:1363 qml/pages/CardDetailPage.qml:1922
+#: qml/backend/DeckController.qml:266 qml/backend/DeckController.qml:286
+#: qml/backend/DeckController.qml:312 qml/backend/DeckController.qml:325
+#: qml/backend/DeckController.qml:335 qml/backend/DeckController.qml:345
+#: qml/backend/DeckController.qml:405 qml/backend/DeckController.qml:418
+#: qml/backend/DeckController.qml:429 qml/backend/DeckController.qml:441
+#: qml/backend/DeckController.qml:456 qml/backend/DeckController.qml:469
+#: qml/backend/DeckController.qml:487 qml/backend/DeckController.qml:509
+#: qml/backend/DeckController.qml:520 qml/backend/DeckController.qml:542
+#: qml/backend/DeckController.qml:556 qml/backend/DeckController.qml:814
+#: qml/backend/DeckController.qml:1386 qml/pages/CardDetailPage.qml:2180
 #: qml/pages/HomePage.qml:1208
 msgid "Up to date"
 msgstr ""
 
-#: qml/backend/DeckController.qml:276 qml/pages/HomePage.qml:3200
+#: qml/backend/DeckController.qml:285 qml/pages/HomePage.qml:3200
 msgid "No cards found."
 msgstr ""
 
-#: qml/backend/DeckController.qml:285
+#: qml/backend/DeckController.qml:294
 msgid "Board created."
 msgstr ""
 
-#: qml/backend/DeckController.qml:294
+#: qml/backend/DeckController.qml:303
 msgid "Board saved."
 msgstr ""
 
-#: qml/backend/DeckController.qml:310
+#: qml/backend/DeckController.qml:319
 msgid "Board deleted."
 msgstr ""
 
-#: qml/backend/DeckController.qml:325
+#: qml/backend/DeckController.qml:334
 msgid "Board sharing updated."
 msgstr ""
 
-#: qml/backend/DeckController.qml:334
+#: qml/backend/DeckController.qml:343
 msgid "Found %1 share recipient(s)."
 msgstr ""
 
-#: qml/backend/DeckController.qml:335
+#: qml/backend/DeckController.qml:344
 msgid "No share recipients found."
 msgstr ""
 
-#: qml/backend/DeckController.qml:342
+#: qml/backend/DeckController.qml:351
 msgid "List created."
 msgstr ""
 
-#: qml/backend/DeckController.qml:348
+#: qml/backend/DeckController.qml:357
 msgid "List saved."
 msgstr ""
 
-#: qml/backend/DeckController.qml:354
+#: qml/backend/DeckController.qml:363
 msgid "List deleted."
 msgstr ""
 
-#: qml/backend/DeckController.qml:395
+#: qml/backend/DeckController.qml:404
 msgid "Card created."
 msgstr ""
 
-#: qml/backend/DeckController.qml:408
+#: qml/backend/DeckController.qml:417
 msgid "Card saved."
 msgstr ""
 
-#: qml/backend/DeckController.qml:419
+#: qml/backend/DeckController.qml:428
 msgid "Card order saved."
 msgstr ""
 
-#: qml/backend/DeckController.qml:431
+#: qml/backend/DeckController.qml:440
 msgid "Card deleted."
 msgstr ""
 
-#: qml/backend/DeckController.qml:446
+#: qml/backend/DeckController.qml:455
 msgid "Card archived."
 msgstr ""
 
-#: qml/backend/DeckController.qml:446
+#: qml/backend/DeckController.qml:455
 msgid "Card restored."
 msgstr ""
 
-#: qml/backend/DeckController.qml:459
+#: qml/backend/DeckController.qml:468
 msgid "Card loaded."
 msgstr ""
 
-#: qml/backend/DeckController.qml:477
+#: qml/backend/DeckController.qml:486
 msgid "Attachment uploaded."
 msgstr ""
 
-#: qml/backend/DeckController.qml:499
+#: qml/backend/DeckController.qml:508
 msgid "Attachment removed."
 msgstr ""
 
-#: qml/backend/DeckController.qml:510
+#: qml/backend/DeckController.qml:519
 msgid "Attachment ready."
 msgstr ""
 
-#: qml/backend/DeckController.qml:532
+#: qml/backend/DeckController.qml:541
 msgid "Comment deleted."
 msgstr ""
 
-#: qml/backend/DeckController.qml:546
+#: qml/backend/DeckController.qml:555
 msgid "Activity loaded."
 msgstr ""
 
-#: qml/backend/DeckController.qml:559 qml/backend/DeckController.qml:1363
-#: qml/backend/DeckController.qml:1544 qml/pages/CardDetailPage.qml:1883
+#: qml/backend/DeckController.qml:568 qml/backend/DeckController.qml:1386
+#: qml/backend/DeckController.qml:1567 qml/pages/CardDetailPage.qml:2141
 msgid "Conflict"
 msgstr ""
 
-#: qml/backend/DeckController.qml:576 qml/backend/DeckController.qml:762
-#: qml/backend/DeckController.qml:785 qml/backend/DeckController.qml:813
-#: qml/backend/DeckController.qml:830 qml/backend/DeckController.qml:862
-#: qml/backend/DeckController.qml:891 qml/backend/DeckController.qml:1080
-#: qml/backend/DeckController.qml:1132 qml/backend/DeckController.qml:1240
-#: qml/backend/DeckController.qml:1271 qml/backend/DeckController.qml:1330
-#: qml/pages/CardDetailPage.qml:1880 qml/pages/HomePage.qml:1205
+#: qml/backend/DeckController.qml:585 qml/backend/DeckController.qml:771
+#: qml/backend/DeckController.qml:794 qml/backend/DeckController.qml:822
+#: qml/backend/DeckController.qml:839 qml/backend/DeckController.qml:871
+#: qml/backend/DeckController.qml:900 qml/backend/DeckController.qml:1089
+#: qml/backend/DeckController.qml:1141 qml/backend/DeckController.qml:1249
+#: qml/backend/DeckController.qml:1294 qml/backend/DeckController.qml:1353
+#: qml/pages/CardDetailPage.qml:2138 qml/pages/HomePage.qml:1205
 msgid "Sync failed"
 msgstr ""
 
-#: qml/backend/DeckController.qml:607 qml/backend/DeckController.qml:656
-#: qml/backend/DeckController.qml:1645
+#: qml/backend/DeckController.qml:616 qml/backend/DeckController.qml:665
+#: qml/backend/DeckController.qml:1673
 msgid "Account changed. Refreshing..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:613 qml/backend/DeckController.qml:687
+#: qml/backend/DeckController.qml:622 qml/backend/DeckController.qml:696
 msgid "Showing cached cards. Refreshing..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:621 qml/backend/DeckController.qml:665
+#: qml/backend/DeckController.qml:630 qml/backend/DeckController.qml:674
 msgid "Showing cached boards. Refreshing..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:628 qml/backend/DeckController.qml:687
+#: qml/backend/DeckController.qml:637 qml/backend/DeckController.qml:696
 msgid "Loading..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:630 qml/backend/DeckController.qml:670
-#: qml/backend/DeckController.qml:688 qml/backend/DeckController.qml:776
-#: qml/backend/DeckController.qml:853 qml/backend/DeckController.qml:882
-#: qml/backend/DeckController.qml:899 qml/backend/DeckController.qml:910
-#: qml/backend/DeckController.qml:921 qml/backend/DeckController.qml:932
-#: qml/backend/DeckController.qml:943 qml/backend/DeckController.qml:954
-#: qml/backend/DeckController.qml:965 qml/backend/DeckController.qml:976
-#: qml/backend/DeckController.qml:987 qml/backend/DeckController.qml:998
-#: qml/backend/DeckController.qml:1009 qml/backend/DeckController.qml:1021
-#: qml/backend/DeckController.qml:1088 qml/backend/DeckController.qml:1123
-#: qml/backend/DeckController.qml:1140 qml/backend/DeckController.qml:1168
-#: qml/backend/DeckController.qml:1201 qml/backend/DeckController.qml:1220
-#: qml/backend/DeckController.qml:1231 qml/backend/DeckController.qml:1248
-#: qml/backend/DeckController.qml:1262 qml/backend/DeckController.qml:1337
-#: qml/backend/DeckController.qml:1350
+#: qml/backend/DeckController.qml:639 qml/backend/DeckController.qml:679
+#: qml/backend/DeckController.qml:697 qml/backend/DeckController.qml:785
+#: qml/backend/DeckController.qml:862 qml/backend/DeckController.qml:891
+#: qml/backend/DeckController.qml:908 qml/backend/DeckController.qml:919
+#: qml/backend/DeckController.qml:930 qml/backend/DeckController.qml:941
+#: qml/backend/DeckController.qml:952 qml/backend/DeckController.qml:963
+#: qml/backend/DeckController.qml:974 qml/backend/DeckController.qml:985
+#: qml/backend/DeckController.qml:996 qml/backend/DeckController.qml:1007
+#: qml/backend/DeckController.qml:1018 qml/backend/DeckController.qml:1030
+#: qml/backend/DeckController.qml:1097 qml/backend/DeckController.qml:1132
+#: qml/backend/DeckController.qml:1149 qml/backend/DeckController.qml:1177
+#: qml/backend/DeckController.qml:1210 qml/backend/DeckController.qml:1229
+#: qml/backend/DeckController.qml:1240 qml/backend/DeckController.qml:1257
+#: qml/backend/DeckController.qml:1271 qml/backend/DeckController.qml:1285
+#: qml/backend/DeckController.qml:1360 qml/backend/DeckController.qml:1373
 msgid "Syncing"
 msgstr ""
 
-#: qml/backend/DeckController.qml:775
+#: qml/backend/DeckController.qml:784
 msgid "Saving card..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:784 qml/backend/DeckController.qml:812
+#: qml/backend/DeckController.qml:793 qml/backend/DeckController.qml:821
 msgid "Conflict data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckController.qml:804
+#: qml/backend/DeckController.qml:813
 msgid "Server version kept."
 msgstr ""
 
-#: qml/backend/DeckController.qml:829
+#: qml/backend/DeckController.qml:838
 msgid "Choose a list before creating a card."
 msgstr ""
 
-#: qml/backend/DeckController.qml:852
+#: qml/backend/DeckController.qml:861
 msgid "Creating card..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:869
+#: qml/backend/DeckController.qml:878
 msgid "Local card deleted."
 msgstr ""
 
-#: qml/backend/DeckController.qml:881
+#: qml/backend/DeckController.qml:890
 msgid "Deleting card..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:898
+#: qml/backend/DeckController.qml:907
 msgid "Archiving card..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:898
+#: qml/backend/DeckController.qml:907
 msgid "Restoring card..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:909
+#: qml/backend/DeckController.qml:918
 msgid "Creating board..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:920
+#: qml/backend/DeckController.qml:929
 msgid "Saving board..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:931
+#: qml/backend/DeckController.qml:940
 msgid "Deleting board..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:942
+#: qml/backend/DeckController.qml:951
 msgid "Creating list..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:953
+#: qml/backend/DeckController.qml:962
 msgid "Saving list..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:964
+#: qml/backend/DeckController.qml:973
 msgid "Deleting list..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:975
+#: qml/backend/DeckController.qml:984
 msgid "Searching share recipients..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:986
+#: qml/backend/DeckController.qml:995
 msgid "Adding board share..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:997
+#: qml/backend/DeckController.qml:1006
 msgid "Saving board share..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1008
+#: qml/backend/DeckController.qml:1017
 msgid "Removing board share..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1020
+#: qml/backend/DeckController.qml:1029
 msgid "Loading card..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1079 qml/pages/CardDetailPage.qml:1741
+#: qml/backend/DeckController.qml:1088 qml/pages/CardDetailPage.qml:1999
 msgid "Save the card before attaching files."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1087
+#: qml/backend/DeckController.qml:1096
 msgid "Uploading attachment..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1102
+#: qml/backend/DeckController.qml:1111
 msgid "No removable attachments selected."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1121 qml/backend/DeckController.qml:1122
+#: qml/backend/DeckController.qml:1130 qml/backend/DeckController.qml:1131
 msgid "Removing attachment..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1131
+#: qml/backend/DeckController.qml:1140
 msgid "Attachment data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1139
+#: qml/backend/DeckController.qml:1148
 msgid "Opening attachment..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1167
+#: qml/backend/DeckController.qml:1176
 msgid "Adding comment..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1182
+#: qml/backend/DeckController.qml:1191
 msgid "No removable comments selected."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1200
+#: qml/backend/DeckController.qml:1209
 msgid "Deleting comment..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1219
+#: qml/backend/DeckController.qml:1228
 msgid "Updating labels..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1230
+#: qml/backend/DeckController.qml:1239
 msgid "Creating label..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1239
+#: qml/backend/DeckController.qml:1248
 msgid "Label delete data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1247
+#: qml/backend/DeckController.qml:1256
 msgid "Deleting label..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1261
+#: qml/backend/DeckController.qml:1270
 msgid "Updating assignment..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1270
+#: qml/backend/DeckController.qml:1284
+msgid "Updating dependents..."
+msgstr ""
+
+#: qml/backend/DeckController.qml:1293
 msgid "Card move data is incomplete."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1324
+#: qml/backend/DeckController.qml:1347
 msgid "Card order changed."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1336
+#: qml/backend/DeckController.qml:1359
 msgid "Saving card order..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1349
+#: qml/backend/DeckController.qml:1372
 msgid "Uploading local changes..."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1362
+#: qml/backend/DeckController.qml:1385
 msgid "All local changes uploaded."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1362
+#: qml/backend/DeckController.qml:1385
 msgid "Some local changes could not be uploaded."
 msgstr ""
 
-#: qml/backend/DeckController.qml:1363 qml/backend/DeckController.qml:1547
+#: qml/backend/DeckController.qml:1386 qml/backend/DeckController.qml:1570
 msgid "Unsynced"
 msgstr ""
 
-#: qml/backend/DeckController.qml:1648
+#: qml/backend/DeckController.qml:1676
 msgid "Refreshing"
 msgstr ""
 
@@ -851,16 +863,16 @@ msgstr ""
 msgid "Shared"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:238
+#: qml/pages/CardDetailPage.qml:242
 msgid "Delete card?"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:239
+#: qml/pages/CardDetailPage.qml:243
 msgid "This card will be deleted from Nextcloud Deck."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:244 qml/pages/CardDetailPage.qml:273
-#: qml/pages/CardDetailPage.qml:340 qml/pages/CardDetailPage.qml:992
+#: qml/pages/CardDetailPage.qml:248 qml/pages/CardDetailPage.qml:277
+#: qml/pages/CardDetailPage.qml:344 qml/pages/CardDetailPage.qml:1249
 #: qml/pages/HomePage.qml:1315 qml/pages/HomePage.qml:1898
 #: qml/pages/HomePage.qml:2155 qml/pages/HomePage.qml:2218
 #: qml/pages/HomePage.qml:2247 qml/pages/HomePage.qml:2852
@@ -868,296 +880,325 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:267
+#: qml/pages/CardDetailPage.qml:271
 msgid "Delete label?"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:268
+#: qml/pages/CardDetailPage.qml:272
 msgid "The label will be removed from this board."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:298
+#: qml/pages/CardDetailPage.qml:302
 msgid "Remove attachment?"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:299
+#: qml/pages/CardDetailPage.qml:303
 msgid "Remove attachments?"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:301
+#: qml/pages/CardDetailPage.qml:305
 msgid "The selected attachment will be removed from this card."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:302
+#: qml/pages/CardDetailPage.qml:306
 msgid "The selected attachments will be removed from this card."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:307 qml/pages/CardDetailPage.qml:1163
+#: qml/pages/CardDetailPage.qml:311 qml/pages/CardDetailPage.qml:1420
 #: qml/pages/HomePage.qml:1811
 msgid "Remove"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:331
+#: qml/pages/CardDetailPage.qml:335
 msgid "Delete comment?"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:332
+#: qml/pages/CardDetailPage.qml:336
 msgid "Delete comments?"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:334
+#: qml/pages/CardDetailPage.qml:338
 msgid "The selected comment will be deleted from this card."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:335
+#: qml/pages/CardDetailPage.qml:339
 msgid "The selected comments will be deleted from this card."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:363 qml/pages/HomePage.qml:1329
+#: qml/pages/CardDetailPage.qml:367 qml/pages/HomePage.qml:1329
 msgid "Sync status"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:369 qml/pages/HomePage.qml:1353
+#: qml/pages/CardDetailPage.qml:373 qml/pages/HomePage.qml:1353
 #: qml/pages/HomePage.qml:1830
 msgid "Close"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:380
+#: qml/pages/CardDetailPage.qml:384
 msgid "Resolve conflict"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:381
+#: qml/pages/CardDetailPage.qml:385
 msgid ""
 "The server version changed while this card had local changes. Choose which "
 "version to keep."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:391
+#: qml/pages/CardDetailPage.qml:395
 msgid "Server version"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:401
+#: qml/pages/CardDetailPage.qml:405
 msgid "Local version"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:419
+#: qml/pages/CardDetailPage.qml:423
 msgid "Keep local version"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:419
+#: qml/pages/CardDetailPage.qml:423
 msgid "Use server version"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:443 qml/pages/CardDetailPage.qml:647
+#: qml/pages/CardDetailPage.qml:447 qml/pages/CardDetailPage.qml:778
 #: qml/pages/HomePage.qml:1385
 msgid "Due date"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:450
+#: qml/pages/CardDetailPage.qml:454
 msgid "Clear due date"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:470 qml/pages/CardDetailPage.qml:677
+#: qml/pages/CardDetailPage.qml:474 qml/pages/CardDetailPage.qml:530
+#: qml/pages/CardDetailPage.qml:737 qml/pages/CardDetailPage.qml:808
 msgid "Time"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:477
+#: qml/pages/CardDetailPage.qml:481 qml/pages/CardDetailPage.qml:537
 msgid "Clear time"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:536 qml/pages/HomePage.qml:2627
+#: qml/pages/CardDetailPage.qml:503 qml/pages/CardDetailPage.qml:707
+msgid "Start date"
+msgstr ""
+
+#: qml/pages/CardDetailPage.qml:510
+msgid "Clear start date"
+msgstr ""
+
+#: qml/pages/CardDetailPage.qml:596 qml/pages/HomePage.qml:2627
 #: qml/pages/HomePage.qml:2885 qml/pages/SettingsPage.qml:58
 msgid "Pull to refresh"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:536 qml/pages/HomePage.qml:2626
+#: qml/pages/CardDetailPage.qml:596 qml/pages/HomePage.qml:2626
 #: qml/pages/HomePage.qml:2886
 msgid "Release to refresh"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:547
+#: qml/pages/CardDetailPage.qml:607
 msgid "Details"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:548 qml/pages/CardDetailPage.qml:1197
+#: qml/pages/CardDetailPage.qml:608 qml/pages/CardDetailPage.qml:1454
 msgid "Attachments"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:549
+#: qml/pages/CardDetailPage.qml:609
 msgid "Comments"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:550 qml/pages/CardDetailPage.qml:1325
+#: qml/pages/CardDetailPage.qml:610 qml/pages/CardDetailPage.qml:1582
 msgid "Activity"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:614
+#: qml/pages/CardDetailPage.qml:674
 msgid "Conflict. Server version changed while local changes are waiting."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:621
+#: qml/pages/CardDetailPage.qml:681
+msgid "Start"
+msgstr ""
+
+#: qml/pages/CardDetailPage.qml:752
 msgid "Due"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:692
+#: qml/pages/CardDetailPage.qml:823
 msgid "Labels"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:772
+#: qml/pages/CardDetailPage.qml:903
 msgid "New label"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:784
+#: qml/pages/CardDetailPage.qml:915
 msgid "Assignments"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:858
+#: qml/pages/CardDetailPage.qml:989
 msgid "Assign users"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:925 qml/pages/HomePage.qml:1485
+#: qml/pages/CardDetailPage.qml:1056 qml/pages/HomePage.qml:1485
 msgid "No users available."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:934
+#: qml/pages/CardDetailPage.qml:1063
+msgid "Dependents"
+msgstr ""
+
+#: qml/pages/CardDetailPage.qml:1124
+msgid "Add dependent"
+msgstr ""
+
+#: qml/pages/CardDetailPage.qml:1182
+msgid "No matching cards found."
+msgstr ""
+
+#: qml/pages/CardDetailPage.qml:1191
 msgid "Mark as done"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:934
+#: qml/pages/CardDetailPage.qml:1191
 msgid "Mark as not done"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:943
+#: qml/pages/CardDetailPage.qml:1200
 msgid "Description"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:966 qml/pages/HomePage.qml:2092
+#: qml/pages/CardDetailPage.qml:1223 qml/pages/HomePage.qml:2092
 #: qml/pages/HomePage.qml:2149
 msgid "Delete card"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:985 qml/pages/CardDetailPage.qml:1156
+#: qml/pages/CardDetailPage.qml:1242 qml/pages/CardDetailPage.qml:1413
 #: qml/pages/HomePage.qml:1291
 msgid "%1 selected"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1009
+#: qml/pages/CardDetailPage.qml:1266
 msgid "No comments yet."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1205
+#: qml/pages/CardDetailPage.qml:1462
 msgid "There are no files attached to this card."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1333
+#: qml/pages/CardDetailPage.qml:1590
 msgid "No activity yet."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1452
+#: qml/pages/CardDetailPage.qml:1709
 msgid "Add comment"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1682
+#: qml/pages/CardDetailPage.qml:1940
 msgid "No app picker is available."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1731
+#: qml/pages/CardDetailPage.qml:1989
 msgid "%1 B"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1734
+#: qml/pages/CardDetailPage.qml:1992
 msgid "%1 KB"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1736
+#: qml/pages/CardDetailPage.qml:1994
 msgid "%1 MB"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1756
+#: qml/pages/CardDetailPage.qml:2014
 msgid "No file picker is available."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1765
+#: qml/pages/CardDetailPage.qml:2023
 msgid "The selected file could not be prepared for upload."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1912
+#: qml/pages/CardDetailPage.qml:2170
 msgid "This card has a conflict."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1914
+#: qml/pages/CardDetailPage.qml:2172
 msgid "This card has local changes waiting to sync."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1920 qml/pages/HomePage.qml:1227
+#: qml/pages/CardDetailPage.qml:2178 qml/pages/HomePage.qml:1227
 msgid "Sync: %1"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1946
+#: qml/pages/CardDetailPage.qml:2204
 msgid ""
 "Server version is not available in the local cache yet. Pull to refresh and "
 "open this conflict again."
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1951
+#: qml/pages/CardDetailPage.qml:2209
 msgid "Title: %1"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:1953
+#: qml/pages/CardDetailPage.qml:2211
 msgid "Due: %1"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2125 qml/pages/CardDetailPage.qml:2240
+#: qml/pages/CardDetailPage.qml:2427 qml/pages/CardDetailPage.qml:2542
 #: qml/pages/HomePage.qml:1035
 msgid "User"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2293 qml/pages/CardDetailPage.qml:2370
+#: qml/pages/CardDetailPage.qml:2595 qml/pages/CardDetailPage.qml:2672
 msgid "Yesterday"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+#: qml/pages/CardDetailPage.qml:2597 qml/pages/CardDetailPage.qml:2674
 msgid "Apr"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+#: qml/pages/CardDetailPage.qml:2597 qml/pages/CardDetailPage.qml:2674
 msgid "Aug"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+#: qml/pages/CardDetailPage.qml:2597 qml/pages/CardDetailPage.qml:2674
 msgid "Dec"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+#: qml/pages/CardDetailPage.qml:2597 qml/pages/CardDetailPage.qml:2674
 msgid "Feb"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+#: qml/pages/CardDetailPage.qml:2597 qml/pages/CardDetailPage.qml:2674
 msgid "Jan"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+#: qml/pages/CardDetailPage.qml:2597 qml/pages/CardDetailPage.qml:2674
 msgid "Jul"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+#: qml/pages/CardDetailPage.qml:2597 qml/pages/CardDetailPage.qml:2674
 msgid "Jun"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+#: qml/pages/CardDetailPage.qml:2597 qml/pages/CardDetailPage.qml:2674
 msgid "Mar"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+#: qml/pages/CardDetailPage.qml:2597 qml/pages/CardDetailPage.qml:2674
 msgid "Nov"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+#: qml/pages/CardDetailPage.qml:2597 qml/pages/CardDetailPage.qml:2674
 msgid "Oct"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+#: qml/pages/CardDetailPage.qml:2597 qml/pages/CardDetailPage.qml:2674
 msgid "Sep"
+msgstr ""
+
+#: qml/pages/CardDetailPage.qml:2857
+msgid "Card #%1"
 msgstr ""
 
 #: qml/pages/HomePage.qml:410

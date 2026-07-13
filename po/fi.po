@@ -1896,3 +1896,40 @@ msgstr "%1 käyttää kieltä %2 uudelleenkäynnistyksen jälkeen."
 
 #~ msgid "Archived cards appear here after their board has been loaded."
 #~ msgstr "Arkistoidut kortit näkyvät tässä, kun niiden taulu on ladattu."
+
+msgid "Start"
+msgstr "Aloitus"
+
+
+msgid "Start date"
+msgstr "Aloituspäivä"
+
+
+msgid "Clear start date"
+msgstr "Tyhjennä aloituspäivä"
+
+msgid "Dependents"
+msgstr "Riippuvuudet"
+
+
+msgid "Search cards on this board"
+msgstr "Hae kortteja tältä taululta"
+
+
+msgid "No matching cards found."
+msgstr "Vastaavia kortteja ei löytynyt."
+
+
+msgid "Card #%1"
+msgstr "Kortti #%1"
+
+
+msgid "Updating dependents..."
+msgstr "Päivitetään riippuvuuksia..."
+
+
+msgid "dependent assignment"
+msgstr "riippuvuuden määritys"
+
+msgid "Add dependent"
+msgstr "Lisää riippuvuus"

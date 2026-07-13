@@ -1894,3 +1894,40 @@ msgstr "%1 використовуватиме %2 після перезапуск
 
 #~ msgid "Archived cards appear here after their board has been loaded."
 #~ msgstr "Заархівовані картки з’являться тут після завантаження їхньої дошки."
+
+msgid "Start"
+msgstr "Початок"
+
+
+msgid "Start date"
+msgstr "Дата початку"
+
+
+msgid "Clear start date"
+msgstr "Очистити дату початку"
+
+msgid "Dependents"
+msgstr "Залежності"
+
+
+msgid "Search cards on this board"
+msgstr "Пошук карток на цій дошці"
+
+
+msgid "No matching cards found."
+msgstr "Відповідних карток не знайдено."
+
+
+msgid "Card #%1"
+msgstr "Картка №%1"
+
+
+msgid "Updating dependents..."
+msgstr "Оновлення залежностей..."
+
+
+msgid "dependent assignment"
+msgstr "призначення залежності"
+
+msgid "Add dependent"
+msgstr "Додати залежність"

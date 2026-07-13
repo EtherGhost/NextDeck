@@ -1896,3 +1896,40 @@ msgstr "%1 gebruikt na een herstart %2."
 
 #~ msgid "Archived cards appear here after their board has been loaded."
 #~ msgstr "Gearchiveerde kaarten verschijnen hier nadat hun bord is geladen."
+
+msgid "Start"
+msgstr "Start"
+
+
+msgid "Start date"
+msgstr "Begindatum"
+
+
+msgid "Clear start date"
+msgstr "Begindatum wissen"
+
+msgid "Dependents"
+msgstr "Afhankelijkheden"
+
+
+msgid "Search cards on this board"
+msgstr "Kaarten op dit board zoeken"
+
+
+msgid "No matching cards found."
+msgstr "Geen overeenkomende kaarten gevonden."
+
+
+msgid "Card #%1"
+msgstr "Kaart #%1"
+
+
+msgid "Updating dependents..."
+msgstr "Afhankelijkheden bijwerken..."
+
+
+msgid "dependent assignment"
+msgstr "afhankelijkheid toewijzen"
+
+msgid "Add dependent"
+msgstr "Afhankelijkheid toevoegen"

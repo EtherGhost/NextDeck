@@ -1912,3 +1912,40 @@ msgstr "%1 verwendet nach dem Neustart %2."
 #~ msgid "Archived cards appear here after their board has been loaded."
 #~ msgstr ""
 #~ "Archivierte Karten erscheinen hier, nachdem ihr Board geladen wurde."
+
+msgid "Start"
+msgstr "Start"
+
+
+msgid "Start date"
+msgstr "Startdatum"
+
+
+msgid "Clear start date"
+msgstr "Startdatum löschen"
+
+msgid "Dependents"
+msgstr "Abhängigkeiten"
+
+
+msgid "Search cards on this board"
+msgstr "Karten auf diesem Board suchen"
+
+
+msgid "No matching cards found."
+msgstr "Keine passenden Karten gefunden."
+
+
+msgid "Card #%1"
+msgstr "Karte Nr. %1"
+
+
+msgid "Updating dependents..."
+msgstr "Abhängigkeiten werden aktualisiert..."
+
+
+msgid "dependent assignment"
+msgstr "Abhängigkeitszuweisung"
+
+msgid "Add dependent"
+msgstr "Abhängigkeit hinzufügen"

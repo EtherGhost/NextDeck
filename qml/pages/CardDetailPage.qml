@@ -15,9 +15,12 @@ Page {
     property string activeTab: "home"
     property string newLabelTitle: ""
     property string assignmentUserId: ""
+    property string dependentQuery: ""
     property string newCommentText: ""
     property string dueDateText: ""
     property string dueTimeText: ""
+    property string startDateText: ""
+    property string startTimeText: ""
     property date calendarMonth: new Date()
     property var selectedLabelForDelete: ({})
     property var selectedAttachments: ({})
@@ -25,6 +28,7 @@ Page {
     property bool attachmentSelectionMode: false
     property bool commentSelectionMode: false
     property bool assignmentPickerVisible: false
+    property bool dependentPickerVisible: false
     property string conflictChoice: "local"
     readonly property real pullRefreshThreshold: units.gu(7)
     readonly property real oskOverlap: Qt.inputMethod.visible && Qt.inputMethod.keyboardRectangle.height > 0
@@ -490,6 +494,62 @@ Page {
         }
     }
 
+    Component {
+        id: startDatePickerDialog
+
+        Dialog {
+            id: startDateDialog
+            width: Math.min(page.width - units.gu(4), units.gu(40))
+            title: i18n.tr("Start date")
+
+            UTControls.CalendarDatePicker {
+                width: Math.min(startDateDialog.width - units.gu(2), units.gu(34))
+                value: page.startDateText
+                okText: i18n.tr("OK")
+                todayTextLabel: i18n.tr("Today")
+                clearText: i18n.tr("Clear start date")
+                cancelText: i18n.tr("Cancel")
+                onAccepted: {
+                    page.applyStartDate(dateText)
+                    PopupUtils.close(startDateDialog)
+                }
+                onCleared: {
+                    page.applyStartDate("")
+                    PopupUtils.close(startDateDialog)
+                }
+                onCanceled: PopupUtils.close(startDateDialog)
+            }
+        }
+    }
+
+    Component {
+        id: startTimePickerDialog
+
+        Dialog {
+            id: startTimeDialog
+            title: i18n.tr("Time")
+
+            UTControls.TimePicker {
+                width: Math.min(startTimeDialog.width - units.gu(2), units.gu(34))
+                value: page.startTimeText
+                okText: i18n.tr("OK")
+                nowText: i18n.tr("Now")
+                clearText: i18n.tr("Clear time")
+                cancelText: i18n.tr("Cancel")
+                onAccepted: {
+                    var parts = String(timeText || "").split(":")
+                    page.applyStartTime(parts.length > 0 ? parts[0] : "", parts.length > 1 ? parts[1] : "")
+                    PopupUtils.close(startTimeDialog)
+                }
+                onCleared: {
+                    page.applyStartTime("", "")
+                    PopupUtils.close(startTimeDialog)
+                }
+                onCanceled: PopupUtils.close(startTimeDialog)
+            }
+        }
+    }
+
     Flickable {
         id: detailFlickable
         anchors {
@@ -613,6 +673,77 @@ Page {
                         anchors { left: parent.left; right: parent.right; verticalCenter: parent.verticalCenter; margins: units.gu(1) }
                         text: i18n.tr("Conflict. Server version changed while local changes are waiting.")
                         wrapMode: Text.WordWrap
+                    }
+                }
+
+                Label {
+                    Layout.fillWidth: true
+                    text: i18n.tr("Start")
+                    font.bold: true
+                }
+
+                RowLayout {
+                    Layout.fillWidth: true
+                    spacing: units.gu(1)
+
+                    Rectangle {
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: units.gu(5.2)
+                        radius: units.gu(0.7)
+                        color: theme.palette.normal.background
+                        border.width: 1
+                        border.color: theme.palette.normal.base
+
+                        RowLayout {
+                            anchors {
+                                fill: parent
+                                leftMargin: units.gu(1)
+                                rightMargin: units.gu(1)
+                            }
+                            spacing: units.gu(0.8)
+
+                            Label {
+                                Layout.fillWidth: true
+                                text: page.startDateText.length > 0 ? page.startDateText : i18n.tr("Start date")
+                                opacity: page.startDateText.length > 0 ? 1.0 : 0.55
+                                elide: Text.ElideRight
+                            }
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: page.openStartDateDialog()
+                        }
+                    }
+
+                    Rectangle {
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: units.gu(5.2)
+                        radius: units.gu(0.7)
+                        color: theme.palette.normal.background
+                        border.width: 1
+                        border.color: theme.palette.normal.base
+
+                        RowLayout {
+                            anchors {
+                                fill: parent
+                                leftMargin: units.gu(1)
+                                rightMargin: units.gu(1)
+                            }
+                            spacing: units.gu(0.8)
+
+                            Label {
+                                Layout.fillWidth: true
+                                text: page.startTimeText.length > 0 ? page.startTimeText : i18n.tr("Time")
+                                opacity: page.startTimeText.length > 0 ? 1.0 : 0.55
+                                elide: Text.ElideRight
+                            }
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: PopupUtils.open(startTimePickerDialog)
+                        }
                     }
                 }
 
@@ -923,6 +1054,132 @@ Page {
                         Layout.fillWidth: true
                         visible: page.visibleUserOptions().length === 0
                         text: i18n.tr("No users available.")
+                        opacity: 0.62
+                    }
+                }
+
+                Label {
+                    Layout.fillWidth: true
+                    text: i18n.tr("Dependents")
+                    font.bold: true
+                }
+
+                Flow {
+                    Layout.fillWidth: true
+                    spacing: units.gu(0.6)
+                    visible: (page.card.dependentCards || []).length > 0
+
+                    Repeater {
+                        model: page.card.dependentCards || []
+
+                        Rectangle {
+                            width: Math.min(dependentChipLayout.implicitWidth + units.gu(1.0), page.width - units.gu(6))
+                            height: units.gu(4.2)
+                            radius: units.gu(2.1)
+                            color: Qt.rgba(0.17, 0.5, 0.72, 0.13)
+                            border.width: 1
+                            border.color: Qt.rgba(0.17, 0.5, 0.72, 0.35)
+
+                            RowLayout {
+                                id: dependentChipLayout
+                                anchors.fill: parent
+                                anchors.leftMargin: units.gu(0.9)
+                                anchors.rightMargin: units.gu(0.25)
+                                spacing: units.gu(0.45)
+
+                                Label {
+                                    Layout.maximumWidth: page.width - units.gu(12)
+                                    text: page.dependentCardTitle(modelData)
+                                    color: theme.palette.normal.foregroundText
+                                    font.bold: true
+                                    fontSize: "small"
+                                    elide: Text.ElideRight
+                                }
+
+                                Item {
+                                    Layout.preferredWidth: units.gu(2.4)
+                                    Layout.preferredHeight: parent.height
+
+                                    Label {
+                                        anchors.centerIn: parent
+                                        text: "×"
+                                        color: "#c23b3b"
+                                        font.bold: true
+                                        font.pixelSize: units.gu(1.75)
+                                    }
+
+                                    MouseArea {
+                                        anchors.fill: parent
+                                        onClicked: page.removeDependent(modelData)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                TextField {
+                    id: dependentField
+                    Layout.fillWidth: true
+                    placeholderText: i18n.tr("Add dependent")
+                    text: page.dependentQuery
+                    onActiveFocusChanged: {
+                        if (activeFocus) {
+                            page.dependentPickerVisible = true
+                        }
+                    }
+                    onTextChanged: {
+                        page.dependentQuery = text
+                        page.dependentPickerVisible = true
+                    }
+                    onAccepted: {
+                        var options = page.visibleDependentOptions()
+                        if (options.length > 0) {
+                            Qt.inputMethod.commit()
+                            page.addDependent(options[0])
+                        }
+                    }
+                }
+
+                ColumnLayout {
+                    Layout.fillWidth: true
+                    spacing: units.gu(0.35)
+                    visible: page.dependentPickerVisible
+
+                    Repeater {
+                        model: page.visibleDependentOptions()
+
+                        Rectangle {
+                            Layout.fillWidth: true
+                            Layout.preferredHeight: units.gu(5)
+                            radius: units.gu(0.6)
+                            color: theme.palette.normal.background
+                            border.width: 1
+                            border.color: theme.palette.normal.base
+
+                            RowLayout {
+                                anchors.fill: parent
+                                anchors.margins: units.gu(0.8)
+                                spacing: units.gu(0.8)
+
+                                Label {
+                                    Layout.fillWidth: true
+                                    text: modelData.title || i18n.tr("Untitled card")
+                                    elide: Text.ElideRight
+                                }
+                            }
+
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: page.addDependent(modelData)
+                            }
+                        }
+                    }
+
+                    Label {
+                        Layout.fillWidth: true
+                        visible: page.visibleDependentOptions().length === 0
+                        text: i18n.tr("No matching cards found.")
                         opacity: 0.62
                     }
                 }
@@ -1566,6 +1823,7 @@ Page {
         updated.description = descriptionArea.text
         updated.duedate = combinedDueDateTime()
         updated.detail = updated.duedate
+        updated.startdate = combinedStartDateTime()
         updated.done = page.card.done || null
         page.card = updated
         page.dirty = false
@@ -1974,6 +2232,9 @@ Page {
         var due = parseDueValue((source && (source.duedate || source.detail)) || "")
         dueDateText = due.date
         dueTimeText = due.time
+        var start = parseDueValue((source && source.startdate) || "")
+        startDateText = start.date
+        startTimeText = start.time
     }
 
     function parseDueValue(value) {
@@ -2038,6 +2299,47 @@ Page {
         dueTimeText = normalized
         if (dueDateText.length === 0 && normalized.length > 0) {
             dueDateText = todayText()
+        }
+        page.dirty = true
+        autoSaveTimer.restart()
+    }
+
+    function combinedStartDateTime() {
+        if (startDateText.length === 0) {
+            return ""
+        }
+        if (startTimeText.length === 0) {
+            return startDateText
+        }
+        var localDateTime = new Date(
+            parseInt(startDateText.substring(0, 4), 10),
+            parseInt(startDateText.substring(5, 7), 10) - 1,
+            parseInt(startDateText.substring(8, 10), 10),
+            parseInt(startTimeText.substring(0, 2), 10),
+            parseInt(startTimeText.substring(3, 5), 10),
+            0)
+        if (isNaN(localDateTime.getTime())) {
+            return startDateText + "T" + startTimeText + ":00"
+        }
+        return localDateTime.toISOString().replace(/\.\d{3}Z$/, "Z")
+    }
+
+    function openStartDateDialog() {
+        calendarMonth = startDateText.length > 0 ? dateFromText(startDateText) : new Date()
+        PopupUtils.open(startDatePickerDialog)
+    }
+
+    function applyStartDate(value) {
+        startDateText = normalizeDateText(value)
+        page.dirty = true
+        autoSaveTimer.restart()
+    }
+
+    function applyStartTime(hour, minute) {
+        var normalized = normalizeTimeText(hour, minute)
+        startTimeText = normalized
+        if (startDateText.length === 0 && normalized.length > 0) {
+            startDateText = todayText()
         }
         page.dirty = true
         autoSaveTimer.restart()
@@ -2496,6 +2798,85 @@ Page {
         return updated
     }
 
+    function addDependent(otherCard) {
+        var dependentCardId = otherCard && otherCard.id ? Number(otherCard.id) : 0
+        if (dependentCardId <= 0) {
+            return
+        }
+        var updated = page.updateDependentCardsLocal(dependentCardId, true)
+        deckController.assignDependent(updated, dependentCardId, true)
+        dependentQuery = ""
+        dependentPickerVisible = false
+        dependentField.focus = false
+    }
+
+    function removeDependent(dependentCardId) {
+        var id = Number(dependentCardId || 0)
+        if (id <= 0) {
+            return
+        }
+        var updated = page.updateDependentCardsLocal(id, false)
+        deckController.assignDependent(updated, id, false)
+    }
+
+    function updateDependentCardsLocal(dependentCardId, assign) {
+        var updated = {}
+        for (var key in page.card) {
+            updated[key] = page.card[key]
+        }
+        var current = page.card.dependentCards || []
+        var ids = []
+        var found = false
+        for (var i = 0; i < current.length; ++i) {
+            var existingId = Number(current[i])
+            if (existingId === dependentCardId) {
+                found = true
+                if (assign) {
+                    ids.push(existingId)
+                }
+            } else {
+                ids.push(existingId)
+            }
+        }
+        if (assign && !found) {
+            ids.push(dependentCardId)
+        }
+        updated.dependentCards = ids
+        page.card = updated
+        return updated
+    }
+
+    function dependentCardTitle(dependentCardId) {
+        var id = Number(dependentCardId || 0)
+        var source = (deckController && deckController.entries) || []
+        for (var i = 0; i < source.length; ++i) {
+            if (source[i].type === "card" && Number(source[i].id || 0) === id) {
+                return source[i].title || i18n.tr("Untitled card")
+            }
+        }
+        return i18n.tr("Card #%1").arg(id)
+    }
+
+    function visibleDependentOptions() {
+        var query = dependentQuery.trim().toLowerCase()
+        var source = (deckController && deckController.entries) || []
+        var currentId = Number(page.card.id || 0)
+        var existing = page.card.dependentCards || []
+        var result = []
+        for (var i = 0; i < source.length; ++i) {
+            var entry = source[i]
+            if (entry.type !== "card") continue
+            var entryId = Number(entry.id || 0)
+            if (entryId <= 0 || entryId === currentId) continue
+            if (existing.indexOf(entryId) >= 0) continue
+            var title = String(entry.title || "").toLowerCase()
+            if (query.length === 0 || title.indexOf(query) >= 0) {
+                result.push(entry)
+            }
+        }
+        return result.slice(0, 8)
+    }
+
     function knownUsers() {
         var seen = {}
         var result = []
@@ -2543,6 +2924,7 @@ Page {
         updated.description = descriptionArea.text
         updated.duedate = combinedDueDateTime()
         updated.detail = updated.duedate
+        updated.startdate = combinedStartDateTime()
         updated.done = done ? currentIsoDateTime() : null
         page.card = updated
         deckController.saveCard(updated)

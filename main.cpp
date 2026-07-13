@@ -122,6 +122,18 @@ QString localeForLanguageCode(const QString &languageCode)
     static const QHash<QString, QString> localeMap = {
         {QStringLiteral("en"), QStringLiteral("C.UTF-8")},
         {QStringLiteral("sv"), QStringLiteral("sv_SE.UTF-8")},
+        {QStringLiteral("ca"), QStringLiteral("ca_ES.UTF-8")},
+        {QStringLiteral("da"), QStringLiteral("da_DK.UTF-8")},
+        {QStringLiteral("de"), QStringLiteral("de_DE.UTF-8")},
+        {QStringLiteral("es"), QStringLiteral("es_ES.UTF-8")},
+        {QStringLiteral("fi"), QStringLiteral("fi_FI.UTF-8")},
+        {QStringLiteral("fr"), QStringLiteral("fr_FR.UTF-8")},
+        {QStringLiteral("it"), QStringLiteral("it_IT.UTF-8")},
+        {QStringLiteral("nb"), QStringLiteral("nb_NO.UTF-8")},
+        {QStringLiteral("nl"), QStringLiteral("nl_NL.UTF-8")},
+        {QStringLiteral("pl"), QStringLiteral("pl_PL.UTF-8")},
+        {QStringLiteral("ru"), QStringLiteral("ru_RU.UTF-8")},
+        {QStringLiteral("uk"), QStringLiteral("uk_UA.UTF-8")},
     };
     return localeMap.value(languageCode, QString());
 }

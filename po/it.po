@@ -1897,3 +1897,40 @@ msgstr "%1 utilizzerà %2 dopo il riavvio."
 #~ msgid "Archived cards appear here after their board has been loaded."
 #~ msgstr ""
 #~ "Le schede archiviate compaiono qui dopo il caricamento della loro bacheca."
+
+msgid "Start"
+msgstr "Inizio"
+
+
+msgid "Start date"
+msgstr "Data di inizio"
+
+
+msgid "Clear start date"
+msgstr "Cancella data di inizio"
+
+msgid "Dependents"
+msgstr "Dipendenze"
+
+
+msgid "Search cards on this board"
+msgstr "Cerca schede in questa bacheca"
+
+
+msgid "No matching cards found."
+msgstr "Nessuna scheda corrispondente trovata."
+
+
+msgid "Card #%1"
+msgstr "Scheda n. %1"
+
+
+msgid "Updating dependents..."
+msgstr "Aggiornamento dipendenze..."
+
+
+msgid "dependent assignment"
+msgstr "assegnazione dipendenza"
+
+msgid "Add dependent"
+msgstr "Aggiungi dipendenza"

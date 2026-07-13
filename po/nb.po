@@ -1904,3 +1904,40 @@ msgstr "%1 bruker %2 etter omstart."
 
 #~ msgid "Archived cards appear here after their board has been loaded."
 #~ msgstr "Arkiverte kort vises her etter at tavlen deres er lastet."
+
+msgid "Start"
+msgstr "Start"
+
+
+msgid "Start date"
+msgstr "Startdato"
+
+
+msgid "Clear start date"
+msgstr "Fjern startdato"
+
+msgid "Dependents"
+msgstr "Avhengigheter"
+
+
+msgid "Search cards on this board"
+msgstr "Søk kort på denne boarden"
+
+
+msgid "No matching cards found."
+msgstr "Ingen matchende kort funnet."
+
+
+msgid "Card #%1"
+msgstr "Kort #%1"
+
+
+msgid "Updating dependents..."
+msgstr "Oppdaterer avhengigheter..."
+
+
+msgid "dependent assignment"
+msgstr "avhengighetstildeling"
+
+msgid "Add dependent"
+msgstr "Legg til avhengighet"

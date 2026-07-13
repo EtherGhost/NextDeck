@@ -2485,3 +2485,40 @@ msgstr "%1 utilitzarà %2 després de reiniciar."
 #~ msgstr ""
 #~ "Les targetes arxivades apareixen aquí després que s’hagi carregat el seu "
 #~ "tauler."
+
+msgid "Start"
+msgstr "Inici"
+
+
+msgid "Start date"
+msgstr "Data d'inici"
+
+
+msgid "Clear start date"
+msgstr "Esborra la data d'inici"
+
+msgid "Dependents"
+msgstr "Dependències"
+
+
+msgid "Search cards on this board"
+msgstr "Cerca targetes en aquest tauler"
+
+
+msgid "No matching cards found."
+msgstr "No s'han trobat targetes coincidents."
+
+
+msgid "Card #%1"
+msgstr "Targeta núm. %1"
+
+
+msgid "Updating dependents..."
+msgstr "Actualitzant dependències..."
+
+
+msgid "dependent assignment"
+msgstr "assignació de dependent"
+
+msgid "Add dependent"
+msgstr "Afegeix un dependent"
