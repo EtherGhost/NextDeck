@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nextdeck.cloudsite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-01 21:25+0000\n"
+"POT-Creation-Date: 2026-07-13 10:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,24 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: qml/UTControls/ConfirmDialog.qml:10
-msgid "Confirm"
+#: qml/UTControls/CalendarDatePicker.qml:12 qml/UTControls/TimePicker.qml:13
+#: qml/pages/CardDetailPage.qml:448 qml/pages/CardDetailPage.qml:475
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:131
+msgid "OK"
 msgstr ""
 
-#: qml/UTControls/ConfirmDialog.qml:11 qml/pages/CardDetailPage.qml:256
+#: qml/UTControls/CalendarDatePicker.qml:13 qml/pages/CardDetailPage.qml:449
+#: qml/pages/CardDetailPage.qml:2290 qml/pages/CardDetailPage.qml:2367
+#: qml/pages/HomePage.qml:1534
+msgid "Today"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:14 qml/UTControls/TimePicker.qml:15
+msgid "Clear"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:15 qml/UTControls/ConfirmDialog.qml:11
+#: qml/UTControls/TimePicker.qml:16 qml/pages/CardDetailPage.qml:256
 #: qml/pages/CardDetailPage.qml:286 qml/pages/CardDetailPage.qml:319
 #: qml/pages/CardDetailPage.qml:352 qml/pages/CardDetailPage.qml:431
 #: qml/pages/CardDetailPage.qml:451 qml/pages/CardDetailPage.qml:478
@@ -34,6 +47,103 @@ msgstr ""
 #: qml/pages/HomePage.qml:2201 qml/pages/HomePage.qml:2230
 #: qml/pages/HomePage.qml:2260
 msgid "Cancel"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "April"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "August"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "December"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "February"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "January"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "July"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "June"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "March"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+msgid "May"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "November"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "October"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "September"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:196
+msgid "Fri"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:196
+msgid "Mon"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:196
+msgid "Sat"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:196
+msgid "Sun"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:196
+msgid "Thu"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:196
+msgid "Tue"
+msgstr ""
+
+#: qml/UTControls/CalendarDatePicker.qml:196
+msgid "Wed"
+msgstr ""
+
+#: qml/UTControls/ConfirmDialog.qml:10
+msgid "Confirm"
+msgstr ""
+
+#: qml/UTControls/TimePicker.qml:14 qml/pages/CardDetailPage.qml:476
+msgid "Now"
+msgstr ""
+
+#: qml/UTControls/TimePicker.qml:139
+msgid "Hour"
+msgstr ""
+
+#: qml/UTControls/TimePicker.qml:183
+msgid "Min"
+msgstr ""
+
+#: qml/UTControls/TreeReorderableListView.qml:1183
+msgid "< LEVEL"
 msgstr ""
 
 #: qml/backend/DeckApiClient.qml:48
@@ -843,26 +953,12 @@ msgstr ""
 msgid "Due date"
 msgstr ""
 
-#: qml/pages/CardDetailPage.qml:448 qml/pages/CardDetailPage.qml:475
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:218
-msgid "OK"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:449 qml/pages/CardDetailPage.qml:2290
-#: qml/pages/CardDetailPage.qml:2367 qml/pages/HomePage.qml:1534
-msgid "Today"
-msgstr ""
-
 #: qml/pages/CardDetailPage.qml:450
 msgid "Clear due date"
 msgstr ""
 
 #: qml/pages/CardDetailPage.qml:470 qml/pages/CardDetailPage.qml:677
 msgid "Time"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:476
-msgid "Now"
 msgstr ""
 
 #: qml/pages/CardDetailPage.qml:477
@@ -1009,55 +1105,6 @@ msgstr ""
 
 #: qml/pages/CardDetailPage.qml:1953
 msgid "Due: %1"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:2087
-msgid "April"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:2087
-msgid "August"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:2087
-msgid "December"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:2087
-msgid "February"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:2087
-msgid "January"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:2087
-msgid "July"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:2087
-msgid "June"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:2087
-msgid "March"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:2087 qml/pages/CardDetailPage.qml:2295
-#: qml/pages/CardDetailPage.qml:2372
-msgid "May"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:2087
-msgid "November"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:2087
-msgid "October"
-msgstr ""
-
-#: qml/pages/CardDetailPage.qml:2087
-msgid "September"
 msgstr ""
 
 #: qml/pages/CardDetailPage.qml:2125 qml/pages/CardDetailPage.qml:2240
@@ -1453,7 +1500,7 @@ msgid "Language"
 msgstr ""
 
 #: qml/pages/HomePage.qml:3264
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:247
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:160
 msgid "Account"
 msgstr ""
 
@@ -1463,7 +1510,7 @@ msgid "Settings"
 msgstr ""
 
 #: qml/pages/HomePage.qml:3266
-#: vendor/NextCommon/qml/NextCommon/AboutPage.qml:17
+#: vendor/NextCommon/qml/NextCommon/AboutPage.qml:18
 msgid "About"
 msgstr ""
 
@@ -1542,235 +1589,196 @@ msgstr ""
 msgid "Open card links in browser directly"
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AboutPage.qml:58
+#: vendor/NextCommon/qml/NextCommon/AboutPage.qml:59
 msgid "Version %1"
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AboutPage.qml:79
+#: vendor/NextCommon/qml/NextCommon/AboutPage.qml:80
 msgid "License"
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:41
+#: vendor/NextCommon/qml/NextCommon/AboutPage.qml:105
+msgid "Contributors"
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AboutPage.qml:119
+msgid "Disclaimer"
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:30
 msgid "Select an account and authorize it for %1."
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:48
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:37
 msgid "Accounts"
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:87
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:115
+msgid "Allow account access"
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:121
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:316
+msgid "Open System Settings"
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:227
+msgid "Server address"
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:235
+msgid "https://cloud.example.com"
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:244
+msgid ""
+"This app uses Ubuntu Touch Online Accounts. Edit this only if the system "
+"account did not expose the correct server address."
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:252
+msgid "Available accounts"
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:264
+msgid "Add another account in System Settings"
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:297
+msgid "No Nextcloud account found"
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:304
+msgid ""
+"Add a Nextcloud or ownCloud account in Ubuntu Touch System Settings > "
+"Accounts, and allow %1 to use it. Then return here and select it."
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:418
+msgid "Verify selected account"
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:418
+msgid "Verifying account..."
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:440
+msgid "How to allow this account"
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:503
+msgid "Selected %1. Verifying authorization..."
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:521
+msgid "Saved account selected. Verify again if needed."
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:565
+msgid "Select an account first."
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:570
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:672
+msgid "Verifying Online Accounts authorization..."
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:586
 msgid ""
 "Authorization succeeded, but the Ubuntu Touch account did not expose a "
 "server address for %1."
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:89
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:588
 msgid ""
 "Authorization succeeded for %1. Credentials are available to the app, but "
 "were not displayed or stored."
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:118
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:857
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:611
 msgid ""
 "Ubuntu Touch Online Accounts did not allow %1 to use this account yet. Check "
 "that %1 is enabled for this account in System Settings > Accounts, then "
 "return here."
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:121
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:614
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:163
+msgid "Authorization was canceled."
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:617
 msgid ""
-"Authorization failed: %1. If the system did not show an Online Accounts "
-"prompt, open System Settings > Accounts and allow %2 for this account, then "
-"try again."
+"Authorization failed. If the system did not show an Online Accounts prompt, "
+"open System Settings > Accounts and allow %1 for this account, then try "
+"again."
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:202
-msgid "Allow account access"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:208
-msgid "Open System Settings"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:314
-msgid "Server address"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:322
-msgid "https://cloud.example.com"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:331
-msgid ""
-"This app uses Ubuntu Touch Online Accounts. Edit this only if the system "
-"account did not expose the correct server address."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:339
-msgid "Available accounts"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:365
-msgid "No Nextcloud account found"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:372
-msgid ""
-"Add a Nextcloud or ownCloud account in Ubuntu Touch System Settings > "
-"Accounts. Then return here and select it."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:384
-msgid "How to add an account"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:506
-msgid "Allow %1 in Ubuntu Touch account settings first"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:506
-msgid "Allowed for %1"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:507
-msgid "Nextcloud account discovered"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:529
-msgid "Verify selected account"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:529
-msgid "Verifying account..."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:551
-msgid "How to allow this account"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:604
-msgid "Selected %1. Verifying authorization..."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:670
-msgid "Saved account selected. Verify again if needed."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:788
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:801
-msgid "Select an account first."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:806
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:853
-msgid "Verifying Online Accounts authorization..."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:814
-msgid ""
-"Waiting for Ubuntu Touch Online Accounts to confirm permission for %1. If "
-"this does not finish, check that %1 is allowed for this account in System "
-"Settings > Accounts."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:832
-msgid "Refreshing Ubuntu Touch account permission for %1..."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:870
-msgid "Checking account permission for %1..."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:894
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:633
 msgid ""
 "Open Ubuntu Touch System Settings manually, go to Accounts, add a Nextcloud "
 "or ownCloud account, then return to %1 and select it."
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:901
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:640
 msgid ""
 "Open Ubuntu Touch System Settings manually, go to Accounts, select %1, allow "
 "%2 for that account, then return here. %2 will verify it automatically."
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:905
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:644
 msgid ""
 "Open Ubuntu Touch System Settings manually, go to Accounts, select the "
 "Nextcloud account, allow %1 for that account, then return here. %1 will "
 "verify it automatically."
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:927
-msgid "Account permission detected. Verifying access..."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:931
-msgid ""
-"Waiting for account permission. If you already allowed %1, return here and "
-"wait a moment."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:968
-msgid ""
-"No account is saved yet. Select a Nextcloud account below, authorize it, and "
-"verify access."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:971
-msgid ""
-"%1 on %2\n"
-"providerId=%3 serviceId=%4"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:972
-msgid "Saved account"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:973
-msgid "server URL missing"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:985
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:1013
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:697
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:725
 msgid "No account selected"
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:996
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:708
 msgid "The selected Ubuntu Touch account did not expose a server address."
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:66
-msgid ""
-"Authentication succeeded, but the required Online Accounts credentials were "
-"not available."
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:98
-msgid "Authentication failed: %1"
-msgstr ""
-
-#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:127
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:63
 msgid "Desktop test credentials are incomplete."
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:146
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:82
 msgid ""
 "No account selected. Open Account first and authorize a Nextcloud account."
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:152
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:88
 msgid "No server URL configured. Open Account and authorize the OS account."
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:170
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:104
 msgid "Waiting for Online Accounts..."
 msgstr ""
 
-#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:172
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:110
 msgid ""
 "Selected Online Accounts service was not found. Open Account and verify the "
 "account again."
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:161
+msgid ""
+"This app is no longer allowed to use this account. Open System Settings > "
+"Accounts, allow it again, then try again."
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:165
+msgid "Authentication failed. Open Account and verify the account again."
+msgstr ""
+
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:174
+msgid ""
+"Authentication succeeded, but the required Online Accounts credentials were "
+"not available."
 msgstr ""
 
 #: vendor/NextCommon/qml/NextCommon/LanguagePage.qml:11

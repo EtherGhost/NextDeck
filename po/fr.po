@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nextdeck.cloudsite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-26 00:00+0000\n"
+"POT-Creation-Date: 2026-07-13 11:57+0200\n"
 "PO-Revision-Date: 2026-06-26 00:00+0200\n"
 "Last-Translator: AI-assisted starter translation\n"
 "Language-Team: French\n"
@@ -15,334 +15,1884 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+#: qml/UTControls/CalendarDatePicker.qml:12 qml/UTControls/TimePicker.qml:13
+#: qml/pages/CardDetailPage.qml:448 qml/pages/CardDetailPage.qml:475
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:131
 msgid "OK"
 msgstr "OK"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+#: qml/UTControls/CalendarDatePicker.qml:13 qml/pages/CardDetailPage.qml:449
+#: qml/pages/CardDetailPage.qml:2290 qml/pages/CardDetailPage.qml:2367
+#: qml/pages/HomePage.qml:1534
 msgid "Today"
 msgstr "Aujourd’hui"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+#: qml/UTControls/CalendarDatePicker.qml:14 qml/UTControls/TimePicker.qml:15
 msgid "Clear"
 msgstr "Effacer"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+#: qml/UTControls/CalendarDatePicker.qml:15 qml/UTControls/ConfirmDialog.qml:11
+#: qml/UTControls/TimePicker.qml:16 qml/pages/CardDetailPage.qml:256
+#: qml/pages/CardDetailPage.qml:286 qml/pages/CardDetailPage.qml:319
+#: qml/pages/CardDetailPage.qml:352 qml/pages/CardDetailPage.qml:431
+#: qml/pages/CardDetailPage.qml:451 qml/pages/CardDetailPage.qml:478
+#: qml/pages/CardDetailPage.qml:1001 qml/pages/CardDetailPage.qml:1172
+#: qml/pages/HomePage.qml:1564 qml/pages/HomePage.qml:1626
+#: qml/pages/HomePage.qml:1664 qml/pages/HomePage.qml:1701
+#: qml/pages/HomePage.qml:1881 qml/pages/HomePage.qml:1910
+#: qml/pages/HomePage.qml:2021 qml/pages/HomePage.qml:2103
+#: qml/pages/HomePage.qml:2138 qml/pages/HomePage.qml:2167
+#: qml/pages/HomePage.qml:2201 qml/pages/HomePage.qml:2230
+#: qml/pages/HomePage.qml:2260
 msgid "Cancel"
 msgstr "Annuler"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Now"
-msgstr "Maintenant"
-
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Hour"
-msgstr "Heure"
-
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Min"
-msgstr "Min"
-
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "January"
-msgstr "Janvier"
-
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "February"
-msgstr "Février"
-
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "March"
-msgstr "Mars"
-
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
 msgid "April"
 msgstr "Avril"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "May"
-msgstr "Mai"
-
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "June"
-msgstr "Juin"
-
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "July"
-msgstr "Juillet"
-
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
 msgid "August"
 msgstr "Août"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "September"
-msgstr "September"
-
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "October"
-msgstr "Oktober"
-
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "November"
-msgstr "November"
-
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
 msgid "December"
 msgstr "Décembre"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Mon"
-msgstr "Mo"
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "February"
+msgstr "Février"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Tue"
-msgstr "Di"
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "January"
+msgstr "Janvier"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Wed"
-msgstr "Mi"
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "July"
+msgstr "Juillet"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Thu"
-msgstr "Do"
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "June"
+msgstr "Juin"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "March"
+msgstr "Mars"
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+msgid "May"
+msgstr "Mai"
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "November"
+msgstr "November"
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "October"
+msgstr "Oktober"
+
+#: qml/UTControls/CalendarDatePicker.qml:64 qml/pages/CardDetailPage.qml:2087
+msgid "September"
+msgstr "September"
+
+#: qml/UTControls/CalendarDatePicker.qml:196
 msgid "Fri"
 msgstr "Fr"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+#: qml/UTControls/CalendarDatePicker.qml:196
+msgid "Mon"
+msgstr "Mo"
+
+#: qml/UTControls/CalendarDatePicker.qml:196
 msgid "Sat"
 msgstr "Sa"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+#: qml/UTControls/CalendarDatePicker.qml:196
 msgid "Sun"
 msgstr "So"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Mark as done"
-msgstr "Marquer comme terminé"
+#: qml/UTControls/CalendarDatePicker.qml:196
+msgid "Thu"
+msgstr "Do"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Mark as not done"
-msgstr "Marquer comme non terminé"
+#: qml/UTControls/CalendarDatePicker.qml:196
+msgid "Tue"
+msgstr "Di"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Use server version"
-msgstr "Serverversion verwenden"
+#: qml/UTControls/CalendarDatePicker.qml:196
+msgid "Wed"
+msgstr "Mi"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Keep local version"
-msgstr "Lokale Version behalten"
+#: qml/UTControls/ConfirmDialog.qml:10
+msgid "Confirm"
+msgstr "Confirmer"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Share board"
-msgstr "Partager le tableau"
+#: qml/UTControls/TimePicker.qml:14 qml/pages/CardDetailPage.qml:476
+msgid "Now"
+msgstr "Maintenant"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Shared with"
-msgstr "Partagé avec"
+#: qml/UTControls/TimePicker.qml:139
+msgid "Hour"
+msgstr "Heure"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
+#: qml/UTControls/TimePicker.qml:183
+msgid "Min"
+msgstr "Min"
+
+#: qml/UTControls/TreeReorderableListView.qml:1183
+msgid "< LEVEL"
+msgstr "< NIVEAU"
+
+#: qml/backend/DeckApiClient.qml:48
+msgid "boards"
+msgstr "tableaux"
+
+#: qml/backend/DeckApiClient.qml:66 qml/backend/DeckApiClient.qml:85
+#: qml/backend/DeckApiClient.qml:638 qml/backend/DeckCache.qml:86
+#: qml/backend/DeckCache.qml:190 qml/backend/DeckController.qml:907
+#: qml/pages/HomePage.qml:2795 qml/pages/HomePage.qml:3346
+msgid "Untitled board"
+msgstr "Tableau sans titre"
+
+#: qml/backend/DeckApiClient.qml:69
+msgid "board create"
+msgstr "création de tableau"
+
+#: qml/backend/DeckApiClient.qml:79
+msgid "Board update data is incomplete."
+msgstr "Les données de mise à jour du tableau sont incomplètes."
+
+#: qml/backend/DeckApiClient.qml:88
+msgid "board update"
+msgstr "mise à jour de tableau"
+
+#: qml/backend/DeckApiClient.qml:97
+msgid "board delete"
+msgstr "suppression de tableau"
+
+#: qml/backend/DeckApiClient.qml:113
+msgid "share search"
+msgstr "recherche de partage"
+
+#: qml/backend/DeckApiClient.qml:123 qml/backend/DeckApiClient.qml:148
+#: qml/backend/DeckApiClient.qml:172
+msgid "Board share data is incomplete."
+msgstr "Les données de partage du tableau sont incomplètes."
+
+#: qml/backend/DeckApiClient.qml:134
+msgid "board share"
+msgstr "partage de tableau"
+
+#: qml/backend/DeckApiClient.qml:138
+msgid "Board share added."
+msgstr "Partage du tableau ajouté."
+
+#: qml/backend/DeckApiClient.qml:160
+msgid "board share update"
+msgstr "mise à jour du partage de tableau"
+
+#: qml/backend/DeckApiClient.qml:162
+msgid "Board share saved."
+msgstr "Partage du tableau enregistré."
+
+#: qml/backend/DeckApiClient.qml:176
+msgid "board share delete"
+msgstr "suppression du partage de tableau"
+
+#: qml/backend/DeckApiClient.qml:177
+msgid "Board share removed."
+msgstr "Partage du tableau supprimé."
+
+#: qml/backend/DeckApiClient.qml:185
+msgid "board stacks"
+msgstr "piles du tableau"
+
+#: qml/backend/DeckApiClient.qml:189
+msgid "archived cards"
+msgstr "cartes archivées"
+
+#: qml/backend/DeckApiClient.qml:191 qml/backend/DeckApiClient.qml:195
+#: qml/backend/DeckApiClient.qml:639 qml/backend/DeckCache.qml:87
+#: qml/backend/DeckController.qml:288 qml/backend/DeckController.qml:677
+#: qml/backend/DeckController.qml:716 qml/pages/HomePage.qml:1841
+#: qml/pages/HomePage.qml:2819
+msgid "Board"
+msgstr "Tableau"
+
+#: qml/backend/DeckApiClient.qml:225 qml/backend/DeckApiClient.qml:244
+#: qml/backend/DeckApiClient.qml:761 qml/backend/DeckApiClient.qml:762
+#: qml/backend/DeckApiClient.qml:783 qml/backend/DeckApiClient.qml:784
+#: qml/backend/DeckCache.qml:128 qml/backend/DeckCache.qml:129
+#: qml/backend/DeckCache.qml:216 qml/backend/DeckController.qml:940
+msgid "Untitled list"
+msgstr "Liste sans titre"
+
+#: qml/backend/DeckApiClient.qml:227
+msgid "list create"
+msgstr "création de liste"
+
+#: qml/backend/DeckApiClient.qml:238
+msgid "List update data is incomplete."
+msgstr "Les données de mise à jour de la liste sont incomplètes."
+
+#: qml/backend/DeckApiClient.qml:246
+msgid "list update"
+msgstr "mise à jour de liste"
+
+#: qml/backend/DeckApiClient.qml:255
+msgid "list delete"
+msgstr "suppression de liste"
+
+#: qml/backend/DeckApiClient.qml:268
+msgid "Card create data is incomplete."
+msgstr "Les données de création de la carte sont incomplètes."
+
+#: qml/backend/DeckApiClient.qml:272 qml/backend/DeckApiClient.qml:935
+#: qml/backend/DeckCache.qml:318 qml/backend/DeckCache.qml:349
+#: qml/backend/DeckController.qml:840 qml/pages/CardDetailPage.qml:91
+#: qml/pages/CardDetailPage.qml:1565 qml/pages/CardDetailPage.qml:1948
+#: qml/pages/CardDetailPage.qml:2542 qml/pages/HomePage.qml:1617
+#: qml/pages/HomePage.qml:2796
+msgid "Untitled card"
+msgstr "Carte sans titre"
+
+#: qml/backend/DeckApiClient.qml:279
+msgid "card create"
+msgstr "création de carte"
+
+#: qml/backend/DeckApiClient.qml:280 qml/backend/DeckApiClient.qml:292
+#: qml/backend/DeckApiClient.qml:324 qml/backend/DeckApiClient.qml:347
+#: qml/backend/DeckApiClient.qml:387 qml/backend/DeckApiClient.qml:453
+#: qml/backend/DeckApiClient.qml:494 qml/backend/DeckApiClient.qml:530
+#: qml/backend/DeckApiClient.qml:565 qml/backend/DeckApiClient.qml:579
+#: qml/backend/DeckApiClient.qml:607 qml/backend/DeckApiClient.qml:629
+#: qml/backend/DeckApiClient.qml:763 qml/backend/DeckApiClient.qml:785
+#: qml/backend/DeckApiClient.qml:800 qml/backend/DeckApiClient.qml:929
+#: qml/backend/DeckCache.qml:130 qml/backend/DeckCache.qml:318
+#: qml/backend/DeckCache.qml:348 qml/backend/DeckCache.qml:350
+#: qml/backend/DeckController.qml:838 qml/backend/DeckController.qml:839
+#: qml/backend/DeckController.qml:1278 qml/pages/HomePage.qml:102
+#: qml/pages/HomePage.qml:117 qml/pages/HomePage.qml:468
+#: qml/pages/HomePage.qml:1596 qml/pages/HomePage.qml:1924
+msgid "List"
+msgstr "Liste"
+
+#: qml/backend/DeckApiClient.qml:291
+msgid "card details"
+msgstr "détails de la carte"
+
+#: qml/backend/DeckApiClient.qml:307 qml/backend/DeckController.qml:761
+msgid "Card update data is incomplete."
+msgstr "Les données de mise à jour de la carte sont incomplètes."
+
+#: qml/backend/DeckApiClient.qml:323
+msgid "card update"
+msgstr "mise à jour de carte"
+
+#: qml/backend/DeckApiClient.qml:340 qml/backend/DeckController.qml:1329
+msgid "Card reorder data is incomplete."
+msgstr "Les données de réorganisation de la carte sont incomplètes."
+
+#: qml/backend/DeckApiClient.qml:346
+msgid "card reorder"
+msgstr "réorganisation de carte"
+
+#: qml/backend/DeckApiClient.qml:362 qml/backend/DeckController.qml:861
+msgid "Card delete data is incomplete."
+msgstr "Les données de suppression de la carte sont incomplètes."
+
+#: qml/backend/DeckApiClient.qml:365
+msgid "card delete"
+msgstr "suppression de carte"
+
+#: qml/backend/DeckApiClient.qml:377 qml/backend/DeckController.qml:890
+msgid "Card archive data is incomplete."
+msgstr "Les données d'archivage de la carte sont incomplètes."
+
+#: qml/backend/DeckApiClient.qml:386
+msgid "card archive"
+msgstr "archivage de carte"
+
+#: qml/backend/DeckApiClient.qml:386
+msgid "card unarchive"
+msgstr "désarchivage de carte"
+
+#: qml/backend/DeckApiClient.qml:402
+msgid "label assignment"
+msgstr "attribution d'étiquette"
+
+#: qml/backend/DeckApiClient.qml:416
+msgid "user assignment"
+msgstr "attribution d'utilisateur"
+
+#: qml/backend/DeckApiClient.qml:426 qml/backend/DeckController.qml:1228
+#: qml/pages/CardDetailPage.qml:723 qml/pages/HomePage.qml:2479
+#: qml/pages/HomePage.qml:3076
+msgid "Label"
+msgstr "Étiquette"
+
+#: qml/backend/DeckApiClient.qml:428
+msgid "label create"
+msgstr "création d'étiquette"
+
+#: qml/backend/DeckApiClient.qml:439
+msgid "label delete"
+msgstr "suppression d'étiquette"
+
+#: qml/backend/DeckApiClient.qml:452
+msgid "attachments"
+msgstr "pièces jointes"
+
+#: qml/backend/DeckApiClient.qml:467
+msgid "Attachment upload data is incomplete."
+msgstr "Les données d'envoi de la pièce jointe sont incomplètes."
+
+#: qml/backend/DeckApiClient.qml:471
+msgid "Attachment upload requires the native network backend."
+msgstr "L'envoi de pièces jointes nécessite le backend réseau natif."
+
+#: qml/backend/DeckApiClient.qml:475
+msgid "The selected file could not be read."
+msgstr "Le fichier sélectionné n'a pas pu être lu."
+
+#: qml/backend/DeckApiClient.qml:491
+msgid "attachment upload"
+msgstr "envoi de pièce jointe"
+
+#: qml/backend/DeckApiClient.qml:501
+msgid "The selected file is empty."
+msgstr "Le fichier sélectionné est vide."
+
+#: qml/backend/DeckApiClient.qml:516
+msgid "Attachment delete data is incomplete."
+msgstr "Les données de suppression de la pièce jointe sont incomplètes."
+
+#: qml/backend/DeckApiClient.qml:529
+msgid "attachment delete"
+msgstr "suppression de pièce jointe"
+
+#: qml/backend/DeckApiClient.qml:542
+msgid "Attachment download data is incomplete."
+msgstr "Les données de téléchargement de la pièce jointe sont incomplètes."
+
+#: qml/backend/DeckApiClient.qml:546
+msgid "Attachment download requires the native network backend."
+msgstr "Le téléchargement de pièces jointes nécessite le backend réseau natif."
+
+#: qml/backend/DeckApiClient.qml:563
+msgid "attachment download"
+msgstr "téléchargement de pièce jointe"
+
+#: qml/backend/DeckApiClient.qml:578
+msgid "comments"
+msgstr "commentaires"
+
+#: qml/backend/DeckApiClient.qml:590
+msgid "comment create"
+msgstr "création de commentaire"
+
+#: qml/backend/DeckApiClient.qml:601
+msgid "Comment delete data is incomplete."
+msgstr "Les données de suppression du commentaire sont incomplètes."
+
+#: qml/backend/DeckApiClient.qml:606
+msgid "comment delete"
+msgstr "suppression de commentaire"
+
+#: qml/backend/DeckApiClient.qml:617
+msgid "Activity data is incomplete."
+msgstr "Les données d'activité sont incomplètes."
+
+#: qml/backend/DeckApiClient.qml:628
+msgid "activity"
+msgstr "activité"
+
+#: qml/backend/DeckApiClient.qml:639 qml/backend/DeckCache.qml:87
+#: qml/pages/HomePage.qml:2831
+msgid "Archived board"
+msgstr "Tableau archivé"
+
+#: qml/backend/DeckApiClient.qml:923 qml/backend/DeckAttachmentOpenPage.qml:49
+#: qml/backend/DeckAttachmentOpenPageUbuntu.qml:49
+#: qml/pages/CardDetailPage.qml:1701
+msgid "Attachment"
+msgstr "Pièce jointe"
+
+#: qml/backend/DeckApiClient.qml:991 qml/backend/DeckApiClient.qml:1026
+#: qml/backend/DeckApiClient.qml:1067
+msgid "Account credentials are incomplete."
+msgstr "Account credentials are incomplete."
+
+#: qml/backend/DeckApiClient.qml:1005 qml/backend/DeckApiClient.qml:1046
+#: qml/backend/DeckApiClient.qml:1087 qml/backend/DeckApiClient.qml:1142
+msgid "Deck %1 request failed with HTTP %2."
+msgstr "La requête Deck %1 a échoué avec le code HTTP %2."
+
+#: qml/backend/DeckApiClient.qml:1012 qml/backend/DeckApiClient.qml:1053
+#: qml/backend/DeckApiClient.qml:1153
+msgid "Deck response could not be parsed."
+msgstr "La réponse de Deck n'a pas pu être analysée."
+
+#: qml/backend/DeckApiClient.qml:1016 qml/backend/DeckApiClient.qml:1057
+#: qml/backend/DeckApiClient.qml:1093 qml/backend/DeckApiClient.qml:1166
+msgid "Deck request failed because the network request could not be completed."
+msgstr "La requête Deck a échoué car la requête réseau n'a pas pu être terminée."
+
+#: qml/backend/DeckApiClient.qml:1019 qml/backend/DeckApiClient.qml:1060
+#: qml/backend/DeckApiClient.qml:1096
+msgid "Deck request timed out."
+msgstr "La requête Deck a expiré."
+
+#: qml/backend/DeckApiClient.qml:1043 qml/backend/DeckApiClient.qml:1139
+msgid "Server version changed. Local card was not uploaded."
+msgstr "La version du serveur a changé. La carte locale n'a pas été envoyée."
+
+#: qml/backend/DeckApiClient.qml:1108
+msgid "Native network backend is not available."
+msgstr "Le backend réseau natif n'est pas disponible."
+
+#: qml/backend/DeckAttachmentImportPage.qml:7
+#: qml/backend/DeckAttachmentImportPageUbuntu.qml:7
+msgid "Attach file"
+msgstr "Joindre un fichier"
+
+#: qml/backend/DeckAttachmentImportPage.qml:46
+#: qml/backend/DeckAttachmentImportPageUbuntu.qml:46
+msgid "No file provider was selected."
+msgstr "Aucun fournisseur de fichiers n'a été sélectionné."
+
+#: qml/backend/DeckAttachmentImportPage.qml:51
+#: qml/backend/DeckAttachmentImportPageUbuntu.qml:51
+msgid "The file provider did not start a transfer."
+msgstr "Le fournisseur de fichiers n'a pas démarré de transfert."
+
+#: qml/backend/DeckAttachmentImportPage.qml:58
+#: qml/backend/DeckAttachmentImportPageUbuntu.qml:58
+msgid "No file was selected."
+msgstr "Aucun fichier n'a été sélectionné."
+
+#: qml/backend/DeckAttachmentOpenPage.qml:7
+#: qml/backend/DeckAttachmentOpenPageUbuntu.qml:7
+msgid "Open attachment"
+msgstr "Ouvrir la pièce jointe"
+
+#: qml/backend/DeckAttachmentOpenPage.qml:40
+#: qml/backend/DeckAttachmentOpenPageUbuntu.qml:40
+msgid "No app was selected."
+msgstr "Aucune application n'a été sélectionnée."
+
+#: qml/backend/DeckAttachmentOpenPage.qml:44
+#: qml/backend/DeckAttachmentOpenPageUbuntu.qml:44
+msgid "The attachment file is not available."
+msgstr "Le fichier de la pièce jointe n'est pas disponible."
+
+#: qml/backend/DeckController.qml:8 qml/backend/DeckController.qml:627
+#: qml/backend/DeckController.qml:1646
+msgid "Select an account to load Deck boards."
+msgstr "Sélectionnez un compte pour charger les tableaux Deck."
+
+#: qml/backend/DeckController.qml:9 qml/backend/DeckController.qml:1649
+msgid "No account"
+msgstr "Aucun compte"
+
+#: qml/backend/DeckController.qml:17 qml/backend/DeckController.qml:698
+#: qml/backend/DeckController.qml:755 qml/backend/DeckController.qml:1635
+#: qml/pages/HomePage.qml:3273
+msgid "Boards"
+msgstr "Tableaux"
+
+#: qml/backend/DeckController.qml:244
+msgid "Authentication failed"
+msgstr "Échec de l’authentification"
+
+#: qml/backend/DeckController.qml:259 qml/backend/DeckController.qml:276
+msgid "Loaded %1 item(s)."
+msgstr "%1 élément(s) chargé(s)."
+
+#: qml/backend/DeckController.qml:259
+msgid "No items found."
+msgstr "Aucun élément trouvé."
+
+#: qml/backend/DeckController.qml:260 qml/backend/DeckController.qml:277
+#: qml/backend/DeckController.qml:303 qml/backend/DeckController.qml:316
+#: qml/backend/DeckController.qml:326 qml/backend/DeckController.qml:336
+#: qml/backend/DeckController.qml:396 qml/backend/DeckController.qml:409
+#: qml/backend/DeckController.qml:420 qml/backend/DeckController.qml:432
+#: qml/backend/DeckController.qml:447 qml/backend/DeckController.qml:460
+#: qml/backend/DeckController.qml:478 qml/backend/DeckController.qml:500
+#: qml/backend/DeckController.qml:511 qml/backend/DeckController.qml:533
+#: qml/backend/DeckController.qml:547 qml/backend/DeckController.qml:805
+#: qml/backend/DeckController.qml:1363 qml/pages/CardDetailPage.qml:1922
+#: qml/pages/HomePage.qml:1208
+msgid "Up to date"
+msgstr "À jour"
+
+#: qml/backend/DeckController.qml:276 qml/pages/HomePage.qml:3200
+msgid "No cards found."
+msgstr "Aucune carte trouvée."
+
+#: qml/backend/DeckController.qml:285
+msgid "Board created."
+msgstr "Tableau créé."
+
+#: qml/backend/DeckController.qml:294
+msgid "Board saved."
+msgstr "Tableau enregistré."
+
+#: qml/backend/DeckController.qml:310
+msgid "Board deleted."
+msgstr "Tableau supprimé."
+
+#: qml/backend/DeckController.qml:325
+msgid "Board sharing updated."
+msgstr "Partage du tableau mis à jour."
+
+#: qml/backend/DeckController.qml:334
+msgid "Found %1 share recipient(s)."
+msgstr "%1 destinataire(s) de partage trouvé(s)."
+
+#: qml/backend/DeckController.qml:335
+msgid "No share recipients found."
+msgstr "Aucun destinataire de partage trouvé."
+
+#: qml/backend/DeckController.qml:342
+msgid "List created."
+msgstr "Liste créée."
+
+#: qml/backend/DeckController.qml:348
+msgid "List saved."
+msgstr "Liste enregistrée."
+
+#: qml/backend/DeckController.qml:354
+msgid "List deleted."
+msgstr "Liste supprimée."
+
+#: qml/backend/DeckController.qml:395
+msgid "Card created."
+msgstr "Carte créée."
+
+#: qml/backend/DeckController.qml:408
+msgid "Card saved."
+msgstr "Carte enregistrée."
+
+#: qml/backend/DeckController.qml:419
+msgid "Card order saved."
+msgstr "Ordre des cartes enregistré."
+
+#: qml/backend/DeckController.qml:431
+msgid "Card deleted."
+msgstr "Carte supprimée."
+
+#: qml/backend/DeckController.qml:446
+msgid "Card archived."
+msgstr "Carte archivée."
+
+#: qml/backend/DeckController.qml:446
+msgid "Card restored."
+msgstr "Carte restaurée."
+
+#: qml/backend/DeckController.qml:459
+msgid "Card loaded."
+msgstr "Carte chargée."
+
+#: qml/backend/DeckController.qml:477
+msgid "Attachment uploaded."
+msgstr "Pièce jointe envoyée."
+
+#: qml/backend/DeckController.qml:499
+msgid "Attachment removed."
+msgstr "Pièce jointe supprimée."
+
+#: qml/backend/DeckController.qml:510
+msgid "Attachment ready."
+msgstr "Pièce jointe prête."
+
+#: qml/backend/DeckController.qml:532
+msgid "Comment deleted."
+msgstr "Commentaire supprimé."
+
+#: qml/backend/DeckController.qml:546
+msgid "Activity loaded."
+msgstr "Activité chargée."
+
+#: qml/backend/DeckController.qml:559 qml/backend/DeckController.qml:1363
+#: qml/backend/DeckController.qml:1544 qml/pages/CardDetailPage.qml:1883
+msgid "Conflict"
+msgstr "Conflit"
+
+#: qml/backend/DeckController.qml:576 qml/backend/DeckController.qml:762
+#: qml/backend/DeckController.qml:785 qml/backend/DeckController.qml:813
+#: qml/backend/DeckController.qml:830 qml/backend/DeckController.qml:862
+#: qml/backend/DeckController.qml:891 qml/backend/DeckController.qml:1080
+#: qml/backend/DeckController.qml:1132 qml/backend/DeckController.qml:1240
+#: qml/backend/DeckController.qml:1271 qml/backend/DeckController.qml:1330
+#: qml/pages/CardDetailPage.qml:1880 qml/pages/HomePage.qml:1205
+msgid "Sync failed"
+msgstr "Échec de la synchronisation"
+
+#: qml/backend/DeckController.qml:607 qml/backend/DeckController.qml:656
+#: qml/backend/DeckController.qml:1645
+msgid "Account changed. Refreshing..."
+msgstr "Actualisation..."
+
+#: qml/backend/DeckController.qml:613 qml/backend/DeckController.qml:687
+msgid "Showing cached cards. Refreshing..."
+msgstr "Affichage des cartes en cache. Actualisation..."
+
+#: qml/backend/DeckController.qml:621 qml/backend/DeckController.qml:665
+msgid "Showing cached boards. Refreshing..."
+msgstr "Affichage des tableaux en cache. Actualisation..."
+
+#: qml/backend/DeckController.qml:628 qml/backend/DeckController.qml:687
+msgid "Loading..."
+msgstr "Chargement..."
+
+#: qml/backend/DeckController.qml:630 qml/backend/DeckController.qml:670
+#: qml/backend/DeckController.qml:688 qml/backend/DeckController.qml:776
+#: qml/backend/DeckController.qml:853 qml/backend/DeckController.qml:882
+#: qml/backend/DeckController.qml:899 qml/backend/DeckController.qml:910
+#: qml/backend/DeckController.qml:921 qml/backend/DeckController.qml:932
+#: qml/backend/DeckController.qml:943 qml/backend/DeckController.qml:954
+#: qml/backend/DeckController.qml:965 qml/backend/DeckController.qml:976
+#: qml/backend/DeckController.qml:987 qml/backend/DeckController.qml:998
+#: qml/backend/DeckController.qml:1009 qml/backend/DeckController.qml:1021
+#: qml/backend/DeckController.qml:1088 qml/backend/DeckController.qml:1123
+#: qml/backend/DeckController.qml:1140 qml/backend/DeckController.qml:1168
+#: qml/backend/DeckController.qml:1201 qml/backend/DeckController.qml:1220
+#: qml/backend/DeckController.qml:1231 qml/backend/DeckController.qml:1248
+#: qml/backend/DeckController.qml:1262 qml/backend/DeckController.qml:1337
+#: qml/backend/DeckController.qml:1350
+msgid "Syncing"
+msgstr "Synchronisation"
+
+#: qml/backend/DeckController.qml:775
+msgid "Saving card..."
+msgstr "Enregistrement de la carte..."
+
+#: qml/backend/DeckController.qml:784 qml/backend/DeckController.qml:812
+msgid "Conflict data is incomplete."
+msgstr "Les données de conflit sont incomplètes."
+
+#: qml/backend/DeckController.qml:804
+msgid "Server version kept."
+msgstr "Version du serveur conservée."
+
+#: qml/backend/DeckController.qml:829
+msgid "Choose a list before creating a card."
+msgstr "Choisissez une liste avant de créer une carte."
+
+#: qml/backend/DeckController.qml:852
+msgid "Creating card..."
+msgstr "Création de la carte..."
+
+#: qml/backend/DeckController.qml:869
+msgid "Local card deleted."
+msgstr "Carte locale supprimée."
+
+#: qml/backend/DeckController.qml:881
+msgid "Deleting card..."
+msgstr "Suppression de la carte..."
+
+#: qml/backend/DeckController.qml:898
+msgid "Archiving card..."
+msgstr "Archivage de la carte..."
+
+#: qml/backend/DeckController.qml:898
+msgid "Restoring card..."
+msgstr "Restauration de la carte..."
+
+#: qml/backend/DeckController.qml:909
+msgid "Creating board..."
+msgstr "Création du tableau..."
+
+#: qml/backend/DeckController.qml:920
+msgid "Saving board..."
+msgstr "Enregistrement du tableau..."
+
+#: qml/backend/DeckController.qml:931
+msgid "Deleting board..."
+msgstr "Suppression du tableau..."
+
+#: qml/backend/DeckController.qml:942
+msgid "Creating list..."
+msgstr "Création de la liste..."
+
+#: qml/backend/DeckController.qml:953
+msgid "Saving list..."
+msgstr "Enregistrement de la liste..."
+
+#: qml/backend/DeckController.qml:964
+msgid "Deleting list..."
+msgstr "Suppression de la liste..."
+
+#: qml/backend/DeckController.qml:975
+msgid "Searching share recipients..."
+msgstr "Recherche de destinataires de partage..."
+
+#: qml/backend/DeckController.qml:986
+msgid "Adding board share..."
+msgstr "Ajout du partage du tableau..."
+
+#: qml/backend/DeckController.qml:997
+msgid "Saving board share..."
+msgstr "Enregistrement du partage du tableau..."
+
+#: qml/backend/DeckController.qml:1008
+msgid "Removing board share..."
+msgstr "Suppression du partage du tableau..."
+
+#: qml/backend/DeckController.qml:1020
+msgid "Loading card..."
+msgstr "Chargement de la carte..."
+
+#: qml/backend/DeckController.qml:1079 qml/pages/CardDetailPage.qml:1741
+msgid "Save the card before attaching files."
+msgstr "Enregistrez la carte avant de joindre des fichiers."
+
+#: qml/backend/DeckController.qml:1087
+msgid "Uploading attachment..."
+msgstr "Envoi de la pièce jointe..."
+
+#: qml/backend/DeckController.qml:1102
+msgid "No removable attachments selected."
+msgstr "Aucune pièce jointe supprimable sélectionnée."
+
+#: qml/backend/DeckController.qml:1121 qml/backend/DeckController.qml:1122
+msgid "Removing attachment..."
+msgstr "Suppression de la pièce jointe..."
+
+#: qml/backend/DeckController.qml:1131
+msgid "Attachment data is incomplete."
+msgstr "Les données de la pièce jointe sont incomplètes."
+
+#: qml/backend/DeckController.qml:1139
+msgid "Opening attachment..."
+msgstr "Ouverture de la pièce jointe..."
+
+#: qml/backend/DeckController.qml:1167
+msgid "Adding comment..."
+msgstr "Ajout du commentaire..."
+
+#: qml/backend/DeckController.qml:1182
+msgid "No removable comments selected."
+msgstr "Aucun commentaire supprimable sélectionné."
+
+#: qml/backend/DeckController.qml:1200
+msgid "Deleting comment..."
+msgstr "Suppression du commentaire..."
+
+#: qml/backend/DeckController.qml:1219
+msgid "Updating labels..."
+msgstr "Mise à jour des étiquettes..."
+
+#: qml/backend/DeckController.qml:1230
+msgid "Creating label..."
+msgstr "Création de l'étiquette..."
+
+#: qml/backend/DeckController.qml:1239
+msgid "Label delete data is incomplete."
+msgstr "Les données de suppression de l'étiquette sont incomplètes."
+
+#: qml/backend/DeckController.qml:1247
+msgid "Deleting label..."
+msgstr "Suppression de l'étiquette..."
+
+#: qml/backend/DeckController.qml:1261
+msgid "Updating assignment..."
+msgstr "Mise à jour de l'attribution..."
+
+#: qml/backend/DeckController.qml:1270
+msgid "Card move data is incomplete."
+msgstr "Les données de déplacement de la carte sont incomplètes."
+
+#: qml/backend/DeckController.qml:1324
+msgid "Card order changed."
+msgstr "Ordre des cartes modifié."
+
+#: qml/backend/DeckController.qml:1336
+msgid "Saving card order..."
+msgstr "Enregistrement de l'ordre des cartes..."
+
+#: qml/backend/DeckController.qml:1349
+msgid "Uploading local changes..."
+msgstr "Envoi des modifications locales..."
+
+#: qml/backend/DeckController.qml:1362
+msgid "All local changes uploaded."
+msgstr "Toutes les modifications locales ont été envoyées."
+
+#: qml/backend/DeckController.qml:1362
+msgid "Some local changes could not be uploaded."
+msgstr "Certaines modifications locales n'ont pas pu être envoyées."
+
+#: qml/backend/DeckController.qml:1363 qml/backend/DeckController.qml:1547
+msgid "Unsynced"
+msgstr "Non synchronise"
+
+#: qml/backend/DeckController.qml:1648
+msgid "Refreshing"
+msgstr "Actualisation"
+
+#: qml/backend/DeckShareExportPage.qml:7
+#: qml/backend/DeckShareExportPageUbuntu.qml:7 qml/pages/HomePage.qml:1791
+msgid "Share"
+msgstr "Partager"
+
+#: qml/backend/DeckShareExportPage.qml:40
+#: qml/backend/DeckShareExportPageUbuntu.qml:40
+msgid "The card text could not be prepared for sharing."
+msgstr "Le texte de la carte n'a pas pu être préparé pour le partage."
+
+#: qml/backend/DeckShareExportPage.qml:46
+#: qml/backend/DeckShareExportPageUbuntu.qml:46
+msgid "Shared"
+msgstr "Partagé"
+
+#: qml/pages/CardDetailPage.qml:238
+msgid "Delete card?"
+msgstr "Supprimer la carte ?"
+
+#: qml/pages/CardDetailPage.qml:239
+msgid "This card will be deleted from Nextcloud Deck."
+msgstr "Cette carte sera supprimée de Nextcloud Deck."
+
+#: qml/pages/CardDetailPage.qml:244 qml/pages/CardDetailPage.qml:273
+#: qml/pages/CardDetailPage.qml:340 qml/pages/CardDetailPage.qml:992
+#: qml/pages/HomePage.qml:1315 qml/pages/HomePage.qml:1898
+#: qml/pages/HomePage.qml:2155 qml/pages/HomePage.qml:2218
+#: qml/pages/HomePage.qml:2247 qml/pages/HomePage.qml:2852
+#: qml/pages/HomePage.qml:2892
+msgid "Delete"
+msgstr "Supprimer"
+
+#: qml/pages/CardDetailPage.qml:267
+msgid "Delete label?"
+msgstr "Supprimer l'étiquette ?"
+
+#: qml/pages/CardDetailPage.qml:268
+msgid "The label will be removed from this board."
+msgstr "L'étiquette sera retirée de ce tableau."
+
+#: qml/pages/CardDetailPage.qml:298
+msgid "Remove attachment?"
+msgstr "Retirer la pièce jointe ?"
+
+#: qml/pages/CardDetailPage.qml:299
+msgid "Remove attachments?"
+msgstr "Retirer les pièces jointes ?"
+
+#: qml/pages/CardDetailPage.qml:301
+msgid "The selected attachment will be removed from this card."
+msgstr "La pièce jointe sélectionnée sera retirée de cette carte."
+
+#: qml/pages/CardDetailPage.qml:302
+msgid "The selected attachments will be removed from this card."
+msgstr "Les pièces jointes sélectionnées seront retirées de cette carte."
+
+#: qml/pages/CardDetailPage.qml:307 qml/pages/CardDetailPage.qml:1163
+#: qml/pages/HomePage.qml:1811
 msgid "Remove"
 msgstr "Retirer"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Select an account and authorize it for %1."
-msgstr "Wähle ein Konto aus und autorisiere es für %1."
+#: qml/pages/CardDetailPage.qml:331
+msgid "Delete comment?"
+msgstr "Supprimer le commentaire ?"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Accounts"
-msgstr "Comptes"
+#: qml/pages/CardDetailPage.qml:332
+msgid "Delete comments?"
+msgstr "Supprimer les commentaires ?"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Authorization succeeded, but the Ubuntu Touch account did not expose a server address for %1."
-msgstr "Die Autorisierung war erfolgreich, aber das Ubuntu-Touch-Konto hat keine Serveradresse für %1 bereitgestellt."
+#: qml/pages/CardDetailPage.qml:334
+msgid "The selected comment will be deleted from this card."
+msgstr "Le commentaire sélectionné sera supprimé de cette carte."
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Authorization succeeded for %1. Credentials are available to the app, but were not displayed or stored."
-msgstr "Die Autorisierung für %1 war erfolgreich. Zugangsdaten sind für die App verfügbar, wurden aber weder angezeigt noch gespeichert."
+#: qml/pages/CardDetailPage.qml:335
+msgid "The selected comments will be deleted from this card."
+msgstr "Les commentaires sélectionnés seront supprimés de cette carte."
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "%1 is not allowed to use this account yet. Open Ubuntu Touch System Settings > Accounts, allow %1 for this account, then return here."
-msgstr "%1 darf dieses Konto noch nicht verwenden. Öffne Ubuntu Touch Systemeinstellungen > Konten, erlaube %1 für dieses Konto und kehre dann hierher zurück."
+#: qml/pages/CardDetailPage.qml:363 qml/pages/HomePage.qml:1329
+msgid "Sync status"
+msgstr "Sync status"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Authorization failed: %1. If the system did not show an Online Accounts prompt, open System Settings > Accounts and allow %2 for this account, then try again."
-msgstr "Autorisierung fehlgeschlagen: %1. Wenn das System keinen Online-Accounts-Dialog angezeigt hat, öffne Systemeinstellungen > Konten und erlaube %2 für dieses Konto. Versuche es danach erneut."
+#: qml/pages/CardDetailPage.qml:369 qml/pages/HomePage.qml:1353
+#: qml/pages/HomePage.qml:1830
+msgid "Close"
+msgstr "Fermer"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Allow account access"
-msgstr "Autoriser l’accès au compte"
+#: qml/pages/CardDetailPage.qml:380
+msgid "Resolve conflict"
+msgstr "Résoudre le conflit"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Open System Settings"
-msgstr "Ouvrir les paramètres système"
+#: qml/pages/CardDetailPage.qml:381
+msgid ""
+"The server version changed while this card had local changes. Choose which "
+"version to keep."
+msgstr "La version du serveur a changé alors que cette carte avait des modifications locales. Choisissez la version à conserver."
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Account"
-msgstr "Compte"
+#: qml/pages/CardDetailPage.qml:391
+msgid "Server version"
+msgstr "Server version"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Server address"
-msgstr "Adresse du serveur"
+#: qml/pages/CardDetailPage.qml:401
+msgid "Local version"
+msgstr "Local version"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "This app uses Ubuntu Touch Online Accounts. Edit this only if the system account did not expose the correct server address."
-msgstr "Diese App verwendet Ubuntu Touch Online Accounts. Bearbeite dies nur, wenn das Systemkonto nicht die richtige Serveradresse bereitgestellt hat."
+#: qml/pages/CardDetailPage.qml:419
+msgid "Keep local version"
+msgstr "Keep local version"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Available accounts"
-msgstr "Verfügbare Konten"
+#: qml/pages/CardDetailPage.qml:419
+msgid "Use server version"
+msgstr "Use serveur version"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "No Nextcloud account found"
-msgstr "Kein Nextcloud-Konto gefunden"
+#: qml/pages/CardDetailPage.qml:443 qml/pages/CardDetailPage.qml:647
+#: qml/pages/HomePage.qml:1385
+msgid "Due date"
+msgstr "Date d’échéance"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Add a Nextcloud or ownCloud account in Ubuntu Touch System Settings > Accounts. Then return here and select it."
-msgstr "Füge ein Nextcloud- oder ownCloud-Konto unter Ubuntu Touch Systemeinstellungen > Konten hinzu. Kehre danach hierher zurück und wähle es aus."
+#: qml/pages/CardDetailPage.qml:450
+msgid "Clear due date"
+msgstr "Effacer la date d'échéance"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "How to add an account"
-msgstr "So fügst du ein Konto hinzu"
+#: qml/pages/CardDetailPage.qml:470 qml/pages/CardDetailPage.qml:677
+msgid "Time"
+msgstr "Heure"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Allow %1 in Ubuntu Touch account settings first"
-msgstr "Erlaube zuerst %1 in den Ubuntu-Touch-Kontoeinstellungen"
+#: qml/pages/CardDetailPage.qml:477
+msgid "Clear time"
+msgstr "Effacer l'heure"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Allowed for %1"
-msgstr "Erlaubt für %1"
+#: qml/pages/CardDetailPage.qml:536 qml/pages/HomePage.qml:2627
+#: qml/pages/HomePage.qml:2885 qml/pages/SettingsPage.qml:58
+msgid "Pull to refresh"
+msgstr "Tirer pour actualiser"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Nextcloud account discovered"
-msgstr "Nextcloud-Konto gefunden"
+#: qml/pages/CardDetailPage.qml:536 qml/pages/HomePage.qml:2626
+#: qml/pages/HomePage.qml:2886
+msgid "Release to refresh"
+msgstr "Relâcher pour actualiser"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Verifying account..."
-msgstr "Konto wird geprüft..."
+#: qml/pages/CardDetailPage.qml:547
+msgid "Details"
+msgstr "Détails"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Verify selected account"
-msgstr "Ausgewähltes Konto prüfen"
+#: qml/pages/CardDetailPage.qml:548 qml/pages/CardDetailPage.qml:1197
+msgid "Attachments"
+msgstr "Pièces jointes"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "How to allow this account"
-msgstr "So erlaubst du dieses Konto"
+#: qml/pages/CardDetailPage.qml:549
+msgid "Comments"
+msgstr "Commentaires"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Selected %1. Verifying authorization..."
-msgstr "%1 ausgewählt. Autorisierung wird geprüft..."
+#: qml/pages/CardDetailPage.qml:550 qml/pages/CardDetailPage.qml:1325
+msgid "Activity"
+msgstr "Activité"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Saved account selected. Verify again if needed."
-msgstr "Gespeichertes Konto ausgewählt. Bei Bedarf erneut prüfen."
+#: qml/pages/CardDetailPage.qml:614
+msgid "Conflict. Server version changed while local changes are waiting."
+msgstr "Conflit. La version du serveur a changé alors que des modifications locales sont en attente."
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Select an account first."
-msgstr "Wähle zuerst ein Konto aus."
+#: qml/pages/CardDetailPage.qml:621
+msgid "Due"
+msgstr "Échéance"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Verifying Online Accounts authorization..."
-msgstr "Online-Accounts-Autorisierung wird geprüft..."
+#: qml/pages/CardDetailPage.qml:692
+msgid "Labels"
+msgstr "Étiquettes"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "This account is not allowed for %1 yet. Open Ubuntu Touch System Settings > Accounts, allow %1 for this account, then return here."
-msgstr "Dieses Konto ist für %1 noch nicht erlaubt. Öffne Ubuntu Touch Systemeinstellungen > Konten, erlaube %1 für dieses Konto und kehre hierher zurück."
+#: qml/pages/CardDetailPage.qml:772
+msgid "New label"
+msgstr "Nouvelle étiquette"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Checking account permission for %1..."
-msgstr "Kontoberechtigung für %1 wird geprüft..."
+#: qml/pages/CardDetailPage.qml:784
+msgid "Assignments"
+msgstr "Attributions"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Open Ubuntu Touch System Settings manually, go to Accounts, add a Nextcloud or ownCloud account, then return to %1 and select it."
-msgstr "Öffne Ubuntu Touch Systemeinstellungen manuell, gehe zu Konten, füge ein Nextcloud- oder ownCloud-Konto hinzu und kehre zu %1 zurück, um es auszuwählen."
+#: qml/pages/CardDetailPage.qml:858
+msgid "Assign users"
+msgstr "Attribuer des utilisateurs"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Open Ubuntu Touch System Settings manually, go to Accounts, select %1, allow %2 for that account, then return here. %2 will verify it automatically."
-msgstr "Öffne Ubuntu Touch Systemeinstellungen manuell, gehe zu Konten, wähle %1, erlaube %2 für dieses Konto und kehre hierher zurück. %2 prüft es automatisch."
+#: qml/pages/CardDetailPage.qml:925 qml/pages/HomePage.qml:1485
+msgid "No users available."
+msgstr "Aucun utilisateur disponible."
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Open Ubuntu Touch System Settings manually, go to Accounts, select the Nextcloud account, allow %1 for that account, then return here. %1 will verify it automatically."
-msgstr "Öffne Ubuntu Touch Systemeinstellungen manuell, gehe zu Konten, wähle das Nextcloud-Konto, erlaube %1 für dieses Konto und kehre hierher zurück. %1 prüft es automatisch."
+#: qml/pages/CardDetailPage.qml:934
+msgid "Mark as done"
+msgstr "Marquer comme terminé"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Account permission detected. Verifying access..."
-msgstr "Kontoberechtigung erkannt. Zugriff wird geprüft..."
+#: qml/pages/CardDetailPage.qml:934
+msgid "Mark as not done"
+msgstr "Marquer comme non terminé"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Waiting for account permission. If you already allowed %1, return here and wait a moment."
-msgstr "Warte auf Kontoberechtigung. Wenn du %1 bereits erlaubt hast, kehre hierher zurück und warte einen Moment."
+#: qml/pages/CardDetailPage.qml:943
+msgid "Description"
+msgstr "Description"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "No account is saved yet. Select a Nextcloud account below, authorize it, and verify access."
-msgstr "Es ist noch kein Konto gespeichert. Wähle unten ein Nextcloud-Konto, autorisiere es und prüfe den Zugriff."
+#: qml/pages/CardDetailPage.qml:966 qml/pages/HomePage.qml:2092
+#: qml/pages/HomePage.qml:2149
+msgid "Delete card"
+msgstr "Supprimer la carte"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "%1 on %2\nproviderId=%3 serviceId=%4"
-msgstr "%1 auf %2\nproviderId=%3 serviceId=%4"
+#: qml/pages/CardDetailPage.qml:985 qml/pages/CardDetailPage.qml:1156
+#: qml/pages/HomePage.qml:1291
+msgid "%1 selected"
+msgstr "%1 selected"
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "Saved account"
-msgstr "Compte enregistré"
+#: qml/pages/CardDetailPage.qml:1009
+msgid "No comments yet."
+msgstr "Aucun commentaire pour le moment."
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "server URL missing"
-msgstr "Serveradresse fehlt"
+#: qml/pages/CardDetailPage.qml:1205
+msgid "There are no files attached to this card."
+msgstr "Aucun fichier n'est joint à cette carte."
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "No account selected"
-msgstr "Aucun compte sélectionné"
+#: qml/pages/CardDetailPage.qml:1333
+msgid "No activity yet."
+msgstr "Aucune activité pour le moment."
 
-#: vendor/NextCommon/qml/NextCommon/generated-release-audit
-msgid "The selected Ubuntu Touch account did not expose a server address."
-msgstr "Das ausgewählte Ubuntu-Touch-Konto hat keine Serveradresse bereitgestellt."
+#: qml/pages/CardDetailPage.qml:1452
+msgid "Add comment"
+msgstr "Ajouter un commentaire"
 
-#: qml/pages/HomePage.qml
-msgid "Board options"
-msgstr "Options du tableau"
+#: qml/pages/CardDetailPage.qml:1682
+msgid "No app picker is available."
+msgstr "Aucun sélecteur d'application n'est disponible."
 
-#: qml/pages/HomePage.qml
-msgid "Restore board"
-msgstr "Restaurer le tableau"
+#: qml/pages/CardDetailPage.qml:1731
+msgid "%1 B"
+msgstr "%1 o"
 
-#: qml/pages/HomePage.qml
+#: qml/pages/CardDetailPage.qml:1734
+msgid "%1 KB"
+msgstr "%1 Ko"
+
+#: qml/pages/CardDetailPage.qml:1736
+msgid "%1 MB"
+msgstr "%1 Mo"
+
+#: qml/pages/CardDetailPage.qml:1756
+msgid "No file picker is available."
+msgstr "Aucun sélecteur de fichier n'est disponible."
+
+#: qml/pages/CardDetailPage.qml:1765
+msgid "The selected file could not be prepared for upload."
+msgstr "Le fichier sélectionné n'a pas pu être préparé pour l'envoi."
+
+#: qml/pages/CardDetailPage.qml:1912
+msgid "This card has a conflict."
+msgstr "Cette carte présente un conflit."
+
+#: qml/pages/CardDetailPage.qml:1914
+msgid "This card has local changes waiting to sync."
+msgstr "Cette carte a des modifications locales en attente de synchronisation."
+
+#: qml/pages/CardDetailPage.qml:1920 qml/pages/HomePage.qml:1227
+msgid "Sync: %1"
+msgstr "Synchronisation : %1"
+
+#: qml/pages/CardDetailPage.qml:1946
+msgid ""
+"Server version is not available in the local cache yet. Pull to refresh and "
+"open this conflict again."
+msgstr "La version du serveur n'est pas encore disponible dans le cache local. Tirez pour actualiser et rouvrez ce conflit."
+
+#: qml/pages/CardDetailPage.qml:1951
+msgid "Title: %1"
+msgstr "Titre : %1"
+
+#: qml/pages/CardDetailPage.qml:1953
+msgid "Due: %1"
+msgstr "Due: %1"
+
+#: qml/pages/CardDetailPage.qml:2125 qml/pages/CardDetailPage.qml:2240
+#: qml/pages/HomePage.qml:1035
+msgid "User"
+msgstr "Utilisateur"
+
+#: qml/pages/CardDetailPage.qml:2293 qml/pages/CardDetailPage.qml:2370
+msgid "Yesterday"
+msgstr "Hier"
+
+#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+msgid "Apr"
+msgstr "avr"
+
+#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+msgid "Aug"
+msgstr "août"
+
+#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+msgid "Dec"
+msgstr "déc"
+
+#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+msgid "Feb"
+msgstr "févr"
+
+#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+msgid "Jan"
+msgstr "janv"
+
+#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+msgid "Jul"
+msgstr "juil"
+
+#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+msgid "Jun"
+msgstr "juin"
+
+#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+msgid "Mar"
+msgstr "mars"
+
+#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+msgid "Nov"
+msgstr "nov"
+
+#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+msgid "Oct"
+msgstr "oct"
+
+#: qml/pages/CardDetailPage.qml:2295 qml/pages/CardDetailPage.qml:2372
+msgid "Sep"
+msgstr "sept"
+
+#: qml/pages/HomePage.qml:410
+msgid "Bulk action finished."
+msgstr "Action groupée terminée."
+
+#: qml/pages/HomePage.qml:438
+msgid "No active cards to archive."
+msgstr "Aucune carte active à archiver."
+
+#: qml/pages/HomePage.qml:520
+msgid "There is no card text to share."
+msgstr "Il n'y a pas de texte de carte à partager."
+
+#: qml/pages/HomePage.qml:524 qml/pages/HomePage.qml:529
+#: qml/pages/HomePage.qml:548 qml/pages/HomePage.qml:552
+msgid "Shared card"
+msgstr "Carte partagée"
+
+#: qml/pages/HomePage.qml:534
+msgid "Sharing is not available."
+msgstr "Le partage n'est pas disponible."
+
+#: qml/pages/HomePage.qml:780
+msgid "Owner"
+msgstr "Propriétaire"
+
+#: qml/pages/HomePage.qml:787
+msgid "(Group)"
+msgstr "(Groupe)"
+
+#: qml/pages/HomePage.qml:788
+msgid "(Team)"
+msgstr "(Équipe)"
+
+#: qml/pages/HomePage.qml:789
+msgid "(Remote)"
+msgstr "(Distant)"
+
+#: qml/pages/HomePage.qml:790
+msgid "Shared user"
+msgstr "Utilisateur partagé"
+
+#: qml/pages/HomePage.qml:1018 qml/pages/HomePage.qml:2395
+#: qml/pages/HomePage.qml:2995
+msgid "Untitled"
+msgstr "Sans titre"
+
+#: qml/pages/HomePage.qml:1229
+msgid "No status message."
+msgstr "No status message."
+
+#: qml/pages/HomePage.qml:1243
+msgid "Search in %1"
+msgstr "Rechercher dans %1"
+
+#: qml/pages/HomePage.qml:1244
+msgid "Search"
+msgstr "Recherche"
+
+#: qml/pages/HomePage.qml:1299 qml/pages/HomePage.qml:2732
+#: qml/pages/HomePage.qml:2893 qml/pages/HomePage.qml:3298
+msgid "Archive"
+msgstr "Archive"
+
+#: qml/pages/HomePage.qml:1299 qml/pages/HomePage.qml:2844
+#: qml/pages/HomePage.qml:2893
+msgid "Restore"
+msgstr "Restaurer"
+
+#: qml/pages/HomePage.qml:1307
+msgid "Move"
+msgstr "Déplacer"
+
+#: qml/pages/HomePage.qml:1341
+msgid "Refresh"
+msgstr "Actualiser"
+
+#: qml/pages/HomePage.qml:1365 qml/pages/HomePage.qml:1578
+msgid "Filter"
+msgstr "Filtre"
+
+#: qml/pages/HomePage.qml:1382
+msgid "Tags"
+msgstr "Tags"
+
+#: qml/pages/HomePage.qml:1383
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: qml/pages/HomePage.qml:1384 qml/pages/HomePage.qml:1502
+msgid "Done"
+msgstr "Terminé"
+
+#: qml/pages/HomePage.qml:1414
+msgid "No assigned tag"
+msgstr "Aucun tag assigné"
+
+#: qml/pages/HomePage.qml:1429
+msgid "Tag"
+msgstr "Tag"
+
+#: qml/pages/HomePage.qml:1441
+msgid "No tags available."
+msgstr "Aucun tag disponible."
+
+#: qml/pages/HomePage.qml:1458
+msgid "Unassigned"
+msgstr "Non attribué"
+
+#: qml/pages/HomePage.qml:1501 qml/pages/HomePage.qml:1532
+msgid "All"
+msgstr "Tous"
+
+#: qml/pages/HomePage.qml:1503
+msgid "Not done"
+msgstr "Non terminé"
+
+#: qml/pages/HomePage.qml:1533
+msgid "Overdue"
+msgstr "En retard"
+
+#: qml/pages/HomePage.qml:1535
+msgid "Tomorrow"
+msgstr "Demain"
+
+#: qml/pages/HomePage.qml:1536
+msgid "Next 7 days"
+msgstr "7 prochains jours"
+
+#: qml/pages/HomePage.qml:1537
+msgid "Next 30 days"
+msgstr "30 prochains jours"
+
+#: qml/pages/HomePage.qml:1538
+msgid "No due date"
+msgstr "No due date"
+
+#: qml/pages/HomePage.qml:1539
+msgid "Later"
+msgstr "Later"
+
+#: qml/pages/HomePage.qml:1571
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: qml/pages/HomePage.qml:1595
+msgid "New card"
+msgstr "Nouvelle carte"
+
+#: qml/pages/HomePage.qml:1596
+msgid "Create a card in %1."
+msgstr "Créer une carte dans %1."
+
+#: qml/pages/HomePage.qml:1599
+msgid "Card title"
+msgstr "Titre de la carte"
+
+#: qml/pages/HomePage.qml:1608 qml/pages/HomePage.qml:1649
+#: qml/pages/HomePage.qml:1687
+msgid "Create"
+msgstr "Créer"
+
+#: qml/pages/HomePage.qml:1637
+msgid "New board"
+msgstr "Nouveau tableau"
+
+#: qml/pages/HomePage.qml:1640
+msgid "Board title"
+msgstr "Titre du tableau"
+
+#: qml/pages/HomePage.qml:1675
+msgid "New list"
+msgstr "Nouvelle liste"
+
+#: qml/pages/HomePage.qml:1678 qml/pages/HomePage.qml:1929
+msgid "List title"
+msgstr "Titre de la liste"
+
+#: qml/pages/HomePage.qml:1712 qml/pages/HomePage.qml:1846
+msgid "Share board"
+msgstr "Partager le tableau"
+
+#: qml/pages/HomePage.qml:1715
+msgid "Search users, groups or teams"
+msgstr "Rechercher des utilisateurs, groupes ou équipes"
+
+#: qml/pages/HomePage.qml:1725
+msgid "Owner: %1"
+msgstr "Propriétaire : %1"
+
+#: qml/pages/HomePage.qml:1736
+msgid "Add %1"
+msgstr "Ajouter %1"
+
+#: qml/pages/HomePage.qml:1748
+msgid "Shared with"
+msgstr "Partagé avec"
+
+#: qml/pages/HomePage.qml:1781
+msgid "Edit"
+msgstr "Modifier"
+
+#: qml/pages/HomePage.qml:1801
+msgid "Manage"
+msgstr "Gérer"
+
+#: qml/pages/HomePage.qml:1822
+msgid "This board is not shared with anyone else."
+msgstr "Ce tableau n'est partagé avec personne d'autre."
+
+#: qml/pages/HomePage.qml:1858
 msgid "Archive board"
 msgstr "Archiver le tableau"
 
-#: qml/pages/HomePage.qml
+#: qml/pages/HomePage.qml:1858
+msgid "Restore board"
+msgstr "Restaurer le tableau"
+
+#: qml/pages/HomePage.qml:1869 qml/pages/HomePage.qml:1892
 msgid "Delete board"
 msgstr "Supprimer le tableau"
 
-#: qml/pages/HomePage.qml
+#: qml/pages/HomePage.qml:1893
 msgid "Delete this board and its cards?"
 msgstr "Supprimer ce tableau et ses cartes ?"
 
-#: vendor/NextCommon/qml/NextCommon/AccountPage.qml
-msgid "Waiting for Ubuntu Touch Online Accounts to confirm permission for %1. If this does not finish, check that %1 is allowed for this account in System Settings > Accounts."
-msgstr "En attente de la confirmation de l’autorisation pour %1 par Ubuntu Touch Online Accounts. Si cela ne se termine pas, vérifiez que %1 est autorisé pour ce compte dans Paramètres système > Comptes."
+#: qml/pages/HomePage.qml:1925
+msgid "Board options"
+msgstr "Options du tableau"
 
-#: qml/pages/HomePage.qml:2958
-msgid "Archived cards"
-msgstr "Cartes archivées"
+#: qml/pages/HomePage.qml:1939
+msgid "Save"
+msgstr "Enregistrer"
 
-#: qml/pages/HomePage.qml
-msgid "Archived boards and cached archived cards are shown here."
-msgstr "Les tableaux archivés et les cartes archivées en cache sont affichés ici."
+#: qml/pages/HomePage.qml:1958
+msgid "Add card"
+msgstr "Ajouter une carte"
 
-#: qml/pages/HomePage.qml
-msgid "Archive is empty."
-msgstr "L’archive est vide."
+#: qml/pages/HomePage.qml:1971
+msgid "Add list"
+msgstr "Ajouter une liste"
 
-#: qml/pages/HomePage.qml
-msgid "Archived cards appear here after their board has been loaded."
-msgstr "Les cartes archivées apparaissent ici après le chargement de leur tableau."
+#: qml/pages/HomePage.qml:1985
+msgid "Move list right"
+msgstr "Déplacer la liste à droite"
 
-#: qml/pages/HomePage.qml
+#: qml/pages/HomePage.qml:1997
+msgid "Archive cards in list"
+msgstr "Archiver les cartes de la liste"
+
+#: qml/pages/HomePage.qml:2009
+msgid "Delete list"
+msgstr "Delete list"
+
+#: qml/pages/HomePage.qml:2032 qml/pages/HomePage.qml:2820
+msgid "Card"
+msgstr "Carte"
+
+#: qml/pages/HomePage.qml:2037
+msgid "Share link"
+msgstr "Partager le lien"
+
+#: qml/pages/HomePage.qml:2048
+msgid "Share content"
+msgstr "Partager le contenu"
+
+#: qml/pages/HomePage.qml:2059
+msgid "Assign card to me"
+msgstr "M'assigner la carte"
+
+#: qml/pages/HomePage.qml:2070 qml/pages/HomePage.qml:2114
+msgid "Move card"
+msgstr "Déplacer la carte"
+
+#: qml/pages/HomePage.qml:2081
+msgid "Archive card"
+msgstr "Archiver la carte"
+
+#: qml/pages/HomePage.qml:2081
+msgid "Restore card"
+msgstr "Restaurer la carte"
+
+#: qml/pages/HomePage.qml:2115 qml/pages/HomePage.qml:2179
+msgid "Choose destination list."
+msgstr "Choisir la liste de destination."
+
+#: qml/pages/HomePage.qml:2150
+msgid "Delete this card?"
+msgstr "Supprimer cette carte ?"
+
+#: qml/pages/HomePage.qml:2178
+msgid "Move selected cards"
+msgstr "Déplacer les cartes sélectionnées"
+
+#: qml/pages/HomePage.qml:2212
+msgid "Delete selected cards"
+msgstr "Supprimer les cartes sélectionnées"
+
+#: qml/pages/HomePage.qml:2213
+msgid "Delete %1 selected card(s)?"
+msgstr "Supprimer %1 carte(s) sélectionnée(s) ?"
+
+#: qml/pages/HomePage.qml:2241
 msgid "Delete archived item"
 msgstr "Supprimer l'élément archivé"
 
-#: qml/pages/HomePage.qml
+#: qml/pages/HomePage.qml:2242
 msgid "Delete this archived item?"
 msgstr "Supprimer cet élément archivé ?"
+
+#: qml/pages/HomePage.qml:2624 qml/pages/HomePage.qml:2887
+msgid "Refreshing..."
+msgstr "Actualisation..."
+
+#: qml/pages/HomePage.qml:2740
+msgid "Archived boards and cards are shown here."
+msgstr "Les tableaux et cartes archivés sont affichés ici."
+
+#: qml/pages/HomePage.qml:2864
+msgid "Archive is empty."
+msgstr "L’archive est vide."
+
+#: qml/pages/HomePage.qml:2865
+msgid ""
+"Archived boards and cards appear here after their board has been loaded."
+msgstr "Les tableaux et cartes archivés apparaissent ici une fois leur tableau chargé."
+
+#: qml/pages/HomePage.qml:3206
+msgid "No matching items"
+msgstr "No matching items"
+
+#: qml/pages/HomePage.qml:3206
+msgid "Open the menu and choose a board."
+msgstr "Ouvrez le menu et choisissez un tableau."
+
+#: qml/pages/HomePage.qml:3263
+#: vendor/NextCommon/qml/NextCommon/LanguagePage.qml:14
+msgid "Language"
+msgstr "Langue"
+
+#: qml/pages/HomePage.qml:3264
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:160
+msgid "Account"
+msgstr "Compte"
+
+#: qml/pages/HomePage.qml:3265 qml/pages/SettingsPage.qml:12
+#: vendor/NextCommon/qml/NextCommon/SettingsShell.qml:8
+msgid "Settings"
+msgstr "Paramètres"
+
+#: qml/pages/HomePage.qml:3266
+#: vendor/NextCommon/qml/NextCommon/AboutPage.qml:18
+msgid "About"
+msgstr "À propos"
+
+#: qml/pages/HomePage.qml:3398
+msgid "Create board"
+msgstr "Créer un tableau"
+
+#: qml/pages/LanguageSelectionPage.qml:11
+msgid "Default"
+msgstr "Par défaut"
+
+#: qml/pages/LanguageSelectionPage.qml:11
+msgid "Follow system language"
+msgstr "Suivre la langue du système"
+
+#: qml/pages/LanguageSelectionPage.qml:12
+msgid "Built-in source language"
+msgstr "Langue source intégrée"
+
+#: qml/pages/LanguageSelectionPage.qml:13
+msgid "Initial translation"
+msgstr "Initial translation"
+
+#: qml/pages/LanguageSelectionPage.qml:14
+#: qml/pages/LanguageSelectionPage.qml:15
+#: qml/pages/LanguageSelectionPage.qml:16
+#: qml/pages/LanguageSelectionPage.qml:17
+#: qml/pages/LanguageSelectionPage.qml:18
+#: qml/pages/LanguageSelectionPage.qml:19
+#: qml/pages/LanguageSelectionPage.qml:20
+#: qml/pages/LanguageSelectionPage.qml:21
+#: qml/pages/LanguageSelectionPage.qml:22
+#: qml/pages/LanguageSelectionPage.qml:23
+#: qml/pages/LanguageSelectionPage.qml:24
+#: qml/pages/LanguageSelectionPage.qml:25
+msgid "AI-assisted starter translation"
+msgstr "Traduction initiale assistée par IA"
+
+#: qml/pages/SettingsPage.qml:56
+msgid "Swipe actions"
+msgstr "Actions de balayage"
+
+#: qml/pages/SettingsPage.qml:57
+msgid "Reverse left/right actions"
+msgstr "Inverser les actions gauche/droite"
+
+#: qml/pages/SettingsPage.qml:59
+msgid "Drag to move"
+msgstr "Glisser pour déplacer"
+
+#: qml/pages/SettingsPage.qml:60
+msgid "Bulk selection"
+msgstr "Sélection groupée"
+
+#: qml/pages/SettingsPage.qml:67
+msgid "Sync"
+msgstr "Synchronisation"
+
+#: qml/pages/SettingsPage.qml:77
+msgid "Sync on startup"
+msgstr "Synchroniser au démarrage"
+
+#: qml/pages/SettingsPage.qml:109
+msgid "List interaction"
+msgstr "Interaction avec la liste"
+
+#: qml/pages/SettingsPage.qml:115
+msgid "Configure card list gestures."
+msgstr "Configurer les gestes de la liste de cartes."
+
+#: qml/pages/SettingsPage.qml:162
+msgid "Cards"
+msgstr "Cartes"
+
+#: qml/pages/SettingsPage.qml:172
+msgid "Open card links in browser directly"
+msgstr "Ouvrir les liens de carte directement dans le navigateur"
+
+#: vendor/NextCommon/qml/NextCommon/AboutPage.qml:59
+msgid "Version %1"
+msgstr "Version %1"
+
+#: vendor/NextCommon/qml/NextCommon/AboutPage.qml:80
+msgid "License"
+msgstr "Licence"
+
+#: vendor/NextCommon/qml/NextCommon/AboutPage.qml:105
+msgid "Contributors"
+msgstr "Contributeurs"
+
+#: vendor/NextCommon/qml/NextCommon/AboutPage.qml:119
+msgid "Disclaimer"
+msgstr "Avertissement"
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:30
+msgid "Select an account and authorize it for %1."
+msgstr "Sélectionnez un compte et autorisez-le pour %1."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:37
+msgid "Accounts"
+msgstr "Comptes"
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:115
+msgid "Allow account access"
+msgstr "Autoriser l’accès au compte"
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:121
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:316
+msgid "Open System Settings"
+msgstr "Ouvrir les paramètres système"
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:227
+msgid "Server address"
+msgstr "Adresse du serveur"
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:235
+msgid "https://cloud.example.com"
+msgstr "https://cloud.example.com"
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:244
+msgid ""
+"This app uses Ubuntu Touch Online Accounts. Edit this only if the system "
+"account did not expose the correct server address."
+msgstr "This app uses Ubuntu Touch Online Accounts. Edit this only if the system account did not expose the correct server address."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:252
+msgid "Available accounts"
+msgstr "Comptes disponibles"
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:264
+msgid "Add another account in System Settings"
+msgstr "Ajoutez un autre compte dans les paramètres système"
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:297
+msgid "No Nextcloud account found"
+msgstr "No Nextcloud account found"
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:304
+msgid ""
+"Add a Nextcloud or ownCloud account in Ubuntu Touch System Settings > "
+"Accounts, and allow %1 to use it. Then return here and select it."
+msgstr "Ajoutez un compte Nextcloud ou ownCloud dans Paramètres système Ubuntu Touch > Comptes, et autorisez %1 à l'utiliser. Revenez ensuite ici et sélectionnez-le."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:418
+msgid "Verify selected account"
+msgstr "Verify selected account"
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:418
+msgid "Verifying account..."
+msgstr "Verification du compte..."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:440
+msgid "How to allow this account"
+msgstr "Comment autoriser ce compte"
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:503
+msgid "Selected %1. Verifying authorization..."
+msgstr "%1 sélectionné. Vérification de l'autorisation..."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:521
+msgid "Saved account selected. Verify again if needed."
+msgstr "Saved account selected. Verify again if needed."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:565
+msgid "Select an account first."
+msgstr "Select an account first."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:570
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:672
+msgid "Verifying Online Accounts authorization..."
+msgstr "Verifying Online Accounts authorization..."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:586
+msgid ""
+"Authorization succeeded, but the Ubuntu Touch account did not expose a "
+"server address for %1."
+msgstr "L'autorisation a réussi, mais le compte Ubuntu Touch n'a pas fourni d'adresse de serveur pour %1."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:588
+msgid ""
+"Authorization succeeded for %1. Credentials are available to the app, but "
+"were not displayed or stored."
+msgstr "Authorization succeeded for %1. Credentials are available to the app, but were not displayed or stored."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:611
+msgid ""
+"Ubuntu Touch Online Accounts did not allow %1 to use this account yet. Check "
+"that %1 is enabled for this account in System Settings > Accounts, then "
+"return here."
+msgstr "Les comptes en ligne d'Ubuntu Touch n'autorisent pas encore %1 à utiliser ce compte. Vérifiez que %1 est activé pour ce compte dans Paramètres système > Comptes, puis revenez ici."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:614
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:163
+msgid "Authorization was canceled."
+msgstr "L'autorisation a été annulée."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:617
+msgid ""
+"Authorization failed. If the system did not show an Online Accounts prompt, "
+"open System Settings > Accounts and allow %1 for this account, then try "
+"again."
+msgstr "Échec de l'autorisation. Si le système n'a pas affiché d'invite Comptes en ligne, ouvrez Paramètres système > Comptes et autorisez %1 pour ce compte, puis réessayez."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:633
+msgid ""
+"Open Ubuntu Touch System Settings manually, go to Accounts, add a Nextcloud "
+"or ownCloud account, then return to %1 and select it."
+msgstr "Ouvrez manuellement les paramètres système Ubuntu Touch, allez dans Comptes, ajoutez un compte Nextcloud ou ownCloud, puis revenez dans %1 et sélectionnez-le."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:640
+msgid ""
+"Open Ubuntu Touch System Settings manually, go to Accounts, select %1, allow "
+"%2 for that account, then return here. %2 will verify it automatically."
+msgstr "Ouvrez manuellement les paramètres système Ubuntu Touch, allez dans Comptes, sélectionnez %1, autorisez %2 pour ce compte, puis revenez ici. %2 vérifiera automatiquement."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:644
+msgid ""
+"Open Ubuntu Touch System Settings manually, go to Accounts, select the "
+"Nextcloud account, allow %1 for that account, then return here. %1 will "
+"verify it automatically."
+msgstr "Ouvrez manuellement les paramètres système Ubuntu Touch, allez dans Comptes, sélectionnez le compte Nextcloud, autorisez %1 pour ce compte, puis revenez ici. %1 vérifiera automatiquement."
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:697
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:725
+msgid "No account selected"
+msgstr "Aucun compte sélectionné"
+
+#: vendor/NextCommon/qml/NextCommon/AccountPage.qml:708
+msgid "The selected Ubuntu Touch account did not expose a server address."
+msgstr "The selected Ubuntu Touch account did not expose a server address."
+"Das ausgewählte Ubuntu-Touch-Konto hat keine Serveradresse bereitgestellt."
+
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:63
+msgid "Desktop test credentials are incomplete."
+msgstr "Desktop test credentials are incomplete."
+
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:82
+msgid ""
+"No account selected. Open Account first and authorize a Nextcloud account."
+msgstr "No account selected. Open Account first and authorize a Nextcloud account."
+
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:88
+msgid "No server URL configured. Open Account and authorize the OS account."
+msgstr "No server URL configured. Open Account and authorize the OS account."
+
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:104
+msgid "Waiting for Online Accounts..."
+msgstr "En attente des comptes en ligne..."
+
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:110
+msgid ""
+"Selected Online Accounts service was not found. Open Account and verify the "
+"account again."
+msgstr "Selected Online Accounts service was not found. Open Account and verify the account again."
+
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:161
+msgid ""
+"This app is no longer allowed to use this account. Open System Settings > "
+"Accounts, allow it again, then try again."
+msgstr "Cette application n'est plus autorisée à utiliser ce compte. Ouvrez Paramètres système > Comptes, autorisez-la à nouveau, puis réessayez."
+
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:165
+msgid "Authentication failed. Open Account and verify the account again."
+msgstr "Échec de l'authentification. Ouvrez Compte et vérifiez à nouveau le compte."
+
+#: vendor/NextCommon/qml/NextCommon/AccountSessionAdapter.qml:174
+msgid ""
+"Authentication succeeded, but the required Online Accounts credentials were "
+"not available."
+msgstr "Authentication succeeded, but the required Online Accounts credentials were not available."
+
+#: vendor/NextCommon/qml/NextCommon/LanguagePage.qml:11
+msgid ""
+"Some translations are AI-assisted and not fully reviewed. You can help "
+"improve translations in the project repository."
+msgstr "Certaines traductions sont assistées par IA et ne sont pas entièrement relues. Vous pouvez aider à les améliorer dans le dépôt du projet."
+
+#: vendor/NextCommon/qml/NextCommon/LanguagePage.qml:34
+msgid ""
+"Choose the language %1 should use. Restart the app after changing language."
+msgstr "Choisissez la langue que %1 doit utiliser. Redémarrez l'application après avoir changé de langue."
+
+#: vendor/NextCommon/qml/NextCommon/LanguagePage.qml:131
+msgid "%1 will follow the system language after restart."
+msgstr "%1 suivra la langue du système après redémarrage."
+
+#: vendor/NextCommon/qml/NextCommon/LanguagePage.qml:132
+msgid "%1 will use %2 after restart."
+msgstr "%1 utilisera %2 après redémarrage."
+
+#~ msgid ""
+#~ "%1 is not allowed to use this account yet. Open Ubuntu Touch System "
+#~ "Settings > Accounts, allow %1 for this account, then return here."
+#~ msgstr ""
+#~ "%1 darf dieses Konto noch nicht verwenden. Öffne Ubuntu Touch "
+#~ "Systemeinstellungen > Konten, erlaube %1 für dieses Konto und kehre dann "
+#~ "hierher zurück."
+
+#~ msgid ""
+#~ "Authorization failed: %1. If the system did not show an Online Accounts "
+#~ "prompt, open System Settings > Accounts and allow %2 for this account, "
+#~ "then try again."
+#~ msgstr ""
+#~ "Autorisierung fehlgeschlagen: %1. Wenn das System keinen Online-Accounts-"
+#~ "Dialog angezeigt hat, öffne Systemeinstellungen > Konten und erlaube %2 "
+#~ "für dieses Konto. Versuche es danach erneut."
+
+#~ msgid ""
+#~ "Add a Nextcloud or ownCloud account in Ubuntu Touch System Settings > "
+#~ "Accounts. Then return here and select it."
+#~ msgstr ""
+#~ "Füge ein Nextcloud- oder ownCloud-Konto unter Ubuntu Touch "
+#~ "Systemeinstellungen > Konten hinzu. Kehre danach hierher zurück und wähle "
+#~ "es aus."
+
+#~ msgid "How to add an account"
+#~ msgstr "So fügst du ein Konto hinzu"
+
+#~ msgid "Allow %1 in Ubuntu Touch account settings first"
+#~ msgstr "Erlaube zuerst %1 in den Ubuntu-Touch-Kontoeinstellungen"
+
+#~ msgid "Allowed for %1"
+#~ msgstr "Erlaubt für %1"
+
+#~ msgid "Nextcloud account discovered"
+#~ msgstr "Nextcloud-Konto gefunden"
+
+#~ msgid ""
+#~ "This account is not allowed for %1 yet. Open Ubuntu Touch System Settings "
+#~ "> Accounts, allow %1 for this account, then return here."
+#~ msgstr ""
+#~ "Dieses Konto ist für %1 noch nicht erlaubt. Öffne Ubuntu Touch "
+#~ "Systemeinstellungen > Konten, erlaube %1 für dieses Konto und kehre "
+#~ "hierher zurück."
+
+#~ msgid "Checking account permission for %1..."
+#~ msgstr "Kontoberechtigung für %1 wird geprüft..."
+
+#~ msgid "Account permission detected. Verifying access..."
+#~ msgstr "Kontoberechtigung erkannt. Zugriff wird geprüft..."
+
+#~ msgid ""
+#~ "Waiting for account permission. If you already allowed %1, return here "
+#~ "and wait a moment."
+#~ msgstr ""
+#~ "Warte auf Kontoberechtigung. Wenn du %1 bereits erlaubt hast, kehre "
+#~ "hierher zurück und warte einen Moment."
+
+#~ msgid ""
+#~ "No account is saved yet. Select a Nextcloud account below, authorize it, "
+#~ "and verify access."
+#~ msgstr ""
+#~ "Es ist noch kein Konto gespeichert. Wähle unten ein Nextcloud-Konto, "
+#~ "autorisiere es und prüfe den Zugriff."
+
+#~ msgid ""
+#~ "%1 on %2\n"
+#~ "providerId=%3 serviceId=%4"
+#~ msgstr ""
+#~ "%1 auf %2\n"
+#~ "providerId=%3 serviceId=%4"
+
+#~ msgid "Saved account"
+#~ msgstr "Compte enregistré"
+
+#~ msgid "server URL missing"
+#~ msgstr "Serveradresse fehlt"
+
+#~ msgid ""
+#~ "Waiting for Ubuntu Touch Online Accounts to confirm permission for %1. If "
+#~ "this does not finish, check that %1 is allowed for this account in System "
+#~ "Settings > Accounts."
+#~ msgstr ""
+#~ "En attente de la confirmation de l’autorisation pour %1 par Ubuntu Touch "
+#~ "Online Accounts. Si cela ne se termine pas, vérifiez que %1 est autorisé "
+#~ "pour ce compte dans Paramètres système > Comptes."
+
+#~ msgid "Archived cards"
+#~ msgstr "Cartes archivées"
+
+#~ msgid "Archived boards and cached archived cards are shown here."
+#~ msgstr ""
+#~ "Les tableaux archivés et les cartes archivées en cache sont affichés ici."
+
+#~ msgid "Archived cards appear here after their board has been loaded."
+#~ msgstr ""
+#~ "Les cartes archivées apparaissent ici après le chargement de leur tableau."

@@ -92,7 +92,10 @@ Item {
     property var hoverParentItem: ({})
     property int hoverIndex: -1
     property int autoScrollDirection: 0
-    property bool suppressPullRefreshAfterDrag: false
+    property real suppressPullRefreshUntil: 0
+    function isPullRefreshSuppressed() {
+        return Date.now() < suppressPullRefreshUntil
+    }
 
     onModelChanged: rebuildRows()
     onExpandedOverridesChanged: rebuildRows()
@@ -618,8 +621,13 @@ Item {
         cancelDrag(false)
         if (selectionTap) {
             toggleRowSelection(fromSection, fromIndex, item, fromParent)
-            suppressPullRefreshAfterDrag = true
-            suppressPullRefreshTimer.restart()
+            // dragStarted already fired when the press began, so consumers
+            // pairing it with dragEnded (e.g. to pause/resume something for
+            // the duration of a drag gesture) need a matching end signal
+            // here too, even though this press resolved as a tap/selection
+            // rather than an actual move.
+            dragEnded(fromSection, fromIndex, fromSection, fromIndex, item, fromParent, fromParent)
+            suppressPullRefreshUntil = Date.now() + 350
             return
         }
         if (!moved || fromIndex < 0 || String(toSection || "").length === 0 || toIndex < 0) {
@@ -633,8 +641,24 @@ Item {
             moveRequested(fromSection, fromIndex, toSection, toIndex, item, fromParent, toParent)
         }
         dragEnded(fromSection, fromIndex, toSection, toIndex, item, fromParent, toParent)
-        suppressPullRefreshAfterDrag = true
-        suppressPullRefreshTimer.restart()
+        suppressPullRefreshUntil = Date.now() + 350
+    }
+
+    function cancelDragAndNotify() {
+        // Used where a drag ends via an OS-level touch cancellation rather
+        // than a normal release (finishDrag()) - dragStarted already fired
+        // when the press began, so consumers pairing it with dragEnded need
+        // a matching end signal here too, not just on a normal release.
+        if (!dragActive) {
+            cancelDrag(false)
+            return
+        }
+        var fromSection = draggedFromSectionId
+        var fromParent = draggedFromParentId || ""
+        var fromIndex = draggedFromIndex
+        var item = draggedItem
+        cancelDrag(false)
+        dragEnded(fromSection, fromIndex, fromSection, fromIndex, item, fromParent, fromParent)
     }
 
     function cancelDrag(clearStatus) {
@@ -671,12 +695,6 @@ Item {
         }
     }
 
-    Timer {
-        id: suppressPullRefreshTimer
-        interval: 350
-        onTriggered: root.suppressPullRefreshAfterDrag = false
-    }
-
     Flickable {
         id: scroll
         anchors.fill: parent
@@ -688,7 +706,7 @@ Item {
         property bool pullRefreshArmed: false
 
         onContentYChanged: {
-            if (root.suppressPullRefreshAfterDrag) {
+            if (root.isPullRefreshSuppressed()) {
                 pullRefreshArmed = false
                 return
             }
@@ -698,7 +716,7 @@ Item {
         }
 
         onMovementEnded: {
-            if (root.suppressPullRefreshAfterDrag) {
+            if (root.isPullRefreshSuppressed()) {
                 pullRefreshArmed = false
                 return
             }
@@ -905,8 +923,7 @@ Item {
                                     if (root.selectionEnabled) {
                                         root.toggleRowSelection(rowData.sectionId, rowData.index, rowData.item, rowData.parentId)
                                         rowContainer.selectionHandledByLongPress = true
-                                        root.suppressPullRefreshAfterDrag = true
-                                        root.suppressPullRefreshTimer.restart()
+                                        root.suppressPullRefreshUntil = Date.now() + 350
                                     }
                                     return
                                 }
@@ -914,8 +931,7 @@ Item {
                                     if (root.selectionEnabled) {
                                         root.toggleRowSelection(rowData.sectionId, rowData.index, rowData.item, rowData.parentId)
                                         rowContainer.selectionHandledByLongPress = true
-                                        root.suppressPullRefreshAfterDrag = true
-                                        root.suppressPullRefreshTimer.restart()
+                                        root.suppressPullRefreshUntil = Date.now() + 350
                                     }
                                     return
                                 }
@@ -923,8 +939,7 @@ Item {
                                     if (root.selectionEnabled) {
                                         root.toggleRowSelection(rowData.sectionId, rowData.index, rowData.item, rowData.parentId)
                                         rowContainer.selectionHandledByLongPress = true
-                                        root.suppressPullRefreshAfterDrag = true
-                                        root.suppressPullRefreshTimer.restart()
+                                        root.suppressPullRefreshUntil = Date.now() + 350
                                     }
                                     return
                                 }
@@ -982,7 +997,7 @@ Item {
                             }
                             onCanceled: {
                                 if (root.dragActive && root.itemId(root.draggedItem) === root.itemId(rowData.item)) {
-                                    root.cancelDrag()
+                                    root.cancelDragAndNotify()
                                 }
                                 swipeOffset = 0
                                 swipeActive = false
@@ -1051,7 +1066,7 @@ Item {
         height: refreshPullLabel.implicitHeight + units.gu(0.9)
         radius: height / 2
         color: root.refreshIndicatorColor
-        opacity: root.pullToRefreshEnabled && !root.dragActive && !root.suppressPullRefreshAfterDrag && (scroll.contentY < -units.gu(2) || root.refreshing) ? 0.92 : 0
+        opacity: root.pullToRefreshEnabled && !root.dragActive && !root.isPullRefreshSuppressed() && (scroll.contentY < -units.gu(2) || root.refreshing) ? 0.92 : 0
         z: 35
         Behavior on opacity { NumberAnimation { duration: 100 } }
 
@@ -1078,7 +1093,7 @@ Item {
             root.updateDrag(p.x, p.y)
         }
         onReleased: root.finishDrag()
-        onCanceled: root.cancelDrag()
+        onCanceled: root.cancelDragAndNotify()
     }
 
     Item {
@@ -1165,7 +1180,7 @@ Item {
             Label {
                 id: outdentBadgeLabel
                 anchors.centerIn: parent
-                text: "< LEVEL"
+                text: i18n.tr("< LEVEL")
                 color: "white"
                 font.bold: true
                 fontSize: "x-small"

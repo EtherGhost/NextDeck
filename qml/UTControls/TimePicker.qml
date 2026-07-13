@@ -10,10 +10,10 @@ Item {
     property int minuteStep: 5
     property bool showClearButton: true
     property bool showCancelButton: true
-    property string okText: qsTr("OK")
-    property string nowText: qsTr("Now")
-    property string clearText: qsTr("Clear")
-    property string cancelText: qsTr("Cancel")
+    property string okText: i18n.tr("OK")
+    property string nowText: i18n.tr("Now")
+    property string clearText: i18n.tr("Clear")
+    property string cancelText: i18n.tr("Cancel")
 
     signal selected(string timeText)
     signal accepted(string timeText)
@@ -136,7 +136,7 @@ Item {
                     width: parent.width
                     height: units.gu(4.8)
                     text: root.pad(root.hour)
-                    placeholderText: qsTr("Hour")
+                    placeholderText: i18n.tr("Hour")
                     horizontalAlignment: Text.AlignHCenter
                     inputMethodHints: Qt.ImhDigitsOnly
                     onAccepted: root.applyFields()
@@ -180,7 +180,7 @@ Item {
                     width: parent.width
                     height: units.gu(4.8)
                     text: root.pad(root.minute)
-                    placeholderText: qsTr("Min")
+                    placeholderText: i18n.tr("Min")
                     horizontalAlignment: Text.AlignHCenter
                     inputMethodHints: Qt.ImhDigitsOnly
                     onAccepted: root.applyFields()

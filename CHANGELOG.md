@@ -1,5 +1,34 @@
 # Changelog
 
+## 0.3.0 - 2026-07-13
+
+Feature and reliability release.
+
+- Updated `vendor/NextCommon` from a very old pin to `v0.3.4`, picking up the
+  Lomiri.OnlineAccounts 2.0 migration (avoids a native crash risk when an
+  account is not yet approved or has its approval revoked mid-session),
+  the account list's server-URL subtitle fix, and other suite-wide fixes.
+  The submodule's local git remote had also drifted to a now-nonexistent
+  local path; fixed so it correctly tracks the GitHub repository again.
+- Closed a large pre-existing translation backlog: most non-English,
+  non-Swedish languages were only about 15% translated (as little as 65 of
+  403 strings), and even Swedish was missing over 100 strings. All 13
+  languages are now fully translated.
+- `DeckNetwork.cpp` had no request timeout and did not follow HTTP
+  redirects. Added a 30s timeout for API calls (120s for attachment
+  upload/download, which can legitimately take longer) and redirect
+  following for same-origin redirects, matching the pattern used in
+  NextTasks/NextNotes. Per-request network isolation across accounts was
+  already correct and did not need changes.
+- Updated `qml/UTControls/CalendarDatePicker.qml`, `TimePicker.qml`, and
+  `TreeReorderableListView.qml` to the current shared UTControls content,
+  fixing several strings (OK/Now/Clear/Cancel, Hour/Min, month/weekday
+  names, the drag-to-indent badge) that were never translatable.
+- Fixed two contract tests left over from switching to the shared
+  NextCommon submodule that still checked internal details of an older,
+  already-replaced Online Accounts API.
+- Dropped "but simple" from the tagline.
+
 ## 0.2.0 - 2026-07-01
 
 Feature and polish release.

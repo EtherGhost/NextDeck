@@ -1,6 +1,6 @@
 # NextDeck
 
-Native but simple Ubuntu Touch client for Nextcloud Deck.
+Native Ubuntu Touch client for Nextcloud Deck.
 
 This project follows the same Ubuntu Touch development approach as NextNotes, NextNews, NextTasks, and the rest of the Nextcloud app suite.
 
@@ -8,7 +8,7 @@ NextDeck is not affiliated with, endorsed by, or sponsored by Nextcloud GmbH or 
 
 ## Current Status
 
-NextDeck 0.2.0 is the current public release candidate. The shared Ubuntu Touch application shell is in place: hamburger/search/sync-status/avatar top bar, released-suite-style hamburger navigation, settings, language selection, about page, Online Accounts/AppArmor declarations, icons, translation scaffold, desktop dark debug support, and desktop test-account support. Account UI and runtime account-session handling use NextCommon shared source components. The account page discovers Ubuntu Touch Nextcloud/ownCloud accounts, guides the user to allow NextDeck in OS account settings when needed, keeps the selected account while the user grants OS permission, verifies automatically after the user returns, serializes verification while running, clears stale in-memory credentials when switching accounts, isolates Deck HTTP requests so same-host accounts do not reuse stale server sessions, ignores delayed auth/Deck API responses from the previous account, and keeps technical diagnostics out of the normal UI.
+NextDeck 0.3.0 is the current public release candidate. The shared Ubuntu Touch application shell is in place: hamburger/search/sync-status/avatar top bar, released-suite-style hamburger navigation, settings, language selection, about page, Online Accounts/AppArmor declarations, icons, translation scaffold, desktop dark debug support, and desktop test-account support. Account UI and runtime account-session handling use NextCommon shared source components. The account page discovers Ubuntu Touch Nextcloud/ownCloud accounts, guides the user to allow NextDeck in OS account settings when needed, keeps the selected account while the user grants OS permission, verifies automatically after the user returns, serializes verification while running, clears stale in-memory credentials when switching accounts, isolates Deck HTTP requests so same-host accounts do not reuse stale server sessions, ignores delayed auth/Deck API responses from the previous account, and keeps technical diagnostics out of the normal UI.
 
 Deck boards, stacks, cards, and card detail pages are implemented. Cards can be created, edited, deleted, reordered, cached locally, and queued for upload when server access fails. Board and list create/update/delete actions are implemented as server-backed actions. Board navigation now shows card counts and includes an archive overview. The card page includes support for labels, assignments, comments, attachments, due date/time, and an activity log. Attachments can be uploaded, opened through Content Hub, and removed from a card. The top-bar sync icon shows loading/success/error/conflict state and opens a compact status dialog.
 

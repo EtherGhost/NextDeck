@@ -11,9 +11,27 @@
 #include <QNetworkRequest>
 #include <QRegularExpression>
 #include <QStandardPaths>
+#include <QTimer>
 #include <QUrl>
 
 namespace {
+
+const int kRequestTimeoutMs = 30000;
+
+// Qt 5.12 has no QNetworkRequest transfer timeout, so a stalled reply (e.g. a
+// mobile connection that drops mid-request) never finishes on its own and
+// wedges any state machine gated on the request completing. Aborting after a
+// timeout makes the reply's finished handler run with an error status, which
+// existing failure handling already covers.
+void armTimeout(QNetworkReply *reply, int timeoutMs = kRequestTimeoutMs)
+{
+    QTimer *timer = new QTimer(reply);
+    timer->setSingleShot(true);
+    QObject::connect(timer, &QTimer::timeout, reply, &QNetworkReply::abort);
+    QObject::connect(reply, &QNetworkReply::finished, timer, &QTimer::stop);
+    timer->start(timeoutMs);
+}
+
 QString safeMultipartFileName(const QString &value)
 {
     QString result = value;
@@ -95,6 +113,7 @@ void DeckNetwork::sendRequest(int generation,
     } else {
         reply = requestManager->sendCustomRequest(request, verb, body.toUtf8());
     }
+    armTimeout(reply);
 
     connect(reply, &QNetworkReply::finished, this, [this, reply, requestManager, requestId, generation]() {
         const int status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
@@ -124,6 +143,7 @@ void DeckNetwork::fetchDataUrl(int generation,
     QNetworkAccessManager *requestManager = isolatedManager();
     QNetworkRequest request = authorizedRequest(url, userName, secret, QString());
     QNetworkReply *reply = requestManager->get(request);
+    armTimeout(reply);
 
     connect(reply, &QNetworkReply::finished, this, [this, reply, requestManager, requestId, generation]() {
         const int status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
@@ -206,6 +226,10 @@ void DeckNetwork::uploadFileMultipart(int generation,
     QNetworkRequest request = authorizedRequest(url, userName, secret, QString());
     QNetworkReply *reply = requestManager->post(request, multiPart);
     multiPart->setParent(reply);
+    // Attachment uploads can be larger and slower than the JSON API calls
+    // elsewhere in this file, so they get a longer timeout before being
+    // treated as stalled.
+    armTimeout(reply, kRequestTimeoutMs * 4);
 
     connect(reply, &QNetworkReply::finished, this, [this, reply, requestManager, requestId, generation]() {
         const int status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
@@ -236,6 +260,10 @@ void DeckNetwork::downloadFileToCache(int generation,
     QNetworkAccessManager *requestManager = isolatedManager();
     QNetworkRequest request = authorizedRequest(url, userName, secret, QString());
     QNetworkReply *reply = requestManager->get(request);
+    // Attachment downloads can be larger and slower than the JSON API calls
+    // elsewhere in this file, so they get a longer timeout before being
+    // treated as stalled.
+    armTimeout(reply, kRequestTimeoutMs * 4);
 
     connect(reply, &QNetworkReply::finished, this, [this, reply, requestManager, requestId, generation, preferredFileName]() {
         const int status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
@@ -315,6 +343,11 @@ QNetworkRequest DeckNetwork::authorizedRequest(const QString &url,
     request.setRawHeader("Cache-Control", "no-cache");
     request.setRawHeader("Pragma", "no-cache");
     request.setRawHeader("Connection", "close");
+    // Without this, a server behind an http->https or path redirect fails
+    // every request outright (Qt does not follow redirects by default).
+    // Qt strips the Authorization header on cross-origin redirects, so this
+    // only helps same-origin redirects - but that covers the common case.
+    request.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
     if (!contentType.trimmed().isEmpty()) {
         request.setHeader(QNetworkRequest::ContentTypeHeader, contentType.trimmed());
     }

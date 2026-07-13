@@ -1,6 +1,6 @@
 {
     "name": "nextdeck.cloudsite",
-    "description": "Native but simple Ubuntu Touch client for Nextcloud Deck.",
+    "description": "Native Ubuntu Touch client for Nextcloud Deck.",
     "architecture": "$ENV{ARCH}",
     "title": "NextDeck",
     "hooks": {

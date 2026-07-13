@@ -9,10 +9,10 @@ Item {
     property string selectedDate: normalizeDateText(value)
     property bool showClearButton: true
     property bool showCancelButton: true
-    property string okText: qsTr("OK")
-    property string todayTextLabel: qsTr("Today")
-    property string clearText: qsTr("Clear")
-    property string cancelText: qsTr("Cancel")
+    property string okText: i18n.tr("OK")
+    property string todayTextLabel: i18n.tr("Today")
+    property string clearText: i18n.tr("Clear")
+    property string cancelText: i18n.tr("Cancel")
     property string viewMode: "month"
 
     signal accepted(string dateText)
@@ -61,7 +61,7 @@ Item {
     }
 
     function monthTitle(date) {
-        var names = [qsTr("January"), qsTr("February"), qsTr("March"), qsTr("April"), qsTr("May"), qsTr("June"), qsTr("July"), qsTr("August"), qsTr("September"), qsTr("October"), qsTr("November"), qsTr("December")]
+        var names = [i18n.tr("January"), i18n.tr("February"), i18n.tr("March"), i18n.tr("April"), i18n.tr("May"), i18n.tr("June"), i18n.tr("July"), i18n.tr("August"), i18n.tr("September"), i18n.tr("October"), i18n.tr("November"), i18n.tr("December")]
         return names[date.getMonth()] + " " + date.getFullYear()
     }
 
@@ -193,7 +193,7 @@ Item {
             spacing: units.gu(0.2)
 
             Repeater {
-                model: [qsTr("Mon"), qsTr("Tue"), qsTr("Wed"), qsTr("Thu"), qsTr("Fri"), qsTr("Sat"), qsTr("Sun")]
+                model: [i18n.tr("Mon"), i18n.tr("Tue"), i18n.tr("Wed"), i18n.tr("Thu"), i18n.tr("Fri"), i18n.tr("Sat"), i18n.tr("Sun")]
 
                 Label {
                     width: (parent.width - parent.spacing * 6) / 7

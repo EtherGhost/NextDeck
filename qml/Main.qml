@@ -20,7 +20,7 @@ MainView {
     AppController {
         id: appController
         appName: "NextDeck"
-        appDescription: "Native but simple Ubuntu Touch client for Nextcloud Deck."
+        appDescription: "Native Ubuntu Touch client for Nextcloud Deck."
         apiNote: "No boards found."
     }
 
